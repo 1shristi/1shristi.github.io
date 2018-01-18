@@ -48,7 +48,7 @@ a {
 }
 
 a:visited {
-  color: black;
+  color:none;
 }
 
 #left{
@@ -143,15 +143,18 @@ nav a{
 
 nav a:hover{
   font-weight: 600;
+  color: black;
 }
 
 .selected{
   font-weight: 600;
   font-size: 1.25em;
+  color: black;
 }
 
 .inview{
   font-weight: 600;
+  color: black;
 }
 
 .vertical{
@@ -363,6 +366,7 @@ footer{
     #left h1{
       font-size: 7vh;
       
+      
     }
     #left{
       position: static;
@@ -372,8 +376,9 @@ footer{
       margin-right: 5vh;
       margin-top: 5vh;
       border-bottom: .25px solid rgba(0, 0, 0, 0.25);
-      
+
     }
+
     #info{
       position: fixed;
       top: 15vh;

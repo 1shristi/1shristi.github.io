@@ -1,4 +1,7 @@
-
+.wrapper {
+	margin-top:10em;
+	justify-content: flex-end;
+}
 
 #first-column {
     width: 50%;
@@ -29,7 +32,7 @@
 }
 
 #first-column a {
-    text-decoration: underline;
+    color: grey;
 }
 
 #first-column h2 {
@@ -54,6 +57,11 @@ span.emoji {
 	line-height: 2;
 }
 
+span.pronounce {
+	font-size: 12px;
+	margin-bottom: 1em;
+}
+
 
 /*---- Genral classes end -------*/
 
@@ -61,7 +69,7 @@ span.emoji {
 /*Change icons size here*/
 
 .social-icons .fa {
-	font-size: 1.5em;
+	font-size: 1.8em;
 }
 
 
@@ -198,7 +206,7 @@ a, a:hover {
 }
 
 .socialbtns .fa:hover {
-	color: #000;
+	color: grey;
 	text-shadow: 1px 1px 0px #fff,
 			1px -1px 0px #fff,
 			-1px 1px 0px #fff,
