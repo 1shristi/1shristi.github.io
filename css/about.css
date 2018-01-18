@@ -60,6 +60,7 @@ span.emoji {
 span.pronounce {
 	font-size: 12px;
 	margin-bottom: 1em;
+	color: rgba(120, 119, 119, 0.572);
 }
 
 
@@ -206,7 +207,7 @@ a, a:hover {
 }
 
 .socialbtns .fa:hover {
-	color: grey;
+	color: black;
 	text-shadow: 1px 1px 0px #fff,
 			1px -1px 0px #fff,
 			-1px 1px 0px #fff,
