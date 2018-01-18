@@ -4,7 +4,7 @@
     width: 50%;
     align-self: center;
     line-height: 1.5em;
-	font-size: 1.1em;
+	font-size: 1em;
 	margin: 0em 0em 0em 2em;
 
 }
@@ -18,7 +18,10 @@
 }
 
 #first-row img {
-    height: 50%;
+	height: 40%;
+	width: 50%;
+	object-fit:none;
+	justify-content:flex-start;
 }
 
 #first-column:nth-child(2){
@@ -26,10 +29,12 @@
 }
 
 #first-column a {
-    text-decoration: underline
+    text-decoration: underline;
 }
 
-
+#first-column h2 {
+	margin: 0em 0em .5em 0em;
+}
 
 
 .list-unstyled {
@@ -43,13 +48,25 @@
 	margin-bottom: 10px;
 }
 
+span.emoji {
+	font-size: 30px;
+	vertical-align: middle;
+	line-height: 2;
+}
+
 
 /*---- Genral classes end -------*/
+
+/*----- Previous social media-----
 /*Change icons size here*/
+
 .social-icons .fa {
-	font-size: 1.9em;
+	font-size: 1.5em;
 }
-/*Change icons circle size and color here*/
+
+
+
+/*Change icons circle size and color here
 .social-icons .fa {
 	width: 50px;
 	height: 50px;
@@ -130,3 +147,76 @@
 .social-icons .fa-xing,.social-icons .fa-xing-square{background-color:#00555C;} 
 .social-icons .fa-youtube,.social-icons .fa-youtube-play,.social-icons .fa-youtube-square{background-color:#C52F30;}
 .social-icons .fa-rss,.social-icons .fa-rss{background-color:#F7931A;}
+
+----*/
+
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+a, a:hover {
+	color: #000;
+	text-decoration: none;
+	padding: 5px;
+}
+
+.socialbtnsbtnsbtns, .socialbtnsbtnsbtns ul, .socialbtnsbtnsbtns li {
+	margin: 0;
+	padding: 5px;
+}
+
+.socialbtnsbtnsbtns li {
+    list-style: none outside none;
+    display: inline-block;
+}
+
+.socialbtns li {
+    list-style: none outside none;
+    display: inline-block;
+}
+
+.socialbtns .fa {
+	color: #FFF;
+	text-shadow: 1px 1px 0px #000,
+			1px -1px 0px #000,
+			-1px 1px 0px #000,
+			-1px -1px 0px #000;
+	-webkit-text-shadow: 1px 1px 0px #000,
+			1px -1px 0px #000,
+			-1px 1px 0px #000,
+			-1px -1px 0px #000;
+	-moz-text-shadow: 1px 1px 0px #000,
+			1px -1px 0px #000,
+			-1px 1px 0px #000,
+			-1px -1px 0px #000;
+	-o-text-shadow: 1px 1px 0px #000,
+			1px -1px 0px #000,
+			-1px 1px 0px #000,
+			-1px -1px 0px #000;
+	transition: all ease-out 0.5s;
+	-moz-transition: all ease-out 0.5s;
+	-webkit-transition: all ease-out 0.5s;
+	-o-transition: all ease-out 0.5s;
+}
+
+.socialbtns .fa:hover {
+	color: #000;
+	text-shadow: 1px 1px 0px #fff,
+			1px -1px 0px #fff,
+			-1px 1px 0px #fff,
+			-1px -1px 0px #fff;
+	-webkit-text-shadow: 1px 1px 0px #fff,
+			1px -1px 0px #fff,
+			-1px 1px 0px #fff,
+			-1px -1px 0px #fff;
+	-moz-text-shadow: 1px 1px 0px #fff,
+			1px -1px 0px #fff,
+			-1px 1px 0px #fff,
+			-1px -1px 0px #fff;
+	-o-text-shadow: 1px 1px 0px #fff,
+			1px -1px 0px #fff,
+			-1px 1px 0px #fff,
+			-1px -1px 0px #fff;
+	transition: all ease 0.5s;
+	-moz-transition: all ease-in 0.5s;
+	-webkit-transition: all ease-in 0.5s;
+	-o-transition: all ease-in 0.5s;
+}

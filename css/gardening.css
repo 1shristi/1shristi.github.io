@@ -1,3 +1,8 @@
+.bulletpoint {
+  padding-left:2em;
+  margin-bottom: 3em;
+}
+
 p{
   font-size: 1em;
 line-height: 1.89em;
@@ -14,10 +19,12 @@ line-height: 1.89em;
   margin:1em 0em 0em 0em;
 }*/
 
-#end .copyEnd {
-  width: 46%;
-  margin: auto;
-  text-align: center;
+#end {
+ 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0em 0;
 }
 
 
@@ -30,6 +37,8 @@ line-height: 1.89em;
   align-self: center;
   text-align: center;
 }
+
+
 
 #compare{
   display:flex;
@@ -85,7 +94,7 @@ p#childrenslogo{
   text-align: center;
   vertical-align: middle;
   margin-bottom: 10%;
-  margin-top: 10%;
+  margin-top: 0%;
   margin-right: 2em;
 }
 
@@ -110,7 +119,7 @@ p#childrenslogo{
 }
 
 #animate div img{
-  margin: 1em 0em 1em 1em;
+  padding-top:5%;
   width: 20%;
   align-self: center;
 }
@@ -300,29 +309,99 @@ div.principle h3{
   flex-direction: column;
 }
 
-
-#comicboarding{
+#layout{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin:0;
 }
 
-#comicboarding div{
-  width: 30%;
+#layout img{
+  width:100%;
+  object-fit:center;
+  margin:2em 0em 0em 0em;
+}
+
+#layout div{
+  width: 100%;
   align-self: center;
   margin:0;
 }
 
-#comicboarding img{
-  width:60%;
-  object-fit: contain;
-  margin: 0em 2em 3em 0em;
+#flowchart img {
+  width:100%;
+  object-fit:center;
+  margin:2em 0em 3em 0em;
 }
 
-#comicboarding div p {
-  font-size: 1em;
+#flowchart div p {
+  padding-bottom:10%;
+}
+
+#layout div p {
   line-height: 1.89em;
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  font-size: .7em;
+  padding-bottom: 10%;
+}
+
+#gardenchart{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin:0;
+}
+
+#gardenchart div{
+  width: 100%;
+  align-self: center;
+  margin:0;
+}
+
+#gardenchart img{
+  width:100%;
+  object-fit: contain;
+  margin: 0em 0em 0em 0em;
+}
+
+#gardenchart div p {
+  line-height: 1.89em;
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  font-size: .7em;
+  padding-bottom: 5%;
+}
+
+
+#gardenchart2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin:0;
+}
+
+#gardenchart2 div{
+  width: 100%;
+  align-self: center;
+  margin:auto auto 3em auto;
+}
+
+#gardenchart2 img{
+  width:100%;
+  object-fit: contain;
+  margin: 3em 0em 0em 0em;
+}
+
+#gardenchart2 div p {
+  line-height: 1.89em;
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  font-size: .7em;
+  padding-bottom: 0%;
 }
 
 .evaluation_stats{
@@ -361,7 +440,7 @@ div.principle h3{
 }
 
 
-/*#comicboarding div p{
+/*#gardenchart div p{
   line-height: 2em;
   font-size: 1em;
 }*/
@@ -370,19 +449,21 @@ div.principle h3{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 4em 0;
+  margin: 0em 0;
 }
 
 #homescreen img{
   object-fit: fill;
-  width:60%;
-  height:100%;
-  margin: 0em 0em 0em 2em;
+  width:65%;
+  height:85%;
+  margin: 0em 0em 0em 0em;
   
 }
 
+
+
 #homescreen div{
-  margin: 0em;
+  margin: 2em 0em 0em 0em;
   width: 30%;
   align-self: center;
 }
@@ -391,8 +472,23 @@ div.principle h3{
   line-height: 1.5em;
   font-size: 0.90em;
   font-style: italic;
+  text-align: left;
+  width:95%;
+  padding-bottom:0%;
+  -webkit-margin-before:0%;
+  -webkit-margin-after:0%;
 }
 
+#homescreen div h6{
+  line-height: 1.5em;
+  font-size: 0.90em;
+  text-align: left;
+  width:95%;
+  margin-bottom:0%;
+  margin-top:0%;
+  -webkit-margin-before:0%;
+  -webkit-margin-after:0%;
+}
 
 
 #ideation p.callout{
@@ -577,10 +673,7 @@ width: 100%;
     justify-content: space-between;
 }
 
-div.third {
-    width: 30%;
-    margin: 3em 0 8em 0;
-}
+
 
 div.third img {
     width: 100%;
@@ -600,11 +693,11 @@ div.third p {
     text-align: center;
 }
 
-#platform img {
+#metrics img {
     object-fit: contain;
 }
 
-#platform > img {
+#metrics > img {
     height: 43em;
 }
 
