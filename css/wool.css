@@ -15,10 +15,12 @@ individual_project > div {
 }
 
 #overview .copy {
-  width: 46%;
+  width: 60%;
   margin: auto;
   text-align: center;
+  padding-bottom: 0%;
 }
+
 #overview .callout{
   font-style: italic;
   font-weight: 200;
@@ -154,7 +156,9 @@ individual_project > div {
 
 
 
-
+#missionstatement div {
+ margin-bottom: 0em; 
+}
 
 
 
@@ -258,13 +262,12 @@ li {
 
 
 #moodboard > p{
- 
-  padding-bottom: 10%;
+  padding-bottom: 0%;
 
 }
 
 #moodboard > img{
-   padding-bottom: 0%;
+   padding-top: 5%;
  
  }
 

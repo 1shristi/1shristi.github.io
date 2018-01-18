@@ -18,7 +18,7 @@
 }
 
 #first-row img {
-	height: 40%;
+	height: auto;
 	width: 50%;
 	object-fit:none;
 	justify-content:flex-start;
