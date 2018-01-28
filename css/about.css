@@ -64,6 +64,43 @@ span.pronounce {
 }
 
 
+.descriptors{
+	text-align: center;
+	  color: grey;
+	  font-family: "Helvetica Neue", Arial, sans-serif;
+	  font-weight: 300;
+	  font-style: italic;
+	  font-size: 30px;
+	  letter-spacing: 0.075em;
+	  line-height: 2em;
+	  text-transform: lowercase;
+  margin-top: 10em; 
+  margin-bottom: 3em;
+  width: 100%;
+  }
+
+  #mystory .copy{
+	/*width: 100%;*/
+	width: 70%;
+	margin: auto;
+	text-align: left;
+	padding-bottom:20%;
+	line-height: 2em;
+  }
+
+  #mystory a {
+    color: slategray;
+}
+
+#design .copy{
+	/*width: 100%;*/
+	width: 70%;
+	margin: auto;
+	text-align: left;
+	padding-bottom:20%;
+	line-height: 2em;
+  }
+
 /*---- Genral classes end -------*/
 
 /*----- Previous social media-----
