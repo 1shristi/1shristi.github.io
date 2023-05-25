@@ -1,0 +1,236 @@
+/*class (.), # is an ID (not popular), html element "p","div" */
+
+
+.project {
+    display: flex;
+    height: auto;
+    max-height: 68vh;
+    margin: 15vh 0;
+  }
+  
+  .project:hover {
+    cursor: pointer;
+    }
+
+  .project:last-child{
+    margin-bottom: 20vh;
+  }
+
+  
+  .project img {
+    width: 55%;
+    height: auto;
+    min-height: 350px;
+    max-height: 68vh;
+    align-self: flex-start;
+    object-fit: scale-down;
+  } 
+
+  .current_project{
+    margin-top: 4em;
+  }
+  
+  .current_project:hover{
+    cursor: default;
+  }
+  
+  project .project_copy {
+    padding:0;
+    min-width: 15em;
+  }
+  
+  .project_copy {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin: 15vh 0;
+    margin-left: 35px;
+  }
+  
+  #full_work .project_copy div h3{
+    font-size: 2.5em;
+  }
+  
+  .project_copy div{
+    margin-bottom: 2em;
+  }
+  
+ 
+  .project_copy a{
+    font-weight: 400;
+    font-size: .8em;
+    align-self: flex-start;
+    color:#808080;
+    
+  }
+
+  #button {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    gap: 8px;
+
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    left: 0px;
+    top: 31px;
+
+    background: #000000;
+    border: 1px dashed #000000;
+    border-radius: 4px;
+  }
+
+  #button:hover {
+    border: 1px dashed #808080;
+    background: #ffffff;
+  }
+
+  #uxSummary {
+    margin-top: 2em;
+    font-size: .75em;
+    align-self: flex-start;
+    font-weight:400;
+    color: #808080;
+  }
+  
+  .project_copy .details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1em;
+  }
+  
+  .project_copy .details section {
+    width: 45%;
+    padding: 0
+  }
+  
+  .project_copy .details section h4{
+    width: 100%;
+    margin-bottom: .5em;
+    border-bottom: .25px solid black;
+    font-size: 1.1em;
+    padding-bottom: .2em;
+  }
+  
+  .project_copy p{
+   line-height: 1.75em;
+   font-size: .9em;
+   font-family: 'Raleway';
+   font-weight: 400;
+  }
+  
+  
+  .subtitle, .project_copy .subtitle {
+    font-family: 'Raleway';
+    color: #808080;
+    font-size: .9em;
+    letter-spacing: 0.075em;
+  }
+  
+  canvas{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left:0;
+  }
+  
+  @media only screen and (max-width: 1120px) {
+  
+      .project {
+        height: auto;
+        max-height: 68vh;
+        margin: 10vh 0;
+        }
+  }
+  
+  @media only screen and (max-width: 850px) {
+  
+      .project {
+        flex-direction: column;
+      }
+
+      .project img{
+        all: initial;
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
+        object-position: top;
+      }
+
+
+      .project_copy{
+        width: 100%;
+        margin: 2em 0;
+      }
+  }
+
+  /*highlight animation begin*/
+
+  mark {
+    position: relative;
+    display: inline-block;
+    background: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+  }
+
+  span {
+    position: inherit;
+    z-index: 1;
+    display: inline-block;
+    padding: 0 0.1em;
+    pointer-events: none;
+  }
+  
+  svg {
+    position: absolute;
+    top: none;
+    left: -10%;
+    right: -10%;
+    bottom: -10%;
+    z-index: -1;
+    overflow: hidden;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    height: 42%;
+    fill: none;
+    stroke-width: 10%;
+    /* height from "svg" x 1.125 */
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    transition: stroke-dashoffset 200ms ease-in-out;
+    will-change: stroke-dashoffset;
+    pointer-events: none;
+  }
+
+  
+  svg:first-of-type {
+    width: 105.5%;
+    height: 104%;
+   /* transform: skewX(-17deg);*/
+  }
+  
+  svg:last-of-type {
+    width: 104%;
+    transform: skewX(-12deg);
+  }
+  
+  mark:hover > svg {
+    stroke-dashoffset: 0;
+  }
+  
+/*highlight animation end*/   
+
+/* html code for button
+ <section id="button" class="hover">
+                    <a href="urbangardening.html">learn more</a>
+             </section>
+
+              */
