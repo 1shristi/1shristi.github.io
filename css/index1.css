@@ -9,7 +9,7 @@
   }
   
   .project:hover {
-    cursor: pointer;
+    cursor: default;
     }
 
   .project:last-child{
@@ -64,7 +64,15 @@
     
   }
 
-  #button {
+  #uxSummary {
+    margin-top: 2em;
+    font-size: .75em;
+    align-self: flex-start;
+    font-weight:400;
+    color: #808080;
+  }
+
+  #button, #button-disabled {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -89,13 +97,11 @@
     background: #ffffff;
   }
 
-  #uxSummary {
-    margin-top: 2em;
-    font-size: .75em;
-    align-self: flex-start;
-    font-weight:400;
-    color: #808080;
+  #button-disabled {
+    border: 1px dashed #808080;
+    background: #ffffff;
   }
+
   
   .project_copy .details {
     display: flex;
@@ -228,9 +234,3 @@
   
 /*highlight animation end*/   
 
-/* html code for button
- <section id="button" class="hover">
-                    <a href="urbangardening.html">learn more</a>
-             </section>
-
-              */
