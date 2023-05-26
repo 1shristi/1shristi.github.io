@@ -123,9 +123,7 @@
    font-weight: 400;
   }
 
-  .subtitle, .project_copy .subtitle {
-    font-family: 'Raleway';
-    color: #808080;
+  .project_copy .subtitle {
     font-size: .9em;
     letter-spacing: 0.075em;
   }
@@ -190,6 +188,10 @@
   }
 
   .project:hover mark > svg {
+    stroke-dashoffset: 0;
+  }
+
+  h2:hover ~ svg {
     stroke-dashoffset: 0;
   }
 
