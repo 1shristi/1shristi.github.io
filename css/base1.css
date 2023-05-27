@@ -1,6 +1,6 @@
-/* * {
+* {
   box-sizing: border-box;
-} */
+}
 
 body {
   display: flex;
@@ -89,7 +89,7 @@ input[type="text"], input[type="password"] {
 
 #left {
   display: block;
-  width: 2vw;
+  width: 7rem;
   padding-right: 5em;
   overflow: hidden;
 }
@@ -100,7 +100,6 @@ input[type="text"], input[type="password"] {
 
 .content {
   margin-top: 100px;
-  width: 100%;
 }
 
 #header {
@@ -114,6 +113,7 @@ input[type="text"], input[type="password"] {
 
 #full_work {
   min-width: 65vw;
+  overflow-x: hidden;
 }
 
 #work {
@@ -207,6 +207,7 @@ nav a:hover {
 
 .block-copy, .image-copy {
   margin-bottom: 2rem;
+  padding: 0 3rem;
 }
 
 .block-title {
@@ -221,7 +222,9 @@ nav a:hover {
 }
 
 .image-copy {
+  align-self: center;
   color: #3F4C56;
+  width: 25%;
 }
 
 .image-title {
@@ -415,7 +418,40 @@ footer {
   border: 1px solid #4C93C3;
   border-radius: 16px;
   box-shadow: 10px 8px 8px rgba(76, 147, 195, 0.1);
+  margin: 0 3rem;
   padding: 3rem;
+}
+
+@media only screen and (max-width: 1440px) {
+  .image-copy {
+    align-self: flex-start;
+    padding-top: 5rem;
+    padding-right: 7rem;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  /* body {
+    margin-left: 0;
+    margin-right: 0;
+  } */
+
+  .block-copy {
+    padding: 0;
+  }
+
+  .card {
+    margin: 0;
+  }
+
+  .three-column-layout {
+    flex-direction: column;
+  }
+
+  .three-column-layout > div {
+    margin-bottom: 2rem;
+  } 
 }
 
 @media only screen and (min-height: 1000px) {
@@ -451,15 +487,14 @@ footer {
   }
 
   .content {
-    height: 85vh;
     margin-top: 0;
   }
 
   #full_work {
     margin: 0;
     padding: 0;
-    padding-left: 20vw;
-    padding-right: 5vh;
+    padding-left: 25vw;
+    padding-right: 0;
     width: auto;
   }
 

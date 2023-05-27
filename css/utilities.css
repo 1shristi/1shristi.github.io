@@ -19,8 +19,8 @@
   align-self: center;
 }
 
-.align-self-end {
-  align-self: flex-end;
+.align-self-start {
+  align-self: flex-start;
 }
 
 /* Margins */
@@ -28,8 +28,8 @@
   margin-top: 0;
 }
 
-.-mt-84 {
-  margin-top: -21rem;
+.mb-0 {
+  margin-bottom: 0;
 }
 
 .mb-20 {
@@ -41,9 +41,9 @@
 }
 
 /* Padding */
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
+.p-0 {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* Typography */

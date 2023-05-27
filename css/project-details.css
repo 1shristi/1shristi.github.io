@@ -1,0 +1,26 @@
+.banner-container {
+  height: 475px;
+}
+
+.section-1-banner {
+  background: url('../images/overview-intro.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.negative-card {
+  margin-top: -12rem;
+}
+
+@media only screen and (max-width: 1440px) {
+  .section-1-banner {
+    background-image: url('../images/overview-intro-mobile.png');
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .negative-card {
+    margin-top: 0;
+  }
+}
