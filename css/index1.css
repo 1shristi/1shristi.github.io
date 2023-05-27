@@ -222,10 +222,16 @@
     margin: 2em 0;
   }
 }
-
+/*START password font styling*/
 /* Target the input element */
 input[type="password"]::placeholder {
   /* Apply styles to the placeholder text */
-  color: red;
-  font-style: italic;
+  color: #808080;
+  font-family: 'american typewriter';
 }
+
+input:focus {
+  background-image: url('path/to/icon.svg');
+}
+
+/*END password font styling*/
