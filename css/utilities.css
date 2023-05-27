@@ -101,3 +101,8 @@
 .no-outline {
   outline: none;
 }
+
+/* Width */
+.w-50 {
+  width: 50%;
+}

@@ -207,6 +207,10 @@ nav a:hover {
   line-height: 1.75em;
 }
 
+.two-column-layout > div:first-child {
+  margin-right: 3rem;
+}
+
 .block-copy, .block-copy-alt, .image-copy {
   margin-bottom: 2rem;
 }
@@ -451,6 +455,18 @@ footer {
 
   .card {
     margin: 0;
+  }
+
+  .two-column-layout {
+    flex-direction: column;
+  }
+
+  .two-column-layout > div {
+    margin-bottom: 2rem;
+  }
+
+  .two-column-layout > div:first-child {
+    margin-right: 0;
   }
 
   .three-column-layout {
