@@ -279,13 +279,6 @@ nav a:hover {
   align-self: center;
 }
 
-#overview {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 #overview img {
   width: 100%;
   object-fit: contain;
