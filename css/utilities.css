@@ -3,8 +3,16 @@
   display: flex
 }
 
+.flex-1 {
+  flex: 1;
+}
+
 .flex-column {
   flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .align-self-end {
@@ -16,8 +24,18 @@
   margin-top: 0;
 }
 
+.-mt-16 {
+  margin-top: -4rem;
+}
+
 .ml-auto {
   margin-left: auto;
+}
+
+/* Padding */
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 /* Typography */
@@ -31,4 +49,9 @@
 
 .text-right {
   text-align: right;
+}
+
+/* Layout */
+.col-4 {
+  width: 33.333%;
 }

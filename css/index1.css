@@ -65,7 +65,7 @@
     color: #808080;
   }
 
-  #button, #button-disabled {
+  .button {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -74,28 +74,23 @@
     padding: 12px 24px;
     gap: 8px;
 
-    position: relative;
-    width: fit-content;
-    height: fit-content;
-    left: 0px;
-    top: 31px;
+    margin-top: 1rem;
 
-    background: #000000;
-    border: 1px dashed #000000;
+    border: 1px dotted #808080;
+    background: #ffffff;
     border-radius: 4px;
   }
 
-  #button:hover {
-    border: 1px dashed #808080;
-    background: #ffffff;
+  .button:hover {
+    background: #808080;
+    border: 1px solid #808080;
+    color: white;
   }
 
-  #button-disabled {
-    border: 1px dashed #808080;
-    background: #ffffff;
+  .button--disabled {
+    cursor: not-allowed;
   }
 
-  
   .project_copy .details {
     display: flex;
     flex-direction: row;
@@ -191,7 +186,7 @@
     stroke-dashoffset: 0;
   }
 
-  h2:hover ~ svg {
+  .no-offset {
     stroke-dashoffset: 0;
   }
 
