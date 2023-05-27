@@ -15,8 +15,12 @@
   justify-content: center;
 }
 
-.align-self-end {
-  align-self: flex-end;
+.align-self-center {
+  align-self: center;
+}
+
+.align-self-start {
+  align-self: flex-start;
 }
 
 /* Margins */
@@ -24,8 +28,12 @@
   margin-top: 0;
 }
 
-.-mt-16 {
-  margin-top: -4rem;
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
 }
 
 .ml-auto {
@@ -33,9 +41,9 @@
 }
 
 /* Padding */
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
+.p-0 {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* Typography */
@@ -52,6 +60,6 @@
 }
 
 /* Layout */
-.col-4 {
-  width: 33.333%;
+.col-3 {
+  width: 25%;
 }
