@@ -15,6 +15,10 @@
   justify-content: center;
 }
 
+.align-self-center {
+  align-self: center;
+}
+
 .align-self-end {
   align-self: flex-end;
 }
@@ -24,8 +28,12 @@
   margin-top: 0;
 }
 
-.-mt-16 {
-  margin-top: -4rem;
+.-mt-84 {
+  margin-top: -21rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
 }
 
 .ml-auto {
@@ -52,6 +60,6 @@
 }
 
 /* Layout */
-.col-4 {
-  width: 33.333%;
+.col-3 {
+  width: 25%;
 }
