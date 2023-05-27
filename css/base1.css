@@ -79,6 +79,14 @@ li {
   line-height: 2rem;
 }
 
+input[type="text"], input[type="password"] {
+  background: #ffffff;
+  border: 1px dotted #808080;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 12px 24px;
+}
+
 #left {
   display: block;
   width: 2vw;
