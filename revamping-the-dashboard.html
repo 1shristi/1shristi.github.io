@@ -21,12 +21,12 @@
       <section id="info">
         <nav>
           <div class="page-nav">
-            <a href="#overview" class="selected">overview</a>
-            <a href="#business-logic">business logic</a>
-            <a href="#comparison">comparison</a>
-            <a href="#competitive-adv">competitive adv</a>
-            <a href="#interface">interface</a>
-            <a href="#conclusion">conclusion</a>
+            <a href="#overview" class="selected" onclick="navItemClicked(this)">overview</a>
+            <a href="#business-logic" onclick="navItemClicked(this)">business logic</a>
+            <a href="#comparison" onclick="navItemClicked(this)">comparison</a>
+            <a href="#competitive-adv" onclick="navItemClicked(this)">competitive adv</a>
+            <a href="#interface" onclick="navItemClicked(this)">interface</a>
+            <a href="#conclusion" onclick="navItemClicked(this)">conclusion</a>
           </div>
 
           <!-- TODO: Bring this back when about page is ready -->
@@ -110,6 +110,29 @@
               <span class="block-title">Content distribution</span>
               <p class="block-text">By looking at the the platform’s content distribution we learn the assumptions that lead to the current interface layout and the business logic behind it.</p>
             </div>
+
+            <div class="flex align-center bg-grey p-6">
+              <img class="flex-1 mr-4" />
+              <div class="flex-1 block-copy-alt p-0 mb-0">
+                <span class="block-title-alt">For each screen linked from the Navigation sidebar</span>
+                <p class="block-text-alt">What can the user see?</p>
+                <p class="block-text-alt">What actions can the user perform (i.e. searching, exporting, etc.)?</p>
+                <p class="block-text-alt">Why is the information valuable for users?</p>
+                <p class="block-text-alt">What does the user want to do with the information?</p>
+                <p class="block-text-alt">Would the user need to perform any actions prior?</p>
+              </div>
+            </div>
+
+            <div class="flex align-center bg-grey p-6">
+              <div class="flex-1 block-copy-alt p-0 mr-4 mb-0">
+                <p class="block-text-alt">Understanding the relationship between location of parking and vehicle status </p>
+                <p class="block-text-alt">vs</p>
+                <p class="block-text-alt">how the application shows this relationship systemically</p>
+                <p class="block-text-alt">vs</p>
+                <p class="block-text-alt">the user’s mental model for completing their roles and responsibilities in this industry</p>
+              </div>
+              <img class="flex-1" />
+            </div>
           </div>
           <div class="flex flex-column">
             <div class="block-copy">
@@ -146,4 +169,10 @@
       </section>
     </section>
   </body>
+  <script type="text/javascript">
+    function navItemClicked(element) {
+      document.querySelectorAll('.page-nav > a').forEach(ele => ele.classList.remove('selected'))
+      element.classList.add('selected')
+    }
+  </script>
 </html>
