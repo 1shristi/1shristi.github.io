@@ -3,15 +3,18 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  font-family: american typewriter;
+}
+
+.wrapper {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin: 0;
   margin-top: 5vh;
   margin-left: 2vw;
   margin-right: 4vw;
-  padding: 0;
-  font-family: american typewriter;
 }
 
 h1, h2, h3, h4, p, a {
