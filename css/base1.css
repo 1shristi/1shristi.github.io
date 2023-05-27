@@ -71,7 +71,7 @@ a {
 }
 
 ul {
-  margin: 0.5rem 0;
+  margin: 0;
   padding-left: 1.75rem;
 }
 
@@ -155,6 +155,8 @@ input[type="text"], input[type="password"] {
 
 nav {
   margin-top: 100px;
+  position: sticky;
+  top: 0;
   white-space: nowrap;
 }
 
