@@ -13,6 +13,22 @@
   margin-top: -12rem;
 }
 
+.grid-container {
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.grid-item {
+  display: flex;
+  outline: 1px solid #808080;
+  padding: 20px;
+}
+
+.small-grid-item {
+  max-width: 5rem;
+}
+
 @media only screen and (max-width: 1440px) {
   .section-1-banner {
     background-image: url('../images/overview-intro-mobile.png');

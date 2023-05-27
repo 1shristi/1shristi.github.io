@@ -54,7 +54,7 @@
 
         <section id="overview" class="flex flex-column font-secondary mb-20">
           <div class="flex banner-container section-1-banner mb-20">
-            <div class="image-copy">
+            <div class="image-copy px-12">
               <span class="image-title">Demo application is ready but visually lacking</span>
               <p class="image-text">“When presenting screenshots of the application to potential buyers, the UI doesn’t sell all the features it is capable of” --Client</p>
             </div>
@@ -63,18 +63,18 @@
           <div class="flex three-column-layout">
             <div class="flex flex-1">
               <div class="card negative-card align-self-start">
-                <div class="block-copy p-0">
+                <div class="block-copy">
                   <p class="block-text">Without usability testing, the solution for “visually lacking” will be dangerously subjective. This is one of the four design constraints that I learned while scoping the project.</p>
                 </div>
 
-                <div class="block-copy p-0 mb-0">
+                <div class="block-copy mb-0">
                   <p class="block-text">Good news? Constraints can tell us where to begin the design process.</p>
                 </div>
               </div>
             </div>
 
             <div class="flex flex-1">
-              <div class="block-copy mb-0">
+              <div class="block-copy px-12 mb-0">
                 <span class="block-title">4 constraints to designing a solution</span>
                 <ul>
                   <li>Little qualitative and quantitative usability data to rely on</li>
@@ -86,17 +86,17 @@
             </div>
 
             <div class="flex flex-column flex-1">
-              <div class="block-copy">
+              <div class="block-copy px-12">
                 <span class="block-title">Application for parking site managers</span>
                 <p class="block-text">Allocates and monitors vehicle spaces and payments across parking site locations</p>
               </div>
 
-              <div class="block-copy">
+              <div class="block-copy px-12">
                 <span class="block-title">Stakeholder as subject matter expert</span>
                 <p class="block-text">Designed by stakeholders familiar with the parking registration industry</p>
               </div>
 
-              <div class="block-copy">
+              <div class="block-copy px-12">
                 <span class="block-title">Competitive advantage in adaptability</span>
                 <p class="block-text">The demo application is a highly customizable white label solution</p>
               </div>
@@ -105,15 +105,15 @@
         </section>
 
         <section id="business-logic" class="flex font-secondary mb-20">
-          <div class="flex flex-column">
-            <div class="block-copy p-0">
+          <div class="flex flex-column flex-1 mr-12">
+            <div class="block-copy">
               <span class="block-title">Content distribution</span>
               <p class="block-text">By looking at the the platform’s content distribution we learn the assumptions that lead to the current interface layout and the business logic behind it.</p>
             </div>
 
             <div class="flex align-center bg-grey p-6">
               <img class="flex-1 mr-4" />
-              <div class="flex-1 block-copy-alt p-0 mb-0">
+              <div class="flex-1 block-copy-alt mb-0">
                 <span class="block-title-alt">For each screen linked from the Navigation sidebar</span>
                 <p class="block-text-alt">What can the user see?</p>
                 <p class="block-text-alt">What actions can the user perform (i.e. searching, exporting, etc.)?</p>
@@ -124,7 +124,7 @@
             </div>
 
             <div class="flex align-center bg-grey p-6">
-              <div class="flex-1 block-copy-alt p-0 mr-4 mb-0">
+              <div class="flex-1 block-copy-alt mr-4 mb-0">
                 <p class="block-text-alt">Understanding the relationship between location of parking and vehicle status </p>
                 <p class="block-text-alt">vs</p>
                 <p class="block-text-alt">how the application shows this relationship systemically</p>
@@ -134,7 +134,39 @@
               <img class="flex-1" />
             </div>
           </div>
-          <div class="flex flex-column">
+
+          <div class="flex flex-column flex-1">
+            <div class="flex flex-column bg-grey p-6 mb-8">
+              <span class="block-title-alt">Type of actions the user does by complexity and priority</span>
+              <div class="grid-container">
+                <div class="grid-item no-outline"></div>
+                <div class="grid-item no-outline pl-0">
+                  <span class="block-subtitle-alt mb-0">Few actions</span>
+                </div>
+                <div class="grid-item no-outline pl-0">
+                  <span class="block-subtitle-alt mb-0">Multiple actions</span>
+                </div>
+                <div class="grid-item small-grid-item no-outline pl-0">
+                  <span class="block-subtitle-alt mb-0">High priority task</span>
+                </div>
+                <div class="grid-item">
+                  <span class="block-text-alt mb-0">Adding to, or searching through, or exporting data tables</span>
+                </div>
+                <div class="grid-item">
+                  <span class="block-text-alt mb-0">Navigating to a dedicated secondary menu in order to complete wizard forms that trigger a major change across multiple areas of the platform</span>
+                </div>
+                <div class="grid-item small-grid-item no-outline pl-0">
+                  <span class="block-subtitle-alt mb-0">Low priority task</span>
+                </div>
+                <div class="grid-item">
+                  <span class="block-text-alt mb-0">Predominately view-only data tables</span>
+                </div>
+                <div class="grid-item">
+                  <span class="block-text-alt mb-0">Predominately view-only data tables</span>
+                </div>
+              </div>
+            </div>
+
             <div class="block-copy">
               <span class="block-title">Mostly data tables</span>
               <ul>

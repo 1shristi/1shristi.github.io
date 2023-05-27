@@ -209,7 +209,6 @@ nav a:hover {
 
 .block-copy, .block-copy-alt, .image-copy {
   margin-bottom: 2rem;
-  padding: 0 3rem;
 }
 
 .block-title {
@@ -223,17 +222,22 @@ nav a:hover {
   line-height: 1.75rem;
 }
 
-.block-copy-alt {
-  color: #575757;
+.block-title-alt {
+  color: #181818;
+  font-weight: 600;
+  line-height: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.block-subtitle-alt {
+  color: #181818;
+  font-weight: 500;
   line-height: 1.25rem;
 }
 
-.block-title-alt {
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
-
 .block-text-alt {
+  color: #575757;
+  line-height: 1.25rem;
   margin-bottom: 1rem;
 }
 
