@@ -1,3 +1,7 @@
+/* * {
+  box-sizing: border-box;
+} */
+
 body {
   display: flex;
   flex-direction: row;
@@ -5,7 +9,7 @@ body {
   margin: 0;
   margin-top: 5vh;
   margin-left: 2vw;
-  margin-right: 3vw;
+  margin-right: 4vw;
   padding: 0;
   font-family: american typewriter;
 }
@@ -16,23 +20,15 @@ h1, h2, h3, h4, p, a {
 
 /* ::-webkit-scrollbar { display: none; } */
 
-img {
-  max-width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-p {
-  font-size: 1em;
-  font-weight: 300;
-}
-
 h1 {
   font-size: 8vh;
+  font-weight: 600;
+  text-transform: lowercase;
 }
 
 h2 {
-  margin: 2em 0em 2em 0em;
+  margin: 0.25rem 0em 0.25rem 0em;
+  font-size: 4.5rem;
   font-weight: 300;
 }
 
@@ -47,18 +43,53 @@ h4 {
   margin-bottom: 0.5em;
 }
 
+.page-header {
+  align-self: flex-end;
+  margin-bottom: 6rem;
+}
+
+.subtitle {
+  color: #808080;
+  font-family: 'Raleway';
+  font-size: 1.375rem;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+p {
+  font-size: 1em;
+  font-weight: 300;
+}
+
 a {
   color: black;
   text-decoration: none;
 }
 
-a:visited {
-  color: none;
+ul {
+  margin: 0.5rem 0;
+  padding-left: 1.75rem;
+}
+
+li {
+  line-height: 2rem;
+}
+
+input[type="text"], input[type="password"] {
+  background: #ffffff;
+  border: 1px dotted #808080;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 12px 24px;
 }
 
 #left {
   display: block;
-  width: 1vw;
+  width: 2vw;
   padding-right: 5em;
   overflow: hidden;
 }
@@ -67,7 +98,7 @@ a:visited {
   cursor: pointer;
 }
 
-#content {
+.content {
   margin-top: 100px;
   width: 100%;
 }
@@ -102,11 +133,6 @@ a:visited {
   to { opacity: 1; }
 }
 
-/*.subtitle{
-  font-weight: 300;
-  font-style:italic;
-}*/
-
 #info {
   margin-left: 2vw;
   margin-right: 2vw;
@@ -118,7 +144,7 @@ a:visited {
 
 #info > a {
   display: block;
-  font-size:.8em;
+  font-size: .8em;
   color: black;
   line-height: 2em;
 }
@@ -129,16 +155,26 @@ a:visited {
 
 nav {
   margin-top: 100px;
+  white-space: nowrap;
 }
 
 nav a {
-  display:block;
+  display: block;
+  font-weight: 300;
   line-height: 3em;
 }
 
 nav a:hover {
   font-weight: 600;
   color: black;
+}
+
+.page-nav {
+  margin-bottom: 3rem;
+}
+
+.page-nav a {
+  line-height: 2em;
 }
 
 .selected {
@@ -161,12 +197,43 @@ nav a:hover {
 }
 
 #pagenav {
-    margin-bottom: 3em;
+  margin-bottom: 3em;
 }
 
 #pagenav a {
   font-size: .9em;
   line-height: 1.75em;
+}
+
+.block-copy, .image-copy {
+  margin-bottom: 2rem;
+}
+
+.block-title {
+  color: #4C93C3;
+  font-weight: bold;
+  line-height: 1.75rem;
+}
+
+.block-text {
+  font-weight: 400;
+  line-height: 1.75rem;
+}
+
+.image-copy {
+  color: #3F4C56;
+}
+
+.image-title {
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 2rem;
+  margin-bottom: 2.25rem;
+}
+
+.image-text {
+  font-style: italic;
+  line-height: 1.75rem;
 }
 
 #individual_project {
@@ -175,7 +242,7 @@ nav a:hover {
 }
 
 #individual_project > div {
-  margin-bottom:0em;
+  margin-bottom: 0em;
 }
 
 #individual_project > video {
@@ -208,7 +275,7 @@ nav a:hover {
 }
 
 #overview {
-  display:flex;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -230,6 +297,7 @@ nav a:hover {
   flex-wrap: nowrap;
   flex-direction: row;
 }
+
 .related_project {
   margin-right: 25px;
   line-height: 1.5em;
@@ -247,12 +315,10 @@ nav a:hover {
   font-size: 1.5em;
   line-height: 1.5em;
   margin-top: .5em;
-
 }
 
 .related_project:hover {
   cursor: pointer;
-
 }
 
 .related_project p {
@@ -269,7 +335,7 @@ nav a:hover {
 }
 
 #team_tools {
- display: flex;
+  display: flex;
 }
 
 #team_tools h2 {
@@ -293,16 +359,19 @@ nav a:hover {
   line-height: normal;
   width: 100%;
 }
+
 #team_stats div {
   width: 100%;
   display:flex;
   flex-direction: column;
 }
+
 #team_stats .number {
   font-size: 3.5em;
   font-weight: 600;
   line-height: 1em;
 }
+
 #team_stats .major {
   font-size: .9em;
   margin-bottom: 1.75em;
@@ -317,6 +386,7 @@ nav a:hover {
 #documentation {
   margin-bottom: 5em;
 }
+
 #documentation a {
   margin-left: 1em;
 }
@@ -340,6 +410,13 @@ footer {
   display: none;
 }
 
+.card {
+  border: 1px solid #4C93C3;
+  border-radius: 16px;
+  box-shadow: 10px 8px 8px rgba(76, 147, 195, 0.1);
+  padding: 3rem;
+}
+
 @media only screen and (min-height: 1000px) {
   h1 {
     font-size: 6em;
@@ -353,10 +430,6 @@ footer {
 
   nav {
     margin-top: 50px;
-  }
-
-  #content {
-    margin-top: 0;
   }
 
   #left h1 {
@@ -376,8 +449,9 @@ footer {
     padding: 0;
   }
 
-  #content {
+  .content {
     height: 85vh;
+    margin-top: 0;
   }
 
   #full_work {
