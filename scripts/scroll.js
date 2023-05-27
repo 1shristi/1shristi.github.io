@@ -42,7 +42,7 @@ $(document).ready(function () {
                 if (target) {
                     $(this).click(function (event) {
                         event.preventDefault();
-                        $('html,body,#content,#work').animate({ scrollTop: $('#work').scrollTop() + $target.offset().top }, 1000, function () {
+                        $('html,body,.content,#work').animate({ scrollTop: $('#work').scrollTop() + $target.offset().top }, 1000, function () {
                             location.hash = target;
                             $target.focus();
                             if ($target.is(":focus")) {

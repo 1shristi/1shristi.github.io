@@ -1,7 +1,57 @@
+/* Flex */
 .flex {
   display: flex
 }
 
+.flex-1 {
+  flex: 1;
+}
+
 .flex-column {
   flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-self-end {
+  align-self: flex-end;
+}
+
+/* Margins */
+.mt-0 {
+  margin-top: 0;
+}
+
+.-mt-16 {
+  margin-top: -4rem;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+/* Padding */
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+/* Typography */
+.font-primary {
+  font-family: american typewriter;
+}
+
+.font-secondary {
+  font-family: 'Raleway';
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Layout */
+.col-4 {
+  width: 33.333%;
 }
