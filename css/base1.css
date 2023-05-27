@@ -432,11 +432,6 @@ footer {
 }
 
 @media only screen and (max-width: 1280px) {
-  /* body {
-    margin-left: 0;
-    margin-right: 0;
-  } */
-
   .block-copy {
     padding: 0;
   }
