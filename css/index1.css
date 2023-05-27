@@ -227,8 +227,4 @@ input[type="password"]::placeholder {
   font-family: 'american typewriter';
 }
 
-input:focus {
-  background-image: url('path/to/icon.svg');
-}
-
 /*END password font styling*/
