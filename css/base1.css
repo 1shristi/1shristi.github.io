@@ -71,7 +71,7 @@ a {
 }
 
 ul {
-  margin: 0.5rem 0;
+  margin: 0;
   padding-left: 1.75rem;
 }
 
@@ -155,6 +155,8 @@ input[type="text"], input[type="password"] {
 
 nav {
   margin-top: 100px;
+  position: sticky;
+  top: 0;
   white-space: nowrap;
 }
 
@@ -205,9 +207,12 @@ nav a:hover {
   line-height: 1.75em;
 }
 
-.block-copy, .image-copy {
+.two-column-layout > div:first-child {
+  margin-right: 3rem;
+}
+
+.block-copy, .block-copy-alt, .image-copy {
   margin-bottom: 2rem;
-  padding: 0 3rem;
 }
 
 .block-title {
@@ -219,6 +224,25 @@ nav a:hover {
 .block-text {
   font-weight: 400;
   line-height: 1.75rem;
+}
+
+.block-title-alt {
+  color: #181818;
+  font-weight: 600;
+  line-height: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.block-subtitle-alt {
+  color: #181818;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+
+.block-text-alt {
+  color: #575757;
+  line-height: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .image-copy {
@@ -275,13 +299,6 @@ nav a:hover {
 #individual_project video {
   width: 75%;
   align-self: center;
-}
-
-#overview {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 #overview img {
@@ -438,6 +455,18 @@ footer {
 
   .card {
     margin: 0;
+  }
+
+  .two-column-layout {
+    flex-direction: column;
+  }
+
+  .two-column-layout > div {
+    margin-bottom: 2rem;
+  }
+
+  .two-column-layout > div:first-child {
+    margin-right: 0;
   }
 
   .three-column-layout {
