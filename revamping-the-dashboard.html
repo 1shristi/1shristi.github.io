@@ -22,12 +22,12 @@
         <section id="info">
           <nav>
             <div class="page-nav">
-              <a href="#overview" class="selected" onclick="navItemClicked(this)">overview</a>
-              <a href="#business-logic" onclick="navItemClicked(this)">business logic</a>
-              <a href="#comparison" onclick="navItemClicked(this)">comparison</a>
-              <a href="#competitive-adv" onclick="navItemClicked(this)">competitive adv</a>
-              <a href="#interface" onclick="navItemClicked(this)">interface</a>
-              <a href="#conclusion" onclick="navItemClicked(this)">conclusion</a>
+              <a href="#overview" class="selected">overview</a>
+              <a href="#business-logic">business logic</a>
+              <a href="#comparison">comparison</a>
+              <a href="#competitive-adv">competitive adv</a>
+              <a href="#interface">interface</a>
+              <a href="#conclusion">conclusion</a>
             </div>
 
             <!-- TODO: Bring this back when about page is ready -->
@@ -239,10 +239,5 @@
     </div>
   </body>
 
-  <script type="text/javascript">
-    function navItemClicked(element) {
-      document.querySelectorAll('.page-nav > a').forEach(ele => ele.classList.remove('selected'))
-      element.classList.add('selected')
-    }
-  </script>
+  <script src="scripts/mark-scroll.js"></script>
 </html>
