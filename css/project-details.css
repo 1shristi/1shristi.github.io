@@ -54,13 +54,11 @@
 }
 
 .interface-section {
-  padding-bottom: 14.5rem;
-  padding-top: 2.5rem;
+  padding: 2.5rem 2.5rem 14.5rem 2.5rem;
 }
 
-.interface-section .three-column-layout {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+.interface-section .two-column-layout {
+  padding: 0 3.25rem;
 }
 
 .interface-section .three-column-layout > .card {
@@ -70,6 +68,18 @@
 
 .interface-section .three-column-layout > .card:last-child {
   margin: 0;
+}
+
+.interface-section .img-1 {
+  width: 85%;
+}
+
+.interface-section .img-2 {
+  width: 55%;
+}
+
+.interface-section .img-3 {
+  width: 60%;
 }
 
 @media only screen and (max-width: 1650px) {
@@ -108,7 +118,34 @@
 }
 
 @media only screen and (max-width: 1280px) {
+  .interface-section .three-column-layout > .card {
+    margin-bottom: 2rem;
+    margin-right: 0;
+  }
+
+  .interface-section .img-1 {
+    width: 100%;
+  }
+  
+  .interface-section .img-2 {
+    width: 100%;
+  }
+  
+  .interface-section .img-3 {
+    margin-bottom: 2.5rem;
+    width: 100%;
+  }
+
+  .interface-section .two-column-layout {
+    padding: 0;
+  }
+
   .negative-card {
     margin-top: 0;
+  }
+
+  .conclusion-card {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
   }
 }

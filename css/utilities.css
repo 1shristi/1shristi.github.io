@@ -103,11 +103,6 @@
   padding-right: 3rem;
 }
 
-.px-23 {
-  padding-left: 5.75rem;
-  padding-right: 5.75rem;
-}
-
 .pl-0 {
   padding-left: 0;
 }
@@ -157,14 +152,6 @@
   width: 50%;
 }
 
-.w-55 {
-  width: 55%;
-}
-
 .w-65 {
   width: 65%;
-}
-
-.w-80 {
-  width: 80%;
 }
