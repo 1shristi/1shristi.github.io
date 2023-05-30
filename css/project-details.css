@@ -9,8 +9,19 @@
   background-size: cover;
 }
 
+.conclusion-card {
+  margin-top: -13rem;
+}
+
 .negative-card {
-  margin-top: -12rem;
+  margin-top: -11rem;
+}
+
+.negative-block-copy {
+  align-self: flex-end;
+  margin-top: -14rem;
+  padding-bottom: 6rem;
+  width: 50%;
 }
 
 .grid-container {
@@ -22,14 +33,75 @@
 .grid-item {
   display: flex;
   outline: 1px solid #808080;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 .small-grid-item {
   max-width: 5rem;
 }
 
+#competitive-adv {
+  padding: 2rem 9.5rem;
+}
+
+#competitive-adv .img-1-container {
+  margin-right: 7rem;
+  width: 65%;
+}
+
+#competitive-adv .img-2-container {
+  width: 35%;
+}
+
+.interface-section {
+  padding-bottom: 14.5rem;
+  padding-top: 2.5rem;
+}
+
+.interface-section .three-column-layout {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.interface-section .three-column-layout > .card {
+  margin: 0;
+  margin-right: 2.5rem;
+}
+
+.interface-section .three-column-layout > .card:last-child {
+  margin: 0;
+}
+
+@media only screen and (max-width: 1650px) {
+  .negative-block-copy {
+    margin-top: -12rem;
+    padding-bottom: 4rem;
+  }
+}
+
 @media only screen and (max-width: 1440px) {
+  #competitive-adv {
+    padding: 2rem 4rem;
+  }
+
+  #competitive-adv .two-column-layout {
+    flex-direction: column;
+  }
+
+  #competitive-adv .img-1-container {
+    width: 100%;
+  }
+  
+  #competitive-adv .img-2-container {
+    width: 100%;
+  }
+
+  .negative-block-copy {
+    margin-top: 0;
+    padding-bottom: 0;
+    width: 100%;
+  }
+
   .section-1-banner {
     background-image: url('../images/overview-intro-mobile.png');
   }
