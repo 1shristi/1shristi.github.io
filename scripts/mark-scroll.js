@@ -38,6 +38,12 @@
     // Get the current vertical position of the scroll bar
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop
 
+    // We are at the bottom of the page so set selected item to conclusion
+    if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+      setSelected(sectionToAnchor.conclusion, navigationLinks)
+      return
+    }
+
     for (section of sections) {
       const sectionTop = section.offsetTop
       // If the user has scrolled over the top of the section  
@@ -47,21 +53,24 @@
 
         if (navigationLink) {
           if (!navigationLink.classList.contains('selected')) {
-            // Remove .selected class from all the links
-            navigationLinks.forEach(item => item?.classList.remove('selected'))
             // Add .selected class to the current link
             navigationLink.classList.add('selected')
+            setSelected(navigationLink, navigationLinks)
           }
         } else {
-          // Remove .selected class from all the links
-          navigationLinks.forEach(item => item?.classList.remove('selected'))
           // Default overview to be selected if no other item fits
-          sectionToAnchor.overview.classList.add('selected')
+          setSelected(sectionToAnchor.overview, navigationLinks)
         }
         // We have found our section, so we break the loop
         break
       }
     }
+  }
+
+  function setSelected(elementToSet, navigationLinks) {
+    // Remove .selected class from all the links
+    navigationLinks.forEach(item => item?.classList.remove('selected'))
+    elementToSet.classList.add('selected')
   }
 
   window.addEventListener('scroll',throttle(highlightNavigation, 150))
