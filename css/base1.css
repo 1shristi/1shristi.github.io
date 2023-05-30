@@ -162,6 +162,7 @@ input[type="text"], input[type="password"] {
 
 nav {
   margin-top: 100px;
+  min-width: 160px;
   position: sticky;
   top: 0;
   white-space: nowrap;
