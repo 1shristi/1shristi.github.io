@@ -1,3 +1,9 @@
+
+@font-face {
+  font-family: "American Typewriter";
+  src: url('font-family/AmericanTypewriter.ttc') format('truetype');
+}
+
 * {
   box-sizing: border-box;
 }
