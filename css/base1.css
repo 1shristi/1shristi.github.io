@@ -66,6 +66,7 @@ h4 {
 .page-header {
   align-self: flex-end;
   margin-bottom: 6rem;
+  text-align: right;
 }
 
 .subtitle {
@@ -109,9 +110,11 @@ input[type="text"], input[type="password"] {
 
 #left {
   display: block;
-  width: 7rem;
   padding-right: 5em;
-  overflow: hidden;
+  position: sticky;
+  overflow: visible;
+  top: 2rem;
+  width: 7rem;
 }
 
 #left:hover {
@@ -174,10 +177,9 @@ input[type="text"], input[type="password"] {
 }
 
 nav {
-  margin-top: 100px;
   min-width: 160px;
   position: sticky;
-  top: 0;
+  top: 2rem;
   white-space: nowrap;
 }
 
@@ -516,6 +518,10 @@ footer {
 
   #left h1 {
     font-size: 7vh;
+  }
+
+  .title {
+    width: 100%;
   }
 
   #left {
