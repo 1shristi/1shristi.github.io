@@ -25,11 +25,12 @@
             <nav>
               <div class="page-nav">
                 <a href="#overview" class="selected">overview</a>
-                <a href="#business-logic">business logic</a>
-                <a href="#comparison">comparison</a>
-                <a href="#competitive-adv">competitive adv</a>
-                <a href="#interface">interface</a>
-                <a href="#conclusion">conclusion</a>
+                <a href="#interface">solution</a>
+                <a href="#business-logic">deep dive: information architecture</a>
+                <a href="#comparison">deep dive: dataset relationships</a>
+                <a href="#competitive-adv">sketches</a>
+               
+                <a href="#conclusion">learnings</a>
               </div>
   
               <!-- TODO: Bring this back when about page is ready -->
@@ -97,12 +98,100 @@
             </div>
             </section>
 
+            <!--interface section -->
+            <section id="interface" class="flex two-column-layout font-secondary mb-20"> 
+                <span class="section-title">solution</span>
+                </section>
+  
+            <section id="interface" class="flex flex-column align-center interface-section font-secondary bg-blue mb-20">
+              <div class="flex three-column-layout mb-20">
+                <div class="card">
+                  <div class="block-copy mb-0">
+                    <span class="block-title">Overview dashboard: pie chart map</span>
+                    <ul>
+                      <li>Because the application has a real-world implication and references to an actual physical space, I wanted the application to visually reference to physical space where it was useful</li>
+                        <li>Each area of the dashboard shows a summary of information from their respective menu-items; interacting with any of the menu items allows the user to easily associate information with menu-items without getting confused or overloaded with information </li>
+
+                      <li>The spatial map shows immediate information about parking locations and broad activity status in pie charts</li>
+
+                      <li>The pie charts act as "Site setting" and "Space management" information, with the ability to interact with each chart for further details about each location</li>
+
+                      <li>Although the pie chart information does not change daily, it provides a frame of mind to the rest of the information displayed in the dashboard</li>
+
+                    </ul>
+                  </div>
+                </div>
+  
+                <div class="card">
+                  <div class="block-copy mb-0">
+                    <span class="block-title">Overview dashboard: Card details</span>
+                    <ul>
+                      <li>"Tenants and bays across all sites" and "Occupancy details" associates User and Activity menu-item content at a broad level for the spaces shown on the map</li>
+                      <li>Revenue and occupancy rates were turned from data tables into visual interactive graphs</li>
+                    </ul>
+                  </div>
+                </div>
+  
+            
+  
+              <img src="./images/interface4.png" class="img-1 mb-20" />
+  
+              <div class="flex three-column-layout mb-20">
+                <div class="card">
+                  <div class="block-copy mb-0">
+                    <span class="block-title">Overview dashboard: selecting pie chart</span>
+                    <ul>
+                        <li>One of the key features of the application is its ability to compare datasets; it was important show this feature visually so as to guide the user through the vast amounts of information</li>
+                      <li>Selecting a pie chart on the map introduces the user to further details about that specific location (including all its associated datasets across menu-items) in further detail </li>
+                     
+                    </ul>
+                  </div>
+                </div>
+
+             
+              <img src="./images/interface5.png" class="img-2 mb-20" />
+              <div class="flex three-column-layout mb-20">
+                  <div class="card">
+                    <div class="block-copy mb-0">
+                      <span class="block-title">Overview dashboard: selecting pie chart</span>
+                      <ul>
+                          <li>One of the key features of the application is its ability to compare datasets; it was important show this feature visually so as to guide the user through the vast amounts of information</li>
+                        <li>Selecting a pie chart on the map introduces the user to further details about that specific location (including all its associated datasets across menu-items) in further detail </li>
+                       
+                      </ul>
+                    </div>
+                  </div>
+              <div class="flex two-column-layout px-13">
+                <img src="./images/interface6.png" class="img-3" />
+
+                <div class="flex three-column-layout mb-20">
+                    <div class="card">
+                      <div class="block-copy mb-0">
+                        <span class="block-title">Overview dashboard: floor plans</span>
+                        <ul>
+                            <li>To solve for secondary menues and wizard forms, I advocated for applying visuals where the task normally would require visual documents for example, physical drawings of parking sites</li>
+                         
+                         
+                        </ul>
+                      </div>
+                    </div>
+                
+                  </div>
+                </div>
+              </div>
+            </section>
+
   <!-- business logic section !-->
   <section id="business-logic" class="flex two-column-layout font-secondary mb-20"> 
-  <span class="section-title">business logic</span>
+  <span class="section-title">deep dive: <br> information architecture</span>
   </section>
             <section id="business-logic" class="flex two-column-layout font-secondary mb-20"> 
               <div class="flex flex-column flex-1">
+                  <div class="block-copy">
+                      <span class="block-title">Challenge</span>
+                      <p class="block-text">Whatever bespoke features pitched was lost in the sheer amount of data tables across the 13 menu-items. And with little affordances to guide users, it was clear to see information architecture was one of the UX gaps. The following steps details my approach to prioritizing content for the purpose of designing a new dashboard.</p>
+                    </div>
+                  
                 <div class="block-copy">
                   <span class="block-title">Analysing the sidebar navigation</span>
                   <p class="block-text">Menu items in the side bar were listed somewhat arbitrarily with each menu item related to a specific user task. Examining each screen provided insight into the kinds of tasks users completed. </p>
@@ -140,6 +229,14 @@
                     <img class="flex-1 w-50" src="./images/business-logic-img2.png" />
                   </div>
                 
+
+                  <div class="flex flex-column flex-1">
+                      <div class="block-copy">
+                        <span class="block-title">Defining menu-items by usefulness</span>
+                        <p class="block-text">Each of the 13 menu-items display content to help the target user complete related tasks. The ability to complete a task varies by the number of actions the user must take. </p>
+                        
+                    </div>
+            </div>
             
 
                 <div class="flex flex-column flex-1">
@@ -151,233 +248,165 @@
                       <div class="grid-container">
                         <div class="grid-item no-outline"></div>
                         <div class="grid-item no-outline pl-0">
-                          <span class="block-subtitle-alt mb-0">Few actions</span>
+                          <span class="block-subtitle-alt mb-0">0-2 interactive components on screen</span>
                         </div>
                         <div class="grid-item no-outline pl-0">
-                          <span class="block-subtitle-alt mb-0">Multiple actions</span>
+                          <span class="block-subtitle-alt mb-0">+2 interactive components on screen</span>
                         </div>
                         <div class="grid-item small-grid-item no-outline pl-0">
-                          <span class="block-subtitle-alt mb-0">High priority task</span>
+                          <span class="block-subtitle-alt mb-0">Menu-item helps complete high priority task(s)</span>
                         </div>
                         <div class="grid-item">
-                          <span class="block-text-alt mb-0">Adding to, searching through, and/or exporting data tables.
-                              <img class="grid-image" src="./images/menu-hi-few.png" />
-                          </span> The content in these menu is important for making decisions related to other high-priority tasks. 
-                       
+                            
+                          <span class="block-text-alt mb-0">Example actions: Adding to, searching through datasets, updating physical entities
+                            <br><br>
+                              Example task: opening physical parking gate
+                              <br><br>
+                              Menu-items: <br><i>Site settings, Activity, Revenue</i>
+                          </span>  
+                          
                         </div>
 
                         <div class="grid-item">
-                          <span class="block-text-alt mb-0">Navigating to 1-5 dedicated secondary menues; table components that lead to complex wizard forms.
-                              <img class="grid-image" src="./images/menu-hi-multi.png" />
-                          </span> The content in these items are complex high-priority tasks with system-wide implications. 
+                          <span class="block-text-alt mb-0">Example actions: Navigating to 1-5 dedicated secondary menues and tasks;complex wizard forms.
+                              <br><br>
+                              Example task: Adding a new promotional parking rate
+                              <br><br>
+                              Menu-items: <br><i>Rates, Transient, Permissions, Users, Space Management</i>
+                          </span>  
                         </div>
                         <div class="grid-item small-grid-item no-outline pl-0">
-                          <span class="block-subtitle-alt mb-0">Low priority task</span>
+                          <span class="block-subtitle-alt mb-0">Menu-item helps complete low priority task(s)</span>
                         </div>
                         <div class="grid-item">
                           <span class="block-text-alt mb-0">View-only data tables, mostly archived content
-                              <img class="grid-image" src="./images/menu-lo-few.png" />
+                              <br><br>
+                              Example task: download data table
+                              <br><br>
+                              Menu-items: <br><i>History, Validation, Bookings</i>
                           </span>
                         </div>
                         <div class="grid-item">
-                          <span class="block-text-alt mb-0">Data tables with infrequently-used components (that are not just searching/downloading data tables) 
-                              <img class="grid-image" src="./images/menu-lo-multi.png" />
+                          <span class="block-text-alt mb-0">Data tables with infrequently-used components (that are not just searching/downloading actions)
+                             <br><br>
+                            Example task: update fee amount on table row
+                            <br><br>
+                            Menu-items: <br><i>Billing</i>
                           </span>
                         </div>
                       </div>
                     </div>
                     </div>
-
                     <div class="flex flex-column flex-1">
                         <div class="block-copy">
-                          <span class="block-title">Conclusion from navigation analysis</span>
-                          <p class="block-text">Menu items that have higher user priority should be further investigated. Menu items with multiple actions may or may not be too complex for the goals of this project. In conclusion I decided to narrow my research into content from the following menu items. </p>
-                          <p><br><i>Site settings, Activity, Rates, Transient, Permissions, Users, Space Management</i></p>
+                          <span class="block-title">Menu-items for Overview dashboard</span>
+                          <p class="block-text">These menu-items reflect tasks of highest priority.</p>
+                          <p><br><i>Site settings, Activity, Revenue, Rates, Transient, Permissions, Users, Space Management</i></p>
                       </div>
               </div>
             </section>
-<!-- comparison section -->
+<!-- new challenges section -->
             <section id="comparison" class="flex two-column-layout font-secondary mb-20"> 
-                <span class="section-title">comparison</span>
+                <span class="section-title">deep dive: dataset relationships</span>
                 </section>
             <section id="comparison" class="font-secondary mb-20">
               <div class="flex two-column-layout mb-20">
 
                   <div class="flex-1">
                       <div class="block-copy">
-                        <span class="block-title">Prioritizing the relevant content</span>
+                        <span class="block-title">Discovering complexities in the system</span>
                         <p class="block-text">
-                          The select menu items
-                          <p><br><i>Site settings, Activity, Rates, Transient, Permissions, Users, Space Management</i><br></p>
+                        Of the narrowed down list of menu-items, some interactive components can trigger changes to datasets in other areas of the system without the user's knowledge thus leading to confusion. 
+                      <br><br>
+                      For example, if a user updated the parking fee attributes for a single vehicle, it may override other billing charges across accounts (unbeknownst to the user who made the change).
+                    <br><br>
+                    By defining the relationship between the task the user completes in a menu-item, the number of interactions associated to each menu-item, and the impact the interaction has on other menu items, I narrowed the menu-items to highlight changes between: 
+                    <br><br>
+                    <i>Space management and Site settings, Activity and Users,</i>  
+                    </p>
 
-                          <br>were rated on how impactful their respective actionable components were on the entire system.  
-
-                          The green menu items in the following matrix graph represent tasks that of high priority with less actionable components but has the least impact across the system the highest opportunity to have affordances for an impactful design.
-                          <br><br>The green menu items in the following matrix graph hold this opportunity.
-                        </p>
                       </div>
                     </div>
 
                 <div class="flex-1 bg-grey">
                   <div class="flex flex-column p-6">
-                    <p class="block-title-alt">User actions and their respective impact across the system</p>
+                    <p class="block-title-alt">Relationship between menu-items</p>
+                    <p class="block-copy">The simpler the relationship, the better the content will be for a dashboard. 
+                      </p>
                     <img src="./images/comparison-img1.png" />
                   </div>
                 </div>
               </div>
+              
               <div class="flex two-column-layout">
                 <div class="flex-1 bg-grey">
                   <div class="flex flex-column p-6">
-                    <span class="block-title-alt">Monolithic architecture</span>
-                    <p class="block-text-alt">Borrowing language from programming, the remaining components from the matrix graph above can broadly be seen as monolithic, whereby one menu item (i.e. Space management) relies on the previous one (Site settings) in order to function.</p>
+                    <span class="block-title-alt">Number of user actions to complete task vs respective priority of task</span>
+                    <p class="block-text-alt">The higher the priority and the fewer interaction actions associated to it, the better the content will be for a dashboard.</p>
                     <img src="./images/comparison-img2.png" />
                   </div>
                 </div>
-                <div class="flex-1">
-                  <div class="block-copy">
-                    <span class="block-title">New Dashboard should</span>
-                    <ul>
-                      <li>Guide user around one area of control since all the other areas are too complex (i.e. monolithic architecture)</li>
-                      <li>Find opportunity to use spatial assets as a visual component to the application</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+
+                <div class="flex two-column-layout">
+                    <div class="flex-1 bg-grey">
+                      <div class="flex flex-column p-6">
+                        <span class="block-title-alt">Priority to complete task vs respective impact on system</span>
+                        <p class="block-text-alt">The higher the priority and the less it triggers unknown changes across the system, the better the content will be for the dashboard.</p>
+                        <img src="./images/comparison-img2.png" />
+                      </div>
+                    </div>
+
             </section>
   
 <!--competitive adv section -->
             <section id="competitive-adv" class="flex two-column-layout font-secondary mb-20"> 
-                <span class="section-title">competitive advantage</span>
+                <span class="section-title">sketches</span>
                 </section>
-            <section id="competitive-adv" class="flex flex-column font-secondary bg-grey">
-              <img src="./images/interface1.png" class="mb-27" />
+
+            <section id="competitive-adv" class="flex flex-column font-secondary bg-grey">  
+                  <div class="card">
+                    <div class="block-copy mb-0">
+                      <span class="block-title">Information to display on the dashboard</span>
+                      <ul>
+                          <li>Data about spaces and vehicles from Space management </li>
+                          <li>Data about Site settings as it relates to Space management</li>
+                          <li>Graph showing Revenue table data as it relates to Activity</li>
+                         
+                      </ul>
+                    </div>
+                  </div>
+               
               <div class="flex align-start two-column-layout">
                 <div class="img-1-container mr-0">
                   <img src="./images/interface2.png" />
                 </div>
-                <div class="img-2-container">
-                  <img src="./images/interface3.png" class="mt-4 mb-8" />
-                </div>
+               
               </div>
+              
               <div class="block-copy negative-block-copy">
-                <span class="block-title">New Dashboard should</span>
+                <span class="block-title">To avoid complexities and confusion</span>
                 <ul>
-                  <li>Guide user around one area of control since all the other areas are too complex (i.e. monolithic architecture)</li>
-                  <li>Find opportunity to use spatial assets as a visual component to the application</li>
-                </ul>
+                  <li>Apply affordances to guide user around one dataset to another</li>
+                  <li>Find opportunity to use spatial assets to reduce information overload</li>
+                  <li>Use visuals and typography to organize different types of menu-item content</li>
+                  <li> Where important information is far too complex to be in a dashboard, avoid showcasing more than necessary</li>
+                  </ul>
               </div>
             </section>
 
-<!--interface section -->
-            <section id="interface" class="flex two-column-layout font-secondary mb-20"> 
-                <span class="section-title">interface</span>
-                </section>
+
   
-            <section id="interface" class="flex flex-column align-center interface-section font-secondary bg-blue mb-20">
-              <div class="flex three-column-layout mb-20">
-                <div class="card">
-                  <div class="block-copy mb-0">
-                    <span class="block-title">Key takeaways about content</span>
-                    <ul>
-                      <li>Adding a map of the site areas on the Dashboard helps users visualize and begin their task </li>
-                      <li>Using site points on a map is the easiest way to help users navigation to other areas</li>
-                    </ul>
-                  </div>
-                </div>
-  
-                <div class="card">
-                  <div class="block-copy mb-0">
-                    <span class="block-title">Key takeaways about content</span>
-                    <ul>
-                      <li>Adding a map of the site areas on the Dashboard helps users visualize and begin their task </li>
-                      <li>Using site points on a map is the easiest way to help users navigation to other areas</li>
-                    </ul>
-                  </div>
-                </div>
-  
-                <div class="card">
-                  <div class="block-copy mb-0">
-                    <span class="block-title">Key takeaways about content</span>
-                    <ul>
-                      <li>Adding a map of the site areas on the Dashboard helps users visualize and begin their task </li>
-                      <li>Using site points on a map is the easiest way to help users navigation to other areas</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-  
-              <img src="./images/interface4.png" class="img-1 mb-20" />
-  
-              <div class="flex three-column-layout mb-20">
-                <div class="card">
-                  <div class="block-copy mb-0">
-                    <span class="block-title">Key takeaways about content</span>
-                    <ul>
-                      <li>Adding a map of the site areas on the Dashboard helps users visualize and begin their task </li>
-                      <li>Using site points on a map is the easiest way to help users navigation to other areas</li>
-                    </ul>
-                  </div>
-                </div>
-  
-                <div class="card">
-                  <div class="block-copy mb-0">
-                    <span class="block-title">Key takeaways about content</span>
-                    <ul>
-                      <li>Adding a map of the site areas on the Dashboard helps users visualize and begin their task </li>
-                      <li>Using site points on a map is the easiest way to help users navigation to other areas</li>
-                    </ul>
-                  </div>
-                </div>
-  
-                <div class="card">
-                  <div class="block-copy mb-0">
-                    <span class="block-title">Key takeaways about content</span>
-                    <ul>
-                      <li>Adding a map of the site areas on the Dashboard helps users visualize and begin their task </li>
-                      <li>Using site points on a map is the easiest way to help users navigation to other areas</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-  
-              <img src="./images/interface5.png" class="img-2 mb-20" />
-  
-              <div class="flex two-column-layout px-13">
-                <img src="./images/interface6.png" class="img-3" />
-  
-                <div class="flex flex-column">
-                  <div class="card mb-10 mr-0">
-                    <div class="block-copy mb-0">
-                      <span class="block-title">Key takeaways about content</span>
-                      <ul>
-                        <li>Adding a map of the site areas on the Dashboard helps users visualize and begin their task </li>
-                        <li>Using site points on a map is the easiest way to help users navigation to other areas</li>
-                      </ul>
-                    </div>
-                  </div>
-  
-                  <div class="card mr-0">
-                    <div class="block-copy mb-0">
-                      <span class="block-title">Key takeaways about content</span>
-                      <ul>
-                        <li>Adding a map of the site areas on the Dashboard helps users visualize and begin their task </li>
-                        <li>Using site points on a map is the easiest way to help users navigation to other areas</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-  
-<!--conclusion section -->
+<!--learnings section -->
             
             <section id="conclusion" class="font-secondary mb-27">
               <div class="card conclusion-card">
                 <div class="flex flex-column align-center block-copy mb-0">
-                  <span class="block-title mb-4">Key takeaways about content</span>
+                  <span class="block-title mb-4">Learnings from the project</span>
                   <ul>
-                    <li>Adding a map of the site areas on the Dashboard helps users visualize and begin their task </li>
-                    <li>Using site points on a map is the easiest way to help users navigation to other areas</li>
+                    <li>Besides the difficulty in mapping attributes and contingencies for dataset relationships: 
+                    Stakeholders had a general idea of the kind of information they wanted to see as part of the final design. 
+                    <br><br>
+                    I was more than happy to design what was asked of me but it was difficult to blindly accept client's design requests without fully comprehending why (if at all) the requests made sense for the user</li>
                   </ul>
   
                   <a href="index.html" class="button">back</a>
