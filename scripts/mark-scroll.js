@@ -1,5 +1,5 @@
 (() => {
-  // Cache the navigation links 
+  // Cache the navigation links
   const navigationLinks = [...document.querySelectorAll('nav > .page-nav > a')]
   // Cache (in reversed order) the sections
   const sections = [...document.getElementsByTagName('section')].reverse()
@@ -40,13 +40,14 @@
 
     // We are at the bottom of the page so set selected item to conclusion
     if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
-      setSelected(sectionToAnchor.conclusion, navigationLinks)
+      const bottomNavigationLink = navigationLinks[navigationLinks.length - 1]
+      setSelected(bottomNavigationLink, navigationLinks)
       return
     }
 
     for (section of sections) {
       const sectionTop = section.offsetTop
-      // If the user has scrolled over the top of the section  
+      // If the user has scrolled over the top of the section
       if (scrollPosition >= sectionTop - 10) {
         // Get the corresponding navigation link
         const navigationLink = sectionToAnchor[section.id]
@@ -59,7 +60,8 @@
           }
         } else {
           // Default overview to be selected if no other item fits
-          setSelected(sectionToAnchor.overview, navigationLinks)
+          const topNavigationLink = navigationLinks[0]
+          setSelected(topNavigationLink, navigationLinks)
         }
         // We have found our section, so we break the loop
         break
@@ -73,5 +75,5 @@
     elementToSet.classList.add('selected')
   }
 
-  window.addEventListener('scroll',throttle(highlightNavigation, 150))
+  window.addEventListener('scroll', throttle(highlightNavigation, 150))
 })()
