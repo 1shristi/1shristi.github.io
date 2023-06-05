@@ -79,10 +79,6 @@ img {
   object-fit: contain;
 }
 
-.grid-image {
-  width: 50%;
-}
-
 p {
   font-size: 1em;
   font-weight: 300;
@@ -252,15 +248,6 @@ nav a:hover {
   line-height: 4.75rem;
 }
 
-.section-title {
-  color: #000;
-  font-weight: normal;
-  line-height: 4.75rem;
-  font-family: 'american typewriter';
-  font-size: 1.4em;
-  text-align-last: right;
-}
-
 .block-text {
   font-weight: 400;
   line-height: 1.75rem;
@@ -268,7 +255,7 @@ nav a:hover {
 
 .block-title-alt {
   color: #181818;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.25rem;
   margin-bottom: 1.5rem;
 }
@@ -281,9 +268,8 @@ nav a:hover {
 
 .block-text-alt {
   color: #575757;
-  font-weight: 200;
-  line-height: 1rem;
-  margin-bottom: .6rem;
+  line-height: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .image-copy {
@@ -310,15 +296,15 @@ nav a:hover {
 
 .arrow-list > li {
   display: grid;
-  grid-template-columns: 40px auto;
+  grid-template-columns: 20px auto;
   justify-content: start;
   align-items: center;
 }
 
 .arrow-list > li::before {
-  content: "\2794";
-  font-size: 2.5vh;
-  color: #000;
+  content: "\279C";
+  font-size: 10px;
+  color: #999;
 }
 
 #individual_project {
@@ -496,8 +482,6 @@ footer {
   margin: 0 3rem;
   padding: 3rem;
 }
-
-
 
 @media only screen and (max-width: 1440px) {
   .image-copy {
