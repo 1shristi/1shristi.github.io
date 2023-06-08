@@ -26,8 +26,8 @@
               <div class="page-nav">
                 <a href="#overview" class="selected">overview</a>
                 <a href="#interface">solution</a>
-                <a href="#business-logic">deep dive: information architecture</a>
-                <a href="#comparison">deep dive: dataset relationships</a>
+                <a href="#business-logic">deep dive: IA</a>
+                <a href="#comparison">deep dive: dataset</a>
                 <a href="#competitive-adv">sketches</a>
                
                 <a href="#conclusion">learnings</a>
@@ -58,7 +58,7 @@
             <section id="overview" class="flex flex-column font-secondary mb-20">
               <div class="flex banner-container section-1-banner mb-20">
                 <div class="image-copy px-12">
-                  <span class="image-title">The client had built an excellent demo application for site managers to track and manage vehicles across parking sites. However despite showing valuable content, the features of the application were not clear.</span>
+                  <span class="image-title">When showcasing a demo of their product for site managers to track and manage vehicles across parking sites, potential buyers could not easily perceive the value of the features based on the UI.</span>
                 </div>
               </div>
   
@@ -66,21 +66,24 @@
                 <div class="flex flex-1">
                   <div class="card negative-card align-self-start">
                     <div class="block-copy">
-                      <p class="block-text">When presenting screenshots of the application to potential buyers, the UI did not easily show all the features it's capable of processing. I noticed a lack of affordances when collecting observations about the usability of the application, particularly on the Overview dashboard. 
+                      <p class="block-text">When making observations about the usability of the application, I noticed a significant lack of affordances, particularly on Overview dashboard, the screen most important for potential buyers to see. 
+                        
                     </div>
   
                     <div class="block-copy mb-0">
-                      <p class="block-text">I <b>learned about the product</b> and design constraints to the project.  I chose to <b>analyse the content</b> within each of the menu items of the navigation sidebar to understand assumptions about user needs. By doing this, I could select <b>the most important data</b> that would be best suited to replace their current Overview dashboard.  </p>
+                      <p class="block-text">To address this entire challenge, I relied on the application's information architecture in my design process. I began by <b>learning about the product and the design constraints</b> to the project. 
+                        <br><br>
+                      Then setting time to <b>analyse the UI content</b> of each screen linked in the navigation sidebar. By doing this, I had a strong contextual understanding of user needs and could confidently point to <b>the most important content and styles</b> that would be best suited to replace the current Overview dashboard.  </p>
                     </div>
                   </div>
                 </div>
   
                 <div class="flex flex-1">
                   <div class="block-copy px-12 mb-0">
-                      <span class="block-title2">Project constraints into project planning</span>
+                      <span class="block-title2">Outlining the project plan by  constraints</span>
                   
                     
-                      <span class="block-title">1. Little qualitative and quantitative usability data to rely on</span>
+                      <span class="block-title">1. Little qualitative and quantitative usability data to rely on</span><br>
                       <span class="block-title">2. No time to arrange user interviews</span>
 
                       <ul class="arrow-list">
@@ -107,30 +110,19 @@
               <div class="flex three-column-layout mb-20">
                 <div class="card">
                   <div class="block-copy mb-0">
-                    <span class="block-title">Overview dashboard: pie chart map</span>
+                    <span class="block-title">Key UI decision: Gradual reveal</span>
+                    <br>
+                    <span class="block-copy-alt">To avoid information overload, the user is introduced to information and data gradually</span>
                     <ul>
-                      <li>Because the application has a real-world implication and references to an actual physical space, I wanted the application to visually reference to physical space where it was useful</li>
-                        <li>Each area of the dashboard shows a summary of information from their respective menu-items; interacting with any of the menu items allows the user to easily associate information with menu-items without getting confused or overloaded with information </li>
-
-                      <li>The spatial map shows immediate information about parking locations and broad activity status in pie charts</li>
-
-                      <li>The pie charts act as "Site setting" and "Space management" information, with the ability to interact with each chart for further details about each location</li>
-
-                      <li>Although the pie chart information does not change daily, it provides a frame of mind to the rest of the information displayed in the dashboard</li>
-
+                      <li>The map is the first thing users see. It visually references the physical space that site managers work with (in their mental model).</li>
+                      <li>Interacting with each pie chart reveals further location information within the map, enabling user-friendly association without confusion.</li>
+                      <li>Pie charts frame the rest of the content displayed in the dashboard cards.</li>
+                      <li>Each card summarizes information that encourages users to navigate to a seperate page to complete any associated tasks.</li>
+                      <li>As a rule, previous read-only table data is shown in charts to reduce information overload.</li>
                     </ul>
                   </div>
                 </div>
-  
-                <div class="card">
-                  <div class="block-copy mb-0">
-                    <span class="block-title">Overview dashboard: Card details</span>
-                    <ul>
-                      <li>"Tenants and bays across all sites" and "Occupancy details" associates User and Activity menu-item content at a broad level for the spaces shown on the map</li>
-                      <li>Revenue and occupancy rates were turned from data tables into visual interactive graphs</li>
-                    </ul>
-                  </div>
-                </div>
+
   
             
   

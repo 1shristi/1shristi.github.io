@@ -1,13 +1,41 @@
-
-/*@font-face {
+/*
+@font-face {
   font-family: "American Typewriter";
-  src: url('/font-family/AmericanTypewriter-01.ttf') format('truetype');
-  src: url('/font-family/AmericanTypewriter-Semibold-04.ttf') format('truetype');
-  src: url('/font-family/AmericanTypewriter-Bold-03.ttf') format('truetype');
-  src: url('/font-family/AmericanTypewriter-Light-02.ttf') format('truetype');
-  src: url('/font-family/AmericanTypewriter-CondensedLight-07.ttf') format('truetype');
- 
-} */
+  src: url('../font-family/AmericanTypewriter-01.ttf');
+  src: url('../font-family/AmericanTypewriter-Semibold-04.ttf') format('truetype');
+  src: url('../font-family/AmericanTypewriter-Bold-03.ttf') format('truetype');
+  src: url('../font-family/AmericanTypewriter-Light-02.ttf') format('truetype');
+  src: url('../font-family/AmericanTypewriter-CondensedLight-07.ttf') format('truetype');
+  
+} 
+
+@font-face {
+  font-family: 'American Typewriter';
+  src: url('../font-family/AmericanTypewriter.eot');
+  src: local('/font-family/American Typewriter'), local('AmericanTypewriter'),
+      url('/font-family/AmericanTypewriter.eot?#iefix') format('embedded-opentype'),
+      url('/font-family/AmericanTypewriter.woff2') format('woff2'),
+      url('/font-family/AmericanTypewriter.woff') format('woff'),
+      url('/font-family/AmericanTypewriter.svg#AmericanTypewriter') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'American Typewriter';
+  src: url('../font-family/AmericanTypewriter.eot');
+  src: local('/font-family/American Typewriter'), local('AmericanTypewriter'),
+      url('/font-family/AmericanTypewriter.eot?#iefix') format('embedded-opentype'),
+      url('/font-family/AmericanTypewriter.woff2') format('woff2'),
+      url('/font-family/AmericanTypewriter.woff') format('woff'),
+      url('/font-family/AmericanTypewriter.svg#AmericanTypewriter') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+*/
+
 
 * {
   box-sizing: border-box;
