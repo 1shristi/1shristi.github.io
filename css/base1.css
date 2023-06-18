@@ -179,7 +179,7 @@ input[type="text"], input[type="password"] {
 }
 
 nav {
-  min-width: 160px;
+  min-width: 310px;
   position: sticky;
   top: 2rem;
   white-space: nowrap;
