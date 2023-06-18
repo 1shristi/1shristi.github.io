@@ -179,7 +179,7 @@ input[type="text"], input[type="password"] {
 }
 
 nav {
-  min-width: 310px;
+  min-width: 230px;
   position: sticky;
   top: 2rem;
   white-space: nowrap;
@@ -202,6 +202,19 @@ nav a:hover {
 
 .page-nav a {
   line-height: 2em;
+}
+
+.page-nav .submenu .submenu-header {
+  line-height: 2em;
+}
+
+.page-nav .submenu .submenu-item {
+  line-height: 1.75em;
+  margin-left: 1rem;
+}
+
+.page-nav .submenu .submenu-item {
+  margin-bottom: 0.25rem;
 }
 
 .selected {
