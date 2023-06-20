@@ -102,60 +102,62 @@
           </section>
 
           <!-- Solution section -->
-          <section id="solution" class="flex flex-column align-center solution-section font-secondary bg-blue mb-20">
+          <section id="solution" class="flex flex-column solution-section font-secondary mb-20">
             <span class="section-title">solution</span>
 
-            <img src="./images/interface4.png" class="img-1 mb-20" />
+            <div class="flex flex-column align-center bg-blue solution-content">
+              <img src="./images/interface4.png" class="img-1 mb-20" />
 
-            <div class="flex three-column-layout mb-20">
-              <div class="card">
-                <div class="block-copy mb-0">
-                  <span class="block-title">Key UI decision: Gradual reveal</span>
-                  <br>
-                  <span class="block-copy-alt">To avoid information overload, the user is introduced to information and data gradually</span>
-                  <ul>
-                    <li>The map is the first thing users see. It visually references the physical space that site managers work with (in their mental model).</li>
-                    <li>Interacting with each pie chart reveals further location information within the map, enabling user-friendly association without confusion.</li>
-                    <li>Pie charts frame the rest of the content displayed in the dashboard cards.</li>
-                    <li>Each card summarizes information that encourages users to navigate to a seperate page to complete any associated tasks.</li>
-                    <li>As a rule, previous read-only table data is shown in charts to reduce information overload.</li>
-                  </ul>
+              <div class="flex three-column-layout mb-20">
+                <div class="card">
+                  <div class="block-copy mb-0">
+                    <span class="block-title">Key UI decision: Gradual reveal</span>
+                    <br>
+                    <span class="block-copy-alt">To avoid information overload, the user is introduced to information and data gradually</span>
+                    <ul>
+                      <li>The map is the first thing users see. It visually references the physical space that site managers work with (in their mental model).</li>
+                      <li>Interacting with each pie chart reveals further location information within the map, enabling user-friendly association without confusion.</li>
+                      <li>Pie charts frame the rest of the content displayed in the dashboard cards.</li>
+                      <li>Each card summarizes information that encourages users to navigate to a seperate page to complete any associated tasks.</li>
+                      <li>As a rule, previous read-only table data is shown in charts to reduce information overload.</li>
+                    </ul>
+                  </div>
+                </div>
+
+              <img src="./images/interface5.png" class="img-2 mb-20" />
+
+              <div class="flex two-column-layout dense mb-20">
+                <div class="card">
+                  <div class="block-copy mb-0">
+                    <span class="block-title">Overview dashboard: selecting pie chart</span>
+                    <ul>
+                        <li>One of the key features of the application is its ability to compare datasets; it was important show this feature visually so as to guide the user through the vast amounts of information</li>
+                      <li>Selecting a pie chart on the map introduces the user to further details about that specific location (including all its associated datasets across menu-items) in further detail </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
 
-            <img src="./images/interface5.png" class="img-2 mb-20" />
+              <div class="flex two-column-layout px-13">
+                <img src="./images/interface6.png" class="img-3" />
 
-            <div class="flex two-column-layout dense mb-20">
-              <div class="card">
-                <div class="block-copy mb-0">
-                  <span class="block-title">Overview dashboard: selecting pie chart</span>
-                  <ul>
-                      <li>One of the key features of the application is its ability to compare datasets; it was important show this feature visually so as to guide the user through the vast amounts of information</li>
-                    <li>Selecting a pie chart on the map introduces the user to further details about that specific location (including all its associated datasets across menu-items) in further detail </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex two-column-layout px-13">
-              <img src="./images/interface6.png" class="img-3" />
-
-              <div class="card mr-0">
-                <div class="block-copy mb-0">
-                  <span class="block-title">Overview dashboard: floor plans</span>
-                  <ul>
-                    <li>To solve for secondary menues and wizard forms, I advocated for applying visuals where the task normally would require visual documents for example, physical drawings of parking sites</li>
-                  </ul>
+                <div class="card mr-0">
+                  <div class="block-copy mb-0">
+                    <span class="block-title">Overview dashboard: floor plans</span>
+                    <ul>
+                      <li>To solve for secondary menues and wizard forms, I advocated for applying visuals where the task normally would require visual documents for example, physical drawings of parking sites</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
 
           <!-- Deep dive: information architecture section !-->
-          <section id="deep-dive-ia" class="flex two-column-layout font-secondary mb-20">
-            <span class="section-title">deep dive: <br> information architecture</span>
+          <section id="deep-dive-ia" class="flex flex-column align-center font-secondary mb-20">
+            <span class="section-title">deep dive: information architecture</span>
 
-            <div class="flex flex-column flex-1">
+            <div class="flex flex-column condensed-column">
               <div class="block-copy">
                 <span class="block-title">Challenge</span>
                 <p class="block-text">Whatever bespoke features pitched was lost in the sheer amount of data tables across the 13 menu-items. And with little affordances to guide users, it was clear to see information architecture was one of the UX gaps. The following steps details my approach to prioritizing content for the purpose of designing a new dashboard.</p>
@@ -167,7 +169,7 @@
               </div>
             </div>
 
-            <div class="flex align-center bg-grey p-6"> 
+            <div class="flex align-center bg-grey w-full p-6 mb-8"> 
               <img class="flex-1 w-50 mr-4" src="./images/business-logic-img1.png" />
               <div class="flex-1 block-copy-alt mb-0">
                 <span class="block-title-alt">For each screen linked from the Navigation sidebar</span>
@@ -179,14 +181,14 @@
               </div>
             </div>
 
-            <div class="flex flex-column flex-1">
+            <div class="flex flex-column condensed-column">
               <div class="block-copy">
                 <span class="block-title">Interviewing stakeholders about the business</span>
                 <p class="block-text">Defining the purpose of each screen helped contextualize the interviews with stakeholders and identify relationships between product, people, and the system. Interview answers clarified <i>stakeholder</i> assumptions regarding the target user.</p>
               </div>
             </div>
 
-            <div class="flex align-center bg-grey p-6">
+            <div class="flex align-center bg-grey w-full p-6 mb-8">
               <div class="flex-1 block-copy-alt mr-4 mb-0">
                 <span class="block-title-alt">Stakeholder interviews to clarify following relationships</span>
                 <p class="block-text-alt">Understanding the relationship between location of parking and vehicle status </p>
@@ -198,14 +200,14 @@
               <img class="flex-1 w-50" src="./images/business-logic-img2.png" />
             </div>
 
-            <div class="flex flex-column flex-1">
+            <div class="flex flex-column condensed-column">
               <div class="block-copy">
                 <span class="block-title">Defining menu-items by usefulness</span>
                 <p class="block-text">Each of the 13 menu-items display content to help the target user complete related tasks. The ability to complete a task varies by the number of actions the user must take. </p>
               </div>
             </div>
 
-            <div class="flex flex-column flex-1">
+            <div class="flex flex-column w-full">
               <div class="flex flex-column bg-grey p-6 mb-8">
                 <div class="block-copy">
                   <span class="block-title-alt">Type of actions the user does by complexity and priority</span>
@@ -273,7 +275,7 @@
               </div>
             </div>
 
-            <div class="flex flex-column flex-1">
+            <div class="flex flex-column condensed-column">
               <div class="block-copy">
                 <span class="block-title">Menu-items for Overview dashboard</span>
                 <p class="block-text">These menu-items reflect tasks of highest priority.</p>
@@ -284,7 +286,7 @@
           </section>
 
           <!-- Deep dive: dataset relationships section -->
-          <section id="deep-dive-dataset-relationships" class="font-secondary mb-20">
+          <section id="deep-dive-dataset-relationships" class="flex flex-column font-secondary mb-20">
             <span class="section-title">deep dive: dataset relationships</span>
 
             <div class="flex two-column-layout mb-20">
@@ -333,32 +335,34 @@
           </section>
 
           <!-- Sketches section -->
-          <section id="sketches" class="flex flex-column font-secondary bg-grey">
+          <section id="sketches" class="flex flex-column font-secondary">
             <span class="section-title">sketches</span>
 
-            <div class="card mb-8">
-              <div class="block-copy mb-0">
-                <span class="block-title">Information to display on the dashboard</span>
+            <div class="flex flex-column bg-grey w-full sketches-content">
+              <div class="card mb-8">
+                <div class="block-copy mb-0">
+                  <span class="block-title">Information to display on the dashboard</span>
+                  <ul>
+                    <li>Data about spaces and vehicles from Space management</li>
+                    <li>Data about Site settings as it relates to Space management</li>
+                    <li>Graph showing Revenue table data as it relates to Activity</li>
+                  </ul>
+                </div>
+              </div>
+  
+              <div class="img-1-container mr-0 mb-8">
+                <img src="./images/interface2.png" />
+              </div>
+  
+              <div class="block-copy negative-block-copy mb-20">
+                <span class="block-title">To avoid complexities and confusion</span>
                 <ul>
-                  <li>Data about spaces and vehicles from Space management</li>
-                  <li>Data about Site settings as it relates to Space management</li>
-                  <li>Graph showing Revenue table data as it relates to Activity</li>
+                  <li>Apply affordances to guide user around one dataset to another</li>
+                  <li>Find opportunity to use spatial assets to reduce information overload</li>
+                  <li>Use visuals and typography to organize different types of menu-item content</li>
+                  <li> Where important information is far too complex to be in a dashboard, avoid showcasing more than necessary</li>
                 </ul>
               </div>
-            </div>
-
-            <div class="img-1-container mr-0 mb-8">
-              <img src="./images/interface2.png" />
-            </div>
-
-            <div class="block-copy negative-block-copy mb-20">
-              <span class="block-title">To avoid complexities and confusion</span>
-              <ul>
-                <li>Apply affordances to guide user around one dataset to another</li>
-                <li>Find opportunity to use spatial assets to reduce information overload</li>
-                <li>Use visuals and typography to organize different types of menu-item content</li>
-                <li> Where important information is far too complex to be in a dashboard, avoid showcasing more than necessary</li>
-              </ul>
             </div>
           </section>
 
