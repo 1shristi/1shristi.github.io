@@ -37,22 +37,22 @@
 }
 
 .small-grid-item {
-  max-width: 5rem;
+  max-width: 12rem;
 }
 
-#sketches {
+.sketches-content {
   padding: 2rem 9.5rem;
 }
 
-#sketches .img-1-container {
+.sketches-content .img-1-container {
   width: 65%;
 }
 
-#sketches .img-2-container {
+.sketches-content .img-2-container {
   width: 35%;
 }
 
-.solution-section {
+.solution-content {
   padding: 2.5rem;
 }
 
@@ -95,19 +95,19 @@
 }
 
 @media only screen and (max-width: 1440px) {
-  #sketches {
+  .sketches-content {
     padding: 2rem 4rem;
   }
 
-  #sketches .two-column-layout {
+  .sketches-content .two-column-layout {
     flex-direction: column;
   }
 
-  #sketches .img-1-container {
+  .sketches-content .img-1-container {
     width: 100%;
   }
   
-  #sketches .img-2-container {
+  .sketches-content .img-2-container {
     width: 100%;
   }
 
