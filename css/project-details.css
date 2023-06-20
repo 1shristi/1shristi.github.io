@@ -19,9 +19,9 @@
 
 .negative-block-copy {
   align-self: flex-end;
-  margin-top: -14rem;
+  margin-top: -18rem;
   padding-bottom: 6rem;
-  width: 50%;
+  width: 48%;
 }
 
 .grid-container {
@@ -45,7 +45,6 @@
 }
 
 #sketches .img-1-container {
-  margin-right: 7rem;
   width: 65%;
 }
 
@@ -54,7 +53,7 @@
 }
 
 .solution-section {
-  padding: 2.5rem 2.5rem 14.5rem 2.5rem;
+  padding: 2.5rem;
 }
 
 .solution-section .two-column-layout {
@@ -64,7 +63,6 @@
 .solution-section .two-column-layout.dense {
   padding: 0;
 }
-
 
 .solution-section .two-column-layout.dense > .card,
 .solution-section .three-column-layout > .card {
@@ -91,7 +89,7 @@
 
 @media only screen and (max-width: 1650px) {
   .negative-block-copy {
-    margin-top: -12rem;
+    margin-top: -14rem;
     padding-bottom: 4rem;
   }
 }
@@ -125,6 +123,7 @@
 }
 
 @media only screen and (max-width: 1280px) {
+  .solution-section .two-column-layout.dense > .card,
   .solution-section .three-column-layout > .card {
     margin-bottom: 2rem;
     margin-right: 0;

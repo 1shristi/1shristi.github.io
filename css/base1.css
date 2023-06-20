@@ -271,7 +271,6 @@ nav a:hover {
   line-height: 4.75rem;
   font-family: 'american typewriter';
   font-size: 1.4em;
-  text-align-last: right;
 }
 
 .block-text {
@@ -581,8 +580,8 @@ footer {
 
   #info {
     position: fixed;
-    top: 15vh;
-    left: 5vh;
+    top: 10vh;
+    left: 2vw;
     margin: 0;
     padding: 0;
   }
@@ -594,7 +593,7 @@ footer {
   #full_work {
     margin: 0;
     padding: 0;
-    padding-left: 25vw;
+    padding-left: 250px; /* Width of nav + padding */
     padding-right: 0;
     width: auto;
   }
