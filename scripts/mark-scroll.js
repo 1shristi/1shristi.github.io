@@ -1,6 +1,6 @@
 (() => {
   // Cache the navigation links
-  const navigationLinks = [...document.querySelectorAll('nav > .page-nav > a')]
+  const navigationLinks = [...document.querySelectorAll('nav > .page-nav a')]
   // Cache (in reversed order) the sections
   const sections = [...document.getElementsByTagName('section')].reverse()
 
@@ -8,7 +8,7 @@
   let sectionToAnchor = {}
 
   for (section of sections) {
-    const anchor = document.querySelector(`nav > .page-nav > a[href=\\#${section.id}]`)
+    const anchor = document.querySelector(`nav > .page-nav a[href=\\#${section.id}]`)
     if (anchor) {
       sectionToAnchor[section.id] = anchor
     }

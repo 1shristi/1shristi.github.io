@@ -9,8 +9,8 @@
   background-size: cover;
 }
 
-.conclusion-card {
-  margin-top: -13rem;
+.learnings-card {
+  margin-top: -6rem;
 }
 
 .negative-card {
@@ -19,9 +19,9 @@
 
 .negative-block-copy {
   align-self: flex-end;
-  margin-top: -14rem;
+  margin-top: -18rem;
   padding-bottom: 6rem;
-  width: 50%;
+  width: 48%;
 }
 
 .grid-container {
@@ -37,72 +37,77 @@
 }
 
 .small-grid-item {
-  max-width: 5rem;
+  max-width: 12rem;
 }
 
-#competitive-adv {
+.sketches-content {
   padding: 2rem 9.5rem;
 }
 
-#competitive-adv .img-1-container {
-  margin-right: 7rem;
+.sketches-content .img-1-container {
   width: 65%;
 }
 
-#competitive-adv .img-2-container {
+.sketches-content .img-2-container {
   width: 35%;
 }
 
-.interface-section {
-  padding: 2.5rem 2.5rem 14.5rem 2.5rem;
+.solution-content {
+  padding: 2.5rem;
 }
 
-.interface-section .two-column-layout {
+.solution-section .two-column-layout {
   padding: 0 3.25rem;
 }
 
-.interface-section .three-column-layout > .card {
+.solution-section .two-column-layout.dense {
+  padding: 0;
+}
+
+.solution-section .two-column-layout.dense > .card,
+.solution-section .three-column-layout > .card {
   margin: 0;
   margin-right: 2.5rem;
 }
 
-.interface-section .three-column-layout > .card:last-child {
+.solution-section .two-column-layout.dense > .card:last-child,
+.solution-section .three-column-layout > .card:last-child {
   margin: 0;
 }
 
-.interface-section .img-1 {
+.solution-section .img-1 {
   width: 85%;
 }
 
-.interface-section .img-2 {
-  width: 55%;
+.solution-section .img-2 {
+  width: 65%;
 }
 
-.interface-section .img-3 {
+.solution-section .img-3 {
   width: 60%;
 }
 
 @media only screen and (max-width: 1650px) {
   .negative-block-copy {
-    margin-top: -12rem;
+    margin-top: -14rem;
     padding-bottom: 4rem;
   }
 }
 
 @media only screen and (max-width: 1440px) {
-  #competitive-adv {
+  .sketches-content {
     padding: 2rem 4rem;
   }
 
-  #competitive-adv .two-column-layout {
+  .sketches-content .two-column-layout {
     flex-direction: column;
   }
 
-  #competitive-adv .img-1-container {
+  .sketches-content .img-1-container {
     width: 100%;
   }
   
-  #competitive-adv .img-2-container {
+  .sketches-content .img-2-container {
     width: 100%;
   }
 
@@ -118,25 +123,26 @@
 }
 
 @media only screen and (max-width: 1280px) {
-  .interface-section .three-column-layout > .card {
+  .solution-section .two-column-layout.dense > .card,
+  .solution-section .three-column-layout > .card {
     margin-bottom: 2rem;
     margin-right: 0;
   }
 
-  .interface-section .img-1 {
+  .solution-section .img-1 {
     width: 100%;
   }
   
-  .interface-section .img-2 {
+  .solution-section .img-2 {
     width: 100%;
   }
   
-  .interface-section .img-3 {
+  .solution-section .img-3 {
     margin-bottom: 2.5rem;
     width: 100%;
   }
 
-  .interface-section .two-column-layout {
+  .solution-section .two-column-layout {
     padding: 0;
   }
 
@@ -144,7 +150,7 @@
     margin-top: 0;
   }
 
-  .conclusion-card {
+  .learnings-card {
     margin-left: 2.5rem;
     margin-right: 2.5rem;
   }
