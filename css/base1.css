@@ -178,7 +178,7 @@ input[type="text"], input[type="password"] {
 }
 
 nav {
-  min-width: 190px;
+  min-width: 150px;
   position: sticky;
   top: 2rem;
   white-space: nowrap;
@@ -261,12 +261,14 @@ nav a:hover,
 
 .block-title {
   color: #4C93C3;
+  display: flex;
   font-weight: bold;
   line-height: 1.75rem;
 }
 
 .block-title2 {
   color: #000000;
+  display: flex;
   font-weight: bold;
   line-height: 4.75rem;
 }
@@ -616,7 +618,7 @@ footer {
   #full_work {
     margin: 0;
     padding: 0;
-    padding-left: 250px; /* Width of nav + padding */
+    padding-left: 210px; /* Width of nav + padding */
     padding-right: 0;
     width: auto;
   }
