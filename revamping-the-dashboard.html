@@ -27,9 +27,9 @@
               <a href="#overview" class="selected">overview</a>
               <a href="#solution">solution</a>
               <div class="submenu">
-                <span class="submenu-header">deep dive</span>
-                <a class="submenu-item" href="#deep-dive-ia">information architecture</a>
-                <a class="submenu-item" href="#deep-dive-dataset-relationships">dataset relationships</a>
+                <span class="submenu-header">challenges</span>
+                <a class="submenu-item" href="#deep-dive-ia">info architecture</a>
+                <a class="submenu-item" href="#deep-dive-dataset-relationships">dataset relationship</a>
               </div>
               <a href="#sketches">sketches</a>
               <a href="#learnings">learnings</a>
@@ -106,75 +106,43 @@
             <span class="section-title">solution</span>
 
             <div class="flex flex-column align-center bg-blue solution-content">
-              <img src="./images/interface4.png" class="img-1 mb-20" />
+              <img src="./images/interface4.png" class="img-1 mt-20 mb-20" />
 
-              <div class="flex three-column-layout mb-20">
-                <div class="card">
-                  <div class="block-copy mb-0">
-                    <span class="block-title">Overview dashboard: pie chart map</span>
-                    <ul>
-                      <li>Because the application has a real-world implication and references to an actual physical space, I wanted the application to visually reference to physical space where it was useful</li>
-                      <li>Each area of the dashboard shows a summary of information from their respective menu-items; interacting with any of the menu items allows the user to easily associate information with menu-items without getting confused or overloaded with information </li>
-                      <li>The spatial map shows immediate information about parking locations and broad activity status in pie charts</li>
-                    </ul>
-                  </div>
-                </div>
-  
-                <div class="card">
-                  <div class="block-copy mb-0">
-                    <span class="block-title">Overview dashboard: Card details</span>
-                    <ul>
-                      <li>"Tenants and bays across all sites" and "Occupancy details" associates User and Activity menu-item content at a broad level for the spaces shown on the map</li>
-                      <li>Revenue and occupancy rates were turned from data tables into visual interactive graphs</li>
-                    </ul>
-                  </div>
-                </div>
-  
-                <div class="card">
-                  <div class="block-copy mb-0">
-                    <span class="block-title">UPDATE ME PLEASE</span>
-                    <ul>
-                      <li>The pie charts act as "Site setting" and "Space management" information, with the ability to interact with each chart for further details about each location</li>
-                      <li>Although the pie chart information does not change daily, it provides a frame of mind to the rest of the information displayed in the dashboard</li>
-                    </ul>
-                  </div>
+              <div class="card mb-20">
+                <div class="block-copy mb-0">
+                  <span class="block-title">Key UI decision: Gradual reveal</span>
+                  <br>
+                  <span class="block-copy-alt">To avoid information overload, the user is introduced to information and data gradually</span>
+                  <ul>
+                    <li>The map is the first thing users see. It visually references the physical space that site managers work with (in their mental model).</li>
+                    <li>Interacting with each pie chart reveals further location information within the map, enabling user-friendly association without confusion.</li>
+                    <li>Pie charts frame the rest of the content displayed in the dashboard cards.</li>
+                    <li>Each card summarizes information that encourages users to navigate to a seperate page to complete any associated tasks.</li>
+                    <li>As a rule, previous read-only table data is shown in charts to reduce information overload.</li>
+                  </ul>
                 </div>
               </div>
-  
+
               <img src="./images/interface5.png" class="img-2 mb-20" />
-  
-              <div class="flex two-column-layout dense mb-20">
-                <div class="card">
-                  <div class="block-copy mb-0">
-                    <span class="block-title">Overview dashboard: selecting pie chart</span>
-                    <ul>
-                      <li>One of the key features of the application is its ability to compare datasets; it was important show this feature visually so as to guide the user through the vast amounts of information</li>
-                      <li>Selecting a pie chart on the map introduces the user to further details about that specific location (including all its associated datasets across menu-items) in further detail </li>
-                    </ul>
-                  </div>
-                </div>
-  
-                <div class="card">
-                  <div class="block-copy mb-0">
-                    <span class="block-title">Overview dashboard: selecting pie chart</span>
-                    <ul>
-                      <li>One of the key features of the application is its ability to compare datasets; it was important show this feature visually so as to guide the user through the vast amounts of information</li>
-                      <li>Selecting a pie chart on the map introduces the user to further details about that specific location (including all its associated datasets across menu-items) in further detail</li>
-                    </ul>
-                  </div>
+
+              <div class="card mb-20">
+                <div class="block-copy mb-0">
+                  <span class="block-title">Overview dashboard: selecting pie chart</span>
+                  <ul>
+                    <li>One of the key features of the application is its ability to compare datasets; it was important show this feature visually so as to guide the user through the vast amounts of information</li>
+                    <li>Selecting a pie chart on the map introduces the user to further details about that specific location (including all its associated datasets across menu-items) in further detail </li>
+                  </ul>
                 </div>
               </div>
-  
-              <div class="flex two-column-layout px-13">
-                <img src="./images/interface6.png" class="img-3" />
-  
-                <div class="card align-self-start mr-0">
-                  <div class="block-copy mb-0">
-                    <span class="block-title">Overview dashboard: floor plans</span>
-                    <ul>
-                      <li>To solve for secondary menues and wizard forms, I advocated for applying visuals where the task normally would require visual documents for example, physical drawings of parking sites</li>
-                    </ul>
-                  </div>
+
+              <img src="./images/interface6.png" class="img-3 mb-20" />
+
+              <div class="card mb-20">
+                <div class="block-copy mb-0">
+                  <span class="block-title">Overview dashboard: floor plans</span>
+                  <ul>
+                    <li>To solve for secondary menues and wizard forms, I advocated for applying visuals where the task normally would require visual documents for example, physical drawings of parking sites</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -182,7 +150,8 @@
 
           <!-- Deep dive: information architecture section !-->
           <section id="deep-dive-ia" class="flex flex-column align-center font-secondary mb-20">
-            <span class="section-title">deep dive: information architecture</span>
+              <span class="section-title-subheader">challenges</span>
+            <span class="section-title">information architecture</span>
 
             <div class="flex flex-column condensed-column">
               <div class="block-copy">
@@ -314,7 +283,8 @@
 
           <!-- Deep dive: dataset relationships section -->
           <section id="deep-dive-dataset-relationships" class="flex flex-column font-secondary mb-20">
-            <span class="section-title">deep dive: dataset relationships</span>
+            <span class="section-title-subheader">challenges</span>
+            <span class="section-title">dataset relationships</span>
 
             <div class="flex two-column-layout mb-20">
               <div class="flex-1">
