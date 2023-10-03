@@ -59,42 +59,51 @@
           </div>
 
           <!-- Overview section -->
+          
           <section id="overview" class="flex flex-column font-secondary mb-20">
+              <span class="section-title">overview</span>
             <div class="flex banner-container section-1-banner mb-20">
               <div class="image-copy px-12">
-                <span class="image-title">The client had built an excellent demo application for site managers to track and manage vehicles across parking sites. However despite showing valuable content, the features of the application were not clear.</span>
+                <span class="image-title">Despite building an excellent demo application for site managers to track and manage vehicles across parking sites, the content and features were not clear enough for executive stakeholders and potential buyers to understand and navigate.</span>
+                
               </div>
+  
             </div>
 
             <div class="flex three-column-layout">
               <div class="flex flex-1">
                 <div class="card negative-card align-self-start">
                   <div class="block-copy">
-                    <p class="block-text">When presenting screenshots of the application to potential buyers, the UI did not easily show all the features it's capable of processing. I noticed a lack of affordances when collecting observations about the usability of the application, particularly on the Overview dashboard. 
+                      <p class="block-text">Making simple observations about the usability of the application, I gathered the problem was due to lack of affordances particularly on the main dashboard page. 
+                        </p>
                   </div>
 
                   <div class="block-copy mb-0">
-                    <p class="block-text">I <b>learned about the product</b> and design constraints to the project.  I chose to <b>analyse the content</b> within each of the menu items of the navigation sidebar to understand assumptions about user needs. By doing this, I could select <b>the most important data</b> that would be best suited to replace their current Overview dashboard.</p>
+        
+                      <p class="block-text">Initial interviews focused on answering the <b>the who-what-why of the product</b>; taking any initial design constraints as an opportunity to guide the design process and timeline for creating the new interface.  
+                      </p>
                   </div>
                 </div>
               </div>
 
               <div class="flex flex-1">
                 <div class="block-copy px-12 mb-0">
-                  <span class="block-title2">Project constraints into project planning</span>
-                  <span class="block-title">1. Little qualitative and quantitative usability data to rely on</span>
-                  <span class="block-title">2. No time to arrange user interviews</span>
+                  <span class="block-title2">Design constraints are an opportunity to guide the design process</span>
+                  <span class="block-title">Constraint: little qualitative and quantitative usability data to rely on</span>
+                  <span class="block-title">Constraint: no time to arrange user interviews</span>
 
                   <ul class="arrow-list">
-                    <li>Led to the decision to analyse the current application and interview stakeholders as if I were new to the company as first, a product owner and then, as a new user.</li>
+                    <li>Decision: interviewed stakeholders regarding the current UI as, first: a product owner persona and second: as a new user persona</li>
                   </ul>
 
-                  <span class="block-title">3. Design team of one, bootstrap design system, limited to ~4 weeks</span>
+                  <span class="block-title">Constraint: design team of one, bootstrap design system, limited to ~4 weeks</span>
                   <ul class="arrow-list">
-                    <li>Lead to an opportunity to be apart of the team and adapt to the team dynamics in order to better advocate for design solutions.</li>
+                      <li>Narrowed the scope to addressing the most impactful screens first, i.e. Overview dashboard layout</li>
                   </ul>
                   <ul class="arrow-list">
-                    <li>Narrowed the scope to addressing the Overview dashboard layout first.</li>
+                    <li>Had the opportunity to be a part of the team and adapt to the team dynamics in order to better advocate for incorporating design processes into their development cycle</li>
+                  </ul>
+                  
                   </ul>
                 </div>
               </div>
@@ -106,15 +115,22 @@
             <span class="section-title">solution</span>
 
             <div class="flex flex-column align-center bg-blue solution-content">
+<div class="image-copy px-12">
+                <span class="image-title2">The bulk of the actual UX work (and thus the solution) involved <b>analyzing and prioritizing the sidebar navigation menu items</b> by <b>how relevant they were for stakeholders and users</b>. 
+                <br><br>
+                  With these affordances added, potential buyers had a clearer understanding of the application's value from the initial view (based on user feedback reported by the client).</span>
+              </div>
+                
               <img src="./images/interface4.png" class="img-1 mt-20 mb-20" />
 
               <div class="card mb-20">
                 <div class="block-copy mb-0">
+                    
                   <span class="block-title">Key UI decision: Gradual reveal</span>
                   <br>
                   <span class="block-copy-alt">To avoid information overload, the user is introduced to information and data gradually</span>
                   <ul>
-                    <li>The map is the first thing users see. It visually references the physical space that site managers work with (in their mental model).</li>
+                    <li>The map is the first item users see. It visually references the physical space that site managers work with (in their mental model).</li>
                     <li>Interacting with each pie chart reveals further location information within the map, enabling user-friendly association without confusion.</li>
                     <li>Pie charts frame the rest of the content displayed in the dashboard cards.</li>
                     <li>Each card summarizes information that encourages users to navigate to a seperate page to complete any associated tasks.</li>
@@ -129,8 +145,8 @@
                 <div class="block-copy mb-0">
                   <span class="block-title">Overview dashboard: selecting pie chart</span>
                   <ul>
-                    <li>One of the key features of the application is its ability to compare datasets; it was important show this feature visually so as to guide the user through the vast amounts of information</li>
-                    <li>Selecting a pie chart on the map introduces the user to further details about that specific location (including all its associated datasets across menu-items) in further detail </li>
+                    <li>One of the key features of the application is its ability to compare datasets; it was important to show this feature visually so as to guide the user through the vast amounts of information</li>
+                    <li>Selecting a pie chart on the map introduces the user to further details about that specific location (including all its associated datasets across menu-items) </li>
                   </ul>
                 </div>
               </div>
@@ -141,7 +157,7 @@
                 <div class="block-copy mb-0">
                   <span class="block-title">Overview dashboard: floor plans</span>
                   <ul>
-                    <li>To solve for secondary menues and wizard forms, I advocated for applying visuals where the task normally would require visual documents for example, physical drawings of parking sites</li>
+                    <li>To solve for secondary menues and wizard forms, I advocated for applying visuals that representing physical documents normally associated with the task, for example, physical drawings of parking sites</li>
                   </ul>
                 </div>
               </div>
@@ -156,7 +172,7 @@
             <div class="flex flex-column condensed-column">
               <div class="block-copy">
                 <span class="block-title">Challenge</span>
-                <p class="block-text">Whatever bespoke features pitched was lost in the sheer amount of data tables across the 13 menu-items. And with little affordances to guide users, it was clear to see information architecture was one of the UX gaps. The following steps details my approach to prioritizing content for the purpose of designing a new dashboard.</p>
+                <p class="block-text">Bespoke features were lost in the sheer amount of data tables across the 13 menu-items. And with little affordances to guide users, it was clear to see information architecture was one of the UX gaps. The following steps details my approach to prioritizing content for the purpose of designing a new dashboard.</p>
               </div>
 
               <div class="block-copy">
@@ -199,7 +215,7 @@
             <div class="flex flex-column condensed-column">
               <div class="block-copy">
                 <span class="block-title">Defining menu-items by usefulness</span>
-                <p class="block-text">Each of the 13 menu-items display content to help the target user complete related tasks. The ability to complete a task varies by the number of actions the user must take. </p>
+                <p class="block-text">Each of the 13 menu-items display content to help the target user complete related tasks. The ability to complete a task varies by the number of actions the user must take.  </p>
               </div>
             </div>
 
@@ -274,7 +290,7 @@
             <div class="flex flex-column condensed-column">
               <div class="block-copy">
                 <span class="block-title">Menu-items for Overview dashboard</span>
-                <p class="block-text">These menu-items reflect tasks of highest priority.</p>
+                <p class="block-text">These menu-items reflect tasks of highest priority and therefore are represented on the interface over other tasks.</p>
                 <!-- Why is this an icon element -->
                 <p><br><i>Site settings, Activity, Revenue, Rates, Transient, Permissions, Users, Space Management</i></p>
               </div>
@@ -291,11 +307,11 @@
                 <div class="block-copy">
                   <span class="block-title">Discovering complexities in the system</span>
                   <p class="block-text">
-                    Of the narrowed down list of menu-items, some interactive components can trigger changes to datasets in other areas of the system without the user's knowledge thus leading to confusion.
+                    Of the narrowed down list of menu-items, some interactive components triggered changes to datasets in other areas of the system without the user's knowledge leading to confusion.
                     <br><br>
                     For example, if a user updated the parking fee attributes for a single vehicle, it may override other billing charges across accounts (unbeknownst to the user who made the change).
                     <br><br>
-                    By defining the relationship between the task the user completes in a menu-item, the number of interactions associated to each menu-item, and the impact the interaction has on other menu items, I narrowed the menu-items to highlight changes between: 
+                    Defining relationships by the following tasks further reduced the number of menu-items to 4 (see below) and led to discovering ways to add affordances for the dashboard screen: <br><br>(1) the task the user completes in a menu-item, (2) the number of interactions associated to each menu-item, and (3) the impact the interaction has on other menu items
                     <br><br>
                     <!-- Why is this an icon element? -->
                     <i>Space management and Site settings, Activity and Users</i>
@@ -336,16 +352,11 @@
             <span class="section-title">sketches</span>
 
             <div class="flex flex-column bg-grey w-full sketches-content">
-              <div class="card mb-8">
-                <div class="block-copy mb-0">
-                  <span class="block-title">Information to display on the dashboard</span>
-                  <ul>
-                    <li>Data about spaces and vehicles from Space management</li>
-                    <li>Data about Site settings as it relates to Space management</li>
-                    <li>Graph showing Revenue table data as it relates to Activity</li>
-                  </ul>
-                </div>
-              </div>
+                <div class="block-copy negative-block-copy mb-20">
+                    <span class="block-title">Information to display on the dashboard</span>
+                  The following are notes on the purpose of the sketch, basic UX reminders, and initial drawings that I did on Goodnotes prior to using Figma
+                  </div>
+           
   
               <div class="img-1-container mr-0 mb-8">
                 <img src="./images/interface2.png" />
@@ -368,9 +379,9 @@
             <div class="card learnings-card">
               <div class="flex flex-column align-center block-copy mb-0">
                 <span class="block-title mb-4">Learnings from the project</span>
-                <p class="block-text">Besides the difficulty in mapping attributes and contingencies for dataset relationships: Stakeholders had a general idea of the kind of information they wanted to see as part of the final design.</p>
+                <p class="block-text">The biggest challenge was the difficulty in mapping attributes and contingencies for dataset relationships by business value in a simpler way than how it was initially shown. <br><br>Besides feedback from product owners, defining the dataset by universal heuristic patterns (ex. more information leads to more confusion) was a quick win that ultimately guided the direction of the rest of the application.</p>
                 <br>
-                <p class="block-text">I was more than happy to design what was asked of me but it was difficult to blindly accept client's design requests without fully comprehending why (if at all) the requests made sense for the user</p>
+                <p class="block-text">Stakeholders had a general idea of the kind of information they wanted to see as part of the final design. I was hesitant to accept client's design requests without fully comprehending why (if at all) the changes would benefit the user. <br><br>In this case, I simply trusted the client's word because they even took the time to provide clear answers for their requests through extra meetings. This helped me clarify or update other parts of the design that the request impacted without delays to the overall timeline. It made for a pleasureable work experience with all the teams involved so I try to find (and reflect) this kind of empathetic way of working together.</p>
                 <a href="index.html" class="button">back</a>
               </div>
             </div>
