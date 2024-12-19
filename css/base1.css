@@ -353,7 +353,7 @@ nav a:hover,
 
 .arrow-list > li {
   display: grid;
-  grid-template-columns: 40px auto;
+  grid-template-columns: 20px auto;
   justify-content: start;
   align-items: top;
 }
