@@ -355,7 +355,7 @@ nav a:hover,
   display: grid;
   grid-template-columns: 40px auto;
   justify-content: start;
-  align-items: center;
+  align-items: top;
 }
 
 .arrow-list > li::before {
