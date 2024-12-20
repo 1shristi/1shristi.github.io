@@ -1,5 +1,5 @@
 
-/*@font-face {
+@font-face {
   font-family: "American Typewriter";
   src: url('/font-family/AmericanTypewriter-01.ttf') format('truetype');
   src: url('/font-family/AmericanTypewriter-Semibold-04.ttf') format('truetype');
@@ -7,7 +7,7 @@
   src: url('/font-family/AmericanTypewriter-Light-02.ttf') format('truetype');
   src: url('/font-family/AmericanTypewriter-CondensedLight-07.ttf') format('truetype');
  
-} */
+} 
 
 * {
   box-sizing: border-box;
