@@ -63,7 +63,7 @@ h4 {
 
 .page-header {
   align-self: flex-end;
-  margin-bottom: 2.8rem;
+  margin-bottom: 3.8rem;
   text-align: right;
 }
 
@@ -88,12 +88,15 @@ p {
   font-weight: 300;
 }
 
+
 a {
   color: black;
   text-decoration: none;
 }
 
 ul {
+  position:relative; /*not needed*/
+  float:left; /*not needed*/
   margin: 0;
   padding-left: 1.75rem;
 }
@@ -101,6 +104,12 @@ ul {
 li {
   line-height: 2rem;
 }
+
+  ul li img {
+    display: flex;
+    max-width: auto;
+    height: 200px;
+  }
 
 input[type="text"], input[type="password"] {
   background: #ffffff;
@@ -260,11 +269,17 @@ nav a:hover,
   margin-bottom: 2rem;
 }
 
-.block-title {
-  color: #4C93C3;
-  display: flex;
-  font-weight: 400;
+.block-copy {
   line-height: 1.75rem;
+}
+
+.block-title {
+  text-align: center;
+  font-family: 'american typewriter';
+  color: #4C93C3;
+  font-size: 1.4em;
+  line-height: 2rem;
+  margin-bottom: 1rem;
 }
 
 .block-title2 {
@@ -274,14 +289,15 @@ nav a:hover,
   line-height: 1.75rem;
 }
 
+
 .section-title {
-  align-self: flex-end;
+  align-self: center; /*flex-start*/
   color: #000;
   font-family: 'american typewriter';
   font-size: 1.4em;
   font-weight: normal;
   line-height: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: -0.4rem; /*1rem*/
 }
 
 .section-title-subheader {
@@ -295,11 +311,43 @@ nav a:hover,
   font-variant: small-caps;
 }
 
+.section-subheading {
+  align-self: center; /*flex-start*/
+  color: #000;
+  color: #333;
+  font-size: 1.1em;
+  font-weight: 300; /*normal*/
+  font-variant: lining-nums;
+  margin-bottom: .4rem;
+}
+
 .block-text {
   font-weight: 400;
   line-height: 1.75rem;
 }
 
+ol {
+  align-content: flex-end;
+  list-style-type: inside;
+  margin: 1rem 4rem 1rem 1rem;
+  padding-left: 5%;
+  // line-height: 0.5rem;
+}
+
+li {
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    line-height: 1.45rem;
+}
+
+.bold-text-li {
+  font-weight: 500;
+}
+
+.bold-text {
+  font-weight: 500;
+  line-height: 3rem;
+}
 
 
 .block-title-alt {

@@ -4,6 +4,7 @@
     <title>Shristi G | portfolio</title>
     <link rel="favicon" href="images/favicon.ico"/>
     <link rel="stylesheet" href="css/base1.css" type="text/css">
+    <link rel="stylesheet" href="css/imageNav.css" type="text/css">
     <link rel="stylesheet" href="css/index1.css" type="text/css">
     <link rel="stylesheet" href="css/project-details.css" type="text/css">
     <link rel="stylesheet" href="css/utilities.css" type="text/css">
@@ -62,67 +63,71 @@
           <!-- Overview section -->
           <section id="overview" class="flex flex-column font-secondary mb-20">
               <span class="section-title">overview</span>
+              <span class="section-subheading">limited data | solo designer | timeline 4-5 weeks </span>
             <div class="flex banner-container section-1-banner mb-20">
               <div class="image-copy px-12">
                 <span class="image-title">The client’s demo app for parking site management—while technically sound, couldn’t show the value proposition clearly enough to gain executive buy-in during important meetings. 
                   <span>
-                  <br>The main dashboard lacked visual cues and affordances for navigation, making it difficult to grasp the key features to showcase.</span>
-                </span>
+                  <br>The main dashboard lacked visual cues and affordances for navigation, making it difficult to grasp the key features to showcase.</span></span>
               </div>
             </div>
 
+            <!--approach sub-section-->
             <div class="flex three-column-layout">
               <div class="flex flex-1">
                 <div class="card negative-card align-self-start">
                   <div class="block-copy">
-                      <p class="block-text">After taking time to assess the usability of the application, I gathered that the issue of poor user experience and navigation was due to a <b>lack of affordances</b> particularly on the main dashboard page.
-                        </p>
-                  </div>
-
-                  <div class="block-copy mb-0">
-
-                      <p class="block-text">Initial interviews focused on answering the <b>who-what-why of the product</b>; taking any initial design constraints as an opportunity to guide the decision-making process and estimating the timeline for creating the new interface.
-                      </p>
+                      <p class="block-text">
+                        <span class="block-title">approach</span><br>
+                        In an interview workshop setting with the client, I facilitated and adopted the perspectives of two key individuals for user interviews:
+                        </p><ol><br>
+                       <li><div class="bold-text-li">Subject matter expert &amp; Product owner</div> 
+                       in order to understand the underlying business logic and its product goals and value proposition. </li>
+                       <li><div class="bold-text-li">New user</div> in order to define user flows of daily users, what problems they are trying to solve and why it’s needed.
+                       </li></ol>
+                      <p></p>
+                      <div class="block-copy">
+                  <p class="block-text">
+                    </p><div class="bold-text">The benefits of this approach</div> 
+                    It revealed the core usability issues that my user interface needed to address, especially on the main dashboard. Additionally, by defining it as a workshop, the client could participate in the design solution and help narrow the project scope to just pertinent screens and user flows.
+                    <p></p>
+                    </div>
                   </div>
                 </div>
                 </div>
               </div>
-
- <!-- Constraints section -->
-              <div class="flex flex-1">
-                <div class="block-copy px-12 mb-0">
-                  <span class="block-title"><br><br>Constraint: no existing qualitative and quantitative usability data and not enough time to arrange user interviews as a new data set</span>
-                  <br><br>
-                    <ul>
-                      <span class="block-copy-alt">I decided to take on the role of two specific and important personas to the business. I defined the user interview questions based on preliminary background research and then facilitated the conversation with stakeholders as:
-
-                      <li>A product owner of the current application who is validating the business logic and
-                        <li>As a new direct user of the application with a specific user flow and needs in mind</span>
-                  </li></li>
-                  </ul><br>
-                  <span class="block-title">Constraint 3: design team of one, bootstrap design system, limited to ~4-5 weeks</span>
-                  <ul>
-                      <li>I worked with the product team to come to an agreement on how to best narrow the scope and address the most impactful screens first, i.e. Overview dashboard layout</li>
-                    <li>I had the opportunity to be a part of the product and dev teams and adapt to the team dynamics in order to better advocate for incorporating design processes into their development cycle</li>
-                  </ul>
-
-              </div>
-            </div>
+               
+              
           </section>
 
           <!-- Solution section -->
           <section id="solution" class="flex flex-column solution-section font-secondary mb-20">
             <span class="section-title">solution</span>
-
+            <span class="section-subheading">assess content hieararchy | reorder sidebar navigation | allow for gradual reveal</span>
             <div class="flex flex-column align-center bg-blue solution-content">
 <div class="image-copy px-12">
-                <span class="image-title2">The bulk of the actual UX work (and thus the solution) involved <b>analyzing and prioritizing the sidebar navigation menu items</b> by <b>how relevant they were for stakeholders and users</b>.
-                <br><br>
-                  With these affordances added, potential buyers had a clearer understanding of the application's value from the initial view (based on user feedback reported by the client).</span>
+                <span class="image-title2">The core UX/UI design efforts were on analyzing and prioritizing the sidebar navigation menu items by relevance and affordance to stakeholders and users. 
+                  <br><br>
+                  Then sharing these design changes with the product and development teams for critical feedback before implementing them as a prototype.
+                  <br><br>
+                  Ultimately, the potential buyers gained a clearer understanding of the application's value right from the start, as confirmed by user feedback.
+                  </span>
               </div>
+<!-- First image of dashboard -->
 
-              <img src="./images/interface4.png" class="img-1 mt-20 mb-20" />
+            <!--  <img src="./images/interface4.png" class="img-1 mt-20 mb-20" /> -->
 
+            <div class="imageNav-container">
+              <button class="button">Button 1</button>
+              <button class="button">Button 2</button>
+      
+              <div class="imageNav-imgcontainer">
+                  <img src="./images/interface2.png" alt="Image 1">
+                  <img src="./images/interface1.png" alt="Image 2">
+              </div>
+          </div>
+
+<!-- UI decision card -->
               <div class="card mb-20">
                 <div class="block-copy mb-0">
 
@@ -130,7 +135,10 @@
                   <br>
                   <span class="block-copy-alt">To avoid information overload, the user is introduced to data content gradually, depending on where the user is in their user flow</span>
                   <ul>
-                    <li>The map is the first item users see. It visually references the physical space that site managers work with (in their mental model).</li>
+                    <li>The map is the first item users see. It visually references the physical space that site managers work with (in their mental model).
+
+                      <img src="./images/interface4.png"/>
+                    </li>
                     <li>Interacting with each pie chart reveals further location information within the map, enabling user-friendly association without confusion.</li>
                     <li>Pie charts frame the rest of the content displayed in the dashboard cards.</li>
                     <li>Each card summarizes information that encourages users to navigate to a seperate page to complete any associated tasks.</li>

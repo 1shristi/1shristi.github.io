@@ -41,7 +41,7 @@
 }
 
 .mt-20 {
-  margin-top: 5rem;
+  /*margin-top: 5rem;*/ //to reduce some of the spacing
 }
 
 .mb-0 {

@@ -1,5 +1,8 @@
+/*height: 475px; changed to auto to adjust text to bg*/
 .banner-container {
-  height: 475px;
+  height: auto;
+  border-radius:16px;
+ 
 }
 
 .section-1-banner {
@@ -54,6 +57,7 @@
 
 .solution-content {
   padding: 2.5rem;
+  border-radius: 16px;
 }
 
 .solution-section .two-column-layout {

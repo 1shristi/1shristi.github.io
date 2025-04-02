@@ -79,6 +79,13 @@ img {
   object-fit: contain;
 }
 
+.img-list {
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: 25% 75%;
+}
+
 p {
   font-size: 1em;
   font-weight: 300;

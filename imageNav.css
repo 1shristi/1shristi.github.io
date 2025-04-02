@@ -1,0 +1,38 @@
+.imageNav-container {
+    display: flex; /* Use flexbox for easy layout control */
+    flex-direction: column; /* Stack items vertically by default */
+    align-items: center; /* Center items horizontally */
+    gap: 20px; /* Add spacing between the elements */
+}
+
+.imageNav-button {
+    padding: 10px 20px; /* Add padding inside the buttons */
+    font-size: 16px;
+    background-color: #007bff; /* A common blue color */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer; /* Change the mouse cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.imageNav-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Image Container Styling */
+.imageNav-imgContainer {
+    display: flex; /* Use flexbox to arrange images */
+    flex-direction: column; /* Stack images vertically by default */
+    align-items: center; /* Center images horizontally */
+    gap: 15px; /* Spacing between images */
+    width: 100%; /* Make the container take full width */
+}
+
+/* Image Styling */
+.imageNav-imgContainer img {
+    max-width: 100%; /* Make images responsive within their container */
+    height: auto; /* Maintain aspect ratio */
+    border: 1px solid #ccc; /* Optional: Add a light border */
+    border-radius: 5px; /* Optional: Slightly rounded corners */
+}
