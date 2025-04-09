@@ -123,15 +123,13 @@
 }
 
 .overlay-image2 {
-  position: absolute;
-  top: 54;
-  left: 90;
-  width: 50%;
-  height: 25%;
-  
-  object-fit: contain;
-  /*Or'cover'dependingonhowyouwantittofit*/transition: opacity 0.3s ease;
-   /* Smooth transition for showing/hiding */
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	width: 30%;
+	height: 25%;
+	object-fit: contain;
+	transition: opacity 0.3s ease;
 }
 
 .overlay-image3 {
