@@ -118,7 +118,7 @@
             <div class="project_copy mt-4 mb-10">
             <div>The map is the first element users see. It's intentionaly laid out to visually reflect the physical space that site managers work with in their mental model. <br><br>As a rule, existing static table data was transformed into charts to reduce visual clutter and improve data comprehension. Orginally entire pages were dedicated to static information.</div>
             </div>
-<!-- UI decision card -->
+<!-- UI decision card 1 -->
               <div class="card mb-20">
                 <div class="block-copy mb-0">
                   <span class="block-title">Key UI decision: gradual reveal</span>
@@ -129,16 +129,18 @@
                     </li>
                     <li>Pie charts frame the rest of the content displayed in the dashboard cards.</li>
                     <li>Interacting with each pie chart reveals specific location details intentionally designed in the same map to avoid confusion. 
-                      <br><button class="button2" id="showOverlay1">Reveal details</button> 
-                      <button class="button2" id="hideOverlay1">Hide details</button>
-                      <br>
-                                  <!-- UI image explanation -->
-                                  <div class="image-stack img-1 mt-10 mb-10">
-                                    <img src="./images/piechart1.png" alt="Static Image 1" class="static-image">
-                                    <img src="./images/piechart2.png" alt="Overlay Image 1" class="overlay-image" id="overlayImage1" style="opacity: 0;">
-                                </div>
+                      <!-- Toggle button -->
+    <button id="toggle-btn" class="button2" data-target="img1">Reveal</button>
                     </li>
                   </ul>
+                           
+
+    <!-- Image stack -->
+    <div class="image-stack img-1 mt-10 mb-10">
+        <img src="./images/piechart1.png" alt="Static Image 1" class="static-image">
+        <img id="img1" src="./images/piechart2.png" class="overlay-image" style="display: none;">
+    </div>
+                   
                 </div>                                  
                                 
               </div>
@@ -150,42 +152,38 @@
                 <div>Research indicated that users needed the ability to compare data sets between two locations. Originally, the solution was to give datasets dedicated space linked from the menu. This solution would work if each of the datasets <em>weren't</em> intricately related to one another.</div>
                 </div>
 
-             
+             <!-- UI decision card 2 -->
               <div class="card mb-20">
                 <div class="block-copy mb-0">
                   <span class="block-title">Key UI decision: intuitive secondary navigation</span>
                   <br>
-                  <span class="block-copy-alt">Instead, selecting details about a parking location via the Dashboard pie chart introduces the user to <em>all the associated static datasets</em> gathered from the multiple menu-items. This reduced the number of menu-items.<br><br>
+                  <span class="block-copy-alt">Instead, selecting details about a parking location via the Dashboard pie chart introduces the user to <em>all the associated static datasets</em> gathered from the multiple menu-items. This reduced the number of menu-items.</span>
                   <ul>
                     <li>To illustrate that the user is now comparing dataset details between locations, two cards representing respective location appear upon clicking the pie chart. </li>
 
                     
-                    <li>The side bar menu is updated to show dedicated space for each parking site and actionable elements (close icon, pin icon) to encourage interaction. <br> </li>
-                    
-                    <br> 
-                    
-                    
+                    <li>The side bar menu is updated to show dedicated space for each parking site and actionable elements (close icon, pin icon) to encourage interaction. <br> 
+
                     <!-- UI image explanation for second dashboard -->
-                      <div class="image-stack img-1 mt-10 mb-10">
-                       
-                    
-                
-                    <img src="./images/dashboard02blur.png" alt="Static Image 1" class="static-image">
+                    <button class="button2" id="showOverlay1">Reveal details</button> 
+                    <button class="button2" id="hideOverlay1">Hide details</button>
 
-                    <img src="./images/dashboard02menu.png" alt="Overlay Image 3" class="overlay-image3" id="overlayImageMenuID" style="opacity: 0;">
-
-                   
-                    </div>
-                    <button class="button2" id="showMenu">Reveal menu</button>    
-                    <button class="button2" id="hideMenu" >Hide detailssss</button>
-
-                  
-                               
-
+                    <div class="image-stack img-1 mt-10 mb-10">
+                      <img src="./images/dashboard02blur.png" alt="Static Image 1" class="static-image">
+                      <img src="./images/dashboard02menu.png" alt="Overlay Image 1" class="overlay-image" id="overlayImage1" style="opacity: 0;"></div>
+                    </li>
                   </ul>
                 </div>
-              </div>
+              </div> 
 
+                                  
+
+                               
+
+               
+         
+
+<!-- Floor plan UI -->
               <img src="./images/interface6.png" class="img-3 mb-20" />
 
               <div class="card mb-20">
@@ -449,5 +447,5 @@
 
   <script src="scripts/mark-scroll.js"></script>
   <script src="scripts/imagenav.js"></script>
-  
+ 
 </html>
