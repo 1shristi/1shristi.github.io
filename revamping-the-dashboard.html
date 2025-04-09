@@ -4,7 +4,6 @@
     <title>Shristi G | portfolio</title>
     <link rel="favicon" href="images/favicon.ico"/>
     <link rel="stylesheet" href="css/base1.css" type="text/css">
-    <link rel="stylesheet" href="css/imageNav.css" type="text/css">
     <link rel="stylesheet" href="css/index1.css" type="text/css">
     <link rel="stylesheet" href="css/project-details.css" type="text/css">
     <link rel="stylesheet" href="css/utilities.css" type="text/css">
@@ -103,9 +102,9 @@
           <!-- Solution section -->
           <section id="solution" class="flex flex-column solution-section font-secondary mb-20">
             <span class="section-title">solution</span>
-            <span class="section-subheading">assess content hieararchy | reorder sidebar navigation | allow for gradual reveal</span>
+            <span class="section-subheading">allow for gradual reveal | assess content hieararchy | reorder sidebar navigation</span>
             <div class="flex flex-column align-center bg-blue solution-content">
-<div class="image-copy px-12">
+              <div class="image-copy px-12">
                 <span class="image-title2">The core UX/UI design efforts were on analyzing and prioritizing the sidebar navigation menu items by relevance and affordance to stakeholders and users. 
                   <br><br>
                   Then sharing these design changes with the product and development teams for critical feedback before implementing them as a prototype.
@@ -114,47 +113,75 @@
                   </span>
               </div>
 <!-- First image of dashboard -->
-
-            <!--  <img src="./images/interface4.png" class="img-1 mt-20 mb-20" /> -->
-
-            <div class="imageNav-container">
-              <button class="button">Button 1</button>
-              <button class="button">Button 2</button>
-      
-              <div class="imageNav-imgcontainer">
-                  <img src="./images/interface2.png" alt="Image 1">
-                  <img src="./images/interface1.png" alt="Image 2">
-              </div>
-          </div>
-
+<h6>Map as Initial Anchor</h6> 
+            <img src="./images/dashboard2.png" class="img-1 mt-10 mb-0" />
+            <div class="project_copy mt-4 mb-10">
+            <div>The map is the first element users see. It's intentionaly laid out to visually reflect the physical space that site managers work with in their mental model. <br><br>As a rule, existing static table data was transformed into charts to reduce visual clutter and improve data comprehension. Orginally entire pages were dedicated to static information.</div>
+            </div>
 <!-- UI decision card -->
               <div class="card mb-20">
                 <div class="block-copy mb-0">
-
-                  <span class="block-title">Key UI decision: Gradual reveal</span>
+                  <span class="block-title">Key UI decision: gradual reveal</span>
                   <br>
-                  <span class="block-copy-alt">To avoid information overload, the user is introduced to data content gradually, depending on where the user is in their user flow</span>
+                  <span class="block-copy-alt">To avoid information overload, users are introduced to data content gradually, depending on where they are on the user flow.</span>
                   <ul>
-                    <li>The map is the first item users see. It visually references the physical space that site managers work with (in their mental model).
-
-                      <img src="./images/interface4.png"/>
+                    <li>Existing table data was transformed into charts to reduce visual clutter and improve data comprehension.
                     </li>
-                    <li>Interacting with each pie chart reveals further location information within the map, enabling user-friendly association without confusion.</li>
                     <li>Pie charts frame the rest of the content displayed in the dashboard cards.</li>
-                    <li>Each card summarizes information that encourages users to navigate to a seperate page to complete any associated tasks.</li>
-                    <li>As a rule, previous read-only table data is shown in charts to reduce information overload.</li>
+                    <li>Interacting with each pie chart reveals specific location details intentionally designed in the same map to avoid confusion. 
+                      <br><button class="button2" id="showOverlay1">Reveal details</button> 
+                      <button class="button2" id="hideOverlay1">Hide details</button>
+                      <br>
+                                  <!-- UI image explanation -->
+                                  <div class="image-stack img-1 mt-10 mb-10">
+                                    <img src="./images/piechart1.png" alt="Static Image 1" class="static-image">
+                                    <img src="./images/piechart2.png" alt="Overlay Image 1" class="overlay-image" id="overlayImage1" style="opacity: 0;">
+                                </div>
+                    </li>
                   </ul>
-                </div>
+                </div>                                  
+                                
               </div>
 
-              <img src="./images/interface5.png" class="img-2 mb-20" />
+              <!-- Second image of dashboard -->
+              <h6>Parking site comparison</h6>  
+              <img src="./images/dashboard02.png" class="img-2 mt-0 mb-0" />
+              <div class="project_copy mt-0 mb-0">
+                <div>Research indicated that users needed the ability to compare data sets between two locations. Originally, the solution was to give datasets dedicated space linked from the menu. This solution would work if each of the datasets <em>weren't</em> intricately related to one another.</div>
+                </div>
 
+             
               <div class="card mb-20">
                 <div class="block-copy mb-0">
-                  <span class="block-title">Overview dashboard: selecting pie chart</span>
+                  <span class="block-title">Key UI decision: intuitive secondary navigation</span>
+                  <br>
+                  <span class="block-copy-alt">Instead, selecting details about a parking location via the Dashboard pie chart introduces the user to <em>all the associated static datasets</em> gathered from the multiple menu-items. This reduced the number of menu-items.<br><br>
                   <ul>
-                    <li>One of the key features of the application is its ability to compare data sets; it was important to show this feature visually and guide the user through the vast amounts of information</li>
-                    <li>Selecting a pie chart on the map introduces the user to further details about that specific location (including all its associated datasets across menu-items) </li>
+                    <li>To illustrate that the user is now comparing dataset details between locations, two cards representing respective location appear upon clicking the pie chart. </li>
+
+                    
+                    <li>The side bar menu is updated to show dedicated space for each parking site and actionable elements (close icon, pin icon) to encourage interaction. <br> </li>
+                    
+                    <br> 
+                    
+                    
+                    <!-- UI image explanation for second dashboard -->
+                      <div class="image-stack img-1 mt-10 mb-10">
+                       
+                    
+                
+                    <img src="./images/dashboard02blur.png" alt="Static Image 1" class="static-image">
+
+                    <img src="./images/dashboard02menu.png" alt="Overlay Image 3" class="overlay-image3" id="overlayImageMenuID" style="opacity: 0;">
+
+                   
+                    </div>
+                    <button class="button2" id="showMenu">Reveal menu</button>    
+                    <button class="button2" id="hideMenu" >Hide detailssss</button>
+
+                  
+                               
+
                   </ul>
                 </div>
               </div>
@@ -169,7 +196,10 @@
                   </ul>
                 </div>
               </div>
+
             </div>
+         
+        
           </section>
 
           <!-- Deep dive: information architecture section !-->
@@ -418,4 +448,6 @@
   </body>
 
   <script src="scripts/mark-scroll.js"></script>
+  <script src="scripts/imagenav.js"></script>
+  
 </html>
