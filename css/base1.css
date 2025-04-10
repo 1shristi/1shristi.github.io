@@ -269,8 +269,12 @@ nav a:hover,
   margin-bottom: 2rem;
 }
 
-.block-copy {
-  line-height: 1.75rem;
+.block-copy, .block-copy-alt, .image-copy {
+  margin-bottom: 2rem;
+}
+
+.block-copy-alt2 {
+ margin-bottom: .5rem;
 }
 
 .block-title {

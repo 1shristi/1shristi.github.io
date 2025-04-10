@@ -156,10 +156,11 @@
                                         </ul>
                                         <p></p>
                                         <div class="block-copy">
-                                            <p class="block-text"></p>
+                                           
                                             <div class="bold-text">
                                                 The benefits of this approach
                                             </div>
+                                            <p class="block-text">
                                             It revealed the core usability
                                             issues that my user interface needed
                                             to address, especially on the main
@@ -169,7 +170,7 @@
                                             and help narrow the project scope to
                                             just pertinent screens and user
                                             flows.
-                                            <p></p>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -256,7 +257,7 @@
                                             Interacting with each pie chart
                                             reveals specific location details
                                             intentionally designed in the same
-                                            map to avoid confusion.
+                                            map to avoid confusion.</li>
                                             <!-- Toggle button -->
                                             <button
                                             class="toggle-btn button2"
@@ -264,7 +265,7 @@
                                             >
                                                 Reveal
                                             </button>
-                                        </li>
+                                        
                                     </ul>
 
                                     <!-- Image stack -->
@@ -272,7 +273,7 @@
                                         <img
                                             src="./images/piechart1.png"
                                             alt="Static Image 1"
-                                            class="static-image"
+                                            class="static-image2"
                                         />
                                         <img
                                             id="img1"
@@ -307,62 +308,57 @@
                             <div class="card mb-20">
                                 <div class="block-copy mb-0">
                                     <span class="block-title"
-                                        >Key UI decision: intuitive secondary
-                                        navigation</span
+                                        >Key UI decision: Grouping with labels and cards</span
                                     >
-                                    <br />
-                                    <span class="block-copy-alt"
-                                        >Instead, selecting details about a
-                                        parking location via the Dashboard pie
-                                        chart introduces the user to
-                                        <em
-                                            >all the associated static
-                                            datasets</em
-                                        >
-                                        gathered from the multiple menu-items.
-                                        This reduced the number of
-                                        menu-items.</span
-                                    >
+                              
                                     <ul>
                                         <li>
-                                            To illustrate that the user is now
-                                            comparing dataset details between
-                                            locations, two cards representing
-                                            respective location appear upon
-                                            clicking the pie chart.
+                                       
+                                        To drastically reduced clutter from the side navigation bar, I chose to take <em
+                                        >all respective static
+                                        data</em> of a parking location and reveal it in seperate card elements for users to compare data. 
                                         </li>
+                                         <!-- Toggle button for cards -->
+                                        <button class="toggle-btn button2" data-target="img2">
+                                            Cards
+                                               </button>  
+                                    </ul>
 
-                                        <li>
-                                            The side bar menu is updated to show
-                                            dedicated space for each parking
-                                            site and actionable elements (close
-                                            icon, pin icon) to encourage
-                                            interaction. <br />  
-                                             <!-- Toggle button -->
-                                             <button
-                                             
-                                             class="toggle-btn button2"
-                                             data-target="img2"
-                                         >
-                                             Reveal
-                                         </button>
-                                          </li>
-                                          </ul>
+                                       
+                                  
+                                     <ul><li> For further control of each location users are comparing, I also introduced labels for each card under the Dashboard menu.
+            
+                                  </li>
+                                  <!-- Toggle button for labels -->
+                              <button
+                              class="toggle-btn button2" data-target="img3">
+                              Labels
+                              </button>
 
+                                </ul>
+                
+                              
                                             <!-- Image stack -->
-                                    <div class="image-stack img-1 mt-10 mb-10">
-                                      <img
-                                          src="./images/dashboard02blur.png"
-                                          alt="Static Image 2"
-                                          class="static-image"
-                                      />
-                                      <img
-                                          id="img2"
-                                          src="./images/dashboard02menu.png"
-                                           class="overlay-image2"
-                                          style="display: none"
-                                      />
-                                  </div>
+                                            <div class="image-stack img-1 mt-10 mb-10">
+                                                <img
+                                                src="./images/dashboard02menuBefore.png"
+                                                class="static-image" alt="navigation bar before"
+                                            />
+                                                <img
+                                                id="img2"
+                                                src="./images/dashboard02cards.png"
+                                                 class="overlay-image" alt="cards"
+                                                style="display: none"
+                                            />
+                                                <img
+                                                    id="img3"
+                                                    src="./images/dashboard02menu.png"
+                                                     class="overlay-image2" alt="menu updated"
+                                                    style="display: none"
+                                                />
+                                            </div>
+                                   
+
 
                                             
                                        

@@ -105,43 +105,55 @@
   width: 100%; /* Make the container take full width */
 }
 
+
+
+/*before and after menu*/
 .static-image {
-  display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image covers the container */
+	display: block;
+	width: 39%;
+	height: 100%;
+	object-fit: contain;
 }
 
+/*piechart static image*/
+.static-image2 {
+	display: block;
+	width: 90%;
+	height: 100%;
+	object-fit: contain;
+}
+
+/*card */
 .overlay-image {
 	position: absolute;
-	top: 39;
-	left: 142;
-	width: 72%;
-	height: 72%;
+	top: 29%;
+	left: 28%;
+	width: 77%;
+	height: 89%;
 	object-fit: contain;
 	transition: opacity 0.3s ease;
 }
 
+/*menu*/
 .overlay-image2 {
 	position: absolute;
-	top: 5%;
-	left: 5%;
-	width: 30%;
-	height: 25%;
+	top: 2%;
+	left: 24%;
+	width: 25%;
+	height: 30%;
 	object-fit: contain;
 	transition: opacity 0.3s ease;
 }
 
 .overlay-image3 {
-  position: absolute;
-  top: 54;
-  left: 90;
-  width: 50%;
-  height:50%;
-  opacity:1;
-  object-fit: contain;
-  /*Or'cover'dependingonhowyouwantittofit*/transition: opacity 0.3s ease;
-  /*Smoothtransitionforshowing/hiding*/:;
+	position: absolute;
+	top: 54;
+	left: 90;
+	width: 85%;
+	height: 92%;
+	opacity: 1;
+	object-fit: contain;
+	transition: opacity 0.3s ease;
 }
 
 
@@ -163,7 +175,7 @@
 	padding: 6px 18px;
    min-width: 72px;
 	/* gap: 5px; */
-	margin-top: 1rem;
+	/*margin-top: 1rem;*/
 	border-radius: 4px;
 	border: 1.1px dotted #222222;
 	background: #ffffff;
