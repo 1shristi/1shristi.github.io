@@ -36,12 +36,20 @@
   margin-top: 0;
 }
 
+.mt--1 {
+  margin-top: -1rem;;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .mt-20 {
-  /*margin-top: 5rem;*/ //to reduce some of the spacing
+  margin-top: 5rem; //to reduce some of the spacing
 }
 
 .mb-0 {
@@ -109,15 +117,24 @@
 
 /* Typography */
 .font-primary {
-  font-family: american typewriter;
+  font-family: 'american typewriter';
+  font-optical-sizing: auto;
 }
 
 .font-secondary {
   font-family: 'Raleway';
+  font-optical-sizing: auto;
 }
 
 .text-right {
   text-align: right;
+}
+
+.playfair-fontfamily {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Layout */
@@ -128,11 +145,27 @@
 /* Backgrounds */
 .bg-grey {
   background-color: #F5F5F5;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 .bg-blue {
   background-color: rgba(76, 147, 195, 0.534);
+
 }
+
+.bg-green {
+  background-color: #ebf4e5;
+}
+
+.bg-grey-light {
+  padding: 2.5rem;
+  /*background-color: #F5F5F5;*/
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  background-color: #eaeaea;
+}
+
 
 /* Borders/outlines */
 .no-outline {

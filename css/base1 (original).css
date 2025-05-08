@@ -286,8 +286,10 @@ nav a:hover {
 }
 
 .image-text {
+  display: inline-block;
   font-style: italic;
-  line-height: 1.75rem;
+  line-height: .7rem;
+  margin: 0rem;
 }
 
 .arrow-list {
