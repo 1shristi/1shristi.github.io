@@ -60,7 +60,10 @@
 }
 
 .solution-content {
-  padding: 2.5rem;
+  padding-left: 6.5rem;
+  padding-right: 6.5rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
   border-radius: 16px;
 }
 
@@ -84,11 +87,11 @@
 }
 
 .solution-section .img-1 {
-  width: 85%;
+  width: 100%;
 }
 
 .solution-section .img-2 {
-  width: 65%;
+  width: 100%;
 }
 
 .solution-section .img-3 {
@@ -133,8 +136,7 @@
 /*before and after menu*/
 .static-image {
   display: block;
-  width: 39%;
-  height: 100%;
+  width: 60%;
   object-fit: contain;
 }
 
@@ -146,26 +148,37 @@
   object-fit: contain;
 }
 
-/*card */
+/*cards for static data */
 .overlay-image {
-  position: absolute;
-  top: 29%;
-  left: 28%;
-  width: 77%;
-  height: 89%;
-  object-fit: contain;
-  transition: opacity 0.3s ease;
+	position: absolute;
+	top: 0;
+	left: 2%;
+	width: 103%;
+	height: 124%;
+	object-fit: contain;
+	transition: opacity 0.3s ease;
 }
 
-/*menu*/
-.overlay-image2 {
+
+/*giffffff */
+.overlay-gif {
   position: absolute;
-  top: 2%;
-  left: 24%;
-  width: 25%;
-  height: 30%;
+  width: 100%;
   object-fit: contain;
   transition: opacity 0.3s ease;
+  background-color:rgba(162, 197, 224, 1);
+}
+
+
+/*tab element menu*/
+.overlay-image2 {
+	position: absolute;
+	/* top: 0%; */
+	left: 54%;
+	width: 35%;
+	height: 30%;
+	object-fit: contain;
+	transition: opacity 0.3s ease;
 }
 
 /*original dashboard*/
@@ -174,10 +187,11 @@
 	/* flex-direction: row; */
 	top: 0%;
 	left: 0%;
-	height:450px;
-	object-fit: contain;
+	height:100%;
+	object-fit: cover;
 	transition: opacity 0.3s ease;
 }
+
 
 /*original dashboard*/
 .overlay-image3 {
@@ -212,7 +226,7 @@
   padding: 6px 18px;
   min-width: 72px;
   /* gap: 5px; */
-  margin-top: .7rem;
+  margin-top: 0;
   border-radius: 4px;
   border: 1.1px dotted #222222;
   background: #ffffff;
@@ -227,18 +241,17 @@
 }
 
 .button3 {
-  box-sizing: border-box;
-  display: inline-grid;
-  flex-direction: row;
+	display: flex;
+	flex-direction: column;
+	align-self: flex-start;
   justify-content: center;
   padding: 6px 18px;
   min-width: 72px;
-  /* gap: 5px; */
-  /*margin-top: 1rem;*/
   border-radius: 4px;
   border: 1.1px dotted #222222;
   background: #ffffff;
 }
+
 
 // Media Queries for Responsive Design 
 

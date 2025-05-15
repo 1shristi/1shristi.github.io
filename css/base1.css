@@ -32,6 +32,12 @@
   box-sizing: border-box;
 }
 
+h5 {
+  font-size: 1.1em;
+  font-weight: 700;
+
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -264,6 +270,10 @@ nav a:hover,
   margin-bottom: 0.25rem;
 }
 
+.submenu-block {
+  margin-bottom: 0rem;
+}
+
 .submenu-header {
   font-family: 'Raleway';
   color: lightslategrey;
@@ -335,13 +345,17 @@ nav a:hover,
   line-height: 1.75rem;
 }
 
+.block-link {
+  text-decoration: underline;
+}
+
 
 .section-title {
   align-self: center;
   /*flex-start*/
   color: #000;
   font-family: 'american typewriter';
-  font-size: 1.4em;
+  font-size: 1.6em;
   font-weight: normal;
   line-height: 3rem;
   margin-bottom: -0.4rem;

@@ -105,11 +105,13 @@
                 </span>
               </div>
 
-              <!--background image of section-1-banner -->
+              
 
+              <!--background image of section-1-banner -->
+              <section id="overview_image">
               <div class="flex three-column-layout">
                 <img src="./images/overview-intro.png" display="cover" />
-              </div>
+              </div></section>
 
               <!--approach sub-section-->
               <div class="flex three-column-layout">
@@ -187,12 +189,12 @@
               <h5>Map as anchor for all user flows</h5>
 
 
-              <div class="block-copy-alt mt-2 mb-4">
+              <div class="block-text mb-4">
                 <div class="mb-8">
                   The map is the first element users see on the updated Dashboard. It's intentionaly laid
                   out to visually reflect the physical space that site managers
                   work with in their mental model.
-                </div>
+                  </div>
                 <ul>
                     <li>
                       Apply affordances to guide user around one dataset to another
@@ -216,7 +218,7 @@
               <div class="image-stack-button img-1">
                 <div class="image-stack img-1 mt-4 mb-0">
                   <img
-                    src="./images/dashboard2.png"
+                    src="./images/Dashboard 3.0a.png"
                     class="img-1 mt-0 mb-0"
                     alt="main dashboard screen"
                   />
@@ -236,22 +238,22 @@
                   />
                 </div>
 
-                <div class="image-text mb-20 mt-8">
+                <div class="project_copy">
+                <div class="image-text mb-0 mt-8 p-1">
                   As a rule, existing static table data is transformed into
                   concise charts to reduce visual clutter and improve data
                   comprehension. Orginally entire pages were dedicated to static
                   information.
+                  </div>
 
-                  <br />
                   <div class="image-stack-button img-1">
                     <!-- Toggle button original dashboard -->
                     <button class="toggle-btn button2" data-target="img4">
                       View old
                     </button>
                   </div>
-                </div>
               </div>
-              <!-- UI decision card 1 -->
+              <!-- UI decision card 1 "ALLOW FOR GRADUAL REVEAL"-->
               <div class="card mb-20">
                 <div class="block-copy mb-0">
                   <span class="block-title mb-4">allow for gradual reveal</span>
@@ -261,64 +263,112 @@
                     content gradually, depending on where they are on the user
                     flow.</span
                   >
+                  <!-- LIST 1-->
                   <ul>
                     <li>
                       Static data from tables become graphical charts to reduce
                       visual clutter and improve data comprehension.
                     </li>
                     <li>
-                     Pie charts in particular frame the rest of the content displayed in the
+                     Pie charts frame the rest of the content displayed in the
                       Dashboard. Interacting with each pie chart reveals specific location
                       details intentionally designed within the map container.
                     </li>
                 
+                    <!-- Image stack 1 GIF IMAGE -->
+                  <div class="image-stack img-1 mt-10 mb-10">
+                    <img
+                      src="./images/gifs/pie-chart-selected.gif"
+                      alt="Static Image 1"
+                      class="static-image2"
+                    />
                    
-                    <!-- Toggle button -->
-                    <button class="toggle-btn button2" data-target="img1">
-                      Reveal
-                    </button>
+                  </div> 
+                  </ul>
+                  
+                </div>
+              </div>
+
+              <!-- Second image of dashboard -->
+              <h5>Updating the app to match users' mental model</h5>
+              <div class="project_copy mt-0 mb-0">
+                <div>
+                  We assumed the user would (first) think about the types of
+                  data they wanted to search on the app then (second) find its
+                  respective parking location. <br /><br />Turns out, it's
+                  actually other way around. <br /><br />Their mental model
+                  thinks of a parking location (first) then searches for its
+                  respective data (second). So I introduced card UI elements to
+                  visually represent each location (first) and support easy
+                  comparison.
+                </div>
+                  <!-- Toogle botton-->
+                 
+                  <button class="toggle-btn button2" data-target="img1">
+                    View quick animation
+                  </button>
+              </div>
 
                     <!-- Image stack 1 -->
                   <div class="image-stack img-1 mt-10 mb-10">
                     <img
-                      src="./images/piechart1.png"
-                      alt="Static Image 1"
-                      class="static-image2"
-                    />
+                    src="./images/dashboard02.png"
+                    class="img-2 mt-10 mb-20"
+                    alt="second image of extended dashboard"
+                  />
                     <img
                       id="img1"
-                      src="./images/piechart2.png"
-                      class="overlay-image"
+                      src="./images/gifs/Dashboard2a.gif"
+                      class="overlay-gif"
                       style="display: none"
                     />
-                  </div>
+                  </div> 
 
-                  </ul>
-                  <ul>
+              <!-- UI decision card 2 -->
+              <div class="card mb-20">
+                <div class="block-copy mb-0">
+                  <p class="block-text">
+                  <span class="block-title mb-2"
+                    >assessing content hierarchy </span
+                  >
+                
+                  <p class="block-text">
+                    Clarifying the content hierarchy was a challenge; below is a summary. <br> For the entire process see  
+                    <a class="block-link" href="#deep-dive-ia">13 menu-items</a>.
+                  </p>
+
+                  
+                  <h5>Static data </h5>
+                  <span class="block-copy-alt mb-0">
+                    <ul>
                     <li>
-                      By scanning respective <em>static data</em> in
-                      seperate card elements, the navigation menu is much
-                      shorter and clearer to understand.
+                      I collected data that didn't require user input or immediate user awareness and placed them in card UI elements to quickly see the current status of each parking location. 
                     </li>
-                    <!-- Toggle button for cards -->
-                    <button class="toggle-btn button2" data-target="img2">
-                      Cards
-                    </button>
+                    </ul>
+                    </span>
+                     <!-- Toggle button 1 -->
+                     <button class="toggle-btn button2" data-target="img2">
+                      Static data in cards
+                    </button> 
+                   
+                    <span class="block-copy-alt mb-0">
+                   <h5 class="mt-1">Transient data </h5>
+                   <ul>
+                      <li>
+                         Of the collected data that was ever-changing, I approached it creatively, for example: introducing a "tab"-like element within the navigation bar. 
+                         
+                      </li>
                   </ul>
-
-                  <ul>
-                    <li>
-                      Labels representing each card allows users to easily see
-                      the current status of their workflow.
-                    </li>
-                    <!-- Toggle button for labels -->
-                    <button class="toggle-btn button2" data-target="img3">
-                      Labels
-                    </button>
-                  </ul>
-
+                </span> 
+                <!-- Toggle button 2 -->
+                <button class="toggle-btn button2" data-target="img3">
+                  Creative "tab"-like element
+                </button>
+                  
+                </p>
+                 
                   <!-- Image stack -->
-                  <div class="image-stack img-1 mt-10 mb-10">
+                  <div class="image-stack img-1 mt-8 mb-10">
                     <img
                     src="./images/dashboard02menuBefore.png"
                     class="static-image"
@@ -340,82 +390,6 @@
                     />
                   </div>
 
-                 
-                </div>
-              </div>
-
-              <!-- Second image of dashboard -->
-              <h5>Updating the app to match users' mental model</h5>
-              <div class="project_copy mt-0 mb-0">
-                <div>
-                  We assumed the user would (first) think about the types of
-                  data they wanted to search on the app then (second) find its
-                  respective parking location. <br /><br />Turns out, it's
-                  actually other way around. <br /><br />Their mental model
-                  thinks of a parking location (first) then searches for its
-                  respective data (second). So I introduced card UI elements to
-                  visually represent each location (first) and support easy
-                  comparison.
-                </div>
-              </div>
-              <img
-                src="./images/dashboard02.png"
-                class="img-2 mt-10 mb-20"
-                alt="second image of extended dashboard"
-              />
-
-              <!-- UI decision card 2 -->
-              <div class="card mb-20">
-                <div class="block-copy mb-0">
-                  <span class="block-title"
-                    >Assessing content hierarchy </span
-                  >
-
-                  <ul>
-                    <li>
-                      By placing all the respective <em>static data</em> in
-                      seperate card elements, the navigation menu is much
-                      shorter and clearer to understand.
-                    </li>
-                    <!-- Toggle button for cards -->
-                    <button class="toggle-btn button2" data-target="img2">
-                      Cards
-                    </button>
-                  </ul>
-
-                  <ul>
-                    <li>
-                      Labels representing each card allows users to easily see
-                      the current status of their workflow.
-                    </li>
-                    <!-- Toggle button for labels -->
-                    <button class="toggle-btn button2" data-target="img3">
-                      Labels
-                    </button>
-                  </ul>
-
-                  <!-- Image stack -->
-                  <div class="image-stack img-1 mt-10 mb-10">
-                    <img
-                      src="./images/dashboard02menuBefore.png"
-                      class="static-image"
-                      alt="navigation bar before"
-                    />
-                    <img
-                      id="img2"
-                      src="./images/dashboard02cards.png"
-                      class="overlay-image"
-                      alt="cards"
-                      style="display: none"
-                    />
-                    <img
-                      id="img3"
-                      src="./images/dashboard02menu.png"
-                      class="overlay-image2"
-                      alt="menu updated"
-                      style="display: none"
-                    />
-                  </div>
                 </div>
               </div>
 
@@ -435,7 +409,7 @@
                 </div>
               </div>
               <img
-                src="./images/interface6.png"
+                src="./images/Floorplan.png"
                 class="img-3 mb-20"
                 alt="customized floor plan layout"
               />

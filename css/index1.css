@@ -43,6 +43,12 @@
     margin-right: 30px;
   }
 
+  .project_copy_image {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+  }
+
   #full_work .project_copy div h3 {
     font-size: 2.5em;
   }
