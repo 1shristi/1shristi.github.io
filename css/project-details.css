@@ -2,7 +2,7 @@
 .banner-container {
   height: auto;
   border-radius: 16px;
-
+  padding-top: 3rem;
 }
 
 .section-1-banner {
@@ -58,14 +58,14 @@
 .sketches-content .img-2-container {
   width: 35%;
 }
-
+/* //moved this to @media section for less than 1280px
 .solution-content {
   padding-left: 6.5rem;
   padding-right: 6.5rem;
   padding-top: 3rem;
   padding-bottom: 2rem;
   border-radius: 16px;
-}
+} */
 
 .solution-section .two-column-layout {
   padding: 0 3.25rem;
@@ -108,7 +108,7 @@
   /* Use flexbox to arrange images */
   flex-direction: row;
   /* Stack images vertically by default */
-  align-items: left;
+  align-items: center;
   /* Center images horizontally */
   gap: 5px;
   /* Spacing between images */
@@ -122,7 +122,7 @@
   /* Use flexbox to arrange images */
   flex-direction: column;
   /* Stack images vertically by default */
-  align-items: left;
+  align-items: center;
   /* Center images horizontally */
   gap: 0px;
   /* Spacing between images */

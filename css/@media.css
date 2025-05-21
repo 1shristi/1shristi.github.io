@@ -1,0 +1,90 @@
+/* For screens up to 1440px wide */
+@media only screen and (max-width: 1440px) {
+    .condensed-column {
+        width: 100%;
+    }
+    .image-copy {
+        align-self: flex-start;
+        padding-top: 3rem;
+        padding-right: 7rem;
+        width: auto;
+    }
+}
+
+/* For screens up to 1280px wide */
+@media only screen and (max-width: 1280px) {
+    .block-copy,
+    .card {
+        padding: 0;
+        margin: 0;
+    }
+    .two-column-layout,
+    .three-column-layout {
+        flex-direction: column;
+    }
+    .two-column-layout > div,
+    .three-column-layout > div {
+        margin-bottom: 2rem;
+    }
+    .two-column-layout > div:first-child {
+        margin-right: 0;
+    }
+}
+
+/* For screens with a minimum height of 1000px */
+@media only screen and (min-height: 1000px) {
+    h1 {
+        font-size: 6em;
+    }
+}
+
+/* For screens up to 1000px wide */
+@media only screen and (max-width: 1000px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    nav {
+        margin-top: 50px;
+    }
+    #left h1 {
+        font-size: 7vh;
+    }
+    .title {
+        width: 50%;
+    }
+    #left {
+        width: 100%;
+        border-bottom: 0.25px solid rgba(0, 0, 0, 0.25);
+    }
+    #info {
+        position: fixed;
+        top: 10vh;
+        left: 2vw;
+        margin: 0;
+        padding: 0;
+    }
+    .content {
+        margin-top: 0;
+    }
+    #full_work {
+        margin: 0;
+        padding: 0 0 0 210px;
+        width: auto;
+    }
+    #work {
+        margin: 0;
+        padding: 0 5vh 0 20vw;
+        width: auto;
+        height: 85vh;
+    }
+    #about {
+        margin: 3vh;
+        padding: 0 15vh 0 20vw;
+        width: auto;
+        height: 85vh;
+    }
+    .vertical {
+        transform: none;
+        margin-top: 0;
+    }
+}

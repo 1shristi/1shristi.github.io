@@ -135,6 +135,7 @@ ul {
   /*not needed*/
   margin: 0;
   padding-left: 1.75rem;
+  
 }
 
 li {
@@ -408,7 +409,7 @@ ol {
   list-style-type: inside;
   margin: 1rem 4rem 1rem 1rem;
   padding-left: 5%;
-  /* line-height: 0.5rem; */
+  line-height: 0.5rem; 
 }
 
 li {
@@ -478,8 +479,8 @@ li {
 	font-style: italic;
 	line-height: 1.55rem;
   padding-top:0rem;
-	padding-left: 2rem;
-	padding-right: 2rem;
+	padding-left: 0rem;
+	padding-right: 0rem;
 	margin-top: 0rem;
 }
 
@@ -725,7 +726,7 @@ footer {
 
 @media only screen and (min-height: 1000px) {
   h1 {
-    font-size: 6em;
+    font-size: 7vh;
   }
 }
 
@@ -739,16 +740,21 @@ footer {
   }
 
   #left h1 {
-    font-size: 7vh;
+    font-size: 5vh;
   }
 
   .title {
-    width: 50%;
+    width: 100%;
   }
 
   #left {
     width: 100%;
     border-bottom: .25px solid rgba(0, 0, 0, 0.25);
+  }
+
+  /* Hide specific divs on small screens */
+  .hide-on-mobile {
+    display: none !important;
   }
 
   #info {
@@ -759,9 +765,64 @@ footer {
     padding: 0;
   }
 
+  h2 {
+	margin: 0.25rem 0em 0.25rem 0em;
+	font-size: 1.5rem;
+	font-weight: 300;
+  }
+
+  .page-header {
+    align-self: flex-start;
+    margin-bottom: 3.8rem;
+    text-align: left;
+  } 
+
+  /*why did i make button2 with this random margin at 1000px
+  .button2 {
+	margin: 2rem;
+}
+*/
+
+	.project_copy {
+		width: 100%;
+		padding-left:3rem;
+    padding-right:3rem;
+	}
+
+  .block-copy-alt, .block-text, li {
+    line-height: 1.5rem;
+  }
+
+  .section-title {
+    line-height: 2rem;
+    margin-bottom: .2rem;
+  }
+
+
+  .flex {
+    flex-direction:column;
+  }
+
   .content {
     margin-top: 0;
   }
+
+  .solution-content {
+	padding-left: 0rem;
+	padding-right: 0rem;
+	padding-top: 1rem;
+	padding-bottom: 2rem;
+	border-radius: 16px;
+}
+
+/* //moved this to @media section in the base.css file for less than 1000px. duplicate otherwise.
+.solution-content {
+  padding-left: 6.5rem;
+  padding-right: 6.5rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  border-radius: 16px;
+} */
 
   #full_work {
     margin: 0;
@@ -796,3 +857,4 @@ footer {
     margin-top: 0;
   }
 }
+

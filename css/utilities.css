@@ -97,6 +97,16 @@
   padding: 0;
 }
 
+.px-0 { /* xaxis is left right*/
+  padding-left: 0rem;
+  padding-right: 0rem;;
+}
+
+.py-1 { /* yaxis is top bottom*/
+  padding-top: 1rem;
+  padding-bottom: 1rem;;
+}
+
 .p-6 {
   padding: 1.5rem;
 }
