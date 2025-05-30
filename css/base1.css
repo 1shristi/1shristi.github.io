@@ -70,13 +70,13 @@ a {
 
 h1 {
   font-size: 8vh;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: lowercase;
 }
 
 h2 {
   margin: 0.25rem 0em 0.25rem 0em;
-  font-size: 2.7rem;
+  font-size: 2.5rem;
   font-weight: 300;
 }
 
@@ -98,6 +98,7 @@ strong {
 .page-header {
   align-self: flex-end;
   margin-bottom: 3.8rem;
+  margin-top:2rem;
   text-align: right;
 }
 
@@ -163,7 +164,7 @@ input[type="password"] {
   position: sticky;
   overflow: visible;
   top: 2rem;
-  width: 7rem;
+  width: 0rem;
 }
 
 #left:hover {
@@ -185,6 +186,10 @@ input[type="password"] {
 
 #full_work {
   overflow-x: hidden;
+}
+
+#full_work a {
+  text-decoration: underline;
 }
 
 #work {
@@ -231,6 +236,14 @@ input[type="password"] {
   font-weight: 600;
 }
 
+#solution a {
+  text-decoration: underline;
+} 
+
+#solution a:hover {
+  font-weight: 600;
+}
+
 nav {
   min-width: 150px;
   position: sticky;
@@ -271,6 +284,14 @@ nav a:hover,
   margin-bottom: 0.25rem;
 }
 
+.page-nav a, .page-nav .submenu,
+.page-nav .submenu-item,
+.page-nav .extra-solution,
+.page-nav .reflections {
+  padding-left: 10px;    /* increase by 5px from your normal (whatever normal is +5px) */
+  margin-left: -5px;     /* pull the link 5px to the left so the background starts before the text.*/
+}
+
 .submenu-block {
   margin-bottom: 0rem;
 }
@@ -295,6 +316,9 @@ nav a:hover,
   transform: translate(-100%) rotate(-90deg);
   margin-top: 10px;
 }
+
+
+
 
 #pagenav {
   margin-bottom: 3em;
@@ -336,7 +360,7 @@ nav a:hover,
   font-size: 1.4em;
   line-height: 2rem;
   margin-bottom: 1rem;
-  font-weight: normal;
+  font-weight: 500;
 }
 
 .block-title2 {
@@ -349,7 +373,6 @@ nav a:hover,
 .block-link {
   text-decoration: underline;
 }
-
 
 .section-title {
   align-self: center;
@@ -394,14 +417,14 @@ nav a:hover,
   color: #333;
   font-family: 'raleway';
   font-size: 1.1em;
-  font-weight: 200;
+  font-weight: 300;
   font-variant: lining-nums;
   margin-bottom: .4rem;
 }
 
 .block-text {
   font-weight: 400;
-  line-height: 1.75rem;
+  line-height: 1.4rem;
 }
 
 ol {
@@ -740,7 +763,7 @@ footer {
   }
 
   #left h1 {
-    font-size: 5vh;
+    font-size: 9vh;
   }
 
   .title {
@@ -774,7 +797,7 @@ footer {
   .page-header {
     align-self: flex-start;
     margin-bottom: 3.8rem;
-    text-align: left;
+    text-align: right;
   } 
 
   /*why did i make button2 with this random margin at 1000px
@@ -801,6 +824,10 @@ footer {
 
   .flex {
     flex-direction:column;
+  }
+
+  .flex-column-reverse {
+    flex-direction:column-reverse;
   }
 
   .content {

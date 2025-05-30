@@ -7,6 +7,12 @@
   flex: 1;
 }
 
+.flex-row {
+    display: row;
+}
+
+flex-row {flex-direction: row-reverse;}
+
 .flex-column {
   flex-direction: column;
 }
@@ -52,6 +58,10 @@
   margin-top: 5rem; //to reduce some of the spacing
 }
 
+.mt-40 {
+  margin-top: 40rem;
+}
+
 .mb-0 {
   margin-bottom: 0;
 }
@@ -74,6 +84,10 @@
 
 .mb-27 {
   margin-bottom: 6.75rem;
+}
+
+.mb-60 {
+  margin-bottom: 15rem;
 }
 
 .ml-auto {
@@ -100,6 +114,11 @@
 .px-0 { /* xaxis is left right*/
   padding-left: 0rem;
   padding-right: 0rem;;
+}
+
+.px-1 { /* xaxis is left right*/
+  padding-left: 1rem;
+  padding-right: 1rem;;
 }
 
 .py-1 { /* yaxis is top bottom*/

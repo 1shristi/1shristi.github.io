@@ -22,37 +22,23 @@
     <!-- index title -->
     <header class="flex">
       <div class="title">
-        <href="index.html" id="left">
+        <a href="index.html" id="left">
           <h1 class="vertical">Shristi Gartaula</h1>
-
-          <!-- SVG LOGO to experiment
-          <div class="vertical">
-              <object type="image/svg+xml" data="logo.svg"></object>
-            </div> -->
-          </a>
-
+        </a>
       </div>
-      <!-- Navigation -->
+       <!-- Navigation -->
       <section id="info">
         <nav>
           <div class="page-nav">
             <a href="#overview" class="selected">overview</a>
-            <div class="submenu">
-              <a class="submenu-item" href="#approach">my approach</a>
-            <div class="submenu">
-              <span class="submenu-header">solution</span>
-              <a class="submenu-item" href="#solution">map as anchor</a>
-              <a class="submenu-item" href="#solution-model">mental model</a>
-            </div>
-
+            <a href="#solution">solution</a>
+            <a href="#floorPlan">extra solution</a>
             <div class="submenu">
               <span class="submenu-header">challenges</span>
               <a class="submenu-item" href="#deep-dive-ia">lengthy menu</a>
               <a class="submenu-item" href="#deep-dive-dataset-relationships">system status</a>
             </div>
-
-            <a href="#floorPlan" class="main-nav extra-solution">extra solution</a>
-            <a href="#learnings" class="main-nav reflections">reflections</a>
+            <a href="#learnings">reflections</a>
           </div>
 
           <!-- TODO: Bring this back when about page is ready -->
@@ -80,7 +66,7 @@
             </svg>
           </mark>
           <h3 class="subtitle text-right">
-            for a client’s parking site management application
+            for a client's parking site management application
           </h3>
         </div>
 
@@ -91,10 +77,14 @@
           </span>
           <div class="flex banner-container mb-20 flex-column bg-green solution-content px-12">
             <div class="image-copy px-12">
-              <span class="image-title">
-                The client's parking site management app worked well technically, but when presenting to executives for
-                buy-in, UI elements like the sparse dashboard and bloated navigation menu made it challenging to
-                showcase the app's value proposition effectively.
+              <span class="image-title">The client’s demo app for parking site management—while
+                technically sound, couldn’t show the value proposition clearly
+                enough to gain executive buy-in during important meetings.
+                <span>
+                  <br />The main dashboard lacked visual cues and affordances
+                  for navigation, making it difficult to grasp the key
+                  features to showcase.
+                </span>
               </span>
             </div>
 
@@ -108,15 +98,15 @@
             </section>
 
             <!--approach sub-section-->
-            <div class="flex three-column-layout" id="approach">
+            <div class="flex three-column-layout">
               <div class="flex flex-1">
                 <div class="card negative-card align-self-start">
                   <div class="block-copy">
                     <p class="block-text">
                       <span class="block-title">approach</span><br />
-                      In an interview workshop setting with the client, I facilitated and adopted the perspectives of
-                      two key individuals for user interviews:
-
+                      In an interview workshop setting with the client, I
+                      facilitated and adopted the perspectives of two key
+                      individuals for user interviews:
                     </p>
                     <ul>
                       <br />
@@ -139,9 +129,12 @@
                         The benefits of this approach
                       </div>
                       <p class="block-text">
-                        It revealed the core usability issues that my user interface needed to address, especially on
-                        the main dashboard. Additionally, by defining it as a workshop, the client could participate in
-                        the design solution and help narrow the project scope to just pertinent screens and user flows.
+                        It revealed the core usability issues that my user
+                        interface needed to address, especially on the main
+                        dashboard. Additionally, by defining it as a workshop,
+                        the client could participate in the design solution
+                        and help narrow the project scope to just pertinent
+                        screens and user flows.
                       </p>
                     </div>
                   </div>
@@ -152,10 +145,9 @@
         </section>
 
         <!-- Solution section -->
-
         <section id="solution" class="flex flex-column solution-section font-secondary mb-20">
           <span class="section-title">solution</span>
-          <span class="section-subheading">allow for gradual reveal | assess content hierarchy | reorder
+          <span class="section-subheading">allow for gradual reveal | assess content hieararchy | reorder
             sidebar navigation</span>
           <div class="flex flex-column bg-blue solution-content banner-container px-12">
             <!--  <div class="image-copy px-12">
@@ -178,26 +170,26 @@
             <!-- map as anchor for all user flows  -->
             <div class="block-text mb-4 px-12">
               <div class="mb-8">
-
-                The map is the first element users see on the updated Dashboard. It's intentionally laid out to visually
-                reflect the physical space that site managers work with in their mental model.
+                The map is the first element users see on the updated Dashboard. It's intentionaly laid
+                out to visually reflect the physical space that site managers
+                work with in their mental model.
               </div>
               <!-- Bullet points for map anchor -->
               <ul>
                 <li>
-                  Apply affordances to guide users from one dataset to another
+                  Apply affordances to guide user around one dataset to another
                 </li>
                 <li>
-                  Find opportunity to use spatial assets to reduce information overload
+                  Find opportunity to use spatial assets to reduce information
+                  overload
                 </li>
                 <li>
-
-                  Use visuals and typography to organize different types of menu item content
+                  Use visuals and typography to organize different types of
+                  menu-item content
                 </li>
                 <li>
-                  Where important information is far too complex to be in a dashboard, avoid showcasing more than
-                  necessary
-
+                  Where important information is far too complex to be in a
+                  dashboard, avoid showcasing more than necessary
                 </li>
               </ul>
 
@@ -215,9 +207,10 @@
               <!-- annotation below image, then button -->
 
               <div class="image-stack-button img-1 project_copy image-text py-1 px-0">
-
-                As a rule, existing static table data is transformed into concise charts to reduce visual clutter and
-                improve data comprehension. Originally entire pages were dedicated to static information.
+                As a rule, existing static table data is transformed into
+                concise charts to reduce visual clutter and improve data
+                comprehension. Originally entire pages were dedicated to static
+                information.
 
               </div>
             </div>
@@ -225,54 +218,53 @@
             <button class="toggle-btn button2 mt-0 mb-60" data-target="img4">
               View old
             </button>
-          </div>
-        </section>
+</div>
+</section>
 
-        <!-- 
--->
+            <!-- UI decision card 1 "ALLOW FOR GRADUAL REVEAL"-->
+            <div class="card learnings-card mb-2 mt-10">
+              <div class="block-copy mb-20">
+                <span class="block-title mb-4">allow for gradual reveal</span>
 
-        <!-- UI decision card 1 "ALLOW FOR GRADUAL REVEAL"-->
-        <div class="card learnings-card mb-2 mt-10">
-          <div class="block-copy mb-20">
-            <span class="block-title mb-4">allow for gradual reveal</span>
+                <span class="block-copy-alt">To avoid information overload, users are introduced to data
+                  content gradually, depending on where they are on the user
+                  flow.</span>
+                <!-- LIST 1-->
+                <ul>
+                  <li>
+                    Static data from tables become graphical charts to reduce
+                    visual clutter and improve data comprehension.
+                  </li>
+                  <li>
+                    Pie charts frame the rest of the content displayed in the
+                    Dashboard. Interacting with each pie chart reveals specific location
+                    details intentionally designed within the map container.
+                  </li>
 
-            <span class="block-copy-alt block-text font-secondary">To avoid information overload, users are introduced
-              to data content gradually, depending on where they are on the user flow.
-            </span>
-            <!-- LIST 1-->
-            <ul class="font-secondary">
-              <li>
-                Static data from tables become graphical charts to reduce visual clutter and improve data comprehension.
+                  <!-- Image stack 1 GIF IMAGE -->
+                  <div class="image-stack img-1 mt-10 mb-0">
+                    <img src="./images/gifs/pie-chart-selected.gif" alt="Static Image 1" class="static-image2" />
 
-              </li>
-              <li>
-                Pie charts frame the rest of the content displayed in the Dashboard. Interacting with each pie chart
-                reveals specific location details intentionally designed within the map container.
-              </li>
-
-              <!-- Image stack 1 GIF IMAGE -->
-              <div class="image-stack img-1 mt-10 mb-0">
-                <img src="./images/gifs/pie-chart-selected.gif" alt="Static Image 1" class="static-image2" />
+                  </div>
+                </ul>
 
               </div>
-            </ul>
+            </div>
 
-          </div>
-        </div>
-
-        <!-- SOLUTION CONTINUED updating app users' mental models -->
-        <section id="" class="flex flex-column solution-section font-secondary mb-20 mt-20">
-          <div class="flex flex-column bg-blue solution-content banner-container px-12" id="solution-model">
+            <!-- SOLUTION CONTINUED updating app users' mental models -->
+             <section id="" class="flex flex-column solution-section font-secondary mb-20 mt-20">
+          <div class="flex flex-column bg-blue solution-content banner-container px-12">
             <h5 class="px-12 mt-8">Updating the app to match users' mental model</h5>
 
             <!-- Numbered List 1 mental mode assumptions-->
             <div class="block-text mb-4 px-12">
               <div class="mb-8">
-                Besides visual cues, the app's content structure and information architecture did not entirely match the
-                users' mental model.
+                Besides visual queues, the app's content structure and information architecture did not entirely match
+                the users' mental model.
                 Based on how the original app was presented, I assumed users would: </div>
               <ol>
-                <li>Think of tracking or monitoring data they wanted to search for <em>first</em></li>
+                <li>Think of tracking or monitoring data they wanted to
+                  search for <em>first</em></li>
                 <li>then think about the parking location that pertains to this data</li>
               </ol>
             </div>
@@ -281,7 +273,7 @@
 
               <!-- line break 1-->
               <div class="mb-8">
-                Turns out it's the other way around —</div>
+                Turns out it’s the other way around — </div>
 
               <!-- Numbered List 2-->
               <ol>
@@ -293,65 +285,102 @@
 
               <!-- line break 2-->
               <div class="mb-4">
-                This new discovery helped me better understand what value the data had for users, so I could decide
-                which elements made sense to reveal on the dashboard, at what point, and which ones could be stored
-                away.
+                This new discovery helped me better understand what value the data had for users, so I could decide which elements made sense to reveal on the dashboard, at what point, and which ones could be stored away.
               </div>
               <!-- actual bullet points-->
-
+              
             </div>
-
+                        
             <!--Updated dashboard img 2 + animation-->
             <!-- Image stack 1 -->
             <div class="image-stack img-1 mt-10 mb-4">
               <img src="./images/dashboard02.png" class="img-2 mt-10 mb-0" alt="second image of extended dashboard" />
               <img id="img1" src="./images/gifs/Dashboard2a.gif" class="overlay-gif" style="display: none" />
             </div>
-            <!-- Toggle botton-->
+             <!-- Toggle botton-->
             <button class="toggle-btn button2 mt-0 mb-60" data-target="img1">
               View quick animation (revealing data with cards)
             </button>
-          </div>
-        </section>
+</div></section>
 
 
-        <!-- UI decision card 2 "Dashboard by data volatility"-->
-        <div class="card learnings-card mb-2 mt-10">
-          <div class="block-copy mb-0">
-            <span class="block-title mb-4">define dashboard by data volatility</span>
+            <!-- UI decision card 2 "Dashboard by data volatility"-->
+            <div class="card learnings-card mb-2 mt-10">
+              <div class="block-copy mb-0">
+                <span class="block-title mb-4">define dashboard by data volatility</span>
 
-            <span class="font-secondary block-text block-copy mb-8">By data volatility, I mean the degree to which any
-              given data that the user sees on the application changes over time. By clarifying the user's mental model,
-              we know what kinds of data they prioritize and this data is largely unchanging or static.</span>
-            <!-- LIST 1-->
-            <ul class="font-secondary">
-              <li>
-                <b>Static data grouped into cards</b>: interestingly (and thankfully), relatively unchanging data (low
-                data volatility) was more important for the dashboard. This is because in the user's frame of mind
-                static data like location and users were the first association to any application task.
-              </li>
-              <li>
-                <b>Transient data grouped selectively
-                </b>: Frequently changing data like tracking vehicles entering or exiting a building was affecting other
-                elements in entirely separate sections of the menu, without notifying the user (!). Using entity
-                relationship diagrams (like below) to group data by volatility and relevance guided me towards a
-                solution within the project scope.
-                <br><br>
-                View the nitty-gritty in <a href="#deep-dive-dataset-relationships">Challenges: system-status</a>.
-              </li>
+                <span class="block-copy-alt mb-4">By data volatility, I mean the degree to which any given data that the user sees on the application changes over time. By clarifying the user's mental model, we know what kinds of data they prioritize and this data is largely unchanging or static.</span>
+                <!-- LIST 1-->
+                <ul>
+                  <li>
+                    <b>Static data grouped into cards</b>: interestingly (and thankfully), relatively unchanging data (low data volatility) was more important for the dashboard. This is because in the user's frame of mind static data like location and users were the first association to any application task.
+                  </li>
+                  <li>
+                    <b>Transient data grouped selectively                    
+                    </b>: Frequently changing data like tracking vehicles entering or exiting a building was affecting other elements in entirely seperate sections of the menu, without notifying the user (!). Using entity relationship diagrams (like below) to group data by volatility and relevance guided me towards a solution within the project scope. View the nitty-gritty in <a href="#deep-dive-dataset-relationships">Challenges: system-status</a>.
+                    
+                   
+                  </li>
 
-              <!-- Image stack 1 GIF IMAGE -->
-              <div class="image-stack align-center img-1 mt-8 mb-0">
-                <img src="./images/erdiagram2.png" alt="entity relationship diagram" class="static-image2" />
+                  <!-- Image stack 1 GIF IMAGE -->
+                  <div class="image-stack align-center img-1 mt-10 mb-0">
+                    <img src="./images/erdiagram.png" alt="entity relationship diagram" class="static-image2" />
+
+                  </div>
+                </ul>
 
               </div>
-            </ul>
-
-          </div>
-        </div>
+            </div>
 
 
+            <!-- Green Section for Floor plan UI -->
 
+        <section id="floorPlan" class="flex flex-column mb-20 mt-20 font-secondary">
+           <span class="section-title">extra</span>
+          <span class="section-subheading">standalone design within parking application | replacing onboarding wizard setup </span>
+        <div class="flex flex-column bg-green solution-content banner-container px-12">
+            <!-- TEXT for Floor plan UI -->
+            <h5 class="px-12 mt-8">Using physical documents to inspire design for screen</h5>
+            <div class="project_copy mt-0 mb-0 px-12">
+              <div>
+                <b>Overview</b>
+                   <br /><br />
+                As a seperate screen within the application, I was asked to brainstorm ways to design for a
+                set-up wizard onboarding new parking sites. 
+                <br /><br />
+               
+                The current application had multiple paged forms that took a long time to complete. It wasn't entirely comprehensible either.
+                <br /><br />
+                <b>Solution</b>
+                  <br /><br />
+               I advocated for translating physical documents into understandable UI screens as closely as possible to the physical task users have to do. That meant taking users' very first step in mapping new parking sites, ie. using a clipboard and pen to jot down parking site numbers, and drawing UI solutions that could support the respective physical task. 
+                <br /><br />
+               A direct visual translation of how users would perfoem the task would be clearer to understand and less arduous to go through step-by-step. 
+                <br /><br />
+                </div>
+            </div>
+            
+            <!-- Image stack 1 -->
+            <div class="image-stack img-1 mt-4 mb-4">
+              <img src="./images/Floorplan.png" class="img-2 mt-0 mb-0" alt="customized floor plan layout" />
+              <img id="img2" src="./images/gifs/FloorUI2.gif" class="overlay-gif" style="display: none" />
+
+              
+             
+            </div>
+              <!-- annotation below image, then button -->
+
+              <div class="image-stack-button img-1 project_copy image-text py-1 px-0">
+                This complex UI screen was presented as a starting
+                point for further discussions with the rest of the team (to the engineers' relief). With no major constraints, I had fun designing this solution using airline seating reservation flows as inspiration.
+              </div>
+
+            <!-- Toggle botton-->
+            <button class="toggle-btn button2" data-target="img2">
+              View quick animation
+            </button>
+</div>
+            </section>
 
         <!-- Deep dive: information architecture section !-->
         <section id="deep-dive-ia" class="flex flex-column align-center bg-grey-light font-secondary mb-20">
@@ -367,7 +396,6 @@
               <div class="flex flex-row block-copy mb-8 mt-0 ml-auto">
 
                 <p class="block-text">
-
                   The original menu had 13 items and little affordances to inform users of what tasks or activities are
                   within each one. See below to see how I tackled this problem and reduced the menu.
                 </p>
@@ -389,16 +417,17 @@
           <div class="flex align-center bg-grey w-full p-6 mb-8">
             <img class="flex-1 w-50 mr-4" src="./images/business-logic-img1.png" />
             <div class="flex-1 block-copy-alt mb-0">
-              <span class="block-title-alt mt-4">Menu items in the side bar were listed somewhat arbitrarily with some
-                pages dedicated to lengthy tasks (i.e. setting up a new account) and others for simple interactions
-                (i.e. search a table).
+              <span class="block-title-alt mt-4">Menu items in the side bar were listed somewhat arbitrarily
+                with some pages dedicated to lengthy tasks (i.e. setting up a new account) and others for simple
+                interactions (i.e. search a table).
                 <br /><br /><br></span>
               <span class="block-title-alt">
                 Questions for each screen:<p><br></p>
 
                 <p class="block-text-alt">What can the user see?</p>
                 <p class="block-text-alt">
-                  What actions can the user perform (i.e. searching, exporting, etc.)?
+                  What actions can the user perform (i.e. searching, exporting,
+                  etc.)?
                 </p>
                 <p class="block-text-alt">
                   Why is the information valuable for users?
@@ -448,11 +477,11 @@
             <div class="block-copy">
               <span class="block-title2 mt-8">Step 3: prioritize screens by usefulness and ease</span>
               <p class="block-text">
-                Equipped with definitions of the screens and their value for the business at large, I measured the total
-                actions users took for each of the 13 pages and charted them against task priority. <br>
-                The results helped narrow down the content in the navigation bar by half.
+                Equipped with definitions of the screens and their value for the business at large, I measured total
+                actions users took for each of
+                the 13 pages and charted it against the priority of the
+                task. The results helped narrow down the content in the navigation bar by half.
               </p>
-
             </div>
           </div>
 
@@ -490,7 +519,7 @@
 
                 <div class="grid-item">
                   <span class="block-text-alt mb-0">Actions: Navigating to 1-5 dedicated secondary
-                    menus and tasks; complex wizard forms. <br /><br />
+                    menues and tasks; complex wizard forms. <br /><br />
                     Example task: adding promotional parking rate
                     <br /><br />
                     Menu-items: <br /><strong>
@@ -576,8 +605,9 @@
                   My redesign had not considered how auto-updating components should behave or which ones should
                   trigger user engagement and permissions and which ones should be push-updates or alerts.
                   <br></br>
-                  Given the client's target audience of executive buyers, my design needed to clearly show these dynamic
-                  components to facilitate meaningful discussions about the product's value.
+                  But keeping the client's target audience for this project in mind (i.e. executive buyers), my
+                  design had to show moving components correctly so it could lead to indepth discussions regarding the
+                  value of the product.
 
                   <br></br>
                   It also had to be simple. So I used the data I already gathered from menu item interactions to lead to
@@ -596,7 +626,7 @@
                   The simpler the relationship, the better the content will be
                   for a dashboard.
                 </p>
-                <img src="./images/erdiagram.png" />
+                <img src="./images/comparison-img1.png" />
               </div>
               <div class="two-column-layout"> </div>
 
@@ -607,9 +637,9 @@
 
             <div class="flex-1 bg-grey">
               <div class="flex flex-column p-6">
-                <span class="block-title-alt">The higher the priority and the fewer interactive actions associated to
-                  it, the better the content will fit within the dashboard instead of a menu item on the navigation
-                  bar.</span>
+                <span class="block-title-alt">The higher the priority and the fewer interactive actions
+                  associated to it, the better the content will fit within the
+                  dashboard instead of a menu-item on the navigation bar.</span>
 
                 <img src="./images/comparison-img2.png" />
               </div>
@@ -623,68 +653,13 @@
                 <span class="block-title-alt">Priority to complete task vs respective impact on
                   system</span>
                 <p class="block-text-alt">
-                  The higher the priority and the less it triggers unknown changes across the system, the better the
-                  content will be for the dashboard.
+                  The higher the priority and the less it triggers unknown
+                  changes across the system, the better the content will be
+                  for the dashboard.
                 </p>
                 <img src="./images/comparison-img2.png" />
               </div>
             </div>
-          </div>
-        </section>
-
-        <!-- Green Section for Floor plan UI -->
-
-        <section id="floorPlan" class="flex flex-column mb-20 mt-20 font-secondary">
-          <span class="section-title">extra</span>
-          <span class="section-subheading">standalone design within parking application | replacing onboarding wizard
-            setup </span>
-          <div class="flex flex-column bg-green solution-content banner-container px-12">
-            <!-- TEXT for Floor plan UI -->
-            <h5 class="px-12">Using physical documents to inspire design for screen</h5>
-            <div class="project_copy mt-0 mb-0 px-12">
-              <div>
-                <b>Overview</b>
-                <br /><br />
-                As a separate screen within the application, I was asked to brainstorm ways to design for a set-up
-                wizard onboarding new parking sites.
-                <br /><br />
-
-                The current application had multiple paged forms that took a long time to complete. It wasn't entirely
-                comprehensible either.
-                <br /><br />
-                <b>Solution</b>
-                <br /><br />
-                I advocated for translating physical documents into understandable UI screens as closely as possible to
-                the physical task users have to do. That meant taking users' very first step in mapping new parking
-                sites, ie. using a clipboard and pen to jot down parking site numbers, and drawing UI solutions that
-                could support the respective physical task.
-                <br /><br />
-                A direct visual translation of how users would perform the task would be clearer to understand and less
-                arduous to go through step-by-step.
-                <br /><br />
-              </div>
-            </div>
-
-            <!-- Image stack 1 -->
-            <div class="image-stack img-1 mt-4 mb-4">
-              <img src="./images/Floorplan.png" class="img-2 mt-0 mb-0" alt="customized floor plan layout" />
-              <img id="img2" src="./images/gifs/FloorUI2.gif" class="overlay-gif" style="display: none" />
-
-
-
-            </div>
-            <!-- annotation below image, then button -->
-
-            <div class="image-stack-button img-1 project_copy image-text py-1 px-0">
-              This complex UI screen was presented as a starting point for further discussions with the rest of the team
-              (to the engineers' relief). With no major constraints, I had fun designing this solution using airline
-              seating reservation flows as inspiration.
-            </div>
-
-            <!-- Toggle botton-->
-            <button class="toggle-btn button2" data-target="img2">
-              View quick animation
-            </button>
           </div>
         </section>
 
@@ -699,26 +674,28 @@
               <p class="block-text">
               <ul>
                 <li>
-
                   Biggest challenge: finding ways to simplify dataset relationships by business value
                 </li>
-                <li>
-                  Quick win: applying heuristic patterns (e.g., "more info = more confusion") to meet the project goal
+                <li>Quick win: using heuristic patterns (e.g., “more info = more confusion”) to meet the project goal
                   (goal: make the design easy to understand when presenting)</li>
                 <li>The client had a vague idea of the desired final visual so our discussions were often a delicate
-                  balance of ideating and defining at once.
+                  balance of
+                  ideating and defining at once.
                 </li>
-                <li>I was often wary of accepting client design changes, not out of defiance but because I lacked the
-                  client's depth of knowledge of the product. I couldn't justify all their design change requests, but I
-                  also couldn't deny that I didn't know as much as they did.
+                <li>I was often weary of accepting client design changes, not out of defiance but because I lacked the
+                  client's depth
+                  of knowledge of the product. I couldn't justify all their design
+                  change requests, but I also couldn't deny that I didn't know as much as they did.
                 </li>
                 <ul>
-                  <li>But, I quickly trusted the client's feedback. I think, on reflection, it was because of the
-                    client's efforts in making me feel involved in their discussions despite my lack of product
-                    knowledge. I felt valued.
+                  <li>But, I quickly trusted the client's feedback. I think, upon reflection, it was because of the
+                    client's efforts
+                    in making me feel involved in their discussions despite my lack of product knowledge. I felt valued.
                   </li>
-                  <li>This trust was impactful and personally meaningful; it led to a positive work experience that
-                    reinforced the value of collaboration in the design process and kept timelines on track.</li>
+                  <li>This trust was impactful and personally meaningful; it lead to a positive work experience that
+                    reinforced the value of
+                    collaboration in the design process and kept timelines on
+                    track.</li>
                 </ul>
                 <li>This project continues to remind me of why I love design: the best work happens when strong
                   relationships come first.</li>
