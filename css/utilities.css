@@ -187,6 +187,11 @@ flex-row {flex-direction: row-reverse;}
   background-color: #ebf4e5;
 }
 
+.bg-red {
+  background-color: rgba(202, 64, 64, 0.279);
+}
+
+
 .bg-grey-light {
   padding: 2.5rem;
   /*background-color: #F5F5F5;*/

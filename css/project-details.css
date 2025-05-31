@@ -5,6 +5,13 @@
   padding-top: 3rem;
 }
 
+.allinone-page .banner-container {
+  height: auto;
+  border-radius: 16px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .section-1-banner {
   background: url('../images/overview-intro.png');
   background-position: right;
@@ -144,6 +151,19 @@
 
 }
 
+.allinone-page .image-stack {
+  position: relative;
+  display: flex;
+  /* Use flexbox to arrange images */
+  flex-direction: row;
+  /* Stack images vertically by default */
+  align-items: center;
+  /* Center images horizontally */
+  gap: 5px;
+  /* Spacing between images */
+  width: 100%;
+  /* Make the container take full width */
+}
 
 
 /*before and after menu*/

@@ -1,5 +1,9 @@
 /*class (.), # is an ID (not popular), html element "p","div" */
-  .project {
+body {
+  background-color:  #fdfdfd;
+}  
+
+.project {
     display: flex;
     height: auto;
     margin-bottom: 8vh;
@@ -180,7 +184,7 @@
   svg:first-of-type {
     width: 105.5%;
     height: 104%;
-   /* transform: skewX(-17deg);*/
+   transform: skewX(-17deg);
   }
 
   svg:last-of-type {

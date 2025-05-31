@@ -1,0 +1,45 @@
+
+                                     
+
+                                        <div class="block-copy">
+                                            <div class="block-text">
+                                                <span class="block-subtitle">Week 1 and 2: get context, define
+                                                    users</span><br>
+                                                <p class="block-text">The 3 personas that would use the application</p>
+                                                <ul>
+                                                    <li>Warehouse manager</li>
+                                                    <li>Shipping manager</li>
+                                                    <li>Marketplace manager</li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="block-copy">
+                                                <div class="block-text">
+                                                    <span class="block-subtitle">Week 3 and 4: Choose components, create
+                                                        prototype</span><br>
+                                                    <p class="block-text">Design for specific interactions common to a
+                                                        shipping application:</p>
+                                                    <ul>
+                                                        <li>
+                                                            <ol>
+                                                                <li>Viewing all orders* with functionality including but not
+                                                                    limited to: basic searches,
+                                                                    filtering, and cancelling an order</li>
+                                                                <li>Processing an order*, including but not limited to:
+                                                                    selecting
+                                                                    carriers, establishing parcel
+                                                                    dimensions, split parcel options, printing shipping
+                                                                    label, etc.
+                                                                </li>
+                                                                <li>Managing and tracking orders, including but not limited
+                                                                    to
+                                                                    defining: order statuses,
+                                                                    notifications and alerts, viewing order history,
+                                                                    changing
+                                                                    associated warehouses</li>
+                                                            </ol>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
