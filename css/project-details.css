@@ -1,16 +1,41 @@
+/*height: 475px; changed to auto to adjust text to bg*/
 .banner-container {
-  height: 475px;
+  height: auto;
+  border-radius: 16px;
+  padding-top: 3rem;
+}
+
+.allinone-page .banner-container {
+  height: auto;
+  border-radius: 16px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .section-1-banner {
   background: url('../images/overview-intro.png');
   background-position: right;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
+  background-color: #ebf4e5;
+  border-radius: 10px;
+
 }
 
 .learnings-card {
-  margin-top: -6rem;
+  position: relative;
+  z-index: 2;
+  margin-top: -18rem;
+  /* pulls up over top container */
+  /* margin-bottom: ; /* pulls down over bottom container */
+}
+
+.learnings-card2 {
+  position: relative;
+  z-index: 2;
+  margin-top: -15rem;
+  /* pulls up over top container */
+  /* margin-bottom: ; /* pulls down over bottom container */
 }
 
 .negative-card {
@@ -52,9 +77,14 @@
   width: 35%;
 }
 
+/* //moved this to @media section for less than 1280px
 .solution-content {
-  padding: 2.5rem;
-}
+  padding-left: 6.5rem;
+  padding-right: 6.5rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  border-radius: 16px;
+} */
 
 .solution-section .two-column-layout {
   padding: 0 3.25rem;
@@ -64,28 +94,230 @@
   padding: 0;
 }
 
-.solution-section .two-column-layout.dense > .card,
-.solution-section .three-column-layout > .card {
+.solution-section .two-column-layout.dense>.card,
+.solution-section .three-column-layout>.card {
   margin: 0;
   margin-right: 2.5rem;
 }
 
-.solution-section .two-column-layout.dense > .card:last-child,
-.solution-section .three-column-layout > .card:last-child {
+.solution-section .two-column-layout.dense>.card:last-child,
+.solution-section .three-column-layout>.card:last-child {
   margin: 0;
 }
 
 .solution-section .img-1 {
-  width: 85%;
+  width: 100%;
 }
 
 .solution-section .img-2 {
-  width: 65%;
+  width: 100%;
 }
 
 .solution-section .img-3 {
   width: 60%;
 }
+
+.imageContainer2 {}
+
+/* Image Container Styling */
+/* Image Stack Styling */
+.image-stack {
+  position: relative;
+  display: flex;
+  /* Use flexbox to arrange images */
+  flex-direction: row;
+  /* Stack images vertically by default */
+  align-items: center;
+  /* Center images horizontally */
+  gap: 5px;
+  /* Spacing between images */
+  width: 100%;
+
+  /* Make the container take full width */
+}
+
+.image-stack-button {
+  position: relative;
+  display: flex;
+  /* Use flexbox to arrange images */
+  flex-direction: column;
+  /* Stack images vertically by default */
+  align-items: center;
+  /* Center images horizontally */
+  gap: 0px;
+  /* Spacing between images */
+  max-width: fit-content;
+  /* Make the container take full width */
+
+}
+
+.allinone-page .image-stack {
+  position: relative;
+  display: flex;
+  /* Use flexbox to arrange images */
+  flex-direction: row;
+  /* Stack images vertically by default */
+  align-items: center;
+  /* Center images horizontally */
+  gap: 5px;
+  /* Spacing between images */
+  width: 100%;
+  /* Make the container take full width */
+}
+
+
+/*before and after menu*/
+.static-image {
+  display: block;
+  width: 60%;
+  object-fit: contain;
+}
+
+/*piechart static image*/
+.static-image2 {
+  display: block;
+  width: 90%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/*cards for static data */
+.overlay-image {
+  position: absolute;
+  top: 0;
+  left: 2%;
+  width: 103%;
+  height: 124%;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+
+/*giffffff */
+.overlay-gif {
+  position: absolute;
+  width: 100%;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+  background-color: rgba(162, 197, 224, 1);
+}
+
+
+/*tab element menu*/
+.overlay-image2 {
+  position: absolute;
+  /* top: 0%; */
+  left: 54%;
+  width: 35%;
+  height: 30%;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+/*original dashboard*/
+.overlay-image4 {
+  position: absolute;
+  /* flex-direction: row; */
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+
+/*original dashboard*/
+.overlay-image3 {
+  position: absolute;
+  width: 85%;
+  height: 92%;
+  opacity: 1;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+
+/* Image Styling */
+.imageContainer img {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  /* Make images responsive within their container */
+  height: auto;
+  /* Maintain aspect ratio */
+  border: 1px solid #ccc;
+  /* Optional: Add a light border */
+  border-radius: 5px;
+  /* Optional: Slightly rounded corners */
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.button2 {
+  box-sizing: border-box;
+  display: inline-grid;
+  flex-direction: row;
+  justify-content: center;
+  padding: 6px 18px;
+  min-width: 72px;
+  /* gap: 5px; */
+  margin-top: 0;
+  border-radius: 4px;
+  border: 1.1px dotted #222222;
+  background: #ffffff;
+  margin-bottom: 1rem;
+
+}
+
+.button2:active {
+  background: goldenrod;
+  border: 1px solid #222222;
+  color: #222222;
+}
+
+.button3 {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  justify-content: center;
+  padding: 6px 18px;
+  min-width: 72px;
+  border-radius: 4px;
+  border: 1.1px dotted #222222;
+  background: #ffffff;
+}
+
+.page-nav a:nth-child(1):hover { background: #ebf4e5; border-radius: 5px;}  /* overview */
+
+.page-nav .submenu:nth-of-type(1) 
+.submenu-item:nth-child(2):hover {
+  background: #4c93c388; border-radius: 5px; /* solution 1 */
+}
+
+.page-nav .submenu:nth-of-type(1) 
+.submenu-item:nth-child(3):hover {
+  background: #4c93c388; border-radius: 5px; /* solution 2 */
+}
+
+.page-nav .submenu:nth-of-type(2) 
+.submenu-item:nth-child(2):hover {
+  background:#eaeaea; border-radius: 5px;/*challenge 1*/
+}
+
+.page-nav .submenu:nth-of-type(2) 
+.submenu-item:nth-child(3):hover {
+  background: #eaeaea; border-radius: 5px;/*challenge 2*/
+}
+
+.page-nav .extra-solution:hover { background: #ebf4e5; border-radius: 5px; } /* extra solution */
+
+.page-nav .reflections:hover { background: #4c93c388; border-radius: 5px; } /* reflections */
+
+// Media Queries for Responsive Design 
 
 @media only screen and (max-width: 1650px) {
   .negative-block-copy {
@@ -106,7 +338,7 @@
   .sketches-content .img-1-container {
     width: 100%;
   }
-  
+
   .sketches-content .img-2-container {
     width: 100%;
   }
@@ -123,8 +355,9 @@
 }
 
 @media only screen and (max-width: 1280px) {
-  .solution-section .two-column-layout.dense > .card,
-  .solution-section .three-column-layout > .card {
+
+  .solution-section .two-column-layout.dense>.card,
+  .solution-section .three-column-layout>.card {
     margin-bottom: 2rem;
     margin-right: 0;
   }
@@ -132,11 +365,11 @@
   .solution-section .img-1 {
     width: 100%;
   }
-  
+
   .solution-section .img-2 {
     width: 100%;
   }
-  
+
   .solution-section .img-3 {
     margin-bottom: 2.5rem;
     width: 100%;
