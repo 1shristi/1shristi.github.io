@@ -1,0 +1,110 @@
+.allinone-page .subtitle .text-right {
+color: #2D2A26;
+text-align: right;
+font-family: "Raleway";
+font-size: 3.25rem;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}
+
+.allinone-page .h3 {
+  color:  #C1551C;
+text-align: right;
+font-family: "American Typewriter";
+font-size: 1.9rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.allinone-page .card {
+  background: #Fff;
+  backdrop-filter: blur(8px);
+  border: 1px solid #CA4040;
+  border-radius: 16px;
+  box-shadow: 10px 8px 8px rgba(202, 64, 64, .1);
+  padding: 3rem;
+}
+
+
+.allinone-page .banner-container {
+  height: auto;
+  border-radius: 16px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+
+.allinone-page .block-copy {
+  margin-bottom: .5rem;
+}
+
+/* Only affects .block-title inside .allinone-page */
+.allinone-page .block-title {
+  color: #CA4040;
+  /* your custom color */
+}
+
+.allinone-page .blocktext {
+  font-family: "Raleway";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: #2D2A26;
+}
+
+/* Only affects .block-title inside .allinone-page */
+.allinone-page .block-subtitle {
+  font-weight: 400;
+  /* your custom color */
+}
+
+.allinone-page .toggle-btn {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #D06222;
+  font-size: .8em;
+  font-weight: 400;
+  color: white;
+  /* text color */
+  border: none;
+  /* no border */
+  padding: 0.5rem 1rem;
+  /* padding for the button */
+  cursor: pointer;
+  /* pointer cursor on hover */
+  border-radius: 4px;
+  margin-bottom: .1rem;
+  font-family: "Raleway";
+  min-width: 200px;
+  max-width: 200px;
+}
+
+.allinone-page .button2 {
+  box-sizing: border-box;
+  display: inline-grid;
+  flex-direction: row;
+  justify-content: center;
+
+  min-width: 72px;
+
+  /* gap: 5px; */
+  margin-top: 0;
+  border-radius: 4px;
+  border: none;
+  background-color: #CA4040;
+  /* your custom color */
+  margin-bottom: 1rem;
+
+}
+
+.allinone-page .block-text-alt {
+  color: #575757;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.25rem;
+  margin-bottom: .6rem;
+  margin-top: .6rem;
+  padding-left: 1rem;
+  padding-right: 3rem;
+}

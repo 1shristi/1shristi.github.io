@@ -364,20 +364,6 @@ nav a:hover,
   font-weight: 500;
 }
 
-.allinone-page .block-copy {
-  margin-bottom: .5rem;
-}
-
-/* Only affects .block-title inside .allinone-page */
-.allinone-page .block-title {
-  color: #CA4040; /* your custom color */
-}
-
-/* Only affects .block-title inside .allinone-page */
-.allinone-page .block-subtitle {
-  color: #CA4040;
-  font-weight: 400; /* your custom color */
-}
 
 .block-title2 {
   color: #000000;
@@ -462,9 +448,9 @@ li {
 }
 
 .allinone-page .bold-text-li {
-  
   color: #CA4040;
-  font-weight: 400; 
+  font-weight: 500; 
+  line-height: 2rem;
 }
 
 .bold-text {
@@ -736,19 +722,6 @@ footer {
   margin: 0 3rem;
   padding: 3rem;
 }
-
-.allinone-page .card {
-background: rgba(255, 255, 255, 0.807);
--webkit-backdrop-filter: blur(8px);
-backdrop-filter: blur(8px);
-  border: none;
-  border-radius: 40px;
-  box-shadow: 10px 8px 8px rgba(202, 64, 64,.1);
-  margin: 0 3rem;
-  padding: 3rem;
-}
-
-
 
 @media only screen and (max-width: 1440px) {
   .condensed-column {

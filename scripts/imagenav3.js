@@ -1,18 +1,16 @@
-const toggleButtons = document.querySelectorAll('.toggle-btn');
-
+const toggleButtons = document.querySelectorAll('button[data-target]');
 
 toggleButtons.forEach(button => {
-    const targetId = button.getAttribute('data-target');
-    const img = document.getElementById(targetId);
-    const originalText = button.textContent; // Store the original text of the button
+  const img = document.getElementById(button.getAttribute('data-target'));
+  const text = document.getElementById(button.getAttribute('data-text'));
+  const originalText = button.textContent;
 
-    button.addEventListener('click', function () {
-        if (img.style.display === 'none' || img.style.display === '') {
-            img.style.display = 'block';
-            button.textContent = 'Hide';
-        } else {
-            img.style.display = 'none';
-             button.textContent = originalText; // Reset to original text
-        }
-    });
+  button.addEventListener('click', function () {
+    const shouldShow = img.style.display === 'none' || img.style.display === '';
+
+    img.style.display = shouldShow ? 'block' : 'none';
+    if (text) text.style.display = shouldShow ? 'block' : 'none';
+
+    button.textContent = shouldShow ? 'Hide' : originalText;
+  });
 });

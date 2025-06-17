@@ -66,6 +66,10 @@ flex-row {flex-direction: row-reverse;}
   margin-bottom: 0;
 }
 
+.mb-2 {
+  margin-bottom: .5rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -188,7 +192,7 @@ flex-row {flex-direction: row-reverse;}
 }
 
 .bg-red {
-  background-color: rgba(202, 64, 64, 0.279);
+background: linear-gradient(0deg, rgba(193, 85, 28, 0.20) 0%, rgba(193, 85, 28, 0.20) 100%), #FFF;
 }
 
 
