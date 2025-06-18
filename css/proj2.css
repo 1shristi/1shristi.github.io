@@ -43,21 +43,38 @@ line-height: normal;
 /* Only affects .block-title inside .allinone-page */
 .allinone-page .block-title {
   color: #CA4040;
+  margin-bottom: 0rem;
   /* your custom color */
 }
 
-.allinone-page .blocktext {
+.allinone-page li .block-text {
+  font-size: 15px;
   font-family: "Raleway";
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
+  font-weight: 400;
   color: #2D2A26;
+  margin-bottom: .25rem;
+}
+
+.allinone-page li {
+  font-family: "Raleway";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.2rem;;
+  color: #2D2A26;
+  margin-right:.5rem;
+}
+
+
+.allinone-page .block-text-bold {
+  font-weight: 500;
 }
 
 /* Only affects .block-title inside .allinone-page */
 .allinone-page .block-subtitle {
   font-weight: 400;
+  font-family: 'american typewriter';
+  margin-bottom: 1rem;
+   color: #CA4040;
   /* your custom color */
 }
 
@@ -76,8 +93,7 @@ line-height: normal;
   border-radius: 4px;
   margin-bottom: .1rem;
   font-family: "Raleway";
-  min-width: 200px;
-  max-width: 200px;
+  max-width: 150px;
 }
 
 .allinone-page .button2 {
@@ -101,10 +117,28 @@ line-height: normal;
 .allinone-page .block-text-alt {
   color: #575757;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.25rem;
   margin-bottom: .6rem;
   margin-top: .6rem;
   padding-left: 1rem;
   padding-right: 3rem;
+}
+
+.allinone-page .bold-text-li {
+  color: #CA4040;
+  font-weight: 400; 
+  line-height: 1.5rem;
+  margin-top:1rem;
+  margin-bottom:.5rem;
+  font-family: 'american typewriter';
+}
+
+.allinone-page .bold-text {
+  font-size: 17px;
+  color: #CA4040;
+  font-weight: 400; 
+  line-height: 1.5rem;
+  margin-bottom:.5rem;
+  font-family: 'american typewriter';
 }

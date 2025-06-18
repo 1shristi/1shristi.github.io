@@ -443,20 +443,6 @@ li {
   line-height: 1.45rem;
 }
 
-.bold-text-li {
-  font-weight: 500;
-}
-
-.allinone-page .bold-text-li {
-  color: #CA4040;
-  font-weight: 500; 
-  line-height: 2rem;
-}
-
-.bold-text {
-  font-weight: 500;
-  line-height: 3rem;
-}
 
 
 .block-title-alt {
