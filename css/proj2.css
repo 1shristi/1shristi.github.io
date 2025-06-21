@@ -8,11 +8,12 @@
 border: #000 .4px solid;
 border-radius: 16px;
 cursor: pointer;
-transition: opacity 0.3s ease;
+transition: opacity 0.1s ease;
 }
 
 .interactive-gif-size {
-  max-width: 80%;
+  max-width: 70%;
+  height: fit-content;
   object-fit: cover;
 }
 
