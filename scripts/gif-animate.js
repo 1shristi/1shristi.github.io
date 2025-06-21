@@ -1,26 +1,31 @@
-// Play once when in view
-const gifs = document.querySelectorAll('.interactive-gif');
-const options = { threshold: 0.5 };
+ document.addEventListener("DOMContentLoaded", () => {
+            const gifs = document.querySelectorAll('.interactive-gif');
 
-const observer = new IntersectionObserver((entries, obs) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const img = entry.target;
-      img.src = img.dataset.gif;
-      obs.unobserve(img); // only play once
-    }
-  });
-}, options);
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.gif;
 
-gifs.forEach(gif => {
-  observer.observe(gif);
+                        // After one play, go back to still (adjust time to GIF length)
+                        setTimeout(() => {
+                            img.src = img.dataset.still;
+                        }, 3000); // Change 3000 to match your GIF duration in ms
 
-  // Hover control
-  gif.addEventListener('mouseenter', () => {
-    gif.src = gif.dataset.gif;
-  });
+                        obs.unobserve(img);
+                    }
+                });
+            }, { threshold: 0.5 });
 
-  gif.addEventListener('mouseleave', () => {
-    gif.src = gif.dataset.still;
-  });
-});
+            gifs.forEach(gif => {
+                observer.observe(gif);
+
+                gif.addEventListener('mouseenter', () => {
+                    gif.src = gif.dataset.gif;
+                });
+
+                gif.addEventListener('mouseleave', () => {
+                    gif.src = gif.dataset.still;
+                });
+            });
+        });

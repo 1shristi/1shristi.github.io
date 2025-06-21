@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="css/index1.css" type="text/css" />
     <link rel="stylesheet" href="css/project-details.css" type="text/css" />
     <link rel="stylesheet" href="css/utilities.css" type="text/css" />
-   <!-- <link rel="stylesheet" href="css/gif-animate.js" type="text/css" />-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&display=swap");
@@ -291,9 +290,11 @@
                                         Often times it was the conversation about the sketches that are most important.
 
                                     </p>
-                                    <img class="interactive-gif" src="./images/proj2/wk1/skeleton.png"
+<div class="flex interactive-gif-size mt-4">
+                                    <img class="interactive-gif" src="./images/proj2/wk1/prototype-reveal.jpeg"
                                         data-gif="./images/gifs/prototype-reveal.gif"
-                                        data-still="./images/proj2/wk1/skeleton.png" alt="demo" />
+                                        data-still="./images/proj2/wk1/prototype-reveal.jpeg" alt="demo" />
+</div>
                                     <!-- ONLY ONE BUTTON IN PROTOTYPE -->
                                     <!-- ONLY ONE BUTTON IN PROTOTYPE -->
                                     <!-- ONLY ONE BUTTON IN PROTOTYPE -->
@@ -355,6 +356,7 @@
     </div>
     <script src="scripts/mark-scroll.js"></script>
     <script src="scripts/imagenav3.js"></script>
+    <script src="scripts/gif-animate.js"></script>
     <script>
         function toggleAllSections() {
             document.querySelectorAll('.img-text-pair').forEach(section => {
@@ -362,39 +364,7 @@
             });
         }
     </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const gifs = document.querySelectorAll('.interactive-gif');
+   
+</body>
 
-            const observer = new IntersectionObserver((entries, obs) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.gif;
-
-                        // After first play, pause it on still frame
-                        setTimeout(() => {
-                            img.src = img.dataset.still;
-                        }, 3000); // adjust to match GIF length
-
-                        obs.unobserve(img);
-                    }
-                });
-            }, { threshold: 0.5 });
-
-            gifs.forEach(gif => {
-                observer.observe(gif);
-
-                gif.addEventListener('mouseenter', () => {
-                    gif.src = gif.dataset.gif;
-                });
-
-                gif.addEventListener('mouseleave', () => {
-                    gif.src = gif.dataset.still;
-                });
-            });
-        });
-</script>
-</body >
-
-</html >
+</html>
