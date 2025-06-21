@@ -5,17 +5,45 @@ toggleButtons.forEach(button => {
   const textIds = (button.getAttribute('data-text') || '').split(',');
   const originalText = button.textContent;
 
-  const allElements = [...imgIds, ...textIds]
+  const targetElements = [...imgIds, ...textIds]
     .map(id => document.getElementById(id.trim()))
-    .filter(Boolean); // filter out any nulls
+    .filter(Boolean);
 
   button.addEventListener('click', function () {
-    const shouldShow = allElements[0].style.display === 'none' || allElements[0].style.display === '';
+    const isHidden = targetElements[0].classList.contains('hidden');
 
-    allElements.forEach(el => {
-      el.style.display = shouldShow ? 'block' : 'none';
+    // Step 1: Hide all other open items
+    toggleButtons.forEach(otherBtn => {
+      if (otherBtn !== button) {
+        const otherImgIds = otherBtn.getAttribute('data-target').split(',');
+        const otherTextIds = (otherBtn.getAttribute('data-text') || '').split(',');
+        const otherElements = [...otherImgIds, ...otherTextIds]
+          .map(id => document.getElementById(id.trim()))
+          .filter(Boolean);
+
+        otherElements.forEach(el => {
+          el.classList.add('hidden');
+          el.classList.remove('fade-in');
+        });
+
+        otherBtn.textContent = otherBtn.getAttribute('data-original') || 'View example';
+      }
     });
 
-    button.textContent = shouldShow ? 'Hide' : originalText;
+    // Step 2: Toggle this one
+    targetElements.forEach(el => {
+      if (isHidden) {
+        el.classList.remove('hidden');
+        el.classList.add('fade-in');
+      } else {
+        el.classList.add('hidden');
+        el.classList.remove('fade-in');
+      }
+    });
+
+    button.textContent = isHidden ? 'Hide' : originalText;
   });
+
+  // Save the original label for reset
+  button.setAttribute('data-original', originalText);
 });

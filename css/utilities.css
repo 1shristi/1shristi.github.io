@@ -1,3 +1,7 @@
+.hidden {
+  display:none !important;
+}
+
 /* Flex */
 .flex {
   display: flex
