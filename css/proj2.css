@@ -1,14 +1,13 @@
-
 /* Make .hidden global so it works anywhere */
 .hidden {
   display: none !important;
 }
 
 .interactive-gif {
-border: #000 .4px solid;
-border-radius: 16px;
-cursor: pointer;
-transition: opacity 0.1s ease;
+  border: #000 .4px solid;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: opacity 0.1s ease;
 }
 
 .interactive-gif-size {
@@ -20,13 +19,13 @@ transition: opacity 0.1s ease;
 .reveal-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  margin-bottom: 2rem;
+ /* gap: 2rem;*.
+ /* margin-bottom: 2rem;*/
 }
 
 .reveal-card {
   flex-wrap: wrap;
-   display: flex;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   flex: 1 1 300px;
@@ -35,31 +34,57 @@ transition: opacity 0.1s ease;
 }
 
 .allinone-page .prototype-img {
-border-radius: 0.25rem;
-border: 0.4px solid #000;
-background: #FFF;
-display: inline-block;
-padding: .1rem;
-flex-direction: column;
-align-items: flex-start;
-gap:1rem;
-width: 100%;
-object-fit: contain; /* keeps aspect ratio, crops if needed */
+  border-radius: 0.25rem;
+  border: 0.4px solid #000;
+  background: #FFF;
+  display: inline-block;
+  padding: .1rem;
+  flex-direction: column;
+  align-items: flex-start baseline;
+  gap: 1rem;
+  width: 100%;
+  object-fit: contain;
+  
+  /* keeps aspect ratio, crops if needed */
+}
+
+.allinone-page .research-img {
+  border-radius: 0.25rem;
+  border: 0.4px solid #000;
+  background: #FFF;
+  display: inline-block;
+  padding: .1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+ max-width:80%;
+  object-fit: fill;/* keeps aspect ratio, crops if needed */
+}
+
+.image-crop-wrapper {
+  width: auto;          /* adjust as needed */
+  height: 200px;         /* crop height */
+  overflow: hidden;
+  border-radius: 16px;
+  position: relative;
 }
 
 .allinone-page .sketch-img {
-border: 0.4px solid #000;
-display: inline-block;
-flex-direction: column;
-align-items: flex-start;
-gap:1rem;
-width: 80%;
-object-fit: contain; /* keeps aspect ratio, crops if needed */
+  width: auto;
+  height: auto;
+  display:inline-grid;
+  border: 0.4px solid #000;
+  object-fit: cover;          
 border-radius: 16px;
+align-items:center;
 }
 
 .allinone-page .image-stack {
-  align-items:none;
+  align-items: center;
+}
+
+.d-baseline {
+  display: baseline;
 }
 
 
@@ -69,8 +94,8 @@ border-radius: 16px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 2rem;
+ /* gap: 1rem;*/
+  /*margin-bottom: 2rem;*/
 }
 
 #faded-reveal .hidden {
@@ -87,6 +112,7 @@ border-radius: 16px;
     opacity: 0;
     transform: translateY(8px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -95,23 +121,23 @@ border-radius: 16px;
 
 
 .allinone-page .subtitle .text-right {
-color: #2D2A26;
-text-align: right;
-font-family: "Raleway";
-font-size: 3.25rem;
-font-style: normal;
-font-weight: 300;
-line-height: normal;
+  color: #2D2A26;
+  text-align: right;
+  font-family: "Raleway";
+  font-size: 3.25rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
 }
 
 .allinone-page .h3 {
-  color:  #C1551C;
-text-align: right;
-font-family: "American Typewriter";
-font-size: 1.9rem;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
+  color: #C1551C;
+  text-align: right;
+  font-family: "American Typewriter";
+  font-size: 1.9rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .allinone-page .card {
@@ -155,9 +181,10 @@ line-height: normal;
   font-family: "Raleway";
   font-size: 14px;
   font-weight: 300;
-  line-height: 1.2rem;;
+  line-height: 1.2rem;
+  ;
   color: #2D2A26;
-  margin-right:.5rem;
+  margin-right: .5rem;
 }
 
 
@@ -170,7 +197,7 @@ line-height: normal;
   font-weight: 400;
   font-family: 'american typewriter';
   margin-bottom: 1rem;
-   color: #CA4040;
+  color: #CA4040;
   /* your custom color */
 }
 
@@ -219,23 +246,24 @@ line-height: normal;
   margin-top: .6rem;
   padding-left: 1rem;
   padding-right: .5rem;
+  display: block;
 }
 
 .allinone-page .bold-text-li {
   color: #CA4040;
-  font-weight: 400; 
+  font-weight: 400;
   line-height: 1.5rem;
-  margin-top:1rem;
-  margin-bottom:.5rem;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
   font-family: 'american typewriter';
 }
 
 .allinone-page .bold-text {
   font-size: 17px;
   color: #CA4040;
-  font-weight: 400; 
+  font-weight: 400;
   line-height: 1.5rem;
-  margin-bottom:.5rem;
+  margin-bottom: .5rem;
   font-family: 'american typewriter';
 }
 
