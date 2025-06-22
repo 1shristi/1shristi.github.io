@@ -39,7 +39,7 @@ border-radius: 0.25rem;
 border: 0.4px solid #000;
 background: #FFF;
 display: inline-block;
-padding: 1.25rem;
+padding: .1rem;
 flex-direction: column;
 align-items: flex-start;
 gap:1rem;
@@ -47,9 +47,21 @@ width: 100%;
 object-fit: contain; /* keeps aspect ratio, crops if needed */
 }
 
-.allinone-page .prototype-skeleton {
-padding:.1rem;
+.allinone-page .sketch-img {
+border: 0.4px solid #000;
+display: inline-block;
+flex-direction: column;
+align-items: flex-start;
+gap:1rem;
+width: 80%;
+object-fit: contain; /* keeps aspect ratio, crops if needed */
+border-radius: 16px;
 }
+
+.allinone-page .image-stack {
+  align-items:none;
+}
+
 
 
 
@@ -206,7 +218,7 @@ line-height: normal;
   margin-bottom: .6rem;
   margin-top: .6rem;
   padding-left: 1rem;
-  padding-right: 3rem;
+  padding-right: .5rem;
 }
 
 .allinone-page .bold-text-li {
@@ -225,4 +237,8 @@ line-height: normal;
   line-height: 1.5rem;
   margin-bottom:.5rem;
   font-family: 'american typewriter';
+}
+
+.allinone-page .block-text {
+  color: #2D2A26;
 }
