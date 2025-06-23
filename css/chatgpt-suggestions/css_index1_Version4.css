@@ -1,0 +1,14 @@
+/* ...keep all code except these changes... */
+
+/* Remove font-family, font-size, font-weight, line-height from .project_copy p, .project_copy .subtitle, etc. */
+
+.project_copy p {
+   /* REMOVE: line-height, font-size, font-family, font-weight */
+   margin-bottom: 1em;
+}
+
+.project_copy .subtitle {
+   /* REMOVE: font-size, letter-spacing */
+}
+
+/* ...rest of your file remains unchanged... */
