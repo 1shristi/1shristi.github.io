@@ -1,0 +1,17 @@
+/* ...keep all code except these changes... */
+
+/* Remove font-family, font-size, font-weight, line-height from headings and text classes, unless truly unique to this file. */
+
+.allinone-page li .block-text {
+  /* REMOVE: font-family, font-size, font-weight */
+  color: #2D2A26;
+  margin-bottom: .25rem;
+}
+
+.allinone-page li {
+  /* REMOVE: font-family, font-size, font-weight, line-height */
+  color: #2D2A26;
+  margin-right: .5rem;
+}
+
+/* ...rest of your file remains unchanged... */
