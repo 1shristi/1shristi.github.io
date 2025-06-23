@@ -87,6 +87,10 @@ align-items:center;
   display: baseline;
 }
 
+.d-top {
+  display: block; margin-top: 0;
+}
+
 
 
 
@@ -269,4 +273,8 @@ align-items:center;
 
 .allinone-page .block-text {
   color: #2D2A26;
+}
+
+.allinone-page .align-self {
+  align-self: flex-start;
 }
