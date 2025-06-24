@@ -1,3 +1,12 @@
+
+.allinone-page .body {
+  background-color: #000;
+}
+
+.allinone-page .submenu-header {
+  color: #B33F3F !important;
+}
+
 /* Make .hidden global so it works anywhere */
 .hidden {
   display: none !important;
