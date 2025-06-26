@@ -227,21 +227,30 @@ align-items:center;
   margin-bottom: .5rem;
 }
 
-/* Only affects .block-title inside .allinone-page */
-.allinone-page .block-title {
-  color: #CA4040;
-  margin-bottom: 0rem;
-  /* your custom color */
+.allinone-page #proposal .block-title {
+
+  margin:auto !important;
 }
 
-.allinone-page .block-title-subtitle {
-  color: #2D2A26;
-  font-size: 1.5rem;
+
+.allinone-page .block-title {
+  color: #C1551C;
+  font-family: 'american typewriter';
+  line-height: 2.5rem;
   font-weight: 400;
-  line-height: 1.5rem;
-  margin-bottom: .5rem;
-  font-family: "Raleway";
+  margin:1rem;
 }
+
+.allinone-page .block-subtitle {
+	font-size: 1.25rem;
+	font-weight: 200;
+	line-height: 2rem;
+	margin-bottom: 1rem;
+  margin:3rem;
+	white-space: wrap;
+}
+
+
 
 
 .allinone-page li {
@@ -254,18 +263,16 @@ align-items:center;
 }
 
 
-
-
 .allinone-page .block-text-bold {
   font-weight: 500;
+  color:#C1551C;
 }
 
 /* Only affects .block-title inside .allinone-page */
 .allinone-page .block-subtitle {
-  font-weight: 400;
-  font-family: 'american typewriter';
-  margin-bottom: 1rem;
-  color: #CA4040;
+
+
+
   /* your custom color */
 }
 
@@ -328,7 +335,7 @@ align-items:center;
 
 .allinone-page .bold-text {
   font-size: 17px;
-  color: #CA4040;
+  color: #C1551C;
   font-weight: 400;
   line-height: 1.5rem;
   margin-bottom: .5rem;
@@ -342,3 +349,35 @@ align-items:center;
 .allinone-page .align-self {
   align-self: flex-start;
 }
+
+
+.allinone-page .page-nav a:nth-child(1):hover { 
+  background: linear-gradient(0deg, rgba(193, 85, 28, 0.20) 0%, rgba(193, 85, 28, 0.20) 100%), #FFF; 
+  border-radius: 5px;
+}  /* overview */
+
+
+.allinone-page .page-nav .submenu:nth-of-type(1) 
+.submenu-item:nth-child(2):hover {
+  background: linear-gradient(0deg, rgba(193, 85, 28, 0.20) 0%, rgba(193, 85, 28, 0.20) 100%), #FFF; 
+  border-radius: 5px; /* proposal */
+}
+
+.allinone-page .page-nav .submenu:nth-of-type(1) 
+.submenu-item:nth-child(3):hover {
+  background:linear-gradient(0deg, rgba(193, 85, 28, 0.20) 0%, rgba(193, 85, 28, 0.20) 100%), #FFF; /* research */
+}
+
+.allinone-page .page-nav .submenu:nth-of-type(1) 
+.submenu-item:nth-child(4):hover {
+  background:linear-gradient(0deg, rgba(193, 85, 28, 0.20) 0%, rgba(193, 85, 28, 0.20) 100%), #FFF; border-radius: 5px; /* prototype */
+}
+
+.allinone-page .page-nav .submenu:nth-of-type(1) 
+.submenu-item:nth-child(5):hover {
+  background:linear-gradient(0deg, rgba(193, 85, 28, 0.20) 0%, rgba(193, 85, 28, 0.20) 100%), #FFF; border-radius: 5px;/*outcome*/
+}
+
+.allinone-page .page-nav .extra-solution:hover { background: #ebf4e5; border-radius: 5px; } /* extra solution */
+
+.allinone-page .page-nav .reflections:hover { background: #4c93c388; border-radius: 5px; } /* reflections */
