@@ -505,26 +505,7 @@ li {
   margin-top: 0rem;
 }
 
-/* Only affects .intro-text inside #overview inside .allinone-page */
-.allinone-page #overview .intro-text {
-  font-size: 1.375rem;
-  font-weight: 400;
-  line-height: 2rem;
-  margin-bottom: 1rem;
-}
 
-.allinone-page #overview .intro-text-subtitle {
-  font-size: 1.1rem;
-  font-weight: 200;
-  line-height: 1.5rem;
-  margin-bottom: 1rem;
-  white-space: wrap;
-}
-
-.allinone-page .intro-text .intro-text-subtitle {
-  color: #3E0000;
-  width: 100%;
-}
 
 .arrow-list {
   list-style-type: none;

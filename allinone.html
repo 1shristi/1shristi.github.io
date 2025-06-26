@@ -36,7 +36,7 @@
                         <a href="#overview" class="selected">overview</a>
                         <div class="submenu">
                             <div class="submenu">
-                                <span class="submenu-header">rocess</span>
+                                <span class="submenu-header">process</span>
                                 <a class="submenu-item" href="#approach">proposal</a>
                                 <a class="submenu-item" href="#solution-week1">research</a>
                                 <a class="submenu-item" href="#solution-week2">ideation</a>
@@ -88,34 +88,42 @@
                 <!-- ===================================== -->
 
                 <!-- OVERVIEW SECTION BEGINS -->
-                <section id="overview" class="flex flex-column font-secondary mb-20">
+                <section id="overview" class="flex flex-column font-secondary mb-20 show-content">
                     <span class="section-title">overview</span>
                     <span class="section-subheading">small team | lead designer | 4 weeks
                     </span>
                     <div class="flex banner-container mb-20 bg-red flex-column solution-content px-12">
+                       
                         <div class="image-copy px-12">
-                            <span class="intro-text">
+                            <p class="intro-text">
                                 The client had a comprehensive product roadmap to replace an outdated, monolithic legacy
                                 system used for shipping international cosmetic goods, which had become a bottleneck
                                 over time causing inefficiencies and staff frustration.
 
-                                <br><br>
+                                <br>
+                                <p class="intro-text-subtitle" display="inline-block">
                                 I was brought in as a contractor to lead user research and a design for the new shipping
                                 platform interface in order to translate critical legacy system flows into efficient,
                                 user-friendly UI screens that could handle the complexities of international shipping
                                 within the client's permissioned B2B marketplace.
-                            </span>
+                                </p>
+                               
+                               
+                            </p>
                         </div>
+                        
                         <!--PROPOSAL SECTION BEGINS-->
-                        <div class="flex flex-1 allinone-page" id="approach">
-                            <div class="card negative-card align-self-start">
+                        <div class="hidden-content"
+                        <div class="flex flex-1 hidden-content" id="approach">
+                            <div class="card negative-card bg-red align-self-start">
                                 <div class="block-copy">
-                                    <p class="block-text">
-                                        </p><h4 class="block-title">proposal</h4><br>
+                                    
+                                        <p><h4 class="block-title">proposal</h4></p><br>
+                                        <p class="block-text">
                                         I proposed 4 dedicated weeks using an iterative design process—cycling through
                                         research, brainstorming, production, and testing over four weeks—to create UI
                                         screens for presentation to key legacy system stakeholders.
-                                    <p></p>
+                                    </p>
                                 </div>
                                 <div class="image-stack mt-8 mb-8">
                                     <img src="./images/proj2/timeline.png" alt="project timeline">
@@ -153,6 +161,7 @@
                             </div>
 
                         </div>
+                    </div>
                         <!--PROPOSAL SECTION ENDS-->
 
                         <!--RESEARCH PROCESS BEGINS-->
@@ -161,7 +170,7 @@
                             <div class="block-copy">
 
                                 <!-- JS TEXT EXAMPLE ANALYSING-->
-                                <div class="flex flex-column w-full p-6 allinone-page">
+                                <div class="flex flex-column w-full p-6">
 
                                     <span class="bold-text">Analysing application, service safari method</span>
                                     <p class="block-text">
@@ -193,7 +202,7 @@
 
 
                                     <!-- JS TEXT EXAMPLE 2 GATHERING-->
-                                    <span class="bold-text-li">Gathering physical documents,
+                                    <span class="bold-text">Gathering physical documents,
                                         noting touchpoints</span>
                                     <p class="block-text">
                                         Physical documents were not only noted as touchpoints but also as opportunities
@@ -215,7 +224,7 @@
                                             to errors.</p>
                                     </div>
                                     <!-- JS TEXT EXAMPLE 2 CONTEXTUAL-->
-                                    <span class="bold-text-li">Contextual, 1:1 semi structured, ethnographic interviews
+                                    <span class="bold-text">Contextual, 1:1 semi structured, ethnographic interviews
                                     </span>
                                     <p class="block-text">
                                         There was no specific direction for how interviews were to be conducted. I began
@@ -341,7 +350,7 @@
                                                 </div>
                                                 <div class="flex image-stack img-1 mb-0">
 
-                                                    <div class="image-stack mt-0">
+                                                    <div class="image-stack-papersketches mt-0">
 
                                                         <div class="reveal-card">
 
@@ -478,9 +487,10 @@
 
         </div>
     </div>
-
+</div>
     <!-- ============================================= -->
 <!-- SCRIPTS -->
+  <script src="scripts/hide-content.js"></script>
     <script src="scripts/mark-scroll.js"></script>
     <script src="scripts/imagenav3.js"></script>
     <script src="scripts/gif-animate.js"></script>
