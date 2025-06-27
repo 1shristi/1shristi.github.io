@@ -48,16 +48,21 @@ body, .allinone-page {
 }
 
 .interactive-gif {
-  border: #000 .4px solid;
+  justify-self: center;
+  /*border: #000 .1px solid; */
   border-radius: 16px;
   cursor: pointer;
   transition: opacity 0.1s ease;
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
 }
 
 .interactive-gif-size {
-  max-width: 70%;
+  width: 80%;
   height: fit-content;
   object-fit: cover;
+  
 }
 
 .reveal-wrapper {
@@ -66,7 +71,7 @@ body, .allinone-page {
  /* gap: 2rem;*.
  /* margin-bottom: 2rem;*/
 }
-
+/*
 .reveal-card {
   flex-wrap: wrap;
   display: flex;
@@ -75,7 +80,7 @@ body, .allinone-page {
   flex: 1 1 300px;
   min-width: 250px;
   max-width: 400px;
-}
+}*/
 
 .allinone-page .prototype-img {
   border-radius: 0.25rem;
@@ -87,8 +92,8 @@ body, .allinone-page {
   align-items: flex-start baseline;
   gap: 1rem;
   width: 100%;
-  object-fit: contain;
-  
+  height: auto;
+  object-fit: cover;
   /* keeps aspect ratio, crops if needed */
 }
 
@@ -124,11 +129,67 @@ align-items:center;
 }
 
 
+.allinone .outcome-img {
+  width: auto;
+  height: auto;
+  object-fit: cover;     /* crops to fill */
+  object-position: center; /* change to top, left, etc. */
+ 
+  border-radius: 0.25rem;
+  border: 0.4px solid #000;
+  background: #FFF;
+  display: inline-block;
+  padding: .1rem;
+  flex-direction: column;
+  align-items: flex-start baseline;
+  gap: 1rem;
+  
+  object-fit: cover;
+  /* keeps aspect ratio, crops if needed */
+}
 
-.image-stack-papersketches{
-    max-width: 100%;
-    height: auto;
-    display: block;
+.allinone-page #outcome .image-crop-wrapper {
+  width: 100%;           /* or fixed px like 400px */
+  height: 290px;         /* visible crop height */
+  overflow: hidden;
+  border-radius: 16px;
+  position: relative;
+}
+
+.allinone-page #outcome .screen1cropped {
+  position: absolute;
+  top: -1px;           /* shift up to crop */
+  left: 0;
+  width: 100%;           /* stretch full width */
+  height: auto;          /* or height: 100% if that fits better */
+}
+
+.allinone-page #outcome .screen2cropped {
+  position: absolute;
+  top: -32px;           /* shift up to crop */
+  left: 0;
+  width: 100%;           /* stretch full width */
+  height: auto;          /* or height: 100% if that fits better */
+}
+
+.allinone-page #outcome .screen3cropped {
+  position: absolute;
+  top: -10px;           /* shift up to crop */
+  left: 0;
+  width: 100%;           /* stretch full width */
+  height: auto;          /* or height: 100% if that fits better */
+}
+
+.allinone-page #outcome .screen4cropped {
+  position: absolute;
+  top: -100px;           /* shift up to crop */
+  left: 0;
+  width: 100%;           /* stretch full width */
+  height: auto;          /* or height: 100% if that fits better */
+}
+
+.allinone-page .image-stack-papersketches{
+    
 
     /* Optional: add border-radius or box-shadow if needed */
 }
@@ -136,12 +197,15 @@ align-items:center;
     width: 100%;
 }
 
-.image-stack-papersketches {
-    width: 100%;
-    object-fit: contain;
+.allinone-page .image-stack-papersketches {
+   /* width: 100%;
+    /*object-fit: contain;
     /* Optional: add display: flex; flex-wrap: wrap; if you want images side by side */
-    display: flex;
-     flex-wrap: wrap;
+    /*display: flex;
+     /*flex-wrap: wrap;*/
+     display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 1.5rem;
 }
 
 .d-baseline {
@@ -157,7 +221,7 @@ align-items:center;
 
 .img-text-pair {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
  /* gap: 1rem;*/
   /*margin-bottom: 2rem;*/
@@ -182,6 +246,18 @@ align-items:center;
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.stacked-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* space between items */
+  align-items: center; /* center-align content if you want */
+}
+
+.stacked-layout .image-stack {
+  width: 100%;
+  max-width: 700px;
 }
 
 
@@ -232,13 +308,21 @@ align-items:center;
   margin:auto !important;
 }
 
+ .allinone-page #proposal h4 {
+    width: 100%;
+    margin-bottom: 0em;
+    border-bottom: .25px solid black;
+    font-size: 1.1em;
+    padding-bottom: .2em;
+  }
+
 
 .allinone-page .block-title {
   color: #C1551C;
   font-family: 'american typewriter';
   line-height: 2.5rem;
   font-weight: 400;
-  margin:1rem;
+;
 }
 
 .allinone-page .block-subtitle {
@@ -277,21 +361,26 @@ align-items:center;
 }
 
 .allinone-page .toggle-btn {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #D06222;
-  font-size: .8em;
-  font-weight: 400;
-  color: white;
-  /* text color */
-  border: none;
-  /* no border */
-  padding: 0.5rem 1rem;
-  /* padding for the button */
+  background-color: rgba(208, 98, 34, 0.1); /* soft terracotta tint */
+  color: #a65429;
+  font-weight: 500;
+  font-size: 0.85em;
+  padding: 0.6rem 1.4rem;
+  border: 1px solid rgba(208, 98, 34, 0.3);
+  border-radius: 999px; /* pill shape */
+  font-family: "Raleway", sans-serif;
   cursor: pointer;
-  /* pointer cursor on hover */
-  border-radius: 4px;
-  margin-bottom: .1rem;
-  font-family: "Raleway";
-  max-width: 150px;
+  transition: all 0.25s ease-in-out;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+
+.allinone-page .toggle-btn:hover {
+  background-color: #c66b3d;
+  color: white;
+  border-color: #c66b3d;
+  box-shadow: 0 4px 12px rgba(198, 107, 61, 0.3);
 }
 
 .allinone-page .button2 {
@@ -317,7 +406,7 @@ align-items:center;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.25rem;
-  margin-bottom: .6rem;
+  margin-bottom: 4rem;
   margin-top: .6rem;
   padding-left: 1rem;
   padding-right: .5rem;
@@ -344,10 +433,6 @@ align-items:center;
 
 .allinone-page .block-text {
   color: #2D2A26;
-}
-
-.allinone-page .align-self {
-  align-self: flex-start;
 }
 
 
@@ -378,6 +463,37 @@ align-items:center;
   background:linear-gradient(0deg, rgba(193, 85, 28, 0.20) 0%, rgba(193, 85, 28, 0.20) 100%), #FFF; border-radius: 5px;/*outcome*/
 }
 
-.allinone-page .page-nav .extra-solution:hover { background: #ebf4e5; border-radius: 5px; } /* extra solution */
+.allinone-page .page-nav .extra-solution:hover { background:linear-gradient(0deg, rgba(193, 85, 28, 0.20) 0%, rgba(193, 85, 28, 0.20) 100%), #FFF; border-radius: 5px; } /* challenges */
 
-.allinone-page .page-nav .reflections:hover { background: #4c93c388; border-radius: 5px; } /* reflections */
+.allinone-page .page-nav .reflections:hover { background: linear-gradient(0deg, rgba(193, 85, 28, 0.20) 0%, rgba(193, 85, 28, 0.20) 100%), #FFF; border-radius: 5px; } /* reflections */
+
+
+/* grid template begins*/
+.allinone .image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  
+  margin-top: 2rem;
+}
+
+.reveal-card {
+  overflow: hidden;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+./*prototype-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+}*/
+
+.block-text-alt-3 {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+/*grid template ends*/
