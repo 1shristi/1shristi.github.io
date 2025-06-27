@@ -261,7 +261,7 @@ nav a {
 nav a:hover,
 .selected {
   font-weight: 600;
-  color: black;
+  color:  #C1551C;
 }
 
 .page-nav {
@@ -798,11 +798,29 @@ footer {
     text-align: right;
   }
 
+  .allinone .reveal-wrapper .image-grid  {
+    display: flex;
+  flex-direction: column;
+  }
+
+  .allinone .image-grid .image-stack {
+     display: flex;
+  flex-direction: column;
+  }
+
+
+
+  .block-text-alt {
+    font-size: 0.9rem;
+  }
+
+  
+
   /*why did i make button2 with this random margin at 1000px
   .button2 {
 	margin: 2rem;
-}
-*/
+  }
+    */
 
   .project_copy {
     width: 100%;
