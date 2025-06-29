@@ -174,7 +174,7 @@ align-items:center;
 
 .allinone-page #outcome .screen3cropped {
   position: absolute;
-  top: -10px;           /* shift up to crop */
+  top: 0px;           /* shift up to crop */
   left: 0;
   width: 100%;           /* stretch full width */
   height: auto;          /* or height: 100% if that fits better */
@@ -182,12 +182,20 @@ align-items:center;
 
 .allinone-page #outcome .screen4cropped {
   position: absolute;
-  top: -100px;           /* shift up to crop */
+  top: -13px;           /* shift up to crop */
   left: 0;
   width: 100%;           /* stretch full width */
   height: auto;          /* or height: 100% if that fits better */
 }
 
+/* Custom taller wrappers for screen 3 and 4 */
+.allinone-page #outcome .screen3-wrapper {
+  height: 458px; /* adjust as needed */
+}
+
+.allinone-page #outcome .screen4-wrapper {
+  height: 600px; /* LAST SCREEN */
+}
 
 .image-stack {
     width: 100%;
@@ -346,13 +354,6 @@ gap: 1.5rem;
   color:#C1551C;
 }
 
-/* Only affects .block-title inside .allinone-page */
-.allinone-page .block-subtitle {
-
-
-
-  /* your custom color */
-}
 
 .allinone-page .toggle-btn {
   background-color: rgba(208, 98, 34, 0.1); /* soft terracotta tint */
@@ -476,7 +477,7 @@ gap: 1.5rem;
   margin-top: 2rem;
 }
 
-.reveal-card {
+.allinone-page .reveal-card {
   overflow: hidden;
   padding: 1rem;
   display: flex;
@@ -484,12 +485,47 @@ gap: 1.5rem;
   align-items: flex-start;
 }
 
-./*prototype-img {
+.allinone-page .reveal-images-container {
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+  justify-content: center;
+  flex-wrap: wrap; /* optional, in case screen shrinks too tight */
+}
+
+.reveal-images-container .image-stack {
+  flex: 1 1 45%;
+  max-width: 45%;
+}
+
+.hover-swap {
+  position: relative;
+  display:block;
+}
+
+.hover-swap .default-img,
+.hover-swap .hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
-  border-radius: 6px;
-}*/
+}
+
+.hover-swap .hover-img {
+  opacity: 0;
+  z-index: 1;
+}
+
+.hover-swap:hover .hover-img {
+  opacity: 1;
+}
+
+.hover-swap:hover .default-img {
+  opacity: 0;
+}
 
 .block-text-alt-3 {
   margin-top: 0.75rem;

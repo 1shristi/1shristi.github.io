@@ -715,6 +715,31 @@ footer {
   }
 }
 
+@media (min-width: 1440px) {
+  .screen-row {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .screen-img {
+    flex: 1;              /* fills available space equally */
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  /* Optional: For the last 2 screens */
+  .screen-row.last-two {
+    align-items: stretch;
+  }
+
+  .screen-row.last-two .screen-img {
+    height: 100%;         /* full height of parent */
+  }
+}
+
+
 @media only screen and (max-width: 1280px) {
   .block-copy {
     padding: 0;
@@ -746,6 +771,7 @@ footer {
 }
 
 @media only screen and (min-height: 1000px) {
+
   h1 {
     font-size: 7vh;
   }
@@ -809,18 +835,11 @@ footer {
   }
 
 
-
   .block-text-alt {
     font-size: 0.9rem;
   }
 
   
-
-  /*why did i make button2 with this random margin at 1000px
-  .button2 {
-	margin: 2rem;
-  }
-    */
 
   .project_copy {
     width: 100%;
@@ -900,5 +919,30 @@ footer {
   .vertical {
     transform: none;
     margin-top: 0;
+  }
+
+  /* Stack on smaller screens */ 
+  .stacked-layout {
+    flex-direction: column;
+    align-items: left;
+  }
+
+  .image-stack,
+  .block-text {
+    width: 100%;
+    text-align: left;
+  }
+
+  .block-text {
+    padding: 1rem;
+  }
+
+  .reveal-images-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reveal-images-container .image-stack {
+    width: 100%;
   }
 }
