@@ -188,11 +188,7 @@ align-items:center;
   height: auto;          /* or height: 100% if that fits better */
 }
 
-.allinone-page .image-stack-papersketches{
-    
 
-    /* Optional: add border-radius or box-shadow if needed */
-}
 .image-stack {
     width: 100%;
 }
@@ -215,8 +211,6 @@ gap: 1.5rem;
 .d-top {
   display: block; margin-top: 0;
 }
-
-
 
 
 .img-text-pair {
@@ -435,6 +429,11 @@ gap: 1.5rem;
   color: #2D2A26;
 }
 
+.allinone-page nav a:hover,
+.selected {
+  font-weight: 600;
+  color:  #C1551C;
+}
 
 .allinone-page .page-nav a:nth-child(1):hover { 
   background: linear-gradient(0deg, rgba(193, 85, 28, 0.20) 0%, rgba(193, 85, 28, 0.20) 100%), #FFF; 
