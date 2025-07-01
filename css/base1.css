@@ -46,7 +46,13 @@ body {
   padding: 0;
   font-family: American Typewriter;
   background-color: #fdfdfd;
+  overflow: hidden; /* to control JS scroll-lock*/
 }
+
+html, body {
+  height: 100%;
+}
+
 
 .wrapper {
   display: flex;
