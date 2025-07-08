@@ -310,12 +310,19 @@ gap: 1.5rem;
 }
 
  .allinone-page #proposal h4 {
-    width: 100%;
-    margin-bottom: 0em;
-    border-bottom: .25px solid black;
-    font-size: 1.1em;
-    padding-bottom: .2em;
-  }
+	color: #C1551C;
+	font-family: 'american typewriter';
+	line-height: 2.5rem;
+	font-weight: 400;
+	white-space: normal;
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 1rem;
+	text-align: center;
+}
+
+  
 
 
 .allinone-page .block-title {
