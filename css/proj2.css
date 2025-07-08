@@ -306,7 +306,6 @@ gap: 1.5rem;
 }
 
 .allinone-page #proposal .block-title {
-
   margin:auto !important;
 }
 
@@ -324,7 +323,12 @@ gap: 1.5rem;
   font-family: 'american typewriter';
   line-height: 2.5rem;
   font-weight: 400;
-;
+  white-space: wrap;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  text-align: center;
 }
 
 .allinone-page .block-subtitle {
@@ -332,8 +336,11 @@ gap: 1.5rem;
 	font-weight: 200;
 	line-height: 2rem;
 	margin-bottom: 1rem;
-  margin:3rem;
 	white-space: wrap;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+text-align: center;
 }
 
 
