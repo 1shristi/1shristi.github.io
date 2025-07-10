@@ -15,6 +15,94 @@
   scroll-snap-align: start;
 }
 
+.component-map {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.component-map .map-item {
+  padding: 0.5rem 0;
+    border-bottom: 1px solid #f4dada; /* warm rose */
+}
+
+.component-map .map-item:last-child {
+  border-bottom: none;
+}
+
+.component-map dt {
+  font-style: italic;
+   color: #b45309; /* warm amber-brown */
+  margin-bottom: 0.3em;
+}
+
+.component-map dd {
+  margin: 0;
+  font-weight: 600;
+  color: #3b2f2f; /* rich warm neutral */
+}
+
+
+.allinone-page 
+.component-map dt {
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+.allinone-page  .component-map dd {
+  margin-left: 1.5em;
+  margin-bottom: 1rem;
+}
+
+.zoom-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.zoom-container .sketch-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s ease;
+  transform-origin: center center;
+}
+
+.card-content-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem; /* spacing between text and image */
+  flex-wrap: wrap; /* optional: allow stacking on small screens */
+}
+
+.card-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.zoom-container .research {
+  flex: 1;
+  max-width: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+.zoom-container .sketch-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+}
+
+
+
+
 .allinone-page .hidden-content {
   overflow-y:hidden;
   height:0;
@@ -114,6 +202,13 @@ body, .allinone-page {
   /* keeps aspect ratio, crops if needed */
 }
 
+.allinone-page .zoom-container .prototype-img {
+align-items: center;
+justify-content: center;
+text-align: center;
+  
+}
+
 .allinone-page .research-img {
   border-radius: 0.25rem;
   border: 0.4px solid #000;
@@ -139,7 +234,7 @@ body, .allinone-page {
   width: auto;
   height: auto;
   display:inline-grid;
-  border: 0.4px solid #000;
+  /*border: 0.4px solid #000;*/
   object-fit: cover;          
 border-radius: 16px;
 align-items:center;
