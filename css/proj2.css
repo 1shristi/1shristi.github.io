@@ -61,15 +61,20 @@
   position: relative;
   width: 100%;
   max-width: 600px;
-  height: auto;
+  height: auto; /*also can be changed to a specific fixed height*/
 }
 
-.zoom-container .sketch-img {
-  display: block;
+
+
+.zoom-container .prototype-img .centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
   width: 100%;
+  max-width: 600px;
   height: auto;
-  transition: transform 0.2s ease;
-  transform-origin: center center;
 }
 
 .card-content-row {
@@ -92,13 +97,7 @@
   position: relative;
 }
 
-.zoom-container .sketch-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
-  transform-origin: center center;
-}
+
 
 
 
@@ -203,10 +202,9 @@ body, .allinone-page {
 }
 
 .allinone-page .zoom-container .prototype-img {
-align-items: center;
-justify-content: center;
-text-align: center;
-  
+  display: flex;
+  justify-content: center; /*horizontal center*/
+  align-items: center; /*vertical center*/
 }
 
 .allinone-page .research-img {
@@ -230,14 +228,16 @@ text-align: center;
   position: relative;
 }
 
-.allinone-page .sketch-img {
-  width: auto;
+.allinone-page .zoom-container .sketch-img {
+  width: 100%;
   height: auto;
   display:inline-grid;
-  /*border: 0.4px solid #000;*/
+  border: 0.4px solid #000;
   object-fit: cover;          
 border-radius: 16px;
 align-items:center;
+  transition: transform 0.2s ease;
+  transform-origin: center center;
 }
 
 
@@ -246,7 +246,6 @@ align-items:center;
   height: auto;
   object-fit: cover;     /* crops to fill */
   object-position: center; /* change to top, left, etc. */
- 
   border-radius: 0.25rem;
   border: 0.4px solid #000;
   background: #FFF;
@@ -533,6 +532,31 @@ text-align: center;
   padding-left: 1rem;
   padding-right: .5rem;
   display: block;
+}
+
+.allinone-page #text6.block-text-alt {
+  color: #575757;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25rem;
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  display: block;
+  text-align: left;
+  width: 80%
+}
+
+.allinone-page #text4.block-text-alt {
+  color: #575757;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  display: block;
+  text-align: left;
 }
 
 .allinone-page .bold-text-li {
