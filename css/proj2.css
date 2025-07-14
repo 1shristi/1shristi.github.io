@@ -308,6 +308,11 @@ align-items:center;
   height: 600px; /* LAST SCREEN */
 }
 
+.allinone-page #outcome .border {
+  border-radius: 16px;
+  border: 0.4px solid #000;
+}
+
 .image-stack {
     width: 100%;
 }
@@ -582,7 +587,7 @@ text-align: center;
 }
 
 .allinone-page nav a:hover,
-.selected {
+.allinone-page .selected {
   font-weight: 600;
   color:  #C1551C;
 }

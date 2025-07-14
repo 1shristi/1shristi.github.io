@@ -2,7 +2,8 @@
   // Cache the navigation links
   const navigationLinks = [...document.querySelectorAll('nav > .page-nav a')]
   // Cache (in reversed order) the sections
-  const sections = [...document.getElementsByTagName('section')].reverse()
+  const sections = [...document.querySelectorAll('section[id], .allinone-page section[id], .allinone-page div[id]')].reverse()
+
 
   // Map each section id to their corresponding navigation link
   let sectionToAnchor = {}
