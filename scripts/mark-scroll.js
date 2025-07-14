@@ -9,7 +9,7 @@
   let sectionToAnchor = {}
 
   for (section of sections) {
-    const anchor = document.querySelector(`nav > .page-nav a[href=\\#${section.id}]`)
+    const anchor = document.querySelector(`nav > .page-nav a[href=${section.id}]`)
     if (anchor) {
       sectionToAnchor[section.id] = anchor
     }
