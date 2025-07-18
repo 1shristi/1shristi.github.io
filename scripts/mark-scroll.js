@@ -1,80 +1,57 @@
-(() => {
+document.addEventListener('DOMContentLoaded', () => {
   // Cache the navigation links
-  const navigationLinks = [...document.querySelectorAll('nav > .page-nav a')]
-  // Cache (in reversed order) the sections
-  const sections = [...document.querySelectorAll('section[id]')].reverse()
+  const navigationLinks = [...document.querySelectorAll('.page-nav a[href^="#"]')];
+  // Build the list of scroll targets from nav hrefs
+  const scrollTargets = navigationLinks
+    .map(link => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean)
+    .reverse();
 
-
-  // Map each section id to their corresponding navigation link
-  let sectionToAnchor = {}
-
-  for (section of sections) {
-    const anchor = document.querySelector(`nav > .page-nav a[href=\\#${section.id}]`)
-    if (anchor) {
-      sectionToAnchor[section.id] = anchor
-    }
-  }
+  // Map each id to its nav link
+  let idToAnchor = {};
+  navigationLinks.forEach(link => {
+    const id = link.getAttribute('href').replace('#', '');
+    idToAnchor[id] = link;
+  });
 
   // Throttle function, enforces a minimum time interval
   function throttle(fn, interval) {
-    let lastCall, timeoutId
+    let lastCall, timeoutId;
     return () => {
-      const now = new Date().getTime()
+      const now = new Date().getTime();
       if (lastCall && now < (lastCall + interval)) {
-        // If we are inside the interval we wait
-        clearTimeout(timeoutId)
+        clearTimeout(timeoutId);
         timeoutId = setTimeout(() => {
-          lastCall = now
-          fn.call()
-        }, interval - (now - lastCall))
+          lastCall = now;
+          fn.call();
+        }, interval - (now - lastCall));
       } else {
-        // Otherwise, we directly call the function 
-        lastCall = now
-        fn.call()
+        lastCall = now;
+        fn.call();
       }
     }
   }
 
   function highlightNavigation() {
-    // Get the current vertical position of the scroll bar
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-    // We are at the bottom of the page so set selected item to conclusion
-    if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
-      const bottomNavigationLink = navigationLinks[navigationLinks.length - 1]
-      setSelected(bottomNavigationLink, navigationLinks)
-      return
-    }
-
-    for (section of sections) {
-      const sectionTop = section.offsetTop
-      // If the user has scrolled over the top of the section
-      if (scrollPosition >= sectionTop - 10) {
-        // Get the corresponding navigation link
-        const navigationLink = sectionToAnchor[section.id]
-
-        if (navigationLink) {
-          if (!navigationLink.classList.contains('selected')) {
-            // Add .selected class to the current link
-            navigationLink.classList.add('selected')
-            setSelected(navigationLink, navigationLinks)
-          }
+    for (let el of scrollTargets) {
+      if (scrollPosition >= el.offsetTop - 10) {
+        const navLink = idToAnchor[el.id];
+        if (navLink) {
+          setSelected(navLink, navigationLinks);
         } else {
-          // Default overview to be selected if no other item fits
-          const topNavigationLink = navigationLinks[0]
-          setSelected(topNavigationLink, navigationLinks)
+          setSelected(navigationLinks[0], navigationLinks);
         }
-        // We have found our section, so we break the loop
-        break
+        break;
       }
     }
   }
 
   function setSelected(elementToSet, navigationLinks) {
-    // Remove .selected class from all the links
-    navigationLinks.forEach(item => item?.classList.remove('selected'))
-    elementToSet.classList.add('selected')
+    navigationLinks.forEach(item => item?.classList.remove('selected'));
+    elementToSet.classList.add('selected');
   }
 
-  window.addEventListener('scroll', throttle(highlightNavigation, 150))
-})()
+  window.addEventListener('scroll', throttle(highlightNavigation, 150));
+});
