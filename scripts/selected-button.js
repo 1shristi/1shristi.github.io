@@ -9,7 +9,7 @@ console.log("Script loaded!");
   });
 
   document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll("section[id]");
+  const sections = document.querySelectorAll("section[id], .allinone-page section[id], .allinone-page div[id]");
   const navLinks = document.querySelectorAll(".page-nav a");
 
   window.addEventListener("scroll", () => {
