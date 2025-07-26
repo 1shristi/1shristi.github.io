@@ -245,8 +245,20 @@ input[type="password"] {
   font-weight: 600;
 }
 
+.index-page nav {
+  /* Only applies on index.html */
+  min-width: 70px;
+}
+
 nav {
   min-width: 150px;
+  position: sticky;
+  top: 2rem;
+  white-space: nowrap;
+}
+
+nav .index {
+  min-width: 100px;
   position: sticky;
   top: 2rem;
   white-space: nowrap;
@@ -868,7 +880,19 @@ footer {
     font-size: 0.9rem;
   }
 
-  
+  .project a {
+  text-decoration: none;
+  color: inherit;
+  pointer-events: none; /* optional: disables clicking */
+  cursor: default;
+  }
+
+  #project_link {
+  text-decoration: none;
+  color: inherit;
+  pointer-events: none; /* optional: disables clicking */
+  cursor: default;
+  }
 
   .project_copy {
     width: 100%;
