@@ -11,6 +11,10 @@
   flex: 1 1 0%;
 }
 
+.flex-2 {
+  flex: 1 1 47%;
+}
+
 .flex-row {
     display: row;
 }

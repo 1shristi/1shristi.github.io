@@ -245,8 +245,20 @@ input[type="password"] {
   font-weight: 600;
 }
 
+.index-page nav {
+  /* Only applies on index.html */
+  min-width: 70px;
+}
+
 nav {
   min-width: 150px;
+  position: sticky;
+  top: 2rem;
+  white-space: nowrap;
+}
+
+nav .index {
+  min-width: 100px;
   position: sticky;
   top: 2rem;
   white-space: nowrap;
@@ -716,6 +728,31 @@ footer {
 }
 
 @media (min-width: 1440px) {
+
+  .allinone-page .flex.banner-container.mb-20.bg-red.flex-column.solution-content.px-12 {
+  max-width: 1200px; /* adjust the width as needed */
+  margin: 0 auto; /* center the container horizontally */ 
+  /* This media query will apply the styles only when the screen width is 1440px or larger. The max-width property sets the maximum width of the container, and the margin property centers the container horizontally.
+
+  You can adjust the max-width value to a width that works best for your content. For example, you could set it to 1000px, 1100px, or any other value that makes the content easier to read on larger screens. */
+
+  }
+
+    .allinone-page #overview .flex.banner-container.mb-20.bg-red.flex-column.solution-content.px-12 {
+    text-align: center;
+  }
+
+
+  .allinone-page #overview .block-title {
+    display: block;
+    margin: 0 auto;
+    width: 100%
+  }
+
+   .allinone-page .wrapper {
+    justify-content: center;
+  } 
+
   .screen-row {
     display: flex;
     gap: 2rem;
@@ -736,6 +773,10 @@ footer {
 
   .screen-row.last-two .screen-img {
     height: 100%;         /* full height of parent */
+  }
+
+  .allinone-page #overview .block-title {
+    justify-content: center;
   }
 }
 
@@ -839,7 +880,19 @@ footer {
     font-size: 0.9rem;
   }
 
-  
+  .project a {
+  text-decoration: none;
+  color: inherit;
+  pointer-events: none; /* optional: disables clicking */
+  cursor: default;
+  }
+
+  #project_link {
+  text-decoration: none;
+  color: inherit;
+  pointer-events: none; /* optional: disables clicking */
+  cursor: default;
+  }
 
   .project_copy {
     width: 100%;
