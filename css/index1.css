@@ -6,7 +6,7 @@ body {
 .project {
     display: flex;
     height: auto;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
     max-height: 68vh;
     align-items: flex-start; /* top align content */
     gap: 2rem;
@@ -50,6 +50,22 @@ body {
     margin-left: 20px;
     margin-right: 30px;
     max-width: 700px;
+  }
+
+  .project_copy_title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1.1em;
+    line-height: 1.75em;
+    color: #333;
+  }
+
+    .project_copy_text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1.1em;
+    line-height: 1.75em;
+    color: #333;
   }
 
   .project_copy_image {
