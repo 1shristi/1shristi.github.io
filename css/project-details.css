@@ -20,28 +20,55 @@
 .learnings-card {
   position: relative;
   z-index: 2;
-  margin-top: -18rem;
-  /* pulls up over top container */
-  /* margin-bottom: ; /* pulls down over bottom container */
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.learnings-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .learnings-card2 {
   position: relative;
   z-index: 2;
-  margin-top: -15rem;
-  /* pulls up over top container */
-  /* margin-bottom: ; /* pulls down over bottom container */
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.learnings-card2:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .negative-card {
-  margin-top: -11rem;
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.negative-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .negative-block-copy {
   align-self: flex-end;
-  margin-top: -18rem;
-  padding-bottom: 6rem;
+  margin-top: 2rem;
+  padding: 2rem;
   width: 48%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.negative-block-copy:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .grid-container {
@@ -52,8 +79,14 @@
 
 .grid-item {
   display: flex;
-  outline: 1px solid #808080;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   padding: 1.25rem;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.grid-item:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 .small-grid-item {
@@ -304,8 +337,7 @@
 
 @media only screen and (max-width: 1650px) {
   .negative-block-copy {
-    margin-top: -14rem;
-    padding-bottom: 4rem;
+    margin-top: 2rem;
   }
 }
 
@@ -327,8 +359,7 @@
   }
 
   .negative-block-copy {
-    margin-top: 0;
-    padding-bottom: 0;
+    margin-top: 2rem;
     width: 100%;
   }
 
