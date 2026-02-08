@@ -3,17 +3,22 @@ body {
   background-color:  #fdfdfd;
 }  
 
-.project {
+  .project {
     display: flex;
     height: auto;
     margin-bottom: 5rem;
     max-height: 68vh;
     align-items: flex-start; /* top align content */
     gap: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease-in-out;
   }
 
   .project:hover {
     cursor: pointer;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
   }
 
   .project:last-child {
@@ -28,6 +33,13 @@ body {
     height: auto;
     min-height: 350px;
     max-height: 60vh;
+    border-radius: 8px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  .project:hover img {
+    opacity: 0.95;
+    transform: scale(1.02);
   }
 
   .current_project {
