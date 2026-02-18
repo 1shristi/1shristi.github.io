@@ -20,76 +20,39 @@
       padding: 1rem 0 6rem;
     }
 
-    /* Central spine */
-    .tl-spine {
-      position: absolute;
-      left: 50%;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      transform: translateX(-50%);
-      background: linear-gradient(
-        to bottom,
-        #AAD292 0%,
-        #AAD292 18%,
-        #4C93C3 18%,
-        #4C93C3 52%,
-        #808080 52%,
-        #808080 74%,
-        #AAD292 74%,
-        #AAD292 84%,
-        #8BB3CD 84%,
-        #8BB3CD 100%
-      );
-      z-index: 0;
-    }
-
     /* Each row on the timeline */
     .tl-item {
       display: grid;
-      grid-template-columns: 1fr 72px 1fr;
+      grid-template-columns: 1fr 44px 1fr;
       margin-bottom: 3rem;
-      position: relative;
-      z-index: 1;
       align-items: start;
     }
 
     /* Left-side content layout */
-    .tl-item.tl-left .tl-content  { grid-column: 1; padding-right: 2.5rem; }
+    .tl-item.tl-left .tl-content   { grid-column: 1; padding-right: 2.5rem; }
     .tl-item.tl-left .tl-spine-col { grid-column: 2; }
-    .tl-item.tl-left .tl-empty    { grid-column: 3; }
+    .tl-item.tl-left .tl-empty     { grid-column: 3; }
 
     /* Right-side content layout */
     .tl-item.tl-right .tl-empty    { grid-column: 1; }
     .tl-item.tl-right .tl-spine-col { grid-column: 2; }
     .tl-item.tl-right .tl-content  { grid-column: 3; padding-left: 2.5rem; }
 
-    /* Spine column centred */
+    /* Step number centred between blocks */
     .tl-spine-col {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 1.25rem;
+      padding-top: 1.5rem;
     }
 
-    /* Phase dot */
-    .tl-dot {
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      border: 3px solid #fdfdfd;
-      flex-shrink: 0;
-      position: relative;
-      z-index: 2;
-    }
-
-    /* Step number below dot */
+    /* Step number */
     .tl-step {
       font-family: 'Raleway', sans-serif;
-      font-size: 0.62rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      margin-top: 0.4rem;
+      font-size: 0.6rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      color: #bbb;
       text-align: center;
     }
 
@@ -157,54 +120,49 @@
       line-height: 1.4;
     }
 
-    /* ── Floating navigation dots ────────────────────────────── */
-    .tl-nav {
-      position: fixed;
-      right: 1.25rem;
-      top: 50%;
-      transform: translateY(-50%);
+    /* ── Sidebar nav items with phase dots ───────────────────── */
+    .page-nav .tl-nav-item {
       display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-      z-index: 200;
+      align-items: center;
+      gap: 0.55rem;
+      line-height: 2em;
+      padding-left: 10px;
+      margin-left: -5px;
+      cursor: pointer;
     }
 
-    .tl-nav a {
-      display: block;
-      width: 11px;
-      height: 11px;
+    .page-nav .tl-nav-item .nav-dot {
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
-      opacity: 0.5;
-      transition: opacity 0.2s, transform 0.2s;
-      position: relative;
-      text-decoration: none;
+      flex-shrink: 0;
+      opacity: 0.35;
+      transition: opacity 0.2s, transform 0.22s;
     }
 
-    .tl-nav a:hover,
-    .tl-nav a.active {
+    .page-nav .tl-nav-item a {
+      display: inline;
+      font-weight: 300;
+      line-height: inherit;
+      transition: font-weight 0.15s, color 0.15s;
+    }
+
+    /* Active state: dot pops, link bolds and takes the phase colour */
+    .page-nav .tl-nav-item.active .nav-dot {
       opacity: 1;
-      transform: scale(1.35);
+      transform: scale(1.5);
     }
 
-    .tl-nav a .tl-nav-tip {
-      position: absolute;
-      right: 1.6rem;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(30, 30, 30, 0.82);
-      color: #fff;
-      font-family: 'Raleway', sans-serif;
-      font-size: 0.68rem;
-      padding: 3px 8px;
-      border-radius: 4px;
-      white-space: nowrap;
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.18s;
+    .page-nav .tl-nav-item.active a {
+      font-weight: 600;
     }
 
-    .tl-nav a:hover .tl-nav-tip {
-      opacity: 1;
+    .page-nav .tl-nav-item:hover .nav-dot {
+      opacity: 0.8;
+    }
+
+    .page-nav .tl-nav-item:hover a {
+      font-weight: 600;
     }
 
     /* ── Phase section divider label ─────────────────────────── */
@@ -279,12 +237,6 @@
       .tl-item.tl-right .tl-spine-col { grid-column: 1; }
       .tl-item.tl-left .tl-empty,
       .tl-item.tl-right .tl-empty    { display: none; }
-
-      .tl-spine {
-        left: 16px;
-      }
-
-      .tl-nav { display: none; }
     }
   </style>
 </head>
@@ -302,13 +254,46 @@
       <section id="info">
         <nav>
           <div class="page-nav">
-            <a href="#tl-overview">overview</a>
-            <a href="#tl-approach">approach</a>
-            <a href="#tl-solution">solution</a>
-            <a href="#tl-challenge1">challenge #1</a>
-            <a href="#tl-challenge2">challenge #2</a>
-            <a href="#tl-extra">extra</a>
-            <a href="#tl-reflections">reflections</a>
+            <span class="tl-nav-item" data-target="tl-overview">
+              <span class="nav-dot" style="background:#AAD292;"></span>
+              <a href="#tl-overview">overview</a>
+            </span>
+            <span class="tl-nav-item" data-target="tl-approach">
+              <span class="nav-dot" style="background:#AAD292;"></span>
+              <a href="#tl-approach">approach</a>
+            </span>
+            <span class="tl-nav-item" data-target="tl-solution">
+              <span class="nav-dot" style="background:#4C93C3;"></span>
+              <a href="#tl-solution">solution: map</a>
+            </span>
+            <span class="tl-nav-item" data-target="tl-gradual">
+              <span class="nav-dot" style="background:#4C93C3;"></span>
+              <a href="#tl-gradual">gradual reveal</a>
+            </span>
+            <span class="tl-nav-item" data-target="tl-solution-model">
+              <span class="nav-dot" style="background:#4C93C3;"></span>
+              <a href="#tl-solution-model">mental model</a>
+            </span>
+            <span class="tl-nav-item" data-target="tl-volatility">
+              <span class="nav-dot" style="background:#4C93C3;"></span>
+              <a href="#tl-volatility">data volatility</a>
+            </span>
+            <span class="tl-nav-item" data-target="tl-challenge1">
+              <span class="nav-dot" style="background:#808080;"></span>
+              <a href="#tl-challenge1">challenge #1</a>
+            </span>
+            <span class="tl-nav-item" data-target="tl-challenge2">
+              <span class="nav-dot" style="background:#808080;"></span>
+              <a href="#tl-challenge2">challenge #2</a>
+            </span>
+            <span class="tl-nav-item" data-target="tl-extra">
+              <span class="nav-dot" style="background:#AAD292;"></span>
+              <a href="#tl-extra">extra</a>
+            </span>
+            <span class="tl-nav-item" data-target="tl-reflections">
+              <span class="nav-dot" style="background:#8BB3CD;"></span>
+              <a href="#tl-reflections">reflections</a>
+            </span>
           </div>
           <a href="revamping-the-dashboard.html">original layout</a>
           <a href="index.html">back</a>
@@ -342,42 +327,6 @@
         <!-- ── Timeline ─────────────────────────────────────── -->
         <div class="timeline-wrapper">
 
-          <!-- Spine -->
-          <div class="tl-spine"></div>
-
-          <!-- ── Floating nav dots ────────────────────────── -->
-          <nav class="tl-nav" aria-label="Jump to section">
-            <a href="#tl-overview"    style="background:#AAD292;">
-              <span class="tl-nav-tip">overview</span>
-            </a>
-            <a href="#tl-approach"    style="background:#AAD292;">
-              <span class="tl-nav-tip">approach</span>
-            </a>
-            <a href="#tl-solution"    style="background:#4C93C3;">
-              <span class="tl-nav-tip">solution: map</span>
-            </a>
-            <a href="#tl-gradual"     style="background:#4C93C3;">
-              <span class="tl-nav-tip">gradual reveal</span>
-            </a>
-            <a href="#tl-solution-model" style="background:#4C93C3;">
-              <span class="tl-nav-tip">mental model</span>
-            </a>
-            <a href="#tl-volatility"  style="background:#4C93C3;">
-              <span class="tl-nav-tip">data volatility</span>
-            </a>
-            <a href="#tl-challenge1"  style="background:#808080;">
-              <span class="tl-nav-tip">challenge #1</span>
-            </a>
-            <a href="#tl-challenge2"  style="background:#808080;">
-              <span class="tl-nav-tip">challenge #2</span>
-            </a>
-            <a href="#tl-extra"       style="background:#AAD292;">
-              <span class="tl-nav-tip">extra</span>
-            </a>
-            <a href="#tl-reflections" style="background:#8BB3CD;">
-              <span class="tl-nav-tip">reflections</span>
-            </a>
-          </nav>
 
           <!-- ════════════════════════════════════════════════
                PHASE 01 — DISCOVERY
@@ -406,8 +355,7 @@
               </div>
             </div>
             <div class="tl-spine-col">
-              <div class="tl-dot" style="background:#AAD292;"></div>
-              <span class="tl-step" style="color:#6aac4e;">01</span>
+              <span class="tl-step">01</span>
             </div>
             <div class="tl-empty"></div>
           </div>
@@ -416,8 +364,7 @@
           <div class="tl-item tl-right" id="tl-approach">
             <div class="tl-empty"></div>
             <div class="tl-spine-col">
-              <div class="tl-dot" style="background:#AAD292;"></div>
-              <span class="tl-step" style="color:#6aac4e;">02</span>
+              <span class="tl-step">02</span>
             </div>
             <div class="tl-content">
               <div class="tl-card" style="--phase-color:#6aac4e;">
@@ -485,8 +432,7 @@
               </div>
             </div>
             <div class="tl-spine-col">
-              <div class="tl-dot" style="background:#4C93C3;"></div>
-              <span class="tl-step" style="color:#4C93C3;">03</span>
+              <span class="tl-step">03</span>
             </div>
             <div class="tl-empty"></div>
           </div>
@@ -495,8 +441,7 @@
           <div class="tl-item tl-right" id="tl-gradual">
             <div class="tl-empty"></div>
             <div class="tl-spine-col">
-              <div class="tl-dot" style="background:#4C93C3;"></div>
-              <span class="tl-step" style="color:#4C93C3;">04</span>
+              <span class="tl-step">04</span>
             </div>
             <div class="tl-content">
               <div class="tl-card" style="--phase-color:#4C93C3;">
@@ -553,8 +498,7 @@
               </div>
             </div>
             <div class="tl-spine-col">
-              <div class="tl-dot" style="background:#4C93C3;"></div>
-              <span class="tl-step" style="color:#4C93C3;">05</span>
+              <span class="tl-step">05</span>
             </div>
             <div class="tl-empty"></div>
           </div>
@@ -563,8 +507,7 @@
           <div class="tl-item tl-right" id="tl-volatility">
             <div class="tl-empty"></div>
             <div class="tl-spine-col">
-              <div class="tl-dot" style="background:#4C93C3;"></div>
-              <span class="tl-step" style="color:#4C93C3;">06</span>
+              <span class="tl-step">06</span>
             </div>
             <div class="tl-content">
               <div class="tl-card" style="--phase-color:#4C93C3;">
@@ -618,8 +561,7 @@
               </div>
             </div>
             <div class="tl-spine-col">
-              <div class="tl-dot" style="background:#808080;"></div>
-              <span class="tl-step" style="color:#808080;">07</span>
+              <span class="tl-step">07</span>
             </div>
             <div class="tl-empty"></div>
           </div>
@@ -628,8 +570,7 @@
           <div class="tl-item tl-right">
             <div class="tl-empty"></div>
             <div class="tl-spine-col">
-              <div class="tl-dot" style="background:#808080;"></div>
-              <span class="tl-step" style="color:#808080;">08</span>
+              <span class="tl-step">08</span>
             </div>
             <div class="tl-content">
               <div class="tl-card" style="--phase-color:#808080;">
@@ -692,8 +633,7 @@
               </div>
             </div>
             <div class="tl-spine-col">
-              <div class="tl-dot" style="background:#808080;"></div>
-              <span class="tl-step" style="color:#808080;">09</span>
+              <span class="tl-step">09</span>
             </div>
             <div class="tl-empty"></div>
           </div>
@@ -702,8 +642,7 @@
           <div class="tl-item tl-right">
             <div class="tl-empty"></div>
             <div class="tl-spine-col">
-              <div class="tl-dot" style="background:#808080;"></div>
-              <span class="tl-step" style="color:#808080;">10</span>
+              <span class="tl-step">10</span>
             </div>
             <div class="tl-content">
               <div class="tl-card" style="--phase-color:#808080;">
@@ -769,8 +708,7 @@
               </div>
             </div>
             <div class="tl-spine-col">
-              <div class="tl-dot" style="background:#AAD292;"></div>
-              <span class="tl-step" style="color:#6aac4e;">11</span>
+              <span class="tl-step">11</span>
             </div>
             <div class="tl-empty"></div>
           </div>
@@ -786,8 +724,7 @@
           <div class="tl-item tl-right" id="tl-reflections">
             <div class="tl-empty"></div>
             <div class="tl-spine-col">
-              <div class="tl-dot" style="background:#8BB3CD;"></div>
-              <span class="tl-step" style="color:#8BB3CD;">12</span>
+              <span class="tl-step">12</span>
             </div>
             <div class="tl-content">
               <div class="tl-card" style="--phase-color:#8BB3CD;">
@@ -841,25 +778,25 @@
 
 <script src="scripts/mark-scroll.js"></script>
 <script>
-  // ── Highlight active nav dot while scrolling ──────────────
-  const navAnchors = document.querySelectorAll('.tl-nav a');
-  const sectionIds = Array.from(navAnchors).map(a => a.getAttribute('href').slice(1));
+  // ── Highlight active sidebar nav item (dot + text) while scrolling ──
+  const navItems   = document.querySelectorAll('.page-nav .tl-nav-item');
+  const sectionIds = Array.from(navItems).map(el => el.dataset.target);
 
-  function updateActiveDot() {
+  function updateActiveItem() {
     let current = sectionIds[0];
     sectionIds.forEach(id => {
       const el = document.getElementById(id);
-      if (el && el.getBoundingClientRect().top <= window.innerHeight * 0.5) {
+      if (el && el.getBoundingClientRect().top <= window.innerHeight * 0.45) {
         current = id;
       }
     });
-    navAnchors.forEach(a => {
-      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    navItems.forEach(item => {
+      item.classList.toggle('active', item.dataset.target === current);
     });
   }
 
-  window.addEventListener('scroll', updateActiveDot, { passive: true });
-  updateActiveDot();
+  window.addEventListener('scroll', updateActiveItem, { passive: true });
+  updateActiveItem();
 </script>
 
 </html>
