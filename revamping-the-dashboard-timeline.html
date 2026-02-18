@@ -1,0 +1,802 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <title>Shristi G | Revamping the Dashboard — Timeline</title>
+  <link rel="favicon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="css/base1.css" type="text/css" />
+  <link rel="stylesheet" href="css/index1.css" type="text/css" />
+  <link rel="stylesheet" href="css/project-details.css" type="text/css" />
+  <link rel="stylesheet" href="css/utilities.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&display=swap");
+
+    /* ── Timeline layout ─────────────────────────────────────── */
+    .timeline-wrapper {
+      position: relative;
+      width: 100%;
+      padding: 1rem 0 6rem;
+    }
+
+    /* Each row on the timeline */
+    .tl-item {
+      display: grid;
+      grid-template-columns: 1fr 44px 1fr;
+      margin-bottom: 3rem;
+      align-items: start;
+    }
+
+    /* Left-side content layout */
+    .tl-item.tl-left .tl-content   { grid-column: 1; padding-right: 2.5rem; }
+    .tl-item.tl-left .tl-spine-col { grid-column: 2; }
+    .tl-item.tl-left .tl-empty     { grid-column: 3; }
+
+    /* Right-side content layout */
+    .tl-item.tl-right .tl-empty    { grid-column: 1; }
+    .tl-item.tl-right .tl-spine-col { grid-column: 2; }
+    .tl-item.tl-right .tl-content  { grid-column: 3; padding-left: 2.5rem; }
+
+    /* Step number centred between blocks */
+    .tl-spine-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 1.5rem;
+    }
+
+    /* Step number */
+    .tl-step {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      color: #bbb;
+      text-align: center;
+    }
+
+    /* Content card */
+    .tl-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem 1.75rem;
+      box-shadow: 0 2px 14px rgba(0, 0, 0, 0.055);
+      border-left: 4px solid var(--phase-color, #4C93C3);
+    }
+
+    .tl-card-phase {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--phase-color, #4C93C3);
+      margin-bottom: 0.35rem;
+    }
+
+    .tl-card-title {
+      font-family: 'american typewriter', serif;
+      font-size: 1.15em;
+      font-weight: 500;
+      color: var(--phase-color, #4C93C3);
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
+    }
+
+    .tl-tags {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.85rem;
+    }
+
+    .tl-tag {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      padding: 2px 9px;
+      border-radius: 20px;
+      background: var(--tag-bg, #ebf4e5);
+      color: var(--phase-color, #6aac4e);
+    }
+
+    .tl-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 0.85rem;
+      display: block;
+    }
+
+    .tl-caption {
+      font-family: 'Raleway', sans-serif;
+      font-style: italic;
+      font-size: 0.78rem;
+      color: #666;
+      margin-top: 0.4rem;
+      line-height: 1.4;
+    }
+
+    /* ── Sidebar nav items with phase dots ───────────────────── */
+    .page-nav .tl-nav-item {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      line-height: 2em;
+      padding-left: 10px;
+      margin-left: -5px;
+      cursor: pointer;
+    }
+
+    .page-nav .tl-nav-item .nav-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      opacity: 0.35;
+      transition: opacity 0.2s, transform 0.22s;
+    }
+
+    .page-nav .tl-nav-item a {
+      display: inline;
+      font-weight: 300;
+      line-height: inherit;
+      transition: font-weight 0.15s, color 0.15s;
+    }
+
+    /* Active state: dot pops, link bolds and takes the phase colour */
+    .page-nav .tl-nav-item.active .nav-dot {
+      opacity: 1;
+      transform: scale(1.5);
+    }
+
+    .page-nav .tl-nav-item.active a {
+      font-weight: 600;
+    }
+
+    .page-nav .tl-nav-item:hover .nav-dot {
+      opacity: 0.8;
+    }
+
+    .page-nav .tl-nav-item:hover a {
+      font-weight: 600;
+    }
+
+    /* ── Phase section divider label ─────────────────────────── */
+    .tl-phase-divider {
+      display: flex;
+      align-items: center;
+      margin: 2.5rem 0 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tl-phase-divider::before,
+    .tl-phase-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--phase-color, #4C93C3);
+      opacity: 0.25;
+    }
+
+    .tl-phase-divider span {
+      font-family: 'american typewriter', serif;
+      font-size: 0.78rem;
+      color: var(--phase-color, #4C93C3);
+      padding: 0 1.25rem;
+      text-transform: lowercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── Inline two-col inside a card ───────────────────────── */
+    .tl-two-col {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 0.75rem;
+    }
+
+    .tl-two-col > div {
+      flex: 1;
+      min-width: 160px;
+    }
+
+    /* ── Button ─────────────────────────────────────────────── */
+    .tl-back-btn {
+      display: inline-block;
+      margin-top: 1.25rem;
+      padding: 6px 18px;
+      border-radius: 4px;
+      border: 1.1px dotted #222;
+      background: #fff;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.85rem;
+      cursor: pointer;
+      text-decoration: none;
+      color: #222;
+    }
+
+    .tl-back-btn:hover {
+      border-style: solid;
+    }
+
+    /* ── Responsive ─────────────────────────────────────────── */
+    @media only screen and (max-width: 900px) {
+      .tl-item {
+        grid-template-columns: 32px 1fr;
+        margin-bottom: 2rem;
+      }
+
+      .tl-item.tl-left .tl-content,
+      .tl-item.tl-right .tl-content  { grid-column: 2; padding-left: 1.5rem; padding-right: 0; }
+      .tl-item.tl-left .tl-spine-col,
+      .tl-item.tl-right .tl-spine-col { grid-column: 1; }
+      .tl-item.tl-left .tl-empty,
+      .tl-item.tl-right .tl-empty    { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- ── Left sidebar ───────────────────────────────────── -->
+    <header class="flex">
+      <div class="title">
+        <href="index.html" id="left">
+          <h1 class="vertical">Shristi Gartaula</h1>
+        </a>
+      </div>
+
+      <section id="info">
+        <nav>
+          <div class="page-nav">
+            <span class="tl-nav-item" data-target="tl-overview">
+              <span class="nav-dot" style="background:#AAD292;"></span>
+              <a href="#tl-overview">overview</a>
+            </span>
+            <span class="tl-nav-item" data-target="tl-approach">
+              <span class="nav-dot" style="background:#AAD292;"></span>
+              <a href="#tl-approach">approach</a>
+            </span>
+            <span class="tl-nav-item" data-target="tl-solution">
+              <span class="nav-dot" style="background:#4C93C3;"></span>
+              <a href="#tl-solution">solution: map</a>
+            </span>
+            <span class="tl-nav-item" data-target="tl-gradual">
+              <span class="nav-dot" style="background:#4C93C3;"></span>
+              <a href="#tl-gradual">gradual reveal</a>
+            </span>
+            <span class="tl-nav-item" data-target="tl-solution-model">
+              <span class="nav-dot" style="background:#4C93C3;"></span>
+              <a href="#tl-solution-model">mental model</a>
+            </span>
+            <span class="tl-nav-item" data-target="tl-volatility">
+              <span class="nav-dot" style="background:#4C93C3;"></span>
+              <a href="#tl-volatility">data volatility</a>
+            </span>
+            <span class="tl-nav-item" data-target="tl-challenge1">
+              <span class="nav-dot" style="background:#808080;"></span>
+              <a href="#tl-challenge1">challenge #1</a>
+            </span>
+            <span class="tl-nav-item" data-target="tl-challenge2">
+              <span class="nav-dot" style="background:#808080;"></span>
+              <a href="#tl-challenge2">challenge #2</a>
+            </span>
+            <span class="tl-nav-item" data-target="tl-extra">
+              <span class="nav-dot" style="background:#AAD292;"></span>
+              <a href="#tl-extra">extra</a>
+            </span>
+            <span class="tl-nav-item" data-target="tl-reflections">
+              <span class="nav-dot" style="background:#8BB3CD;"></span>
+              <a href="#tl-reflections">reflections</a>
+            </span>
+          </div>
+          <a href="revamping-the-dashboard.html">original layout</a>
+          <a href="index.html">back</a>
+        </nav>
+      </section>
+    </header>
+
+    <!-- ── Main content ──────────────────────────────────── -->
+    <section class="content mt-0">
+      <section id="full_work" class="flex flex-column">
+
+        <!-- Page header -->
+        <div class="page-header">
+          <mark>
+            <h2>Revamping the Dashboard</h2>
+            <svg class="no-offset" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60"
+              preserveAspectRatio="none" stroke="#8BB3CD">
+              <path d="m 3.518915,27.827324 c 55.429038,4.081 111.581115,5.822 167.117815,2.867 22.70911,-1.208 45.39827,-0.601 68.126,-0.778 28.38172,-0.223 56.76078,-1.024 85.13721,-1.33 24.17378,-0.261 48.4273,0.571 72.58114,0.571" />
+            </svg>
+            <svg class="no-offset" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60"
+              preserveAspectRatio="none" stroke="#AAD292">
+              <path d="m 3.518915,27.827324 c 55.429038,4.081 111.581115,5.822 167.117815,2.867 22.70911,-1.208 45.39827,-0.601 68.126,-0.778 28.38172,-0.223 56.76078,-1.024 85.13721,-1.33 24.17378,-0.261 48.4273,0.571 72.58114,0.571" />
+            </svg>
+          </mark>
+          <h3 class="subtitle text-right">timeline story layout</h3>
+          <p style="text-align:right; font-family:'Raleway'; font-size:0.85rem; color:#808080; margin-top:0.4rem;">
+            for a client's parking site management application
+          </p>
+        </div>
+
+        <!-- ── Timeline ─────────────────────────────────────── -->
+        <div class="timeline-wrapper">
+
+
+          <!-- ════════════════════════════════════════════════
+               PHASE 01 — DISCOVERY
+               ════════════════════════════════════════════════ -->
+          <div class="tl-phase-divider" style="--phase-color:#6aac4e;">
+            <span>phase 01 · discovery</span>
+          </div>
+
+          <!-- 01 · Overview (LEFT) -->
+          <div class="tl-item tl-left" id="tl-overview">
+            <div class="tl-content">
+              <div class="tl-card" style="--phase-color:#6aac4e;">
+                <p class="tl-card-phase">phase 01 · discovery</p>
+                <h4 class="tl-card-title">overview</h4>
+                <div class="tl-tags">
+                  <span class="tl-tag" style="--phase-color:#6aac4e; --tag-bg:#ebf4e5;">limited data</span>
+                  <span class="tl-tag" style="--phase-color:#6aac4e; --tag-bg:#ebf4e5;">solo designer</span>
+                  <span class="tl-tag" style="--phase-color:#6aac4e; --tag-bg:#ebf4e5;">4–5 weeks</span>
+                </div>
+                <p class="block-text font-secondary">
+                  The client's parking site management app worked well technically, but when presenting to
+                  executives for buy-in, UI elements like the sparse dashboard and bloated navigation menu made
+                  it challenging to showcase the app's value proposition effectively.
+                </p>
+                <img src="./images/overview-intro.png" alt="overview of project" />
+              </div>
+            </div>
+            <div class="tl-spine-col">
+              <span class="tl-step">01</span>
+            </div>
+            <div class="tl-empty"></div>
+          </div>
+
+          <!-- 02 · Approach (RIGHT) -->
+          <div class="tl-item tl-right" id="tl-approach">
+            <div class="tl-empty"></div>
+            <div class="tl-spine-col">
+              <span class="tl-step">02</span>
+            </div>
+            <div class="tl-content">
+              <div class="tl-card" style="--phase-color:#6aac4e;">
+                <p class="tl-card-phase">phase 01 · discovery</p>
+                <h4 class="tl-card-title">approach</h4>
+                <p class="block-text font-secondary">
+                  In an interview workshop setting with the client, I facilitated and adopted the perspectives
+                  of two key individuals for user interviews:
+                </p>
+                <ul class="font-secondary" style="margin-top:0.5rem;">
+                  <li>
+                    <strong>Subject matter expert &amp; Product owner</strong> — to understand the underlying
+                    business logic and its product goals and value proposition.
+                  </li>
+                  <li>
+                    <strong>New user</strong> — to define user flows of daily users, what problems they are
+                    trying to solve and why it's needed.
+                  </li>
+                </ul>
+                <div style="margin-top:1rem;">
+                  <strong class="font-secondary" style="font-size:0.9em;">The benefit of this approach</strong>
+                  <p class="block-text font-secondary" style="margin-top:0.4rem;">
+                    It revealed the core usability issues that the interface needed to address, especially on
+                    the main dashboard. By defining it as a workshop, the client could participate in the
+                    design solution and help narrow the project scope to pertinent screens and user flows.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ════════════════════════════════════════════════
+               PHASE 02 — SOLUTION
+               ════════════════════════════════════════════════ -->
+          <div class="tl-phase-divider" style="--phase-color:#4C93C3;">
+            <span>phase 02 · solution</span>
+          </div>
+
+          <!-- 03 · Map as anchor (LEFT) -->
+          <div class="tl-item tl-left" id="tl-solution">
+            <div class="tl-content">
+              <div class="tl-card" style="--phase-color:#4C93C3;">
+                <p class="tl-card-phase">phase 02 · solution</p>
+                <h4 class="tl-card-title">map as anchor for all user flows</h4>
+                <div class="tl-tags">
+                  <span class="tl-tag" style="--phase-color:#4C93C3; --tag-bg:rgba(76,147,195,0.12);">gradual reveal</span>
+                  <span class="tl-tag" style="--phase-color:#4C93C3; --tag-bg:rgba(76,147,195,0.12);">content hierarchy</span>
+                  <span class="tl-tag" style="--phase-color:#4C93C3; --tag-bg:rgba(76,147,195,0.12);">sidebar nav</span>
+                </div>
+                <p class="block-text font-secondary">
+                  The map is the first element users see on the updated dashboard. It's intentionally laid out
+                  to visually reflect the physical space that site managers work with in their mental model.
+                </p>
+                <ul class="font-secondary" style="margin-top:0.5rem;">
+                  <li>Apply affordances to guide users from one dataset to another</li>
+                  <li>Find opportunity to use spatial assets to reduce information overload</li>
+                  <li>Use visuals and typography to organize different types of menu item content</li>
+                  <li>Where important information is far too complex, avoid showcasing more than necessary</li>
+                </ul>
+                <img src="./images/Dashboard 3.0a.png" alt="updated main dashboard" />
+                <p class="tl-caption">
+                  Existing static table data is transformed into concise charts to reduce visual clutter and
+                  improve data comprehension. Originally, entire pages were dedicated to static information.
+                </p>
+              </div>
+            </div>
+            <div class="tl-spine-col">
+              <span class="tl-step">03</span>
+            </div>
+            <div class="tl-empty"></div>
+          </div>
+
+          <!-- 04 · Gradual reveal (RIGHT) -->
+          <div class="tl-item tl-right" id="tl-gradual">
+            <div class="tl-empty"></div>
+            <div class="tl-spine-col">
+              <span class="tl-step">04</span>
+            </div>
+            <div class="tl-content">
+              <div class="tl-card" style="--phase-color:#4C93C3;">
+                <p class="tl-card-phase">phase 02 · solution</p>
+                <h4 class="tl-card-title">allow for gradual reveal</h4>
+                <p class="block-text font-secondary">
+                  To avoid information overload, users are introduced to data content gradually, depending on
+                  where they are in the user flow.
+                </p>
+                <ul class="font-secondary" style="margin-top:0.5rem;">
+                  <li>
+                    Static data from tables become graphical charts to reduce visual clutter and improve data
+                    comprehension.
+                  </li>
+                  <li>
+                    Pie charts frame the rest of the content displayed in the Dashboard. Interacting with each
+                    pie chart reveals specific location details intentionally designed within the map container.
+                  </li>
+                </ul>
+                <img src="./images/gifs/pie-chart-selected.gif" alt="pie chart interaction animation" />
+              </div>
+            </div>
+          </div>
+
+          <!-- 05 · Mental model (LEFT) -->
+          <div class="tl-item tl-left" id="tl-solution-model">
+            <div class="tl-content">
+              <div class="tl-card" style="--phase-color:#4C93C3;">
+                <p class="tl-card-phase">phase 02 · solution</p>
+                <h4 class="tl-card-title">updating the app to match users' mental model</h4>
+                <p class="block-text font-secondary">
+                  Besides visual cues, the app's content structure and information architecture did not
+                  entirely match the users' mental model. Based on how the original app was presented, I
+                  assumed users would:
+                </p>
+                <ol class="font-secondary" style="margin-top:0.5rem;">
+                  <li>Think of tracking or monitoring data they wanted to search for <em>first</em></li>
+                  <li>then think about the parking location that pertains to this data</li>
+                </ol>
+                <p class="block-text font-secondary" style="margin-top:0.85rem;">
+                  Turns out it's the other way around —
+                </p>
+                <ol class="font-secondary" style="margin-top:0.5rem;">
+                  <li>
+                    Users manage multiple parking locations, and therefore they think and complete tasks in
+                    terms of one unique location <em>at a time</em>
+                  </li>
+                  <li>
+                    The job the user has to do is the same across parking locations but the data set is unique
+                    to that specific location
+                  </li>
+                </ol>
+                <img src="./images/dashboard02.png" alt="extended dashboard view" />
+              </div>
+            </div>
+            <div class="tl-spine-col">
+              <span class="tl-step">05</span>
+            </div>
+            <div class="tl-empty"></div>
+          </div>
+
+          <!-- 06 · Data volatility (RIGHT) -->
+          <div class="tl-item tl-right" id="tl-volatility">
+            <div class="tl-empty"></div>
+            <div class="tl-spine-col">
+              <span class="tl-step">06</span>
+            </div>
+            <div class="tl-content">
+              <div class="tl-card" style="--phase-color:#4C93C3;">
+                <p class="tl-card-phase">phase 02 · solution</p>
+                <h4 class="tl-card-title">define dashboard by data volatility</h4>
+                <p class="block-text font-secondary">
+                  By data volatility, I mean the degree to which any given data that the user sees on the
+                  application changes over time. By clarifying the user's mental model, we know what kinds of
+                  data they prioritize — and this data is largely unchanging or static.
+                </p>
+                <ul class="font-secondary" style="margin-top:0.5rem;">
+                  <li>
+                    <strong>Static data grouped into cards</strong>: relatively unchanging data (low data
+                    volatility) was more important for the dashboard — static data like location and users
+                    were the first association to any application task.
+                  </li>
+                  <li>
+                    <strong>Transient data grouped selectively</strong>: frequently changing data like
+                    tracking vehicles entering or exiting a building was affecting other elements in entirely
+                    separate sections of the menu, without notifying the user (!). Entity relationship
+                    diagrams helped me group data by volatility and relevance.
+                  </li>
+                </ul>
+                <img src="./images/erdiagram2.png" alt="entity relationship diagram" />
+              </div>
+            </div>
+          </div>
+
+          <!-- ════════════════════════════════════════════════
+               PHASE 03 — CHALLENGES
+               ════════════════════════════════════════════════ -->
+          <div class="tl-phase-divider" style="--phase-color:#808080;">
+            <span>phase 03 · challenges</span>
+          </div>
+
+          <!-- 07 · Challenge #1 intro (LEFT) -->
+          <div class="tl-item tl-left" id="tl-challenge1">
+            <div class="tl-content">
+              <div class="tl-card" style="--phase-color:#808080;">
+                <p class="tl-card-phase">phase 03 · challenges</p>
+                <h4 class="tl-card-title">challenge #1: cluttered sidebar menu</h4>
+                <div class="tl-tags">
+                  <span class="tl-tag" style="--phase-color:#808080; --tag-bg:#eaeaea;">information architecture</span>
+                  <span class="tl-tag" style="--phase-color:#808080; --tag-bg:#eaeaea;">navigation</span>
+                </div>
+                <p class="block-text font-secondary">
+                  The original menu had 13 items and little affordances to inform users of what tasks or
+                  activities are within each one.
+                </p>
+                <img src="./images/dashboard02menuBefore.png" alt="navigation bar before redesign" />
+              </div>
+            </div>
+            <div class="tl-spine-col">
+              <span class="tl-step">07</span>
+            </div>
+            <div class="tl-empty"></div>
+          </div>
+
+          <!-- 08 · Challenge #1 steps (RIGHT) -->
+          <div class="tl-item tl-right">
+            <div class="tl-empty"></div>
+            <div class="tl-spine-col">
+              <span class="tl-step">08</span>
+            </div>
+            <div class="tl-content">
+              <div class="tl-card" style="--phase-color:#808080;">
+                <p class="tl-card-phase">phase 03 · challenges</p>
+                <h4 class="tl-card-title">how I tackled it: three steps</h4>
+
+                <div style="margin-bottom:1.1rem;">
+                  <strong class="font-secondary">Step 1 — map, question, define menu pages</strong>
+                  <p class="block-text font-secondary" style="margin-top:0.4rem;">
+                    With a set of questions in hand, I sought to understand the current tasks users completed
+                    on each of the linked pages. Answers also clarified and aligned assumptions for
+                    <em>everyone involved in the project</em>.
+                  </p>
+                  <img src="./images/business-logic-img1.png" alt="business logic mapping" />
+                </div>
+
+                <div style="margin-bottom:1.1rem;">
+                  <strong class="font-secondary">Step 2 — learn, clarify, define with the client</strong>
+                  <p class="block-text font-secondary" style="margin-top:0.4rem;">
+                    With the purpose of each screen defined, I was able to construct the relationship between
+                    product, people, and the system and where the intended business goals fit.
+                  </p>
+                  <img src="./images/business-logic-img2.png" alt="system and user relationship diagram" />
+                </div>
+
+                <div>
+                  <strong class="font-secondary">Step 3 — prioritize screens by usefulness and ease</strong>
+                  <p class="block-text font-secondary" style="margin-top:0.4rem;">
+                    Equipped with definitions of the screens and their value for the business, I measured the
+                    total actions users took for each of the 13 pages and charted them against task priority.
+                    The results helped narrow down the navigation bar content by half.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 09 · Challenge #2 intro (LEFT) -->
+          <div class="tl-item tl-left" id="tl-challenge2">
+            <div class="tl-content">
+              <div class="tl-card" style="--phase-color:#808080;">
+                <p class="tl-card-phase">phase 03 · challenges</p>
+                <h4 class="tl-card-title">challenge #2: unknown system status</h4>
+                <div class="tl-tags">
+                  <span class="tl-tag" style="--phase-color:#808080; --tag-bg:#eaeaea;">system telemetry</span>
+                  <span class="tl-tag" style="--phase-color:#808080; --tag-bg:#eaeaea;">auto-updates</span>
+                </div>
+                <p class="block-text font-secondary">
+                  While consolidating the menu, I learned that pages within the menu items had forms, live
+                  data tables, and auto-updating components that trigger system-wide changes
+                  <em>without users' awareness</em>.
+                </p>
+                <p class="block-text font-secondary" style="margin-top:0.75rem;">
+                  For example, updating parking fees for one vehicle could change the billing cycle across
+                  multiple accounts without the user knowing. This was a key business selling point but there
+                  was no observable UI to reflect these status changes.
+                </p>
+                <img src="./images/erdiagram.png" alt="entity relationship diagram" />
+                <p class="tl-caption">The simpler the relationship, the better the content will be for a dashboard.</p>
+              </div>
+            </div>
+            <div class="tl-spine-col">
+              <span class="tl-step">09</span>
+            </div>
+            <div class="tl-empty"></div>
+          </div>
+
+          <!-- 10 · Challenge #2 analysis (RIGHT) -->
+          <div class="tl-item tl-right">
+            <div class="tl-empty"></div>
+            <div class="tl-spine-col">
+              <span class="tl-step">10</span>
+            </div>
+            <div class="tl-content">
+              <div class="tl-card" style="--phase-color:#808080;">
+                <p class="tl-card-phase">phase 03 · challenges</p>
+                <h4 class="tl-card-title">the 2×2 framework analysis</h4>
+                <p class="block-text font-secondary">
+                  I used data already gathered from menu item interactions and applied a 2×2 framework to look
+                  at the relationship between menu items and their interaction with each other.
+                </p>
+                <div class="tl-two-col">
+                  <div>
+                    <p class="tl-caption" style="margin-top:0;">
+                      The higher the priority and the fewer interactive actions, the better the content fits
+                      within the dashboard instead of the navigation bar.
+                    </p>
+                    <img src="./images/comparison-img2.png" alt="priority vs actions chart" />
+                  </div>
+                  <div>
+                    <p class="tl-caption" style="margin-top:0;">
+                      The higher the priority and the less it triggers unknown changes, the better the content
+                      works for the dashboard.
+                    </p>
+                    <img src="./images/comparison-img2.png" alt="priority vs system impact chart" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ════════════════════════════════════════════════
+               PHASE 04 — EXTRA
+               ════════════════════════════════════════════════ -->
+          <div class="tl-phase-divider" style="--phase-color:#6aac4e;">
+            <span>phase 04 · extra solution</span>
+          </div>
+
+          <!-- 11 · Floor plan (LEFT) -->
+          <div class="tl-item tl-left" id="tl-extra">
+            <div class="tl-content">
+              <div class="tl-card" style="--phase-color:#6aac4e;">
+                <p class="tl-card-phase">phase 04 · extra solution</p>
+                <h4 class="tl-card-title">using physical documents to inspire screen design</h4>
+                <div class="tl-tags">
+                  <span class="tl-tag" style="--phase-color:#6aac4e; --tag-bg:#ebf4e5;">standalone design</span>
+                  <span class="tl-tag" style="--phase-color:#6aac4e; --tag-bg:#ebf4e5;">replacing onboarding wizard</span>
+                </div>
+                <p class="block-text font-secondary">
+                  As a separate screen within the application, I was asked to brainstorm ways to design for a
+                  set-up wizard onboarding new parking sites. The current application had multiple paged forms
+                  that took a long time to complete — and weren't entirely comprehensible.
+                </p>
+                <p class="block-text font-secondary" style="margin-top:0.75rem;">
+                  I advocated for translating physical documents into understandable UI screens as closely as
+                  possible to the physical task users have to do: taking users' very first step in mapping new
+                  parking sites (using a clipboard and pen to jot down site numbers) and drawing UI solutions
+                  that support the respective physical task.
+                </p>
+                <img src="./images/Floorplan.png" alt="floor plan UI layout" />
+                <p class="tl-caption">
+                  This complex UI screen was presented as a starting point for further discussions. Designed
+                  with airline seating reservation flows as inspiration.
+                </p>
+              </div>
+            </div>
+            <div class="tl-spine-col">
+              <span class="tl-step">11</span>
+            </div>
+            <div class="tl-empty"></div>
+          </div>
+
+          <!-- ════════════════════════════════════════════════
+               PHASE 05 — REFLECTIONS
+               ════════════════════════════════════════════════ -->
+          <div class="tl-phase-divider" style="--phase-color:#8BB3CD;">
+            <span>phase 05 · reflections</span>
+          </div>
+
+          <!-- 12 · Reflections (RIGHT) -->
+          <div class="tl-item tl-right" id="tl-reflections">
+            <div class="tl-empty"></div>
+            <div class="tl-spine-col">
+              <span class="tl-step">12</span>
+            </div>
+            <div class="tl-content">
+              <div class="tl-card" style="--phase-color:#8BB3CD;">
+                <p class="tl-card-phase">phase 05 · reflections</p>
+                <h4 class="tl-card-title">reflections on the project</h4>
+                <ul class="font-secondary">
+                  <li>
+                    <strong>Biggest challenge:</strong> finding ways to simplify dataset relationships by
+                    business value.
+                  </li>
+                  <li>
+                    <strong>Quick win:</strong> applying heuristic patterns (e.g., "more info = more
+                    confusion") to meet the project goal of making the design easy to understand when
+                    presenting.
+                  </li>
+                  <li>
+                    The client had a vague idea of the desired final visual so our discussions were often a
+                    delicate balance of ideating and defining at once.
+                  </li>
+                  <li>
+                    I was often wary of accepting client design changes — not out of defiance but because
+                    I lacked the client's depth of knowledge of the product. I couldn't justify all their
+                    design change requests, but I also couldn't deny that I didn't know as much as they did.
+                    <ul>
+                      <li>
+                        But, I quickly trusted the client's feedback. On reflection, it was because of the
+                        client's efforts in making me feel involved in their discussions despite my lack of
+                        product knowledge. I felt valued.
+                      </li>
+                      <li>
+                        This trust was impactful and personally meaningful; it led to a positive work
+                        experience that reinforced the value of collaboration and kept timelines on track.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    This project continues to remind me of why I love design: the best work happens when
+                    strong relationships come first.
+                  </li>
+                </ul>
+                <a href="index.html" class="tl-back-btn">back</a>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end .timeline-wrapper -->
+      </section>
+    </section>
+  </div><!-- end .wrapper -->
+</body>
+
+<script src="scripts/mark-scroll.js"></script>
+<script>
+  // ── Highlight active sidebar nav item (dot + text) while scrolling ──
+  const navItems   = document.querySelectorAll('.page-nav .tl-nav-item');
+  const sectionIds = Array.from(navItems).map(el => el.dataset.target);
+
+  function updateActiveItem() {
+    let current = sectionIds[0];
+    sectionIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && el.getBoundingClientRect().top <= window.innerHeight * 0.45) {
+        current = id;
+      }
+    });
+    navItems.forEach(item => {
+      item.classList.toggle('active', item.dataset.target === current);
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveItem, { passive: true });
+  updateActiveItem();
+</script>
+
+</html>
