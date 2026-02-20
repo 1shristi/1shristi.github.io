@@ -367,6 +367,115 @@
 
     .card-two-col .content-card { margin-bottom: 0; }
 
+    /* Pull Quote - for key insights */
+    .pull-quote {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.65rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #1a1a1a;
+      font-style: italic;
+      padding: 2.5rem 0;
+      margin: 3rem 0;
+      border-left: 4px solid var(--color-orange);
+      padding-left: 2.5rem;
+      position: relative;
+    }
+
+    .pull-quote::before {
+      content: '"';
+      font-size: 4rem;
+      font-weight: 600;
+      color: var(--color-orange);
+      opacity: 0.2;
+      position: absolute;
+      left: 0.5rem;
+      top: 1rem;
+    }
+
+    /* Insight Box */
+    .insight-box {
+      background: linear-gradient(135deg, var(--color-orange-light) 0%, #fff9f3 100%);
+      border: 1px solid #ffd7b8;
+      border-radius: 12px;
+      padding: 2rem 2.5rem;
+      margin: 2.5rem 0;
+      position: relative;
+    }
+
+    .insight-box::before {
+      content: '💡';
+      font-size: 1.5rem;
+      position: absolute;
+      top: 1.5rem;
+      left: -0.5rem;
+    }
+
+    .insight-label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-orange);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .insight-text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #444440;
+      margin: 0;
+    }
+
+    /* Step Numbers */
+    .step-card {
+      position: relative;
+      padding-left: 5rem;
+    }
+
+    .step-number {
+      position: absolute;
+      left: 0;
+      top: 2.5rem;
+      width: 3.5rem;
+      height: 3.5rem;
+      background: linear-gradient(135deg, var(--color-red) 0%, var(--color-orange) 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(214, 69, 69, 0.25);
+    }
+
+    /* Section Divider */
+    .section-divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 4rem 0 3rem;
+    }
+
+    .section-divider-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, #e4e4e0 50%, transparent 100%);
+    }
+
+    .section-divider-icon {
+      width: 8px;
+      height: 8px;
+      background: var(--color-orange);
+      border-radius: 50%;
+      opacity: 0.5;
+    }
+
     /* Images */
     .img-block { margin: 2rem 0; }
     .img-block img { 
@@ -561,21 +670,28 @@
       <span class="split-section-label">RESEARCH</span>
       <h2 class="split-section-title">Research Methods</h2>
 
-      <div class="content-card content-card-orange card-accent-orange">
-        <span class="card-heading-dark">1. Gathering physical documents, noting touchpoints</span>
+      <div class="pull-quote">
+        Understanding user behavior in their natural environment revealed workarounds, not workflows.
+      </div>
+
+      <div class="content-card content-card-orange card-accent-orange step-card">
+        <div class="step-number">1</div>
+        <span class="card-heading-dark">Gathering physical documents, noting touchpoints</span>
         <p class="card-body">
           Physical documents were not only noted as touchpoints but also as opportunities to be transcribed into the user interface for a better user experience.
         </p>
         <div class="img-block">
           <img src="./images/proj2/wk1/physical docs.png" alt="Physical documents used in shipping process" />
         </div>
-        <p class="card-body" style="font-style: italic; color: #666660; margin-top: 1rem;">
-          <strong>Research discovery:</strong> Physical documents were used only when the computer was not accessible and were prone to errors.
-        </p>
+        <div class="insight-box">
+          <span class="insight-label">Research Discovery</span>
+          <p class="insight-text">Physical documents were used only when the computer was not accessible and were prone to errors.</p>
+        </div>
       </div>
 
-      <div class="content-card content-card-orange card-accent-orange">
-        <span class="card-heading-dark">2. Contextual, 1:1 semi-structured, ethnographic interviews</span>
+      <div class="content-card content-card-orange card-accent-orange step-card">
+        <div class="step-number">2</div>
+        <span class="card-heading-dark">Contextual, 1:1 semi-structured, ethnographic interviews</span>
         <p class="card-body">
           There was no specific direction for how interviews were to be conducted. I began all interviews as a personal understanding of the kinds of tasks the users completed and made a note of how many of these tasks were painpoints attributed to the legacy system vs the struggles of the overall role and responsibilities.
         </p>
@@ -583,16 +699,20 @@
           <img src="./images/proj2/wk1/user-interviewMR.png" alt="Screenshot of interviewing users" />
         </div>
         <button data-target="img6" data-text="text6" class="toggle-btn">Dig deeper</button>
-        <div id="text6" class="card-body" style="display:none; font-style: italic; color: #666660; margin-top: 1rem;">
-          <strong>Research discovery:</strong> Many of the user tasks that were described were not necessarily essential to complete, instead they were "work-around solutions" for dealing with the legacy system.
+        <div id="text6" style="display:none;">
+          <div class="insight-box" style="margin-top: 1.5rem;">
+            <span class="insight-label">Research Discovery</span>
+            <p class="insight-text">Many of the user tasks that were described were not necessarily essential to complete, instead they were "work-around solutions" for dealing with the legacy system.</p>
+          </div>
         </div>
         <div style="margin-top: 1rem;">
           <img id="img6" style="display:none; width: 100%; height: auto; border-radius: 12px;" src="./images/proj2/wk1/interviews.png" alt="Interview analysis" />
         </div>
       </div>
 
-      <div class="content-card content-card-orange card-accent-orange">
-        <span class="card-heading-dark">3. Analysing application, service safari method</span>
+      <div class="content-card content-card-orange card-accent-orange step-card">
+        <div class="step-number">3</div>
+        <span class="card-heading-dark">Analysing application, service safari method</span>
         <p class="card-body">
           Following along the application's SOP (Standard Operating Procedures) documents, I used the <strong>service safari method</strong> to gather insights on how users interacted with the system in real-world scenarios.
         </p>
@@ -600,8 +720,11 @@
           <img src="./images/proj2/wk1/order-intake-process.png" alt="Flow of the order intake process" />
         </div>
         <button data-target="img4" data-text="text4" class="toggle-btn">Dig deeper</button>
-        <div id="text4" class="card-body" style="display:none; font-style: italic; color: #666660; margin-top: 1rem;">
-          <strong>Research discovery:</strong> The legacy system is not important and should be ignored completely. Instead, defining the users' specific actions and physical touchpoints will better inform the design timeline.
+        <div id="text4" style="display:none;">
+          <div class="insight-box" style="margin-top: 1.5rem;">
+            <span class="insight-label">Research Discovery</span>
+            <p class="insight-text">The legacy system is not important and should be ignored completely. Instead, defining the users' specific actions and physical touchpoints will better inform the design timeline.</p>
+          </div>
         </div>
         <div style="margin-top: 1rem;">
           <img id="img4" style="display:none; width: 100%; height: auto; border-radius: 12px;" src="./images/proj2/wk1/application.png" alt="Application analysis" />
@@ -609,10 +732,21 @@
       </div>
     </section>
 
+    <!-- Section Divider -->
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-icon"></div>
+      <div class="section-divider-line"></div>
+    </div>
+
     <!-- Ideas Section -->
     <section id="ideas" class="split-section">
       <span class="split-section-label">IDEATION</span>
       <h2 class="split-section-title">Ideas</h2>
+
+      <div class="pull-quote">
+        Paper sketches are my sandbox—no expectations, just intuition and translation.
+      </div>
 
       <div class="content-card content-card-red card-accent-red">
         <span class="card-heading-dark">Personal paper sketches</span>
@@ -643,9 +777,10 @@
         <div class="img-block">
           <img src="./images/gifs/prototype-reveal.gif" alt="Prototype walkthrough animation" />
         </div>
-        <p class="card-body" style="font-style: italic; color: #666660; margin-top: 1rem;">
-          <strong>Teamwork insight:</strong> I've broken down the interaction into 3 tasks and identified the visual flow of information. By guiding my PO step-by-step, we were able to come to an agreement on the final interface.
-        </p>
+        <div class="insight-box">
+          <span class="insight-label">Teamwork Insight</span>
+          <p class="insight-text">I've broken down the interaction into 3 tasks and identified the visual flow of information. By guiding my PO step-by-step, we were able to come to an agreement on the final interface.</p>
+        </div>
       </div>
 
       <div class="content-card content-card-red card-accent-red">
@@ -672,32 +807,46 @@
         <div class="img-block">
           <img src="./images/proj2/wk1/component-map.png" alt="Mapping actions to components" />
         </div>
-        <p class="card-body" style="font-style: italic; color: #666660; margin-top: 1rem;">
-          <strong>Design discovery:</strong> By applying the user journey map framework as a guide, I discovered that I could define components and organize and track their progress while setting my junior designer up for success.
-        </p>
+        <div class="insight-box">
+          <span class="insight-label">Design Discovery</span>
+          <p class="insight-text">By applying the user journey map framework as a guide, I discovered that I could define components and organize and track their progress while setting my junior designer up for success.</p>
+        </div>
       </div>
     </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-icon"></div>
+      <div class="section-divider-line"></div>
+    </div>
 
     <!-- Outcome Section -->
     <section id="outcome" class="split-section">
       <span class="split-section-label">RESULTS</span>
       <h2 class="split-section-title">Outcome after four weeks</h2>
 
-      <div class="content-card content-card-orange card-accent-orange">
-        <span class="card-heading card-heading-orange">Less of a "solution", more of a foundation</span>
-        <p class="card-body">
-          From past experience I've learned presentations are often assumed as final solutions, especially to those unfamiliar with the design process. So directing the conversation around the concept of the design was just as important as showing the interface "solution" screens.
-        </p>
-        <p class="card-body">
-          I spoke to how components were essentially parts of features that should be introduced incrementally (hover over each screen below to see the priority of the components).
-        </p>
+      <div class="pull-quote">
+        The foundation was more valuable than a final solution—showing the path forward, not the destination.
       </div>
 
-      <div class="content-card content-card-orange card-accent-orange">
-        <span class="card-heading card-heading-orange">Signed on to lead the design road map</span>
-        <p class="card-body">
-          Through these screens, I was able to show the team why designing incrementally was the best approach and that having a "ready to build" solution would not be efficient. As a result of this presentation and my emphasis on following a human-centric design process, I was hired to lead the design for the entire project.
-        </p>
+      <div class="card-two-col">
+        <div class="content-card content-card-orange card-accent-orange">
+          <span class="card-heading card-heading-orange">Less of a "solution", more of a foundation</span>
+          <p class="card-body">
+            From past experience I've learned presentations are often assumed as final solutions, especially to those unfamiliar with the design process. So directing the conversation around the concept of the design was just as important as showing the interface "solution" screens.
+          </p>
+          <p class="card-body">
+            I spoke to how components were essentially parts of features that should be introduced incrementally (hover over each screen below to see the priority of the components).
+          </p>
+        </div>
+
+        <div class="content-card content-card-orange card-accent-orange">
+          <span class="card-heading card-heading-orange">Signed on to lead the design road map</span>
+          <p class="card-body">
+            Through these screens, I was able to show the team why designing incrementally was the best approach and that having a "ready to build" solution would not be efficient. As a result of this presentation and my emphasis on following a human-centric design process, I was hired to lead the design for the entire project.
+          </p>
+        </div>
       </div>
 
       <div class="content-card content-card-orange card-accent-orange">
