@@ -1,81 +1,314 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="UTF-8" />
-    <title>Shristi G | portfolio</title>
-    <link rel="favicon" href="images/favicon.ico" />
-    <link rel="stylesheet" href="css/base1.css" type="text/css" />
-    <link rel="stylesheet" href="css/proj2.css" type="text/css" />
-    <link rel="stylesheet" href="css/index1.css" type="text/css" />
-    <link rel="stylesheet" href="css/project-details.css" type="text/css" />
-    <link rel="stylesheet" href="css/utilities.css" type="text/css" />
-    <!-- <link rel="stylesheet" href="css/typography.css" type="text/css" /> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&display=swap");
-    </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <title>All-in-one Shipping Interface | Shristi G</title>
+  <link rel="icon" href="images/favicon.ico" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Crimson+Pro:wght@400;500;600;700&display=swap");
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #f5f5f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ============================================
+       SIDEBAR LAYOUT
+       ============================================ */
+
+    /* ---- Sidebar ---- */
+    .split-sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100vh;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-right: 1px solid #e4e4e0;
+      display: flex;
+      flex-direction: column;
+      padding: 3rem 2rem;
+      box-sizing: border-box;
+      overflow-y: auto;
+      z-index: 200;
+    }
+
+    .sidebar-brand { margin-bottom: 2rem; }
+    .sidebar-brand a { text-decoration: none; color: inherit; }
+
+    .sidebar-name {
+      font-family: 'Crimson Pro', serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: lowercase;
+      color: #1a1a1a;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .sidebar-tagline {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 400;
+      color: #9a9a92;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .sidebar-divider {
+      width: 28px;
+      height: 1px;
+      background: #d8d8d0;
+      margin: 1.25rem 0;
+    }
+
+    .split-sidebar nav a {
+      display: block;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: #666660;
+      line-height: 2em;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: all 0.2s ease;
+      padding: 0.25rem 0.5rem;
+      border-radius: 6px;
+    }
+
+    .split-sidebar nav a:hover,
+    .split-sidebar nav a.selected,
+    .split-sidebar nav a.inview {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+
+    .split-sidebar .submenu-header {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: #b0b0a8;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      display: block;
+      line-height: 2.2em;
+    }
+
+    .split-sidebar .submenu-item {
+      margin-left: 0.65rem;
+      font-size: 0.74rem;
+      line-height: 1.8em;
+    }
+
+    /* Navigation hover colors matching sections */
+    .page-nav a:nth-child(1):hover { background: #E5F5F6; border-radius: 5px; } /* overview - teal */
+    .page-nav .submenu:nth-of-type(1) .submenu-item:nth-child(2):hover { background: #FDE8E4; border-radius: 5px; } /* proposal - coral */
+    .page-nav .submenu:nth-of-type(1) .submenu-item:nth-child(3):hover { background: #FDE8E4; border-radius: 5px; } /* research - coral */
+    .page-nav .submenu:nth-of-type(1) .submenu-item:nth-child(4):hover { background: #FDE8E4; border-radius: 5px; } /* ideas - coral */
+    .page-nav .submenu:nth-of-type(1) .submenu-item:nth-child(5):hover { background: #FDE8E4; border-radius: 5px; } /* outcome - coral */
+
+    .sidebar-back { margin-top: auto; padding-top: 1.5rem; }
+
+    .sidebar-back a {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.74rem;
+      font-weight: 400;
+      color: #9a9a92;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.15s;
+    }
+
+    .sidebar-back a::before { content: "← "; }
+    .sidebar-back a:hover { color: #1a1a1a; }
+
+    /* Mobile Menu Toggle */
+    .mobile-menu-toggle {
+      display: none;
+      position: fixed;
+      top: 1.25rem;
+      left: 1.25rem;
+      z-index: 400;
+      background: #ffffff;
+      border: 1px solid #e4e4e0;
+      border-radius: 8px;
+      width: 44px;
+      height: 44px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: background 0.2s;
+    }
+
+    .mobile-menu-toggle:hover { background: #f5f5f2; }
+
+    .mobile-menu-toggle span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: #1a1a1a;
+      margin: 4px auto;
+      transition: all 0.3s;
+      border-radius: 2px;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .mobile-menu-toggle.active span:nth-child(2) { opacity: 0; }
+    .mobile-menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+
+    .mobile-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 250;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .mobile-overlay.active { opacity: 1; }
+
+    /* ---- Main content ---- */
+    .split-main {
+      margin-left: 260px;
+      padding: 5rem 6rem 7rem 6rem;
+      max-width: 1000px;
+      box-sizing: border-box;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Crimson Pro', serif;
+    }
+
+    body, p, li, span {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .block-title {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #2D9DA9;
+      margin-bottom: 0.75rem;
+    }
+
+    .block-text, .block-copy p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #444440;
+    }
+
+    .bold-text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 600;
+    }
+
+    /* Color updates - replacing red/orange with teal/coral */
+    .bg-red {
+      background: linear-gradient(135deg, #E5F5F6 0%, #D1EEF1 100%) !important;
+    }
+
+    .accent-teal { background: #2D9DA9; }
+    .accent-coral { background: #E87461; }
+
+    /* Responsive */
+    @media only screen and (max-width: 900px) {
+      .split-sidebar {
+        position: fixed;
+        width: 260px;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 300;
+      }
+
+      .split-sidebar.active { transform: translateX(0); }
+
+      .mobile-menu-toggle { display: flex; align-items: center; justify-content: center; flex-direction: column; }
+      .mobile-overlay { display: block; }
+
+      .split-main { margin-left: 0; padding: 7rem 2rem 3rem 2rem; }
+    }
+  </style>
 </head>
 
-<body class="allinone-page">
-    <div class="wrapper">
-        <!-- index title -->
-        <header class="flex">
-            <div class="title">
-                <a href="index.html" id="left">
-                    <h1 class="vertical">Shristi Gartaula</h1>
-                </a>
-            </div>
-            <!-- Navigation -->
-            <section id="info" class="allinone-page">
-                <nav>
-                    <div class="page-nav">
-                        <a href="#overview" class="selected">overview</a>
-                        <div class="submenu">
-                            <div class="submenu">
-                                <span class="submenu-header">process</span>
-                                <a class="submenu-item" href="#proposal">proposal</a>
-                                <a class="submenu-item" href="#research">research</a>
-                                <a class="submenu-item" href="#ideas">ideas</a>
-                                <a class="submenu-item" href="#outcome">outcome</a>
-                            </div>
-                            <div class="submenu">
-                                <span class="submenu-header">lead designer</span>
-                                <p class="submenu-item" >coming soon</p>
-                               <!--<p class="submenu-item" >implement</p>
-                                <p class="submenu-item" >operate</p>-->
-                            </div>
-                           <!--<a href="challenges" class="main-nav extra-solution">challenges</a>
-                            <a href="reflections" class="main-nav reflections">reflections</a> -->
-                        </div>
-                        <a href="index.html">back</a>
-                </nav>
-            </section>
-        </header>
-        <section id="full_work" class="flex flex-column">
-            <div id="overview">
-                <!-- Project 2 BEGINS -->
-                <div class="content mt-0">
-                    <!-- Project 2 Header / Project 2 Title / SVG -->
-                    <div class="page-header">
-                        <div>
-                            <mark>
-                                <h3 class="h3">All-in-one shipping interface</h3>
-                            </mark>
-                        </div>
-                        <h3 class="subtitle text-right">
-                              to replace the broken legacy application
-                        </h3>
-                    </div>
-                    <!-- ===================================== -->
-                    <div class="flex flex-column font-secondary mb-20">
-                        <!-- OVERVIEW SECTION BEGINS -->
-                        <div class="flex flex-column font-secondary">
-                            <span class="section-title">overview</span>
-                            <span class="section-subheading">small team | lead designer | 4 weeks
-                            </span>
-                        </div>
-                        <div class="flex banner-container bg-red flex-column solution-content">
+<body>
+  <!-- Mobile Menu Toggle -->
+  <button class="mobile-menu-toggle" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay"></div>
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="split-sidebar">
+    <div class="sidebar-brand">
+      <a href="index.html">
+        <div class="sidebar-name">shristi gartaula</div>
+        <div class="sidebar-tagline">UX Designer</div>
+      </a>
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <nav>
+      <div class="page-nav">
+        <a href="#overview" class="selected">overview</a>
+        <div class="submenu">
+          <span class="submenu-header">process</span>
+          <a class="submenu-item" href="#proposal">proposal</a>
+          <a class="submenu-item" href="#research">research</a>
+          <a class="submenu-item" href="#ideas">ideas</a>
+          <a class="submenu-item" href="#outcome">outcome</a>
+        </div>
+        <div class="submenu">
+          <span class="submenu-header">lead designer</span>
+          <p class="submenu-item" style="color: #9a9a92;">coming soon</p>
+        </div>
+      </div>
+    </nav>
+
+    <div class="sidebar-back">
+      <a href="index.html">all work</a>
+    </div>
+  </aside>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main class="split-main">
+    <!-- Page Header -->
+    <div class="split-page-header">
+      <div class="accent-strip">
+        <span class="accent-teal" style="width: 40px; height: 4px; border-radius: 2px;"></span>
+        <span class="accent-coral" style="width: 20px; height: 4px; border-radius: 2px;"></span>
+        <span class="accent-teal" style="width: 12px; height: 4px; border-radius: 2px; opacity: 0.4;"></span>
+      </div>
+      <h2 style="font-family: 'Crimson Pro', serif; font-size: 2.6rem; font-weight: 300; color: #1a1a1a; margin: 0 0 0.5rem 0; line-height: 1.2;">All-in-one shipping interface</h2>
+      <p class="subtitle" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.95rem; font-weight: 300; color: #888880; margin: 0;">to replace the broken legacy application</p>
+    </div>
+
+    <!-- Overview Section -->
+    <section id="overview" style="margin-bottom: 5rem;">
+      <div style="margin-bottom: 2rem;">
+        <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9a9a92; display: block; margin-bottom: 0.3rem;">OVERVIEW</span>
+        <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.95rem; font-weight: 400; color: #888880;">small team | lead designer | 4 weeks</span>
+      </div>
+      <div class="bg-red" style="border-radius: 16px; padding: 3rem; box-shadow: 0 4px 16px rgba(0,0,0,0.06);">
                             <div class="image-copy px-12">
                                 <p class="block-title">
                                     Due to a lack of consistent updates over time, my client's legacy system for
@@ -563,6 +796,34 @@
 
 
     </script>
+
+  <!-- Mobile menu toggle script -->
+  <script>
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const sidebar = document.querySelector('.split-sidebar');
+    const overlay = document.querySelector('.mobile-overlay');
+
+    function toggleMenu() {
+      menuToggle.classList.toggle('active');
+      sidebar.classList.toggle('active');
+      overlay.classList.toggle('active');
+    }
+
+    menuToggle.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking on sidebar links
+    const sidebarLinks = document.querySelectorAll('.split-sidebar a');
+    sidebarLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 900) {
+          toggleMenu();
+        }
+      });
+    });
+  </script>
+
+</main>
 
 </body>
 
