@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset="UTF-8" />
   <title>Shristi G | portfolio</title>
-  <link rel="favicon" href="images/favicon.ico" />
+  <link rel="icon" href="images/favicon.ico" />
   <link rel="stylesheet" href="css/base1.css" type="text/css" />
   <link rel="stylesheet" href="css/index1.css" type="text/css" />
   <link rel="stylesheet" href="css/project-details.css" type="text/css" />
@@ -398,6 +398,7 @@
       .split-main { margin-left: 0; padding: 2rem 1.5rem; }
       .card-two-col { grid-template-columns: 1fr; }
       .priority-grid { display: none; }
+      .priority-mobile-summary { display: block !important; }
     }
   </style>
 </head>
@@ -480,7 +481,7 @@
       </div>
 
       <div class="img-block">
-        <img src="./images/overview-intro.png" alt="Overview introduction" />
+        <img src="./images/overview-intro.png" alt="Comparison of old and new dashboard showing improved visual hierarchy and cleaner interface" />
       </div>
 
       <!-- Approach -->
@@ -529,9 +530,9 @@
         </ul>
         <div class="img-block">
           <div class="image-stack">
-            <img src="./images/Dashboard 3.0a.png" alt="main dashboard screen" />
-            <img id="img4" src="./images/originalDashboard.png" class="overlay-image4" style="display:none;" />
-            <img id="img5" src="./images/dashboard02.png" class="overlay-image3" style="display:none;" />
+            <img src="./images/Dashboard 3.0a.png" alt="Updated dashboard with map-centered design, pie charts for data visualization, and improved spatial hierarchy" />
+            <img id="img4" src="./images/originalDashboard.png" class="overlay-image4" style="display:none;" alt="Original dashboard showing sparse layout and table-heavy data presentation" />
+            <img id="img5" src="./images/dashboard02.png" class="overlay-image3" style="display:none;" alt="Dashboard iteration showing progressive data reveal through card-based layout" />
           </div>
           <p class="img-caption">
             As a rule, existing static table data is transformed into concise charts to reduce visual clutter and
@@ -554,7 +555,7 @@
             reveals specific location details intentionally designed within the map container.</li>
         </ul>
         <div class="img-block">
-          <img src="./images/gifs/pie-chart-selected.gif" alt="Pie chart selection animation" />
+          <img src="./images/gifs/pie-chart-selected.gif" alt="Interactive animation showing pie chart selection revealing location-specific parking data on the map" />
         </div>
       </div>
     </section>
@@ -584,8 +585,8 @@
         </p>
         <div class="img-block">
           <div class="image-stack">
-            <img src="./images/dashboard02.png" alt="second image of extended dashboard" />
-            <img id="img1" src="./images/gifs/Dashboard2a.gif" class="overlay-gif" style="display:none;" />
+            <img src="./images/dashboard02.png" alt="Extended dashboard view showing card-based information architecture organized by parking location" />
+            <img id="img1" src="./images/gifs/Dashboard2a.gif" class="overlay-gif" style="display:none;" alt="Animation demonstrating progressive disclosure of parking data through expandable cards" />
           </div>
         </div>
         <button class="toggle-btn button2" data-target="img1">View quick animation (revealing data with cards)</button>
@@ -614,7 +615,7 @@
           </li>
         </ul>
         <div class="img-block">
-          <img src="./images/erdiagram2.png" alt="entity relationship diagram" />
+          <img src="./images/erdiagram2.png" alt="Entity relationship diagram showing data groupings by volatility and relevance for dashboard design" />
         </div>
       </div>
     </section>
@@ -627,7 +628,7 @@
 
       <div class="content-card">
         <div class="img-block">
-          <img src="./images/dashboard02menuBefore.png" alt="navigation bar before" />
+          <img src="./images/dashboard02menuBefore.png" alt="Original cluttered sidebar navigation with 13 menu items lacking visual hierarchy" />
         </div>
         <p class="card-body">
           The original menu had 13 items and little affordances to inform users of what tasks or activities are
@@ -641,7 +642,7 @@
           With a set of questions in hand, I sought to understand the current tasks users completed on each of
           the linked pages. Answers also clarified and aligned assumptions for <em style="font-style:italic;">everyone involved in the project</em>.
         </p>
-        <div class="img-block"><img src="./images/business-logic-img1.png" alt="Business logic mapping" /></div>
+        <div class="img-block"><img src="./images/business-logic-img1.png" alt="Diagram mapping business logic and task flows for each menu item in the navigation" /></div>
         <p class="card-body" style="margin-top:1rem;">
           Menu items in the side bar were listed somewhat arbitrarily — some pages dedicated to lengthy tasks
           (i.e. setting up a new account), others for simple interactions (i.e. search a table).
@@ -662,7 +663,7 @@
           With the purpose of each screen defined, I was able to construct the relationship between product,
           people, and the system and where the intended business goals fit.
         </p>
-        <div class="img-block"><img src="./images/business-logic-img2.png" alt="Drawing it out" /></div>
+        <div class="img-block"><img src="./images/business-logic-img2.png" alt="Visual diagram illustrating relationships between parking locations, vehicle status, and system architecture versus user mental model" /></div>
         <ul class="card-body">
           <li>Understanding the relationship between location of parking and vehicle status</li>
           <li>How the application shows this relationship systemically</li>
@@ -707,6 +708,13 @@
             Menu-items: <strong>Billing</strong>
           </div>
         </div>
+
+        <div class="priority-mobile-summary" style="display:none; font-family: 'Raleway', sans-serif; font-size: 0.875rem; color: #444440; line-height: 1.8; margin-top: 1rem;">
+          <p style="margin-bottom: 1rem;"><strong>High Priority Tasks (0–2 actions):</strong> Add to, search, update datasets + trigger physical entities. Example: opening physical parking gate. Menu-items: Site settings, Activity, Revenue</p>
+          <p style="margin-bottom: 1rem;"><strong>High Priority Tasks (+2 actions):</strong> Navigating to 1–5 dedicated secondary menus; complex wizard forms. Example: adding promotional parking rate. Menu-items: Rates, Transient, Permissions, Users, Space Management</p>
+          <p style="margin-bottom: 1rem;"><strong>Low Priority Tasks (0–2 actions):</strong> View to download. Example: download last year's traffic. Menu-items: History, Validation, Bookings</p>
+          <p><strong>Low Priority Tasks (+2 actions):</strong> Other infrequently-used components. Example: update fee amount on table row. Menu-items: Billing</p>
+        </div>
       </div>
     </section>
 
@@ -742,12 +750,12 @@
         <div class="content-card content-card-grey">
           <span class="card-heading-dark">Relationship between menu-items</span>
           <p class="card-body">The simpler the relationship, the better the content will be for a dashboard.</p>
-          <div class="img-block"><img src="./images/erdiagram.png" alt="ER diagram" /></div>
+          <div class="img-block"><img src="./images/erdiagram.png" alt="Entity relationship diagram showing connections between menu items and data dependencies" /></div>
         </div>
         <div class="content-card content-card-grey">
           <span class="card-heading-dark">Priority vs. system impact</span>
           <p class="card-body">The higher the priority and the fewer interactive actions, the better the content fits within the dashboard.</p>
-          <div class="img-block"><img src="./images/comparison-img2.png" alt="Comparison chart" /></div>
+          <div class="img-block"><img src="./images/comparison-img2.png" alt="Matrix chart comparing task priority versus number of interactive actions for menu items" /></div>
         </div>
       </div>
 
@@ -757,7 +765,7 @@
           The higher the priority and the less it triggers unknown changes across the system, the better the
           content will be for the dashboard.
         </p>
-        <div class="img-block"><img src="./images/comparison-img2.png" alt="Comparison" /></div>
+        <div class="img-block"><img src="./images/comparison-img2.png" alt="Chart analyzing task priority versus system-wide impact to determine optimal dashboard content" /></div>
       </div>
     </section>
 
@@ -791,8 +799,8 @@
 
         <div class="img-block" style="margin-top:1.25rem;">
           <div class="image-stack">
-            <img src="./images/Floorplan.png" alt="customized floor plan layout" />
-            <img id="img2" src="./images/gifs/FloorUI2.gif" class="overlay-gif" style="display:none;" />
+            <img src="./images/Floorplan.png" alt="Interactive floor plan interface showing parking space layout with visual indicators inspired by physical clipboard task" />
+            <img id="img2" src="./images/gifs/FloorUI2.gif" class="overlay-gif" style="display:none;" alt="Animation of floor plan UI interaction showing space selection and number assignment similar to airline seating" />
           </div>
           <p class="img-caption">
             This complex UI screen was presented as a starting point for further discussions with the rest of
