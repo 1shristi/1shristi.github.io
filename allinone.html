@@ -216,13 +216,182 @@
       font-weight: 600;
     }
 
-    /* Color updates - replacing red/orange with teal/coral */
-    .bg-red {
-      background: linear-gradient(135deg, #E5F5F6 0%, #D1EEF1 100%) !important;
+    /* Accessible red/orange color palette */
+    :root {
+      --color-red: #D64545;
+      --color-red-light: #FDE8E8;
+      --color-orange: #E87428;
+      --color-orange-light: #FFF2E8;
     }
 
-    .accent-teal { background: #2D9DA9; }
-    .accent-coral { background: #E87461; }
+    /* Page Header */
+    .split-page-header {
+      margin-bottom: 4rem;
+    }
+
+    .split-page-header h2 {
+      font-family: 'Crimson Pro', serif;
+      font-size: 2.6rem;
+      font-weight: 300;
+      color: #1a1a1a;
+      line-height: 1.2;
+      margin-bottom: 0.6rem;
+    }
+
+    .split-page-header .subtitle {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: #888880;
+      margin-top: 0.5rem;
+    }
+
+    /* Section headers */
+    .split-section { margin-bottom: 5rem; }
+
+    .split-section-label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #9a9a92;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .split-section-title {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.85rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .split-section-subheading {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: #888880;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    /* Cards */
+    .content-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 3rem 3rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #e8e8e4;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .content-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    .content-card-red { background: #ffffff; border-color: #fdc9c9; }
+    .content-card-orange { background: #ffffff; border-color: #ffd7b8; }
+
+    .card-accent-red { border-left: 3px solid var(--color-red); }
+    .card-accent-orange { border-left: 3px solid var(--color-orange); }
+
+    /* Card typography */
+    .card-heading {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--color-red);
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+      display: block;
+    }
+
+    .card-heading-orange {
+      color: var(--color-orange);
+    }
+
+    .card-heading-dark {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 0.7rem;
+      display: block;
+    }
+
+    .card-body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #444440;
+      line-height: 2;
+      margin: 0;
+    }
+
+    .card-body + .card-body { margin-top: 0.7rem; }
+
+    .card-body ul, .card-body ol {
+      padding-left: 1.3rem;
+      margin: 0.6rem 0;
+    }
+
+    .card-body li { 
+      margin-bottom: 0.5rem; 
+      line-height: 1.8; 
+    }
+
+    .card-body b, .card-body strong { font-weight: 600; color: #1a1a1a; }
+
+    /* Two-column card grid */
+    .card-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-two-col .content-card { margin-bottom: 0; }
+
+    /* Images */
+    .img-block { margin: 2rem 0; }
+    .img-block img { 
+      width: 100%; 
+      height: auto; 
+      border-radius: 12px; 
+      display: block;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    /* Toggle button */
+    .toggle-btn {
+      background: transparent;
+      border: 1.5px solid var(--color-red);
+      border-radius: 8px;
+      color: var(--color-red);
+      cursor: pointer;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      padding: 0.65rem 1.4rem;
+      margin-top: 0.75rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .toggle-btn:hover { 
+      background: var(--color-red); 
+      color: #fff;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(214, 69, 69, 0.3);
+    }
 
     /* Responsive */
     @media only screen and (max-width: 900px) {
@@ -241,6 +410,12 @@
       .mobile-overlay { display: block; }
 
       .split-main { margin-left: 0; padding: 7rem 2rem 3rem 2rem; }
+
+      .card-two-col { grid-template-columns: 1fr; gap: 1.25rem; }
+
+      .split-page-header h2 { font-size: 2rem; }
+      .split-section-title { font-size: 1.5rem; }
+      .content-card { padding: 2rem 1.75rem; }
     }
   </style>
 </head>
@@ -303,85 +478,58 @@
     </div>
 
     <!-- Overview Section -->
-    <section id="overview" style="margin-bottom: 5rem;">
-      <div style="margin-bottom: 2rem;">
-        <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9a9a92; display: block; margin-bottom: 0.3rem;">OVERVIEW</span>
-        <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.95rem; font-weight: 400; color: #888880;">small team | lead designer | 4 weeks</span>
+    <section id="overview" class="split-section">
+      <span class="split-section-label">OVERVIEW</span>
+      <p class="split-section-subheading">small team | lead designer | 4 weeks</p>
+
+      <div class="content-card content-card-red card-accent-red">
+        <span class="card-heading">The Problem</span>
+        <p class="card-body">
+          Due to a lack of consistent updates over time, my client's legacy system for shipment had become bloated and a bottleneck causing inefficiencies that negatively impacting their bottom line.
+        </p>
+        <p class="card-body">
+          With a comprehensive product roadmap for the new shipping interface ready to go, I was brought in as a contractor to lead user research and design by defining, adapting, and applying user flows from the legacy system into an efficient user-friendly interface. Within the MVP scope, the interface was expected to support international shipping within the client's permissioned B2B marketplace.
+        </p>
       </div>
-      <div class="bg-red" style="border-radius: 16px; padding: 3rem; box-shadow: 0 4px 16px rgba(0,0,0,0.06);">
-                            <div class="image-copy px-12">
-                                <p class="block-title">
-                                    Due to a lack of consistent updates over time, my client's legacy system for
-                                    shipment
-                                    had become bloated and a bottleneck
-                                    causing inefficiencies that negatively impacting their bottom line.</p>
-                                <p class="block-subtitle" display="inline-block">
-                                    With a comprehensive product roadmap for the new shipping interface ready to go, I
-                                    was
-                                    brought in as a contractor to lead user research and design by defining, adapting,
-                                    and
-                                    applying user flows from the legacy system into an efficient user-friendly interface. Within the MVP scope, the interface was expected to support
-                                    international shipping
-                                    within the client's permissioned B2B marketplace.
-                                </p>
-                            </div>
 
-                            <div id="proposal" class="flex mb-20 flex-column solution-content px-12">
-                                <div class="mt-8"></div>
-                                <div class="card align-self-start">
-                                    <div class="block-copy">
-                                        <h4 class="block-title">proposal</h4>
+    <!-- Proposal Section -->
+    <section id="proposal" class="split-section">
+      <span class="split-section-label">PROCESS</span>
+      <h2 class="split-section-title">Proposal</h2>
 
-                                        <p class="block-text">
-                                            I presentated a timeline of four dedicated weeks following the standard
-                                            design process which cycles through
-                                            research, ideation, prototyping, and testing. The end result would be a
-                                            series of UI
-                                            screens ready for presentation to the stakeholders and c-executives of
-                                            the
-                                            legacy system.
-                                        </p>
-                                    </div>
-                                    <h4 class="block-title">more content here</h4>
+      <div class="content-card content-card-orange card-accent-orange">
+        <span class="card-heading card-heading-orange">The Timeline</span>
+        <p class="card-body">
+          I presented a timeline of four dedicated weeks following the standard design process which cycles through research, ideation, prototyping, and testing. The end result would be a series of UI screens ready for presentation to the stakeholders and c-executives of the legacy system.
+        </p>
+      </div>
 
-                                    <div class="image-stack mt-8 mb-8">
-                                        <img src="./images/proj2/timeline.png" alt="project timeline">
-                                    </div>
-                                    <h4 class="block-title">Why just 4 weeks?</h4>
-                                    <p class="block-text mb-2 mt-4">
-                                        The client wanted to
-                                        leverage a visual solution to positively influence and steer the discussion
-                                        towards budgeting
-                                        and resourcing for the entire product roadmap in the fourth quarter.
-                                    </p>
-                                    <p class="block-text mb-8">
-                                        From past experience, I knew the scope of the project could easily extend
-                                        the
-                                        original timeline so I made sure the team understood that design resources
-                                        had
-                                        to be
-                                        a priority for the duration of the 4 weeks. </p>
-                                    <ul>
-                                        <li>
-                                            <div class="block-text">
-                                                Quick access to: Subject Matter Experts (SMEs)
-                                            </div>
-                                            I expressed the need to have easy and
-                                            quick access to subject matter experts (SME). These were senior staff
-                                            members who had been using the legacy system for years and had a deep
-                                            understanding of its functionalities and limitations.
-                                        </li>
-                                        <li>
-                                            <div class="block-text">Alignment with Product Owner (PO) and core
-                                                team</div>
-                                            Given the deadline, I requested daily meetings with the PO and regular
-                                            meetings with the team in order to understand their UI vision for the
-                                            product; including time to read and ask questions from their
-                                            research documents.
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+      <div class="img-block">
+        <img src="./images/proj2/timeline.png" alt="Project timeline showing 4-week design process">
+      </div>
+
+      <div class="content-card content-card-orange card-accent-orange">
+        <span class="card-heading card-heading-orange">Why just 4 weeks?</span>
+        <p class="card-body">
+          The client wanted to leverage a visual solution to positively influence and steer the discussion towards budgeting and resourcing for the entire product roadmap in the fourth quarter.
+        </p>
+        <p class="card-body">
+          From past experience, I knew the scope of the project could easily extend the original timeline so I made sure the team understood that design resources had to be a priority for the duration of the 4 weeks.
+        </p>
+      </div>
+
+      <div class="content-card content-card-orange card-accent-orange">
+        <span class="card-heading-dark">Requirements for Success</span>
+        <ul class="card-body">
+          <li>
+            <strong>Quick access to Subject Matter Experts (SMEs):</strong> I expressed the need to have easy and quick access to subject matter experts. These were senior staff members who had been using the legacy system for years and had a deep understanding of its functionalities and limitations.
+          </li>
+          <li>
+            <strong>Alignment with Product Owner (PO) and core team:</strong> Given the deadline, I requested daily meetings with the PO and regular meetings with the team in order to understand their UI vision for the product; including time to read and ask questions from their research documents.
+          </li>
+        </ul>
+      </div>
+    </section>
 
                             <h4 class="block-title"></h4>
                             <!-- ======================RESEARCH======================= -->
