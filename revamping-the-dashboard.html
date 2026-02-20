@@ -411,6 +411,188 @@
 
     .card-two-col .content-card { margin-bottom: 0; }
 
+    /* ============================================
+       STORYTELLING ENHANCEMENTS
+       ============================================ */
+
+    /* Pull Quotes */
+    .pull-quote {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.75rem;
+      font-weight: 600;
+      line-height: 1.4;
+      color: #4C93C3;
+      margin: 3rem 0;
+      padding: 2rem 3rem;
+      background: linear-gradient(135deg, #f0f6fb 0%, #e8f4fd 100%);
+      border-left: 4px solid #4C93C3;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    .pull-quote::before {
+      content: '"';
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      font-size: 4rem;
+      color: rgba(76, 147, 195, 0.2);
+      line-height: 1;
+    }
+
+    /* Step Numbers */
+    .step-card {
+      position: relative;
+      padding-left: 5rem !important;
+    }
+
+    .step-number {
+      position: absolute;
+      left: 2rem;
+      top: 2.5rem;
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, #4C93C3 0%, #5A9FCC 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(76, 147, 195, 0.3);
+    }
+
+    /* Highlight/Insight Boxes */
+    .insight-box {
+      background: linear-gradient(135deg, #ebf4e5 0%, #f2f7f2 100%);
+      border-left: 4px solid #7ab87a;
+      border-radius: 12px;
+      padding: 2rem 2.5rem;
+      margin: 2.5rem 0;
+    }
+
+    .insight-box .insight-label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #5a9e5a;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .insight-box .insight-text {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      line-height: 1.6;
+      color: #1a1a1a;
+      margin: 0;
+    }
+
+    /* Side by Side Comparisons */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 2.5rem 0;
+    }
+
+    .comparison-item {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid #e8e8e4;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .comparison-label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .comparison-label.before { color: #9a9a92; }
+    .comparison-label.after { color: #4C93C3; }
+
+    .comparison-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    /* Section Dividers */
+    .section-divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, #e4e4e0 50%, transparent 100%);
+      margin: 4rem 0;
+      position: relative;
+    }
+
+    .section-divider::after {
+      content: '◆';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: #f5f5f2;
+      padding: 0 1rem;
+      color: #d8d8d0;
+      font-size: 0.75rem;
+    }
+
+    /* Visual Stats/Metrics */
+    .stat-highlight {
+      display: inline-block;
+      font-family: 'Crimson Pro', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #4C93C3;
+      line-height: 1;
+      margin: 0 0.25rem;
+    }
+
+    /* Responsive Storytelling Elements */
+    @media only screen and (max-width: 900px) {
+      .pull-quote {
+        font-size: 1.35rem;
+        padding: 1.5rem 2rem;
+        margin: 2rem 0;
+      }
+
+      .step-card {
+        padding-left: 2rem !important;
+        padding-top: 5rem !important;
+      }
+
+      .step-number {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 1.5rem;
+      }
+
+      .comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .insight-box {
+        padding: 1.5rem 1.75rem;
+      }
+
+      .stat-highlight {
+        font-size: 2rem;
+      }
+    }
+
     /* ---- Priority grid table ---- */
     .priority-grid {
       display: grid;
@@ -727,6 +909,8 @@
       </div>
     </section>
 
+    <div class="section-divider"></div>
+
     <!-- ======= SOLUTION ======= -->
     <section id="solution" class="split-section">
       <span class="split-section-label">solution</span>
@@ -777,6 +961,8 @@
       </div>
     </section>
 
+    <div class="section-divider"></div>
+
     <!-- ======= SOLUTION: MENTAL MODEL ======= -->
     <section id="solution-model" class="split-section">
       <div class="content-card content-card-blue">
@@ -789,17 +975,22 @@
           <li>Think of tracking or monitoring data they wanted to search for <em style="color:#4C93C3;">first</em></li>
           <li>then think about the parking location that pertains to this data</li>
         </ol>
-        <p class="card-body" style="margin-top:1rem;">Turns out it's the other way around —</p>
+        <div class="pull-quote">
+          Turns out it's the other way around — users think location-first, not data-first.
+        </div>
         <ol class="card-body">
           <li>Users manage multiple parking locations, and therefore they think and complete tasks in terms of
             one unique location <em style="color:#4C93C3;">at a time</em></li>
           <li>The job the user has to do is the same across parking locations but the data set is unique to
             that specific location</li>
         </ol>
-        <p class="card-body" style="margin-top:1rem;">
-          This new discovery helped me better understand what value the data had for users, so I could decide
-          which elements made sense to reveal on the dashboard, at what point, and which ones could be stored away.
-        </p>
+        <div class="insight-box">
+          <span class="insight-label">Key Insight</span>
+          <p class="insight-text">
+            This new discovery helped me better understand what value the data had for users, so I could decide
+            which elements made sense to reveal on the dashboard, at what point, and which ones could be stored away.
+          </p>
+        </div>
         <div class="img-block">
           <div class="image-stack">
             <img src="./images/dashboard02.png" alt="Extended dashboard view showing card-based information architecture organized by parking location" />
@@ -837,6 +1028,8 @@
       </div>
     </section>
 
+    <div class="section-divider"></div>
+
     <!-- ======= CHALLENGE 1 ======= -->
     <section id="deep-dive-ia" class="split-section">
       <span class="split-section-label">challenge #1</span>
@@ -848,13 +1041,14 @@
           <img src="./images/dashboard02menuBefore.png" alt="Original cluttered sidebar navigation with 13 menu items lacking visual hierarchy" />
         </div>
         <p class="card-body">
-          The original menu had 13 items and little affordances to inform users of what tasks or activities are
-          within each one. See below to see how I tackled this problem and reduced the menu.
+          The original menu had <span class="stat-highlight">13</span> items and little affordances to inform users of what tasks or activities are
+          within each one. See below to see how I tackled this problem and reduced the menu by <span class="stat-highlight">50%</span>.
         </p>
       </div>
 
-      <div class="content-card content-card-grey">
-        <span class="card-heading-dark">Step 1: map, question, define menu pages</span>
+      <div class="content-card content-card-grey step-card">
+        <div class="step-number">1</div>
+        <span class="card-heading-dark">map, question, define menu pages</span>
         <p class="card-body">
           With a set of questions in hand, I sought to understand the current tasks users completed on each of
           the linked pages. Answers also clarified and aligned assumptions for <em style="font-style:italic;">everyone involved in the project</em>.
@@ -874,8 +1068,9 @@
         </ul>
       </div>
 
-      <div class="content-card content-card-grey">
-        <span class="card-heading-dark">Step 2: learn, clarify, define with the client</span>
+      <div class="content-card content-card-grey step-card">
+        <div class="step-number">2</div>
+        <span class="card-heading-dark">learn, clarify, define with the client</span>
         <p class="card-body">
           With the purpose of each screen defined, I was able to construct the relationship between product,
           people, and the system and where the intended business goals fit.
@@ -888,8 +1083,9 @@
         </ul>
       </div>
 
-      <div class="content-card content-card-grey">
-        <span class="card-heading-dark">Step 3: prioritize screens by usefulness and ease</span>
+      <div class="content-card content-card-grey step-card">
+        <div class="step-number">3</div>
+        <span class="card-heading-dark">prioritize screens by usefulness and ease</span>
         <p class="card-body">
           Equipped with definitions of the screens and their value for the business at large, I measured the
           total actions users took for each of the 13 pages and charted them against task priority.
