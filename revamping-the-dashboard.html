@@ -11,11 +11,15 @@
   <link rel="stylesheet" href="css/utilities.css" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <style>
-    @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Crimson+Pro:wght@400;500;600;700&display=swap");
 
     /* ============================================
        MODERN SPLIT-SCREEN LAYOUT
        ============================================ */
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       background-color: #f5f5f2;
@@ -31,13 +35,15 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: 220px;
+      width: 260px;
       height: 100vh;
-      background: #ffffff;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border-right: 1px solid #e4e4e0;
       display: flex;
       flex-direction: column;
-      padding: 2.5rem 1.75rem;
+      padding: 3rem 2rem;
       box-sizing: border-box;
       overflow-y: auto;
       z-index: 200;
@@ -47,9 +53,9 @@
     .sidebar-brand a { text-decoration: none; color: inherit; }
 
     .sidebar-name {
-      font-family: 'American Typewriter', serif;
+      font-family: 'Crimson Pro', serif;
       font-size: 0.95rem;
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: 0.04em;
       text-transform: lowercase;
       color: #1a1a1a;
@@ -58,7 +64,7 @@
     }
 
     .sidebar-tagline {
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.68rem;
       font-weight: 400;
       color: #9a9a92;
@@ -81,14 +87,30 @@
 
     .split-sidebar nav a {
       display: block;
-      font-family: 'Raleway', sans-serif;
-      font-size: 0.78rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.875rem;
       font-weight: 400;
       color: #666660;
       line-height: 2em;
       text-decoration: none;
       letter-spacing: 0.02em;
-      transition: color 0.15s, font-weight 0.15s;
+      transition: all 0.2s ease;
+      padding: 0.25rem 0.5rem;
+      border-radius: 6px;
+      position: relative;
+    }
+
+    .split-sidebar nav a::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 0;
+      background: #4C93C3;
+      border-radius: 2px;
+      transition: height 0.2s ease;
     }
 
     .split-sidebar nav a:hover,
@@ -98,8 +120,12 @@
       font-weight: 600;
     }
 
+    .split-sidebar nav a.inview::before {
+      height: 60%;
+    }
+
     .split-sidebar .submenu-header {
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.65rem;
       font-weight: 600;
       color: #b0b0a8;
@@ -120,7 +146,7 @@
     .sidebar-back { margin-top: auto; padding-top: 1.5rem; }
 
     .sidebar-back a {
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.74rem;
       font-weight: 400;
       color: #9a9a92;
@@ -135,11 +161,16 @@
 
     /* ---- Main content ---- */
     .split-main {
-      margin-left: 220px;
-      padding: 4rem 5rem 6rem 5rem;
-      max-width: 920px;
+      margin-left: 260px;
+      padding: 5rem 6rem 7rem 6rem;
+      max-width: 1000px;
       box-sizing: border-box;
       animation: fadein 0.6s ease;
+    }
+
+    @keyframes fadein {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     /* ---- Page header ---- */
@@ -189,7 +220,7 @@
     }
 
     .split-page-header .subtitle {
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.95rem;
       font-weight: 300;
       color: #888880;
@@ -197,83 +228,89 @@
     }
 
     /* ---- Section headers ---- */
-    .split-section { margin-bottom: 4rem; }
+    .split-section { margin-bottom: 5rem; }
 
     .split-section-label {
-      font-family: 'Raleway', sans-serif;
-      font-size: 0.65rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 0.16em;
       text-transform: uppercase;
       color: #9a9a92;
       display: block;
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.3rem;
     }
 
     .split-section-title {
-      font-family: 'American Typewriter', serif;
-      font-size: 1.55rem;
-      font-weight: 400;
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.85rem;
+      font-weight: 600;
       color: #1a1a1a;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.5rem;
       line-height: 1.3;
     }
 
     .split-section-subheading {
-      font-family: 'Raleway', sans-serif;
-      font-size: 0.82rem;
-      font-weight: 300;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
       color: #888880;
-      margin-bottom: 1.75rem;
-      line-height: 1.5;
+      margin-bottom: 2rem;
+      line-height: 1.6;
     }
 
     /* ---- Cards ---- */
     .content-card {
       background: #ffffff;
-      border-radius: 12px;
-      padding: 2rem 2.25rem;
-      margin-bottom: 1.25rem;
+      border-radius: 16px;
+      padding: 3rem 3rem;
+      margin-bottom: 1.5rem;
       border: 1px solid #e8e8e4;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.035);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
       overflow: hidden;
       box-sizing: border-box;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .content-card-blue  { background: #f0f6fb; border-color: #cfe2f0; }
-    .content-card-green { background: #f2f7f2; border-color: #c8dfc8; }
-    .content-card-grey  { background: #f5f5f2; border-color: #dededa; }
+    .content-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
 
-    .card-accent-blue  { border-left: 4px solid #4C93C3; }
-    .card-accent-green { border-left: 4px solid #7ab87a; }
-    .card-accent-dark  { border-left: 4px solid #1a1a1a; }
+    .content-card-blue  { background: #ffffff; border-color: #cfe2f0; }
+    .content-card-green { background: #ffffff; border-color: #c8dfc8; }
+    .content-card-grey  { background: #ffffff; border-color: #dededa; }
+
+    .card-accent-blue  { border-left: 3px solid #4C93C3; }
+    .card-accent-green { border-left: 3px solid #7ab87a; }
+    .card-accent-dark  { border-left: 3px solid #1a1a1a; }
 
     /* ---- Card typography ---- */
     .card-heading {
-      font-family: 'American Typewriter', serif;
-      font-size: 1.05rem;
-      font-weight: 500;
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
       color: #4C93C3;
-      margin-bottom: 0.65rem;
+      margin-bottom: 0.75rem;
       line-height: 1.4;
       display: block;
     }
 
     .card-heading-dark {
-      font-family: 'American Typewriter', serif;
-      font-size: 1rem;
-      font-weight: 500;
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
       color: #1a1a1a;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.7rem;
       display: block;
     }
 
     .card-body {
-      font-family: 'Raleway', sans-serif;
-      font-size: 0.875rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1rem;
       font-weight: 400;
       color: #444440;
-      line-height: 1.8;
+      line-height: 2;
       margin: 0;
     }
 
@@ -299,7 +336,7 @@
     .card-body a { text-decoration: underline; }
 
     .content-card h5 {
-      font-family: 'American Typewriter', serif;
+      font-family: 'Crimson Pro', serif;
       font-size: 1.05rem;
       font-weight: 600;
       color: #1a1a1a;
@@ -307,10 +344,21 @@
     }
 
     /* ---- Images ---- */
-    .img-block { margin: 1.25rem 0; }
-    .img-block img { width: 100%; height: auto; border-radius: 8px; display: block; }
+    .img-block { margin: 2rem 0; }
+    .img-block img { 
+      width: 100%; 
+      height: auto; 
+      border-radius: 12px; 
+      display: block;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .img-block img:hover {
+      transform: scale(1.01);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    }
     .img-caption {
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.74rem;
       font-weight: 300;
       color: #888880;
@@ -330,27 +378,35 @@
     /* ---- Toggle button ---- */
     .toggle-btn {
       background: transparent;
-      border: 1px solid #4C93C3;
-      border-radius: 6px;
+      border: 1.5px solid #4C93C3;
+      border-radius: 8px;
       color: #4C93C3;
       cursor: pointer;
-      font-family: 'Raleway', sans-serif;
-      font-size: 0.76rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.875rem;
       font-weight: 500;
       letter-spacing: 0.04em;
-      padding: 0.45rem 1.1rem;
-      margin-top: 0.5rem;
-      margin-bottom: 1.25rem;
-      transition: background 0.15s, color 0.15s;
+      padding: 0.65rem 1.4rem;
+      margin-top: 0.75rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.2s ease;
     }
-    .toggle-btn:hover { background: #4C93C3; color: #fff; }
+    .toggle-btn:hover { 
+      background: #4C93C3; 
+      color: #fff;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(76, 147, 195, 0.3);
+    }
+    .toggle-btn:active {
+      transform: translateY(0);
+    }
 
     /* ---- Two-column card grid ---- */
     .card-two-col {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
-      margin-bottom: 1.25rem;
+      gap: 1.75rem;
+      margin-bottom: 1.5rem;
     }
 
     .card-two-col .content-card { margin-bottom: 0; }
@@ -365,7 +421,7 @@
       border-radius: 8px;
       overflow: hidden;
       margin-top: 1rem;
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
     .priority-grid .cell {
@@ -385,7 +441,7 @@
       padding: 0.6rem 1.4rem;
       background: #1a1a1a;
       color: #ffffff !important;
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.78rem;
       font-weight: 500;
       letter-spacing: 0.06em;
@@ -459,31 +515,44 @@
     @media only screen and (min-width: 1600px) {
       .split-sidebar {
         width: 320px;
-        padding: 3rem 2rem;
+        padding: 3.5rem 2.5rem;
       }
 
       .split-main {
         margin-left: 320px;
         max-width: 1400px;
-        padding: 3.5rem 4rem;
+        padding: 6rem 7rem 8rem 7rem;
       }
 
       .split-section {
-        margin-bottom: 5rem;
+        margin-bottom: 6rem;
+      }
+
+      .split-page-header h2 {
+        font-size: 3rem;
       }
 
       .split-section-title {
-        font-size: 1.75rem;
+        font-size: 2.1rem;
+      }
+
+      .split-section-subheading {
+        font-size: 1.05rem;
       }
 
       .card-two-col {
         grid-template-columns: repeat(3, 1fr);
-        gap: 1.75rem;
+        gap: 2rem;
       }
 
       .content-card {
-        padding: 2.5rem 2.75rem;
-        margin-bottom: 1.75rem;
+        padding: 3.5rem 3.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .card-body {
+        font-size: 1.05rem;
+        line-height: 2.1;
       }
 
       .priority-grid {
@@ -492,8 +561,8 @@
       }
 
       .priority-grid .cell {
-        padding: 1.15rem 1.5rem;
-        font-size: 0.85rem;
+        padding: 1.25rem 1.75rem;
+        font-size: 0.95rem;
       }
     }
 
@@ -528,10 +597,15 @@
       }
 
       .sidebar-back { margin-top: auto; padding-top: 1.5rem; }
-      .split-main { margin-left: 0; padding: 6.5rem 1.5rem 2rem 1.5rem; }
-      .card-two-col { grid-template-columns: 1fr; }
+      .split-main { margin-left: 0; padding: 7rem 2rem 3rem 2rem; }
+      .card-two-col { grid-template-columns: 1fr; gap: 1.25rem; }
       .priority-grid { display: none; }
       .priority-mobile-summary { display: block !important; }
+      
+      .split-page-header h2 { font-size: 2rem; }
+      .split-section-title { font-size: 1.5rem; }
+      .content-card { padding: 2rem 1.75rem; }
+      .card-body { font-size: 0.95rem; line-height: 1.8; }
     }
   </style>
 </head>
@@ -852,7 +926,7 @@
           </div>
         </div>
 
-        <div class="priority-mobile-summary" style="display:none; font-family: 'Raleway', sans-serif; font-size: 0.875rem; color: #444440; line-height: 1.8; margin-top: 1rem;">
+        <div class="priority-mobile-summary" style="display:none; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.875rem; color: #444440; line-height: 1.8; margin-top: 1rem;">
           <p style="margin-bottom: 1rem;"><strong>High Priority Tasks (0–2 actions):</strong> Add to, search, update datasets + trigger physical entities. Example: opening physical parking gate. Menu-items: Site settings, Activity, Revenue</p>
           <p style="margin-bottom: 1rem;"><strong>High Priority Tasks (+2 actions):</strong> Navigating to 1–5 dedicated secondary menus; complex wizard forms. Example: adding promotional parking rate. Menu-items: Rates, Transient, Permissions, Users, Space Management</p>
           <p style="margin-bottom: 1rem;"><strong>Low Priority Tasks (0–2 actions):</strong> View to download. Example: download last year's traffic. Menu-items: History, Validation, Bookings</p>
