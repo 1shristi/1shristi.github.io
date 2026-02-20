@@ -393,6 +393,22 @@
       box-shadow: 0 2px 8px rgba(214, 69, 69, 0.3);
     }
 
+    /* Image hover swap effect */
+    .img-block:hover .default-img {
+      display: none;
+    }
+
+    .img-block:hover .hover-img {
+      display: block !important;
+    }
+
+    /* Responsive images */
+    @media (max-width: 768px) {
+      .img-block img {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      }
+    }
+
     /* Responsive */
     @media only screen and (max-width: 900px) {
       .split-sidebar {
@@ -531,390 +547,197 @@
       </div>
     </section>
 
-                            <h4 class="block-title"></h4>
-                            <!-- ======================RESEARCH======================= -->
-                            <div id="research" class="flex mb-20 flex-column solution-content px-12">
-                                <div class="mt-8"></div>
-                                <div class="card align-self-start">
-                                    <h4 class="block-title">Research methods used</h4>
-                                    <div class="block-copy">
+    <!-- Research Section -->
+    <section id="research" class="split-section">
+      <span class="split-section-label">RESEARCH</span>
+      <h2 class="split-section-title">Research Methods</h2>
 
-                                        <!-- JS TEXT EXAMPLE 1 GATHERING-->
-                                        <div class="card-content-row">
-                                            <div class="card-text">
-                                                <span class="bold-text">1. Gathering physical documents,
-                                                    noting touchpoints</span>
-                                                <p class="block-text">
-                                                    Physical documents were not only noted as touchpoints but also as
-                                                    opportunities
-                                                    to be transcribed into the user interface for a better user
-                                                    experience.
-                                                </p>
-
-                                            </div>
-                                            <div class="zoom-container">
-                                                <img class="zoom-container prototype-img " style="border:none;"
-                                                    src="./images/proj2/wk1/physical docs.png" />
-                                                <p id="text5" class=" block-text-alt mb-10"><b>Research
-                                                        discovery</b>:
-                                                    physical
-                                                    documents were used only when the computer was not accessible and
-                                                    were
-                                                    prone
-                                                    to errors.</p>
-
-                                            </div>
-
-
-                                        </div>
-
-
-
-                                    </div>
-
-                                    <!-- JS TEXT EXAMPLE 2 CONTEXTUAL-->
-                                    <div class="card-content-row">
-                                        <div class="card-text">
-                                            <span class="bold-text">2. Contextual, 1:1 semi structured, ethnographic
-                                                interviews
-                                            </span>
-                                            <p class="block-text">
-                                                There was no specific direction for how interviews were to be conducted.
-                                                I
-                                                began
-                                                all interviews as a personal understanding of the kinds of tasks the
-                                                users
-                                                completed and made a note of how many of these tasks were painpoints
-                                                attributed
-                                                to the legacy system vs the struggles of the overall role and
-                                                responsibilities.
-                                            </p>
-                                            <button data-target="img6" data-text="text6"
-                                                class="toggle-btn mt-4 mb-10">Dig deeper</button>
-                                        </div>
-                                        <div class="zoom-container">
-                                            <img class="prototype-img" style="border:none;"
-                                                src="./images/proj2/wk1/user-interviewMR.png"
-                                                alt="Screenshot of interviewing users">
-                                        </div>
-
-                                    </div>
-
-                                    <!--BUTTON 2 TRIGGERED -->
-                                    <div class="flex-row">
-                                        <p id="text6" class="hidden block-text-alt"><b>Research discovery</b>:
-                                            many of
-                                            the
-                                            user tasks that were described were not necessarily essential to
-                                            complete,
-                                            instead they were "work-around solutions" for dealing with the legacy
-                                            system.
-                                        </p>
-                                        <div class="image-stack-button"
-                                            style="display: block; height: auto; object-fit: contain; margin: 0 auto">
-                                            <div class="image-stack img-1 mt-0 mb-2">
-                                                <img id="img6" class="hidden" src="./images/proj2/wk1/interviews.png" />
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- JS TEXT EXAMPLE ANALYSING-->
-                                    <div class="flex flex-column w-full py-10">
-                                        <div class="card-content-row">
-                                            <div class="card-text">
-                                                <span class="bold-text">3. Analysing application, service safari
-                                                    method</span>
-                                                <p class="block-text">
-                                                    Following along the application's SOP (Standard Operating
-                                                    Procedures)
-                                                    documents,
-                                                    I used the
-                                                    <span class="block-text-bold">service safari method</span>
-                                                    to gather insights on how users interacted with the system in
-                                                    real-world
-                                                    scenarios.
-                                                </p>
-                                                <button data-target="img4" data-text="text4"
-                                                    class="toggle-btn mt-4 mb-10">Dig deeper</button>
-                                            </div>
-
-                                            <div class="zoom-container research">
-                                                <img class="sketch-img"
-                                                    src="./images/proj2/wk1/order-intake-process.png"
-                                                    alt="Flow of the order intake process">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="flex-row mb-2">
-                                        <!-- BUTTON 1 TRIGGERED -->
-                                        <p id="text4" class="hidden block-text-alt"><b>Research discovery</b>:
-                                            the
-                                            legacy system is not important and should be ignored completely.
-                                            Instead,
-                                            defining the users' specific actions and physical touchpoints will
-                                            better
-                                            inform the design timeline</p>
-                                        <div class="image-stack-button"
-                                            style="display: block; height: auto; object-fit: contain; margin: 0 auto">
-                                            <div class="image-stack img-1 mt-0 mb-2"
-                                                style="width:90%; display: block; height: auto; object-fit: contain; margin: 0 auto">
-                                                <img id="img4" class="hidden"
-                                                    src="./images/proj2/wk1/application.png" />
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- ===================IDEAS========================== -->
-
-                            <div id="ideas" class="flex mb-20 flex-column solution-content px-12">
-                                <div class="mt-8"></div>
-                                <div class="card">
-
-
-                                    <h4 class="block-title">Ideas</h4>
-                                    <div class="flex flex-column w-full p-6">
-                                        <div class="flex flex-column w-full py-10">
-
-                                            <!-- PAPER SKETCHES (3) -->
-                                            <div class="img-text-pair flex-row block-copy-alt image-stack">
-                                                <!-- PAPER SKETCHES (3) -->
-                                                <div class="image-grid">
-                                                    <div class="card-text">
-                                                        <h4 class="bold-text">Personal paper sketches</h4>
-                                                        <div class="flex image-stack img-1 mb-0">
-                                                            <div class="image-stack-papersketches mt-0">
-                                                                <p id="text14" class="block-text fade-in"> I start
-                                                                    with paper
-                                                                    sketches and treat them like private notes. It's
-                                                                    akin to
-                                                                    playing in a
-                                                                    personal sandbox with no expectations and lots of
-                                                                    intuition.
-                                                                    I draw out
-                                                                    others' ideas and translate conversations into
-                                                                    components
-                                                                    for my own
-                                                                    understanding.</p>
-                                                                <div class="reveal-card">
-                                                                    <img id="img10" class="prototype-img fade-in"
-                                                                        src="./images/proj2/wk1/image 7.png">
-                                                                    <p id="text10" class="block-text-alt fade-in">
-                                                                        "Viewing items"
-                                                                    </p>
-                                                                </div>
-                                                                <div class="reveal-card">
-                                                                    <img id="img11" class="prototype-img fade-in"
-                                                                        src="./images/proj2/wk1/paper2.png">
-                                                                    <p id="text11" class="block-text-alt fade-in">
-                                                                        "Seleting
-                                                                        parcels"
-                                                                    </p>
-                                                                </div>
-                                                                <div class="reveal-card">
-                                                                    <img id="img12" class="prototype-img fade-in"
-                                                                        src="./images/proj2/wk1/paper3.png">
-                                                                    <p id="text12" class="block-text-alt fade-in">
-                                                                        "Dragging
-                                                                        and dropping"
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- DRAFT PARAGRAPH + GIF IMAGE-->
-
-                                            <div class="card-content-row align-self-center">
-                                                <div class="card-text">
-                                                    <h4 class="bold-text">Draft designs are for agreement</h4>
-                                                    <p class="block-text">
-                                                        Product Owners think about the product as much as users value
-                                                        the tasks it's meant to support; it's their baby, and aligning
-                                                        the initial interface with POs' and stakeholders' expectations
-                                                        and vision is often more important early on.
-                                                    </p>
-
-                                                </div>
-
-
-
-                                                <div class="zoom-container interactive-gif interactive-gif-size mt-4">
-                                                    <img class="interactive-gif align-self-center justify-center"
-                                                        src="./images/gifs/prototype-reveal.gif"
-                                                        data-gif="./images/gifs/prototype-reveal.gif"
-                                                        data-still="./images/proj2/wk1/prototype-reveal.jpeg"
-                                                        alt="demo">
-                                                    <p id="text4" class="block-text-alt"><b>Teamwork insight</b>: I've broken down the interaction into 3 tasks and identified the visual flow of information. By guiding my PO step-by-step, we were able to come to an agreement on the final interface.</p>
-                                                    <p></p>
-                                                </div>
-                                            </div>
-
-
-                                            <!-- UI COMPONENTS PARAGRAPH-->
-                                            <div class="card-content-row justify-center mt-20">
-                                                <div class="card-text">
-                                                    <h4 class="bold-text">Flow charts define UI components</h4>
-                                                    <p class="block-text mb-8">
-                                                        Task statements define UI components of the interface and each
-                                                        statement maps to standardized universal UI component(s).
-                                                    </p>
-                                                    <dl class="component-map block-text p-6">
-                                                        <div class="map-item">
-                                                            <dt>"The warehouse operator parcel dimensions."</dt>
-                                                            <dd>→ <b>Editable component</b></dd>
-                                                        </div>
-                                                        <div class="map-item">
-                                                            <dt>"Quantity is physically checked against online data..."
-                                                            </dt>
-                                                            <dd>→ <b>Search toolbar</b></dd>
-                                                        </div>
-                                                        <div class="map-item">
-                                                            <dt>"Printing labels need to include the following
-                                                                information..."</dt>
-                                                            <dd>→ <b>Setup wizard</b></dd>
-                                                        </div>
-                                                    </dl>
-                                                </div>
-
-
-                                                <div class="zoom-container sketch-img-container">
-                                                    <div class="zoom-container mt-4">
-                                                        <img class="sketch-img" style="max-width:fit-content;"
-                                                            src="./images/proj2/wk1/component-map.png"
-                                                            alt="Mapping actions to components">
-
-                                                    </div>
-                                                    <div>
-                                                        <p id="text4" class="block-text-alt"><b>Design discovery</b>:
-                                                            By applying the user journey map  framework as a guide, I discovered that I could define components and organize and track their progress while setting my junior designer up for success.</p>
-                                                    </div>
-
-
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- =====================OUTCOME======================== -->
-                            <div id="outcome" class="flex mb-20 flex-column solution-content px-12">
-                                <div class="mt-8"></div>
-                                <div class="card">
-                                    <h4 class="block-title">Outcome after four weeks
-                                   </h4>
-                                    <div class="flex flex-column w-full p-6">
-
-                                        <!-- LESS OF A SOLUTION -->
-                                        <div class="card-content-row align-self-center">
-                                            <div class="card-text">
-                                                <h4 class="bold-text">Less of a "solution", more of a foundation</h4>
-                                                <p id="text14" class="block-text fade-in"> 
-                                                    From past experience I've learned presentations are often assumed as
-                                                    final solutions, especially to those unfamiliar with the design
-                                                    process. So directing the conversation around the concept of the design was just as
-                                                    important as showing the interface "solution" screens.  <br><br>I spoke to how components were essentially parts of features that should be introduced incrementally (hover over each screen below to see the priority of the components).
-                                                    <br>
-                                                    <br></p>
-                                                       <h4 class="bold-text">Signed on to lead the design road map</h4>
-                                                        <p id="text14" class="block-text fade-in"> 
-                                                        Through these screens, I was able to show the team why designing incrementally was the the best approach and that having a "read to build" solution would not be efficient. As a result of this presentation and my emphasis on following a human-centric design process, I was hired to lead the design for the entire project.
-                                                </p>
-
-                                                <p id="text4" class="block-text-alt ">
-                                                    </br><br>
-                                                    <b>Screen 1: Viewing all shipments in the system</b>
-                                                    <br>
-                                                       This screen below may appear simple but an engineer would tell you otherwise. All of these screens needed to be accessible at 3 different levels of permission to address the needs of 3 different user groups. 
-                                    </p>
-                                                <div class="img-text-pair stacked-layout">
-                                                    <!-- OUTCOME/SCREEN 1-->
-                                                    <div class="image-stack image-crop-wrapper hover-swap border">
-                                                        <img src="./images/proj2/wk1/image 16.png"
-                                                            class="outcome-img screen1cropped default-img">
-                                                        <img src="./images/proj2/wk1/image 16-hover.png"
-                                                            class="outcome-img screen1cropped hover-img">
-                                                    </div>
-
-                                                </div>
-
-                                                <br><br>
-
-                                                <p id="text4" class="block-text-alt">
-                                                    <b>Screen 2: Shipping information for a specific order</b><br>
-                                                   Each screen is dedicated to showing components required for the application to function as a minimum viable product. 
-                                                   
-                                                        <br><br>
-                                                        For instance, this screen shows the most complicated items of a shipment (e.g. items that need to be at a certain temperature while being transported) that need to be addressed in order to function as an MVP. </p>
-                                                <div class="img-text-pair stacked-layout">
-                                                    <!-- OUTCOME/SCREEN 2-->
-                                                    <div
-                                                        class="image-stack image-crop-wrapper hover-swap screen3-wrapper border">
-                                                        <img src="./images/proj2/wk1/image 15.png"
-                                                            class="outcome-img screen3cropped default-img">
-                                                        <img src="./images/proj2/wk1/image 15-hover.png"
-                                                            class="outcome-img screen3cropped hover-img">
-                                                    </div>
-                                                </div>
-
-                                                <p id="text4" class="block-text-alt">
-                                                    <b><br><br>Screen 3: Editing parcel information within a
-                                                        shipment of multiple parcels</b><br>
-
-                                                        By discussing components in detail, I was able to show the team just how much work was involved to produce each screen and why designing incrementally was the the best approach.
-                                                        <br><br>
-                                                    Despite my confidence in knowing what I was presenting, there were aspects of the design that I didn't anticipate being a challenge. <br><br>For example, this particular screen would become a UI challenge because I wasn't able to assess the complexity of the features accurately beforehand (more on this later).  
-
-                                                </p>
-                                                <div class="img-text-pair stacked-layout">
-                                                    <!-- OUTCOME/SCREEN 4-->
-                                                    <div
-                                                        class="image-stack image-crop-wrapper hover-swap screen4-wrapper border">
-                                                        <img src="./images/proj2/wk1/image 11.png"
-                                                            class="outcome-img screen4cropped default-img">
-                                                        <img src="./images/proj2/wk1/image 11-hover.png"
-                                                            class="outcome-img screen4cropped hover-img">
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-                                
-                                        <div class="card-content-row align-self-center">
-
-                                            <p id="text14" class="block-text fade-in"> 
-                                              <!-- <button class="toggle-btn mt-4">lead designer case study *coming soon*</button>-->
-                                                <a href="index.html">
-                                                <button class="toggle-btn mt-4">Back to homepage</button></a>
-                                            </p>
-
-
-                                        </div>
-                        </div>
-
-
-                        <!-- ============================================= -->
-                    </div>
-                </div>
-            </div>
+      <div class="content-card content-card-orange card-accent-orange">
+        <span class="card-heading-dark">1. Gathering physical documents, noting touchpoints</span>
+        <p class="card-body">
+          Physical documents were not only noted as touchpoints but also as opportunities to be transcribed into the user interface for a better user experience.
+        </p>
+        <div class="img-block">
+          <img src="./images/proj2/wk1/physical docs.png" alt="Physical documents used in shipping process" />
         </div>
+        <p class="card-body" style="font-style: italic; color: #666660; margin-top: 1rem;">
+          <strong>Research discovery:</strong> Physical documents were used only when the computer was not accessible and were prone to errors.
+        </p>
+      </div>
+
+      <div class="content-card content-card-orange card-accent-orange">
+        <span class="card-heading-dark">2. Contextual, 1:1 semi-structured, ethnographic interviews</span>
+        <p class="card-body">
+          There was no specific direction for how interviews were to be conducted. I began all interviews as a personal understanding of the kinds of tasks the users completed and made a note of how many of these tasks were painpoints attributed to the legacy system vs the struggles of the overall role and responsibilities.
+        </p>
+        <div class="img-block">
+          <img src="./images/proj2/wk1/user-interviewMR.png" alt="Screenshot of interviewing users" />
+        </div>
+        <button data-target="img6" data-text="text6" class="toggle-btn">Dig deeper</button>
+        <div id="text6" class="card-body" style="display:none; font-style: italic; color: #666660; margin-top: 1rem;">
+          <strong>Research discovery:</strong> Many of the user tasks that were described were not necessarily essential to complete, instead they were "work-around solutions" for dealing with the legacy system.
+        </div>
+        <div style="margin-top: 1rem;">
+          <img id="img6" style="display:none; width: 100%; height: auto; border-radius: 12px;" src="./images/proj2/wk1/interviews.png" alt="Interview analysis" />
+        </div>
+      </div>
+
+      <div class="content-card content-card-orange card-accent-orange">
+        <span class="card-heading-dark">3. Analysing application, service safari method</span>
+        <p class="card-body">
+          Following along the application's SOP (Standard Operating Procedures) documents, I used the <strong>service safari method</strong> to gather insights on how users interacted with the system in real-world scenarios.
+        </p>
+        <div class="img-block">
+          <img src="./images/proj2/wk1/order-intake-process.png" alt="Flow of the order intake process" />
+        </div>
+        <button data-target="img4" data-text="text4" class="toggle-btn">Dig deeper</button>
+        <div id="text4" class="card-body" style="display:none; font-style: italic; color: #666660; margin-top: 1rem;">
+          <strong>Research discovery:</strong> The legacy system is not important and should be ignored completely. Instead, defining the users' specific actions and physical touchpoints will better inform the design timeline.
+        </div>
+        <div style="margin-top: 1rem;">
+          <img id="img4" style="display:none; width: 100%; height: auto; border-radius: 12px;" src="./images/proj2/wk1/application.png" alt="Application analysis" />
+        </div>
+      </div>
     </section>
+
+    <!-- Ideas Section -->
+    <section id="ideas" class="split-section">
+      <span class="split-section-label">IDEATION</span>
+      <h2 class="split-section-title">Ideas</h2>
+
+      <div class="content-card content-card-red card-accent-red">
+        <span class="card-heading-dark">Personal paper sketches</span>
+        <p class="card-body">
+          I start with paper sketches and treat them like private notes. It's akin to playing in a personal sandbox with no expectations and lots of intuition. I draw out others' ideas and translate conversations into components for my own understanding.
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem;">
+          <div>
+            <img src="./images/proj2/wk1/image 7.png" alt="Viewing items sketch" style="width: 100%; height: auto; border-radius: 8px;" />
+            <p class="card-body" style="font-size: 0.85rem; margin-top: 0.5rem; text-align: center;">"Viewing items"</p>
+          </div>
+          <div>
+            <img src="./images/proj2/wk1/paper2.png" alt="Selecting parcels sketch" style="width: 100%; height: auto; border-radius: 8px;" />
+            <p class="card-body" style="font-size: 0.85rem; margin-top: 0.5rem; text-align: center;">"Selecting parcels"</p>
+          </div>
+          <div>
+            <img src="./images/proj2/wk1/paper3.png" alt="Dragging and dropping sketch" style="width: 100%; height: auto; border-radius: 8px;" />
+            <p class="card-body" style="font-size: 0.85rem; margin-top: 0.5rem; text-align: center;">"Dragging and dropping"</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card content-card-red card-accent-red">
+        <span class="card-heading-dark">Draft designs are for agreement</span>
+        <p class="card-body">
+          Product Owners think about the product as much as users value the tasks it's meant to support; it's their baby, and aligning the initial interface with POs' and stakeholders' expectations and vision is often more important early on.
+        </p>
+        <div class="img-block">
+          <img src="./images/gifs/prototype-reveal.gif" alt="Prototype walkthrough animation" />
+        </div>
+        <p class="card-body" style="font-style: italic; color: #666660; margin-top: 1rem;">
+          <strong>Teamwork insight:</strong> I've broken down the interaction into 3 tasks and identified the visual flow of information. By guiding my PO step-by-step, we were able to come to an agreement on the final interface.
+        </p>
+      </div>
+
+      <div class="content-card content-card-red card-accent-red">
+        <span class="card-heading-dark">Flow charts define UI components</span>
+        <p class="card-body">
+          Task statements define UI components of the interface and each statement maps to standardized universal UI component(s).
+        </p>
+        <div style="background: var(--color-red-light); border-radius: 12px; padding: 2rem; margin: 1.5rem 0;">
+          <dl class="card-body" style="margin: 0;">
+            <div style="margin-bottom: 1.25rem;">
+              <dt style="font-weight: 400; margin-bottom: 0.25rem;">"The warehouse operator parcel dimensions."</dt>
+              <dd style="margin: 0; color: var(--color-red); font-weight: 600;">→ Editable component</dd>
+            </div>
+            <div style="margin-bottom: 1.25rem;">
+              <dt style="font-weight: 400; margin-bottom: 0.25rem;">"Quantity is physically checked against online data..."</dt>
+              <dd style="margin: 0; color: var(--color-red); font-weight: 600;">→ Search toolbar</dd>
+            </div>
+            <div>
+              <dt style="font-weight: 400; margin-bottom: 0.25rem;">"Printing labels need to include the following information..."</dt>
+              <dd style="margin: 0; color: var(--color-red); font-weight: 600;">→ Setup wizard</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="img-block">
+          <img src="./images/proj2/wk1/component-map.png" alt="Mapping actions to components" />
+        </div>
+        <p class="card-body" style="font-style: italic; color: #666660; margin-top: 1rem;">
+          <strong>Design discovery:</strong> By applying the user journey map framework as a guide, I discovered that I could define components and organize and track their progress while setting my junior designer up for success.
+        </p>
+      </div>
+    </section>
+
+    <!-- Outcome Section -->
+    <section id="outcome" class="split-section">
+      <span class="split-section-label">RESULTS</span>
+      <h2 class="split-section-title">Outcome after four weeks</h2>
+
+      <div class="content-card content-card-orange card-accent-orange">
+        <span class="card-heading card-heading-orange">Less of a "solution", more of a foundation</span>
+        <p class="card-body">
+          From past experience I've learned presentations are often assumed as final solutions, especially to those unfamiliar with the design process. So directing the conversation around the concept of the design was just as important as showing the interface "solution" screens.
+        </p>
+        <p class="card-body">
+          I spoke to how components were essentially parts of features that should be introduced incrementally (hover over each screen below to see the priority of the components).
+        </p>
+      </div>
+
+      <div class="content-card content-card-orange card-accent-orange">
+        <span class="card-heading card-heading-orange">Signed on to lead the design road map</span>
+        <p class="card-body">
+          Through these screens, I was able to show the team why designing incrementally was the best approach and that having a "ready to build" solution would not be efficient. As a result of this presentation and my emphasis on following a human-centric design process, I was hired to lead the design for the entire project.
+        </p>
+      </div>
+
+      <div class="content-card content-card-orange card-accent-orange">
+        <span class="card-heading-dark">Screen 1: Viewing all shipments in the system</span>
+        <p class="card-body">
+          This screen below may appear simple but an engineer would tell you otherwise. All of these screens needed to be accessible at 3 different levels of permission to address the needs of 3 different user groups.
+        </p>
+        <div class="img-block" style="position: relative; overflow: hidden;">
+          <img src="./images/proj2/wk1/image 16.png" class="default-img" style="width: 100%; height: auto; border-radius: 12px; display: block;" alt="Shipments overview screen" />
+          <img src="./images/proj2/wk1/image 16-hover.png" class="hover-img" style="width: 100%; height: auto; border-radius: 12px; display: none; position: absolute; top: 0; left: 0;" alt="Shipments overview screen with annotations" />
+        </div>
+      </div>
+
+      <div class="content-card content-card-orange card-accent-orange">
+        <span class="card-heading-dark">Screen 2: Shipping information for a specific order</span>
+        <p class="card-body">
+          Each screen is dedicated to showing components required for the application to function as a minimum viable product.
+        </p>
+        <p class="card-body">
+          For instance, this screen shows the most complicated items of a shipment (e.g. items that need to be at a certain temperature while being transported) that need to be addressed in order to function as an MVP.
+        </p>
+        <div class="img-block" style="position: relative; overflow: hidden;">
+          <img src="./images/proj2/wk1/image 15.png" class="default-img" style="width: 100%; height: auto; border-radius: 12px; display: block;" alt="Shipment details screen" />
+          <img src="./images/proj2/wk1/image 15-hover.png" class="hover-img" style="width: 100%; height: auto; border-radius: 12px; display: none; position: absolute; top: 0; left: 0;" alt="Shipment details screen with annotations" />
+        </div>
+      </div>
+
+      <div class="content-card content-card-orange card-accent-orange">
+        <span class="card-heading-dark">Screen 3: Editing parcel information within a shipment of multiple parcels</span>
+        <p class="card-body">
+          By discussing components in detail, I was able to show the team just how much work was involved to produce each screen and why designing incrementally was the best approach.
+        </p>
+        <p class="card-body">
+          Despite my confidence in knowing what I was presenting, there were aspects of the design that I didn't anticipate being a challenge. For example, this particular screen would become a UI challenge because I wasn't able to assess the complexity of the features accurately beforehand (more on this later).
+        </p>
+        <div class="img-block" style="position: relative; overflow: hidden;">
+          <img src="./images/proj2/wk1/image 11.png" class="default-img" style="width: 100%; height: auto; border-radius: 12px; display: block;" alt="Parcel editing screen" />
+          <img src="./images/proj2/wk1/image 11-hover.png" class="hover-img" style="width: 100%; height: auto; border-radius: 12px; display: none; position: absolute; top: 0; left: 0;" alt="Parcel editing screen with annotations" />
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="index.html">
+          <button class="toggle-btn">Back to homepage</button>
+        </a>
+      </div>
+    </section>
+
+  </main>
     <!-- ============================================= -->
     <!-- SCRIPTS -->
     <script src="scripts/mark-scroll2.js"></script>
@@ -966,6 +789,33 @@
       link.addEventListener('click', () => {
         if (window.innerWidth <= 900) {
           toggleMenu();
+        }
+      });
+    });
+
+    // Toggle button functionality for "Dig deeper"
+    document.querySelectorAll('.toggle-btn').forEach(button => {
+      button.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-target');
+        const textId = this.getAttribute('data-text');
+        
+        if (targetId) {
+          const targetImg = document.getElementById(targetId);
+          const targetText = document.getElementById(textId);
+          
+          if (targetImg) {
+            targetImg.style.display = targetImg.style.display === 'none' ? 'block' : 'none';
+          }
+          if (targetText) {
+            targetText.style.display = targetText.style.display === 'none' ? 'block' : 'none';
+          }
+          
+          // Update button text
+          if (targetImg && targetImg.style.display === 'block') {
+            this.textContent = 'Show less';
+          } else {
+            this.textContent = 'Dig deeper';
+          }
         }
       });
     });
