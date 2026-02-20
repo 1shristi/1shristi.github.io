@@ -12,6 +12,141 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600&display=swap");
+    /* Font Pairing Showcase */
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Crimson+Pro:wght@400;500;600;700&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap");
+
+    /* ============================================
+       FONT PAIRING SHOWCASE
+       ============================================ */
+    
+    /* Pairing 1: Inter + Fraunces (Most Modern) */
+    #overview .split-section-title,
+    #overview .card-heading,
+    #overview .card-heading-dark,
+    #solution .split-section-title,
+    #solution .card-heading,
+    #solution .card-heading-dark,
+    #solution h5 {
+      font-family: 'Fraunces', serif !important;
+    }
+    
+    #overview .split-section-label,
+    #overview .split-section-subheading,
+    #overview .card-body,
+    #overview .card-body li,
+    #solution .split-section-label,
+    #solution .split-section-subheading,
+    #solution .card-body,
+    #solution .card-body li {
+      font-family: 'Inter', sans-serif !important;
+    }
+
+    /* Pairing 2: Plus Jakarta Sans + Crimson Pro (Warm & Approachable) */
+    #solution-model .split-section-title,
+    #solution-model .card-heading,
+    #solution-model .card-heading-dark,
+    #solution-model h5,
+    #deep-dive-ia .split-section-title,
+    #deep-dive-ia .card-heading,
+    #deep-dive-ia .card-heading-dark,
+    #deep-dive-ia h5 {
+      font-family: 'Crimson Pro', serif !important;
+    }
+    
+    #solution-model .split-section-label,
+    #solution-model .split-section-subheading,
+    #solution-model .card-body,
+    #solution-model .card-body li,
+    #deep-dive-ia .split-section-label,
+    #deep-dive-ia .split-section-subheading,
+    #deep-dive-ia .card-body,
+    #deep-dive-ia .card-body li {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+    }
+
+    /* Pairing 3: Manrope + Lora (Editorial & Professional) */
+    #deep-dive-dataset-relationships .split-section-title,
+    #deep-dive-dataset-relationships .card-heading,
+    #deep-dive-dataset-relationships .card-heading-dark,
+    #deep-dive-dataset-relationships h5,
+    #floorPlan .split-section-title,
+    #floorPlan .card-heading,
+    #floorPlan .card-heading-dark,
+    #floorPlan h5,
+    #learnings .split-section-title,
+    #learnings .card-heading,
+    #learnings .card-heading-dark,
+    #learnings h5 {
+      font-family: 'Lora', serif !important;
+    }
+    
+    #deep-dive-dataset-relationships .split-section-label,
+    #deep-dive-dataset-relationships .split-section-subheading,
+    #deep-dive-dataset-relationships .card-body,
+    #deep-dive-dataset-relationships .card-body li,
+    #floorPlan .split-section-label,
+    #floorPlan .split-section-subheading,
+    #floorPlan .card-body,
+    #floorPlan .card-body li,
+    #learnings .split-section-label,
+    #learnings .split-section-subheading,
+    #learnings .card-body,
+    #learnings .card-body li {
+      font-family: 'Manrope', sans-serif !important;
+    }
+
+    /* Visual indicators for font pairing sections */
+    #overview::before,
+    #solution::before {
+      content: "Font Pairing 1: Inter + Fraunces (Most Modern)";
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #4C93C3;
+      background: #e8f4fd;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+
+    #solution-model::before,
+    #deep-dive-ia::before {
+      content: "Font Pairing 2: Plus Jakarta Sans + Crimson Pro (Warm & Approachable)";
+      display: block;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #5a9e5a;
+      background: #ebf4e5;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+
+    #deep-dive-dataset-relationships::before,
+    #floorPlan::before,
+    #learnings::before {
+      content: "Font Pairing 3: Manrope + Lora (Editorial & Professional)";
+      display: block;
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #666660;
+      background: #f5f5f2;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      letter-spacing: 0.05em;
+      border: 1px solid #dededa;
+    }
 
     /* ============================================
        MODERN SPLIT-SCREEN LAYOUT
