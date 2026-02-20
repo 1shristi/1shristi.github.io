@@ -236,6 +236,8 @@
       margin-bottom: 1.25rem;
       border: 1px solid #e8e8e4;
       box-shadow: 0 2px 10px rgba(0,0,0,0.035);
+      overflow: hidden;
+      box-sizing: border-box;
     }
 
     .content-card-blue  { background: #f0f6fb; border-color: #cfe2f0; }
@@ -281,9 +283,18 @@
       padding-left: 1.3rem;
       margin: 0.6rem 0;
       float: none;
+      clear: both;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
     }
 
-    .card-body li { margin-bottom: 0.5rem; line-height: 1.65; }
+    .card-body li { 
+      margin-bottom: 0.5rem; 
+      line-height: 1.65; 
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      word-break: break-word;
+    }
     .card-body b, .card-body strong { font-weight: 600; color: #1a1a1a; }
     .card-body a { text-decoration: underline; }
 
