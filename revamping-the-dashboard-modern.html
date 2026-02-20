@@ -80,6 +80,114 @@
       color: var(--color-accent);
     }
 
+    /* Navigation Menu */
+    .nav-menu {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--color-text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+      color: var(--color-accent);
+    }
+
+    /* Mobile Menu Toggle */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      z-index: 1001;
+    }
+
+    .mobile-menu-btn span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--color-text);
+      margin: 5px 0;
+      transition: all 0.3s ease;
+    }
+
+    .mobile-menu-btn.active span:nth-child(1) {
+      transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .mobile-menu-btn.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    .mobile-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .mobile-overlay.active {
+      opacity: 1;
+    }
+
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 280px;
+      height: 100vh;
+      background: #fff;
+      box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+      z-index: 1000;
+      transition: right 0.3s ease;
+      padding: 6rem 2rem 2rem;
+      overflow-y: auto;
+    }
+
+    .mobile-nav.active {
+      right: 0;
+    }
+
+    .mobile-nav ul {
+      list-style: none;
+    }
+
+    .mobile-nav ul li {
+      margin-bottom: 1.5rem;
+    }
+
+    .mobile-nav ul a {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--color-text);
+      text-decoration: none;
+      display: block;
+      padding: 0.5rem 0;
+      transition: color 0.2s;
+    }
+
+    .mobile-nav ul a:hover {
+      color: var(--color-accent);
+    }
+
     /* Hero Section */
     .hero {
       min-height: 100vh;
@@ -368,6 +476,55 @@
       color: var(--color-text);
     }
 
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-inner {
+        padding: 1.25rem 2rem;
+      }
+
+      .nav-menu {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .mobile-overlay {
+        display: block;
+      }
+
+      .hero {
+        padding: 6rem 2rem 3rem;
+      }
+
+      .container {
+        padding: 0 2rem;
+      }
+
+      .container-narrow {
+        padding: 0 2rem;
+      }
+
+      .side-by-side {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .side-by-side-reverse {
+        grid-template-columns: 1fr;
+      }
+
+      .comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     /* Step Cards */
     .steps-grid {
       display: grid;
@@ -475,17 +632,44 @@
 </head>
 
 <body>
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay"></div>
 
   <!-- Navigation -->
   <nav class="nav">
     <div class="nav-inner">
-      <a href="/" class="nav-logo">shristi</a>
-      <a href="/index.html" class="nav-back">← Back to Work</a>
+      <a href="#" class="nav-logo">shristi</a>
+      <ul class="nav-menu">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#mental-model">Mental Model</a></li>
+        <li><a href="#challenges">Challenges</a></li>
+        <li><a href="#solution">Solution</a></li>
+        <li><a href="#learnings">Learnings</a></li>
+      </ul>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
 
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav">
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#mental-model">Mental Model</a></li>
+      <li><a href="#challenges">Challenges</a></li>
+      <li><a href="#solution">Solution</a></li>
+      <li><a href="#learnings">Learnings</a></li>
+      <li><a href="/index.html">← All Work</a></li>
+    </ul>
+  </div>
+
   <!-- Hero -->
-  <section class="hero">
+  <section id="overview" class="hero">
     <div class="hero-content">
       <div class="hero-label">Case Study</div>
       <h1 class="hero-title">Revamping the Dashboard</h1>
@@ -513,7 +697,7 @@
   </section>
 
   <!-- Context Section -->
-  <section class="section">
+  <section id="approach" class="section">
     <div class="container-narrow">
       <div class="section-header">
         <span class="section-label">Overview</span>
@@ -539,7 +723,7 @@
   </section>
 
   <!-- Solution Overview -->
-  <section class="section">
+  <section id="solution" class="section">
     <div class="container-narrow">
       <div class="section-header">
         <span class="section-label">Solution</span>
@@ -570,7 +754,7 @@
   </section>
 
   <!-- Mental Model Discovery -->
-  <section class="section">
+  <section id="mental-model" class="section">
     <div class="container-narrow">
       <div class="pull-quote">
         Turns out it's the other way around — users think location-first, not data-first.
@@ -588,7 +772,7 @@
   </section>
 
   <!-- Challenge: Cluttered Menu -->
-  <section class="section">
+  <section id="challenges" class="section">
     <div class="container-narrow">
       <div class="section-header">
         <span class="section-label">Challenge #1</span>
@@ -653,7 +837,7 @@
   </section>
 
   <!-- Learnings -->
-  <section class="section">
+  <section id="learnings" class="section">
     <div class="container-narrow">
       <div class="section-header">
         <span class="section-label">Reflection</span>
@@ -678,6 +862,61 @@
       </a>
     </div>
   </section>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const mobileOverlay = document.querySelector('.mobile-overlay');
+    const body = document.body;
+
+    function toggleMobileMenu() {
+      mobileMenuBtn.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+      mobileOverlay.classList.toggle('active');
+      body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+    }
+
+    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    mobileOverlay.addEventListener('click', toggleMobileMenu);
+
+    // Close mobile menu when clicking on a link
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (mobileNav.classList.contains('active')) {
+          toggleMobileMenu();
+        }
+      });
+    });
+
+    // Active navigation state on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-menu a, .mobile-nav a');
+
+    function setActiveNav() {
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (pageYOffset >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', setActiveNav);
+    setActiveNav(); // Initialize on page load
+  </script>
 
 </body>
 </html>
