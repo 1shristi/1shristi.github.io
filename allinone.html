@@ -226,7 +226,15 @@
 
     /* Page Header */
     .split-page-header {
-      margin-bottom: 4rem;
+      margin-bottom: 5rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid #e8e8e4;
+    }
+
+    .accent-strip {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
     }
 
     .split-page-header h2 {
@@ -235,7 +243,7 @@
       font-weight: 300;
       color: #1a1a1a;
       line-height: 1.2;
-      margin-bottom: 0.6rem;
+      margin: 0 0 0.6rem 0;
     }
 
     .split-page-header .subtitle {
@@ -243,7 +251,7 @@
       font-size: 0.95rem;
       font-weight: 300;
       color: #888880;
-      margin-top: 0.5rem;
+      margin: 0;
     }
 
     /* Section headers */
@@ -485,18 +493,19 @@
     <!-- Page Header -->
     <div class="split-page-header">
       <div class="accent-strip">
-        <span class="accent-teal" style="width: 40px; height: 4px; border-radius: 2px;"></span>
-        <span class="accent-coral" style="width: 20px; height: 4px; border-radius: 2px;"></span>
-        <span class="accent-teal" style="width: 12px; height: 4px; border-radius: 2px; opacity: 0.4;"></span>
+        <span style="display: inline-block; width: 40px; height: 4px; background: var(--color-red); border-radius: 2px;"></span>
+        <span style="display: inline-block; width: 20px; height: 4px; background: var(--color-orange); border-radius: 2px; margin-left: 6px;"></span>
+        <span style="display: inline-block; width: 12px; height: 4px; background: var(--color-red); border-radius: 2px; opacity: 0.4; margin-left: 6px;"></span>
       </div>
-      <h2 style="font-family: 'Crimson Pro', serif; font-size: 2.6rem; font-weight: 300; color: #1a1a1a; margin: 0 0 0.5rem 0; line-height: 1.2;">All-in-one shipping interface</h2>
-      <p class="subtitle" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.95rem; font-weight: 300; color: #888880; margin: 0;">to replace the broken legacy application</p>
+      <h2>All-in-one shipping interface</h2>
+      <p class="subtitle">to replace the broken legacy application</p>
     </div>
 
     <!-- Overview Section -->
     <section id="overview" class="split-section">
       <span class="split-section-label">OVERVIEW</span>
-      <p class="split-section-subheading">small team | lead designer | 4 weeks</p>
+      <h2 class="split-section-title">Context</h2>
+      <p class="split-section-subheading">small team &nbsp;·&nbsp; lead designer &nbsp;·&nbsp; timeline 4 weeks</p>
 
       <div class="content-card content-card-red card-accent-red">
         <span class="card-heading">The Problem</span>
