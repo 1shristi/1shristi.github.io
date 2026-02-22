@@ -3,738 +3,823 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset="UTF-8" />
-  <title>Shristi G | portfolio</title>
+  <title>Shristi G | Revamping the Dashboard</title>
   <link rel="favicon" href="images/favicon.ico" />
-  <link rel="stylesheet" href="css/base1.css" type="text/css" />
-
-  <link rel="stylesheet" href="css/index1.css" type="text/css" />
-  <link rel="stylesheet" href="css/project-details.css" type="text/css" />
-  <link rel="stylesheet" href="css/utilities.css" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <style>
-    @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&display=swap");
-  </style>
+    @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap");
 
+    @font-face {
+      font-family: "American Typewriter";
+      src: url('/font-family/AmericanTypewriter-Light-02.ttf') format('truetype');
+      font-weight: 300; font-style: normal;
+    }
+    @font-face {
+      font-family: "American Typewriter";
+      src: url('/font-family/AmericanTypewriter-01.ttf') format('truetype');
+      font-weight: 400; font-style: normal;
+    }
+    @font-face {
+      font-family: "American Typewriter";
+      src: url('/font-family/AmericanTypewriter-Semibold-04.ttf') format('truetype');
+      font-weight: 600; font-style: normal;
+    }
+
+    /* ============================================
+       DARK THEME — Revamping the Dashboard
+       ============================================ */
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0a0a0a;
+      color: #f0f0ec;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+
+    a { color: #7ab87a; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---- Page wrapper ---- */
+    .page-wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 2rem 8rem;
+      animation: fadein 0.7s ease;
+    }
+
+    @keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+
+    /* ============================================
+       HERO
+       ============================================ */
+    .hero {
+      padding: 5rem 0 3.5rem;
+    }
+
+    .hero-label {
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #7ab87a;
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-title {
+      font-family: 'American Typewriter', serif;
+      font-size: 3.6rem;
+      font-weight: 300;
+      color: #f0f0ec;
+      line-height: 1.1;
+      margin: 0 0 0.5rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-title mark {
+      background: none;
+      color: inherit;
+      position: relative;
+    }
+
+    .hero-title mark svg {
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 18px;
+      pointer-events: none;
+    }
+
+    .hero-subtitle {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: #5a5a54;
+      margin: 1.25rem 0 2rem;
+      line-height: 1.6;
+    }
+
+    /* Quick-nav pills */
+    .quick-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .quick-nav a {
+      font-size: 0.72rem;
+      font-weight: 400;
+      color: #808078;
+      background: #141414;
+      border: 1px solid #2a2a2a;
+      border-radius: 999px;
+      padding: 0.35rem 0.9rem;
+      text-decoration: none;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .quick-nav a:hover {
+      color: #f0f0ec;
+      border-color: #484840;
+    }
+
+    /* Hero image container */
+    .hero-img-card {
+      background: #141414;
+      border: 1px solid #252525;
+      border-radius: 14px;
+      overflow: hidden;
+      padding: 1.5rem;
+    }
+
+    .hero-img-card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    /* ============================================
+       SECTIONS
+       ============================================ */
+    .cs-section {
+      margin-bottom: 5rem;
+      padding-top: 1rem;
+    }
+
+    .cs-label {
+      display: block;
+      font-size: 0.63rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #7ab87a;
+      margin-bottom: 0.4rem;
+    }
+
+    .cs-heading {
+      font-family: 'American Typewriter', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      color: #f0f0ec;
+      margin: 0 0 0.4rem;
+      line-height: 1.25;
+    }
+
+    .cs-subheading {
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: #484840;
+      margin: 0 0 1.75rem;
+      line-height: 1.5;
+    }
+
+    .cs-body {
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: #9a9a94;
+      line-height: 1.85;
+      margin: 0 0 0.85rem;
+    }
+
+    .cs-body:last-child { margin-bottom: 0; }
+
+    /* ============================================
+       DARK CARDS
+       ============================================ */
+    .dk-card {
+      background: #141414;
+      border: 1px solid #252525;
+      border-radius: 12px;
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .dk-card-green { border-left: 3px solid #7ab87a; }
+    .dk-card-subtle { background: #111111; border-color: #1e1e1e; }
+
+    /* Card heading – green */
+    .ck-head {
+      font-family: 'American Typewriter', serif;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #7ab87a;
+      display: block;
+      margin-bottom: 0.7rem;
+      line-height: 1.4;
+    }
+
+    /* Card heading – white */
+    .ck-head-w {
+      font-family: 'American Typewriter', serif;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #e8e8e4;
+      display: block;
+      margin-bottom: 0.7rem;
+      line-height: 1.4;
+    }
+
+    .ck-body {
+      font-size: 0.875rem;
+      color: #9a9a94;
+      line-height: 1.85;
+      margin: 0 0 0.75rem;
+    }
+
+    .ck-body:last-child { margin-bottom: 0; }
+
+    .dk-card ul, .dk-card ol {
+      padding-left: 1.3rem;
+      margin: 0.6rem 0;
+      float: none;
+      color: #9a9a94;
+      font-size: 0.875rem;
+      line-height: 1.85;
+    }
+
+    .dk-card li { margin-bottom: 0.5rem; line-height: 1.65; color: #9a9a94; }
+    .dk-card b, .dk-card strong { color: #e8e8e4; font-weight: 600; }
+    .dk-card em { color: #7ab87a; font-style: normal; }
+    .dk-card a { color: #7ab87a; text-decoration: underline; }
+
+    .dk-card h5 {
+      font-family: 'American Typewriter', serif;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #e8e8e4;
+      margin: 0 0 1rem;
+    }
+
+    /* ============================================
+       IMAGES
+       ============================================ */
+    .img-wrap {
+      background: #0e0e0e;
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 1.25rem 0;
+      border: 1px solid #1e1e1e;
+      position: relative;
+    }
+
+    .img-wrap img { width: 100%; border-radius: 0; }
+
+    .img-note {
+      font-size: 0.73rem;
+      font-weight: 300;
+      color: #484840;
+      font-style: italic;
+      margin-top: 0.5rem;
+      line-height: 1.5;
+    }
+
+    /* Image stack for JS toggle overlays */
+    .image-stack { position: relative; }
+    .overlay-gif, .overlay-image4, .overlay-image3 {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: auto;
+    }
+
+    /* ============================================
+       TOGGLE BUTTON
+       ============================================ */
+    .toggle-btn {
+      background: transparent;
+      border: 1px solid #2a2a2a;
+      border-radius: 6px;
+      color: #808078;
+      cursor: pointer;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.74rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      padding: 0.4rem 1rem;
+      margin-top: 0.75rem;
+      margin-bottom: 1rem;
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
+    }
+
+    .toggle-btn:hover {
+      background: #1e1e1e;
+      border-color: #3a3a3a;
+      color: #f0f0ec;
+    }
+
+    /* ============================================
+       TWO-COLUMN GRID
+       ============================================ */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .two-col .dk-card { margin-bottom: 0; }
+
+    /* ============================================
+       PRIORITY TABLE
+       ============================================ */
+    .priority-table {
+      display: grid;
+      grid-template-columns: 110px 1fr 1fr;
+      gap: 1px;
+      background: #252525;
+      border: 1px solid #252525;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 1.25rem;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    .pt-cell {
+      background: #141414;
+      padding: 0.85rem 1rem;
+      font-size: 0.76rem;
+      color: #9a9a94;
+      line-height: 1.55;
+    }
+
+    .pt-cell strong { color: #e8e8e4; }
+
+    .pt-header {
+      background: #1c1c1c;
+      color: #e8e8e4;
+      font-weight: 600;
+      font-size: 0.72rem;
+    }
+
+    /* ============================================
+       BACK BUTTON
+       ============================================ */
+    .btn-back {
+      display: inline-block;
+      margin-top: 1.75rem;
+      padding: 0.65rem 1.5rem;
+      background: #7ab87a;
+      color: #0a0a0a !important;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      border-radius: 6px;
+      text-decoration: none !important;
+      transition: background 0.15s;
+    }
+
+    .btn-back:hover { background: #8acc8a; }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
+    @media (max-width: 640px) {
+      .hero-title { font-size: 2.6rem; }
+      .cs-heading  { font-size: 1.6rem; }
+      .two-col     { grid-template-columns: 1fr; }
+      .priority-table { display: none; }
+      .page-wrap   { padding: 0 1.25rem 5rem; }
+      .hero        { padding: 3rem 0 2.5rem; }
+    }
+  </style>
 </head>
 
 <body>
-  <div class="wrapper">
-    <!-- index title -->
-    <header class="flex">
-      <div class="title">
-        <href="index.html" id="left">
-          <h1 class="vertical">Shristi Gartaula</h1>
+<div class="page-wrap">
 
-          <!-- SVG LOGO to experiment
-          <div class="vertical">
-              <object type="image/svg+xml" data="logo.svg"></object>
-            </div> -->
-          </a>
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="top">
+    <span class="hero-label">Case Study</span>
 
+    <h1 class="hero-title">
+      <mark>
+        Revamping the Dashboard
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60" preserveAspectRatio="none" stroke="#4a7a4a" fill="none" stroke-width="1.5">
+          <path d="m 3.518915,27.827324 c 55.429038,4.081 111.581115,5.822 167.117815,2.867 22.70911,-1.208 45.39827,-0.601 68.126,-0.778 28.38172,-0.223 56.76078,-1.024 85.13721,-1.33 24.17378,-0.261 48.4273,0.571 72.58114,0.571" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60" preserveAspectRatio="none" stroke="#2a5a2a" fill="none" stroke-width="1">
+          <path d="m 3.518915,27.827324 c 55.429038,4.081 111.581115,5.822 167.117815,2.867 22.70911,-1.208 45.39827,-0.601 68.126,-0.778 28.38172,-0.223 56.76078,-1.024 85.13721,-1.33 24.17378,-0.261 48.4273,0.571 72.58114,0.571" />
+        </svg>
+      </mark>
+    </h1>
+
+    <p class="hero-subtitle">for a client's parking site management application</p>
+
+    <nav class="quick-nav">
+      <a href="#overview">Overview</a>
+      <a href="#approach">Approach</a>
+      <a href="#solution">Solution</a>
+      <a href="#solution-model">Mental Model</a>
+      <a href="#deep-dive-ia">Challenges</a>
+      <a href="#floorPlan">Extra</a>
+      <a href="#learnings">Reflections</a>
+    </nav>
+
+    <div class="hero-img-card">
+      <img src="./images/overview-intro.png" alt="Dashboard overview" />
+    </div>
+  </section>
+
+  <!-- ===================== THE PROBLEM ===================== -->
+  <section class="cs-section" id="overview">
+    <span class="cs-label">Overview</span>
+    <h2 class="cs-heading">The Problem</h2>
+    <p class="cs-subheading">limited data &nbsp;·&nbsp; solo designer &nbsp;·&nbsp; timeline 4–5 weeks</p>
+
+    <div class="dk-card">
+      <p class="ck-body">
+        The client's parking site management app worked well technically, but when presenting to executives for
+        buy-in, UI elements like the sparse dashboard and bloated navigation menu made it challenging to
+        showcase the app's value proposition effectively.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== APPROACH ===================== -->
+  <section class="cs-section" id="approach">
+    <span class="cs-label">Approach</span>
+    <h2 class="cs-heading">Interview Workshop</h2>
+
+    <div class="dk-card dk-card-green">
+      <span class="ck-head">approach</span>
+      <p class="ck-body">
+        In an interview workshop setting with the client, I facilitated and adopted the perspectives of
+        two key individuals for user interviews:
+      </p>
+      <ul>
+        <li>
+          <strong>Subject matter expert &amp; Product owner</strong> — to understand the underlying business logic
+          and its product goals and value proposition.
+        </li>
+        <li>
+          <strong>New user</strong> — to define user flows of daily users, what problems they are trying to solve
+          and why it's needed.
+        </li>
+      </ul>
+      <span class="ck-head-w" style="margin-top:1.25rem;">The benefits of this approach</span>
+      <p class="ck-body">
+        It revealed the core usability issues that my user interface needed to address, especially on
+        the main dashboard. Additionally, by defining it as a workshop, the client could participate in
+        the design solution and help narrow the project scope to just pertinent screens and user flows.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== SOLUTION ===================== -->
+  <section class="cs-section" id="solution">
+    <span class="cs-label">Solution</span>
+    <h2 class="cs-heading">Design Decisions</h2>
+    <p class="cs-subheading">allow for gradual reveal &nbsp;·&nbsp; assess content hierarchy &nbsp;·&nbsp; reorder sidebar navigation</p>
+
+    <div class="dk-card">
+      <h5>Map as anchor for all user flows</h5>
+      <p class="ck-body">
+        The map is the first element users see on the updated Dashboard. It's intentionally laid out to visually
+        reflect the physical space that site managers work with in their mental model.
+      </p>
+      <ul>
+        <li>Apply affordances to guide users from one dataset to another</li>
+        <li>Find opportunity to use spatial assets to reduce information overload</li>
+        <li>Use visuals and typography to organize different types of menu item content</li>
+        <li>Where important information is far too complex to be in a dashboard, avoid showcasing more than necessary</li>
+      </ul>
+      <div class="img-wrap">
+        <div class="image-stack">
+          <img src="./images/Dashboard 3.0a.png" alt="main dashboard screen" />
+          <img id="img4" src="./images/originalDashboard.png" class="overlay-image4" style="display:none;" />
+          <img id="img5" src="./images/dashboard02.png" class="overlay-image3" style="display:none;" />
+        </div>
       </div>
-      <!-- Navigation -->
-      <section id="info">
-        <nav>
-          <div class="page-nav">
-            <a href="#overview" class="selected">overview</a>
-            <div class="submenu">
-              <a class="submenu-item" href="#approach">approach</a>
-            <div class="submenu">
-              <span class="submenu-header">solution</span>
-              <a class="submenu-item" href="#solution">map as anchor</a>
-              <a class="submenu-item" href="#solution-model">mental model</a>
-            </div>
+      <p class="img-note">
+        As a rule, existing static table data is transformed into concise charts to reduce visual clutter and
+        improve data comprehension. Originally entire pages were dedicated to static information.
+      </p>
+      <button class="toggle-btn button2" data-target="img4">View old dashboard</button>
+    </div>
 
-            <div class="submenu">
-              <span class="submenu-header">challenges</span>
-              <a class="submenu-item" href="#deep-dive-ia">lengthy menu</a>
-              <a class="submenu-item" href="#deep-dive-dataset-relationships">system status</a>
-            </div>
+    <!-- UI decision: gradual reveal -->
+    <div class="dk-card dk-card-green">
+      <span class="ck-head">allow for gradual reveal</span>
+      <p class="ck-body">
+        To avoid information overload, users are introduced to data content gradually, depending on where
+        they are on the user flow.
+      </p>
+      <ul>
+        <li>Static data from tables become graphical charts to reduce visual clutter and improve data comprehension.</li>
+        <li>Pie charts frame the rest of the content displayed in the Dashboard. Interacting with each pie chart
+          reveals specific location details intentionally designed within the map container.</li>
+      </ul>
+      <div class="img-wrap">
+        <img src="./images/gifs/pie-chart-selected.gif" alt="Pie chart selection animation" />
+      </div>
+    </div>
+  </section>
 
-            <a href="#floorPlan" class="main-nav extra-solution">extra solution</a>
-            <a href="#learnings" class="main-nav reflections">reflections</a>
-          </div>
+  <!-- ===================== MENTAL MODEL ===================== -->
+  <section class="cs-section" id="solution-model">
+    <span class="cs-label">Solution</span>
+    <h2 class="cs-heading">Updating the Mental Model</h2>
 
-          <!-- TODO: Bring this back when about page is ready -->
-          <!-- <a href="about.html">about</a> -->
-          <a href="index.html">back</a>
-        </nav>
-      </section>
-    </header>
-    <!-- Project 1 -->
-    <section class="content mt-0">
-      <section id="full_work" class="flex flex-column">
-        <!-- Project Header / Project Title -->
-        <div class="page-header">
-          <mark>
-            <h2>Revamping the Dashboard</h2>
-            <svg class="no-offset" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60" preserveAspectRatio="none"
-              stroke="#8BB3CD">
-              <path
-                d="m 3.518915,27.827324 c 55.429038,4.081 111.581115,5.822 167.117815,2.867 22.70911,-1.208 45.39827,-0.601 68.126,-0.778 28.38172,-0.223 56.76078,-1.024 85.13721,-1.33 24.17378,-0.261 48.4273,0.571 72.58114,0.571" />
-            </svg>
-            <svg class="no-offset" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60" preserveAspectRatio="none"
-              stroke="#AAD292">
-              <path
-                d="m 3.518915,27.827324 c 55.429038,4.081 111.581115,5.822 167.117815,2.867 22.70911,-1.208 45.39827,-0.601 68.126,-0.778 28.38172,-0.223 56.76078,-1.024 85.13721,-1.33 24.17378,-0.261 48.4273,0.571 72.58114,0.571" />
-            </svg>
-          </mark>
-          <h3 class="subtitle text-right">
-            for a client’s parking site management application
-          </h3>
+    <div class="dk-card">
+      <h5>Updating the app to match users' mental model</h5>
+      <p class="ck-body">
+        Besides visual cues, the app's content structure and information architecture did not entirely match
+        the users' mental model. Based on how the original app was presented, I assumed users would:
+      </p>
+      <ol style="color:#9a9a94; font-size:0.875rem; padding-left:1.3rem; float:none; margin:0.6rem 0;">
+        <li>Think of tracking or monitoring data they wanted to search for <em>first</em></li>
+        <li>then think about the parking location that pertains to this data</li>
+      </ol>
+      <p class="ck-body" style="margin-top:1rem;">Turns out it's the other way around —</p>
+      <ol style="color:#9a9a94; font-size:0.875rem; padding-left:1.3rem; float:none; margin:0.6rem 0;">
+        <li>Users manage multiple parking locations, and therefore they think and complete tasks in terms of one
+          unique location <em>at a time</em></li>
+        <li>The job the user has to do is the same across parking locations but the data set is unique to that
+          specific location</li>
+      </ol>
+      <p class="ck-body" style="margin-top:1rem;">
+        This new discovery helped me better understand what value the data had for users, so I could decide
+        which elements made sense to reveal on the dashboard, at what point, and which ones could be stored away.
+      </p>
+      <div class="img-wrap">
+        <div class="image-stack">
+          <img src="./images/dashboard02.png" alt="extended dashboard" />
+          <img id="img1" src="./images/gifs/Dashboard2a.gif" class="overlay-gif" style="display:none;" />
+        </div>
+      </div>
+      <button class="toggle-btn button2" data-target="img1">View animation (revealing data with cards)</button>
+    </div>
+
+    <!-- UI decision: data volatility -->
+    <div class="dk-card dk-card-green">
+      <span class="ck-head">define dashboard by data volatility</span>
+      <p class="ck-body">
+        By data volatility, I mean the degree to which any given data that the user sees on the application
+        changes over time. By clarifying the user's mental model, we know what kinds of data they prioritize —
+        and this data is largely unchanging or static.
+      </p>
+      <ul>
+        <li>
+          <strong>Static data grouped into cards:</strong> relatively unchanging data (low data volatility) was
+          more important for the dashboard — in the user's frame of mind, static data like location and users were
+          the first association to any application task.
+        </li>
+        <li>
+          <strong>Transient data grouped selectively:</strong> Frequently changing data like tracking vehicles
+          entering or exiting a building was affecting other elements in entirely separate sections of the menu,
+          without notifying the user (!). Using entity relationship diagrams to group data by volatility and
+          relevance guided me towards a solution within the project scope.<br><br>
+          View the nitty-gritty in <a href="#deep-dive-dataset-relationships">Challenges: system-status</a>.
+        </li>
+      </ul>
+      <div class="img-wrap">
+        <img src="./images/erdiagram2.png" alt="entity relationship diagram" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CHALLENGE 1 ===================== -->
+  <section class="cs-section" id="deep-dive-ia">
+    <span class="cs-label">Challenge #1</span>
+    <h2 class="cs-heading">Cluttered Sidebar Menu</h2>
+    <p class="cs-subheading">cluttered side bar menu competes for visual content</p>
+
+    <div class="dk-card">
+      <div class="img-wrap">
+        <img src="./images/dashboard02menuBefore.png" alt="navigation bar before" />
+      </div>
+      <p class="ck-body">
+        The original menu had 13 items and little affordances to inform users of what tasks or activities are
+        within each one. See below to see how I tackled this problem and reduced the menu.
+      </p>
+    </div>
+
+    <div class="dk-card">
+      <span class="ck-head-w">Step 1: map, question, define menu pages</span>
+      <p class="ck-body">
+        With a set of questions in hand, I sought to understand the current tasks users completed on each of
+        the linked pages. Answers also clarified and aligned assumptions for <em style="color:#7ab87a;font-style:italic;">everyone involved in the project</em>.
+      </p>
+      <div class="img-wrap">
+        <img src="./images/business-logic-img1.png" alt="Business logic mapping" />
+      </div>
+      <p class="ck-body" style="margin-top:1rem;">
+        Menu items in the side bar were listed somewhat arbitrarily — some pages dedicated to lengthy tasks
+        (i.e. setting up a new account), others for simple interactions (i.e. search a table).
+      </p>
+      <span class="ck-head-w" style="margin-top:1.25rem;">Questions for each screen:</span>
+      <ul>
+        <li>What can the user see?</li>
+        <li>What actions can the user perform (i.e. searching, exporting, etc.)?</li>
+        <li>Why is the information valuable for users?</li>
+        <li>What does the user want to do with the information?</li>
+        <li>Would the user need to perform any actions prior?</li>
+      </ul>
+    </div>
+
+    <div class="dk-card">
+      <span class="ck-head-w">Step 2: learn, clarify, define with the client</span>
+      <p class="ck-body">
+        With the purpose of each screen defined, I was able to construct the relationship between product,
+        people, and the system and where the intended business goals fit.
+      </p>
+      <div class="img-wrap">
+        <img src="./images/business-logic-img2.png" alt="Drawing it out" />
+      </div>
+      <ul>
+        <li>Understanding the relationship between location of parking and vehicle status</li>
+        <li>How the application shows this relationship systemically</li>
+        <li>vs. the user's mental model for completing their roles and responsibilities in this industry</li>
+      </ul>
+    </div>
+
+    <div class="dk-card">
+      <span class="ck-head-w">Step 3: prioritize screens by usefulness and ease</span>
+      <p class="ck-body">
+        Equipped with definitions of the screens and their value for the business at large, I measured the total
+        actions users took for each of the 13 pages and charted them against task priority.
+        The results helped narrow down the content in the navigation bar by half.
+      </p>
+
+      <div class="priority-table">
+        <div class="pt-cell pt-header"></div>
+        <div class="pt-cell pt-header">0–2 actions</div>
+        <div class="pt-cell pt-header">+2 actions</div>
+
+        <div class="pt-cell pt-header">high priority</div>
+        <div class="pt-cell">
+          Actions: Add to, search, update datasets + trigger physical entities<br><br>
+          Example: opening physical parking gate<br><br>
+          Menu-items: <strong>Site settings, Activity, Revenue</strong>
+        </div>
+        <div class="pt-cell">
+          Actions: Navigating to 1–5 dedicated secondary menus; complex wizard forms<br><br>
+          Example: adding promotional parking rate<br><br>
+          Menu-items: <strong>Rates, Transient, Permissions, Users, Space Management</strong>
         </div>
 
-        <!-- Overview section -->
-        <section id="overview" class="flex flex-column font-secondary mb-20">
-          <span class="section-title">overview</span>
-          <span class="section-subheading">limited data | solo designer | timeline 4-5 weeks
-          </span>
-          <div class="flex banner-container mb-20 flex-column bg-green solution-content px-12">
-            <div class="image-copy px-12">
-              <span class="image-title">
-                The client's parking site management app worked well technically, but when presenting to executives for
-                buy-in, UI elements like the sparse dashboard and bloated navigation menu made it challenging to
-                showcase the app's value proposition effectively.
-              </span>
-            </div>
-
-
-
-            <!--background image of section-1-banner -->
-          <section id="approach">
-            <div id="overview_image">
-              <div class="flex three-column-layout">
-                <img src="./images/overview-intro.png" display="cover" />
-              </div>
-            </div>
-          </section>
-
-            <!--approach sub-section-->
-            <div class="flex three-column-layout" id="approach">
-              <div class="flex flex-1">
-                <div class="card negative-card align-self-start">
-                  <div class="block-copy">
-                    <p class="block-text">
-                      <span class="block-title">approach</span><br />
-                      In an interview workshop setting with the client, I facilitated and adopted the perspectives of
-                      two key individuals for user interviews:
-                    </p>
-                    
-                    <ul>
-                      <br />
-                      <li>
-                        <div class="bold-text-li">
-                          Subject matter expert &amp; Product owner
-                        </div>
-                        in order to understand the underlying business logic
-                        and its product goals and value proposition.
-                      </li>
-                      <li>
-                        <div class="bold-text-li">New user</div>
-                        in order to define user flows of daily users, what
-                        problems they are trying to solve and why it’s needed.
-                      </li>
-                    </ul>
-                    <p></p>
-                    <div class="block-copy">
-                      <div class="bold-text">
-                        The benefits of this approach
-                      </div>
-                      <p class="block-text">
-                        It revealed the core usability issues that my user interface needed to address, especially on
-                        the main dashboard. Additionally, by defining it as a workshop, the client could participate in
-                        the design solution and help narrow the project scope to just pertinent screens and user flows.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Solution section -->
-
-        <section id="solution" class="flex flex-column solution-section font-secondary mb-20">
-          <span class="section-title">solution</span>
-          <span class="section-subheading">allow for gradual reveal | assess content hierarchy | reorder
-            sidebar navigation</span>
-          <div class="flex flex-column bg-blue solution-content banner-container px-12">
-            <!--  <div class="image-copy px-12">
-                <span class="image-title2 align-center"
-                  >The core UX/UI design efforts were on analyzing and
-                  prioritizing the sidebar navigation menu items by relevance
-                  and affordance to stakeholders and users. <br /><br />
-                  Then sharing these design changes with the product and
-                  development teams for critical feedback before implementing
-                  them as a prototype.
-                  <br /><br />
-                  Ultimately, the potential buyers gained a clearer
-                  understanding of the application's value right from the start,
-                  as confirmed by user feedback.
-                </span>
-              </div> -->
-            <!-- map as anchor -->
-            <h5 class="px-12">Map as anchor for all user flows</h5>
-
-            <!-- map as anchor for all user flows  -->
-            <div class="block-text mb-4 px-12">
-              <div class="mb-8">
-
-                The map is the first element users see on the updated Dashboard. It's intentionally laid out to visually
-                reflect the physical space that site managers work with in their mental model.
-              </div>
-              <!-- Bullet points for map anchor -->
-              <ul>
-                <li>
-                  Apply affordances to guide users from one dataset to another
-                </li>
-                <li>
-                  Find opportunity to use spatial assets to reduce information overload
-                </li>
-                <li>
-
-                  Use visuals and typography to organize different types of menu item content
-                </li>
-                <li>
-                  Where important information is far too complex to be in a dashboard, avoid showcasing more than
-                  necessary
-
-                </li>
-              </ul>
-
-            </div>
-            <!--  First image of dashboard + toggle button -->
-            <div class="image-stack-button">
-              <div class="image-stack img-1 mt-4 mb-0">
-                <img src="./images/Dashboard 3.0a.png" class="img-1 mt-0 mb-0" alt="main dashboard screen" />
-
-                <img id="img4" src="./images/originalDashboard.png" class="overlay-image4 img-1 mt-0 mb-4"
-                  style="display: none" />
-
-                <img id="img5" src="./images/dashboard02.png" class="overlay-image3" style="display: none" />
-              </div>
-              <!-- annotation below image, then button -->
-
-              <div class="image-stack-button img-1 project_copy image-text py-1 px-0">
-
-                As a rule, existing static table data is transformed into concise charts to reduce visual clutter and
-                improve data comprehension. Originally entire pages were dedicated to static information.
-
-              </div>
-            </div>
-            <!-- Toggle button original vs new dashboard -->
-            <button class="toggle-btn button2 mt-0 mb-60" data-target="img4">
-              View old
-            </button>
-          </div>
-        </section>
-
-        <!-- 
--->
-
-        <!-- UI decision card 1 "ALLOW FOR GRADUAL REVEAL"-->
-        <div class="card learnings-card mb-2 mt-10">
-          <div class="block-copy mb-20">
-            <span class="block-title mb-4">allow for gradual reveal</span>
-
-            <span class="block-copy-alt block-text font-secondary">To avoid information overload, users are introduced
-              to data content gradually, depending on where they are on the user flow.
-            </span>
-            <!-- LIST 1-->
-            <ul class="font-secondary">
-              <li>
-                Static data from tables become graphical charts to reduce visual clutter and improve data comprehension.
-
-              </li>
-              <li>
-                Pie charts frame the rest of the content displayed in the Dashboard. Interacting with each pie chart
-                reveals specific location details intentionally designed within the map container.
-              </li>
-
-              <!-- Image stack 1 GIF IMAGE -->
-              <div class="image-stack img-1 mt-10 mb-0">
-                <img src="./images/gifs/pie-chart-selected.gif" alt="Static Image 1" class="static-image2" />
-
-              </div>
-            </ul>
-
-          </div>
+        <div class="pt-cell pt-header">low priority</div>
+        <div class="pt-cell">
+          Action: view to download<br><br>
+          Example: download last year's traffic<br><br>
+          Menu-items: <strong>History, Validation, Bookings</strong>
         </div>
-
-        <!-- SOLUTION CONTINUED updating app users' mental models -->
-        <section id="" class="flex flex-column solution-section font-secondary mb-20 mt-20">
-          <div class="flex flex-column bg-blue solution-content banner-container px-12" id="solution-model">
-            <h5 class="px-12 mt-8">Updating the app to match users' mental model</h5>
-
-            <!-- Numbered List 1 mental mode assumptions-->
-            <div class="block-text mb-4 px-12">
-              <div class="mb-8">
-                Besides visual cues, the app's content structure and information architecture did not entirely match the
-                users' mental model.
-                Based on how the original app was presented, I assumed users would: </div>
-              <ol>
-                <li>Think of tracking or monitoring data they wanted to search for <em>first</em></li>
-                <li>then think about the parking location that pertains to this data</li>
-              </ol>
-            </div>
-
-            <div class="block-text mb-4 px-12">
-
-              <!-- line break 1-->
-              <div class="mb-8">
-                Turns out it's the other way around —</div>
-
-              <!-- Numbered List 2-->
-              <ol>
-                <li>Users manage multiple parking locations, and therefore they think and complete tasks in terms of one
-                  unique location <em>at a time</em></li>
-                <li>The job the user has to do is the same across parking locations but the data set is unique to that
-                  specific location</li>
-              </ol>
-
-              <!-- line break 2-->
-              <div class="mb-4">
-                This new discovery helped me better understand what value the data had for users, so I could decide
-                which elements made sense to reveal on the dashboard, at what point, and which ones could be stored
-                away.
-              </div>
-              <!-- actual bullet points-->
-
-            </div>
-
-            <!--Updated dashboard img 2 + animation-->
-            <!-- Image stack 1 -->
-            <div class="image-stack img-1 mt-10 mb-4">
-              <img src="./images/dashboard02.png" class="img-2 mt-10 mb-0" alt="second image of extended dashboard" />
-              <img id="img1" src="./images/gifs/Dashboard2a.gif" class="overlay-gif" style="display: none" />
-            </div>
-            <!-- Toggle botton-->
-            <button class="toggle-btn button2 mt-0 mb-60" data-target="img1">
-              View quick animation (revealing data with cards)
-            </button>
-          </div>
-        </section>
-
-
-        <!-- UI decision card 2 "Dashboard by data volatility"-->
-        <div class="card learnings-card mb-2 mt-10">
-          <div class="block-copy mb-0">
-            <span class="block-title mb-4">define dashboard by data volatility</span>
-
-            <span class="font-secondary block-text block-copy mb-8">By data volatility, I mean the degree to which any
-              given data that the user sees on the application changes over time. By clarifying the user's mental model,
-              we know what kinds of data they prioritize and this data is largely unchanging or static.</span>
-            <!-- LIST 1-->
-            <ul class="font-secondary">
-              <li>
-                <b>Static data grouped into cards</b>: interestingly (and thankfully), relatively unchanging data (low
-                data volatility) was more important for the dashboard. This is because in the user's frame of mind
-                static data like location and users were the first association to any application task.
-              </li>
-              <li>
-                <b>Transient data grouped selectively
-                </b>: Frequently changing data like tracking vehicles entering or exiting a building was affecting other
-                elements in entirely separate sections of the menu, without notifying the user (!). Using entity
-                relationship diagrams (like below) to group data by volatility and relevance guided me towards a
-                solution within the project scope.
-                <br><br>
-                View the nitty-gritty in <a href="#deep-dive-dataset-relationships">Challenges: system-status</a>.
-              </li>
-
-              <!-- Image stack 1 GIF IMAGE -->
-              <div class="image-stack align-center img-1 mt-8 mb-0">
-                <img src="./images/erdiagram2.png" alt="entity relationship diagram" class="static-image2" />
-
-              </div>
-            </ul>
-
-          </div>
+        <div class="pt-cell">
+          Other infrequently-used components<br><br>
+          Example: update fee amount on table row<br><br>
+          Menu-items: <strong>Billing</strong>
         </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ===================== CHALLENGE 2 ===================== -->
+  <section class="cs-section" id="deep-dive-dataset-relationships">
+    <span class="cs-label">Challenge #2</span>
+    <h2 class="cs-heading">Unknown System Updates</h2>
+    <p class="cs-subheading">unknown updates across system confuses users on the status of the app</p>
 
+    <div class="dk-card">
+      <p class="ck-body">
+        While spending time consolidating the menu, I later learned that pages within the menu items had
+        forms, live data tables, and other auto-updating components that trigger system-wide changes without
+        users' awareness.
+      </p>
+      <p class="ck-body">
+        This was a level of system telemetry that was a key business selling point but there was no observable
+        UI to reflect or communicate these status changes. For example, when updating parking fees for one
+        vehicle, it can change the billing cycle across multiple accounts without the user knowing.
+      </p>
+      <p class="ck-body">
+        My redesign had not considered how auto-updating components should behave or which ones should trigger
+        user engagement and permissions and which ones should be push-updates or alerts. Given the client's
+        target audience of executive buyers, my design needed to clearly show these dynamic components to
+        facilitate meaningful discussions about the product's value.
+      </p>
+      <p class="ck-body">
+        Using a 2×2 framework, I looked at the relationship between menu items and their interaction with each other.
+      </p>
+    </div>
 
+    <div class="two-col">
+      <div class="dk-card">
+        <span class="ck-head-w">Relationship between menu-items</span>
+        <p class="ck-body">The simpler the relationship, the better the content will be for a dashboard.</p>
+        <div class="img-wrap">
+          <img src="./images/erdiagram.png" alt="ER diagram" />
+        </div>
+      </div>
+      <div class="dk-card">
+        <span class="ck-head-w">Priority vs. system impact</span>
+        <p class="ck-body">
+          The higher the priority and the fewer interactive actions associated to it, the better the
+          content fits within the dashboard.
+        </p>
+        <div class="img-wrap">
+          <img src="./images/comparison-img2.png" alt="Comparison chart" />
+        </div>
+      </div>
+    </div>
 
-        <!-- Deep dive: information architecture section !-->
-        <section id="deep-dive-ia" class="flex flex-column align-center bg-grey-light font-secondary mb-20 mt-40">
-          <span class="section-title mt-4">challenge #1</span>
-          <span class="section-subheading mb-10">cluttered side bar menu competes for visual content</span>
-          <div class="flex flex-column condensed-column">
+    <div class="dk-card dk-card-subtle">
+      <span class="ck-head-w">Priority to complete task vs. respective impact on system</span>
+      <p class="ck-body">
+        The higher the priority and the less it triggers unknown changes across the system, the better the
+        content will be for the dashboard.
+      </p>
+      <div class="img-wrap">
+        <img src="./images/comparison-img2.png" alt="Comparison" />
+      </div>
+    </div>
+  </section>
 
-            <!-- Image stack -->
-            <div class="flex flex-row flex-column-reverse justify-center mt-0 ">
-              <div class="image-stack img w-full mr-4 mb-10 px-1">
-                <img src="./images/dashboard02menuBefore.png" alt="navigation bar before" />
-              </div>
-              <div class="flex flex-row block-copy mb-8 mt-0 ml-auto">
+  <!-- ===================== FLOOR PLAN ===================== -->
+  <section class="cs-section" id="floorPlan">
+    <span class="cs-label">Extra</span>
+    <h2 class="cs-heading">Floor Plan UI</h2>
+    <p class="cs-subheading">standalone design within parking application &nbsp;·&nbsp; replacing onboarding wizard setup</p>
 
-                <p class="block-text">
+    <div class="dk-card">
+      <h5>Using physical documents to inspire design for screen</h5>
 
-                  The original menu had 13 items and little affordances to inform users of what tasks or activities are
-                  within each one. See below to see how I tackled this problem and reduced the menu.
-                </p>
-              </div>
+      <span class="ck-head-w">Overview</span>
+      <p class="ck-body">
+        As a separate screen within the application, I was asked to brainstorm ways to design for a set-up
+        wizard onboarding new parking sites. The current application had multiple paged forms that took a long
+        time to complete and wasn't entirely comprehensible.
+      </p>
 
+      <span class="ck-head-w" style="margin-top:1.25rem;">Solution</span>
+      <p class="ck-body">
+        I advocated for translating physical documents into understandable UI screens as closely as possible
+        to the physical task users have to do — taking users' very first step in mapping new parking sites
+        (using a clipboard and pen to jot down parking site numbers) and drawing UI solutions that could
+        support the respective physical task.
+      </p>
+      <p class="ck-body">
+        A direct visual translation of how users would perform the task would be clearer to understand and
+        less arduous to go through step-by-step.
+      </p>
 
-            </div>
+      <div class="img-wrap" style="margin-top:1.25rem;">
+        <div class="image-stack">
+          <img src="./images/Floorplan.png" alt="customized floor plan layout" />
+          <img id="img2" src="./images/gifs/FloorUI2.gif" class="overlay-gif" style="display:none;" />
+        </div>
+      </div>
+      <p class="img-note">
+        This complex UI screen was presented as a starting point for further discussions with the rest of
+        the team (to the engineers' relief). With no major constraints, I had fun designing this solution
+        using airline seating reservation flows as inspiration.
+      </p>
+      <button class="toggle-btn button2" data-target="img2">View quick animation</button>
+    </div>
+  </section>
 
-            <div class="block-copy">
-              <span class="block-title2 mt-8">Step 1: map, question, define menu pages</span>
-              <p class="block-text">
-                With a set of questions in hand, I sought to understand the current tasks users completed on each of the
-                linked pages. Answers also clarified and aligned assumptions for <em>everyone involved in the
-                  project</em>.
-              </p>
-            </div>
-          </div>
+  <!-- ===================== LOOKING BACK ===================== -->
+  <section class="cs-section" id="learnings">
+    <span class="cs-label">Reflections</span>
+    <h2 class="cs-heading">Looking Back</h2>
 
-          <div class="flex align-center bg-grey w-full p-6 mb-8">
-            <img class="flex-1 w-50 mr-4" src="./images/business-logic-img1.png" />
-            <div class="flex-1 block-copy-alt mb-0">
-              <span class="block-title-alt mt-4">Menu items in the side bar were listed somewhat arbitrarily with some
-                pages dedicated to lengthy tasks (i.e. setting up a new account) and others for simple interactions
-                (i.e. search a table).
-                <br /><br /><br></span>
-              <span class="block-title-alt">
-                Questions for each screen:<p><br></p>
+    <div class="dk-card dk-card-green">
+      <span class="ck-head">reflections on the project</span>
+      <ul>
+        <li>Biggest challenge: finding ways to simplify dataset relationships by business value</li>
+        <li>Quick win: applying heuristic patterns (e.g., "more info = more confusion") to meet the project
+          goal — make the design easy to understand when presenting</li>
+        <li>The client had a vague idea of the desired final visual so our discussions were often a delicate
+          balance of ideating and defining at once.</li>
+        <li>I was often wary of accepting client design changes, not out of defiance but because I lacked the
+          client's depth of knowledge of the product. I couldn't justify all their design change requests,
+          but I also couldn't deny that I didn't know as much as they did.
+          <ul style="margin-top:0.5rem;">
+            <li>I quickly trusted the client's feedback. On reflection, it was because of the client's
+              efforts in making me feel involved in their discussions despite my lack of product knowledge.
+              I felt valued.</li>
+            <li>This trust was impactful and personally meaningful; it led to a positive work experience
+              that reinforced the value of collaboration in the design process and kept timelines on track.</li>
+          </ul>
+        </li>
+        <li>This project continues to remind me of why I love design: the best work happens when strong
+          relationships come first.</li>
+      </ul>
+      <a href="index.html" class="btn-back">Back to work</a>
+    </div>
+  </section>
 
-                <p class="block-text-alt">What can the user see?</p>
-                <p class="block-text-alt">
-                  What actions can the user perform (i.e. searching, exporting, etc.)?
-                </p>
-                <p class="block-text-alt">
-                  Why is the information valuable for users?
-                </p>
-                <p class="block-text-alt">
-                  What does the user want to do with the information?
-                </p>
-                <p class="block-text-alt">
-                  Would the user need to perform any actions prior?
-                </p>
-              </span>
-
-            </div>
-          </div>
-
-          <div class="flex flex-column condensed-column">
-            <div class="block-copy">
-              <span class="block-title2 mt-8">Step 2: learn, clarify, define with the client</span>
-              <p class="block-text">
-                With the purpose of each screen defined, I was able to construct the
-                relationship between product, people, and the system and where the intended business goals fit.
-              </p>
-            </div>
-          </div>
-
-          <div class="flex align-center bg-grey w-full p-6 mb-8">
-            <div class="flex-1 block-copy-alt mr-4 mb-0">
-              <span class="block-title-alt">Drawing it out to figure it out</span>
-              <p class="block-text-alt">
-                Understanding the relationship between location of parking and
-                vehicle status
-              </p>
-              <p class="block-text-alt">and</p>
-              <p class="block-text-alt">
-                how the application shows this relationship systemically
-              </p>
-              <p class="block-text-alt">vs</p>
-              <p class="block-text-alt">
-                the user’s mental model for completing their roles and
-                responsibilities in this industry
-              </p>
-            </div>
-            <img class="flex-1 w-50" src="./images/business-logic-img2.png" />
-          </div>
-
-          <div class="flex flex-column condensed-column">
-            <div class="block-copy">
-              <span class="block-title2 mt-8">Step 3: prioritize screens by usefulness and ease</span>
-              <p class="block-text">
-                Equipped with definitions of the screens and their value for the business at large, I measured the total
-                actions users took for each of the 13 pages and charted them against task priority. <br>
-                The results helped narrow down the content in the navigation bar by half.
-              </p>
-
-            </div>
-          </div>
-
-          <div class="flex flex-column w-full">
-            <div class="flex flex-column bg-grey p-6 mb-8 hide-on-mobile">
-              <div class="block-copy">
-                <span class="block-title-alt">Number and types of interactive components and their priority </span>
-              </div>
-
-              <div class="grid-container">
-                <div class="grid-item no-outline"></div>
-
-                <div class="grid-item no-outline pl-0">
-                  <span class="grid-subtitle mb-0">0-2 actions</span>
-                </div>
-
-                <div class="grid-item no-outline pl-0">
-                  <span class="grid-subtitle mb-0">+2 actions</span>
-                </div>
-
-                <div class="grid-item small-grid-item no-outline pl-0">
-                  <span class="grid-subtitle mb-0">menu-item with <br>high priority task(s)</span>
-                </div>
-
-                <div class="grid-item">
-                  <span class="block-text-alt mb-0">
-                    Actions: Add to, search, update datasets +
-                    trigger physical entities
-                    <br /><br />
-                    Example task: opening physical parking gate
-                    <br /><br />
-                    Menu-items: <br /><strong>Site settings, Activity, Revenue</strong>
-                  </span>
-                </div>
-
-                <div class="grid-item">
-                  <span class="block-text-alt mb-0">Actions: Navigating to 1-5 dedicated secondary
-                    menus and tasks; complex wizard forms. <br /><br />
-                    Example task: adding promotional parking rate
-                    <br /><br />
-                    Menu-items: <br /><strong>
-                      Rates, Transient, Permissions, Users, Space
-                      Management</strong>
-
-                  </span>
-                </div>
-
-                <div class="grid-item small-grid-item no-outline pl-0">
-                  <span class="grid-subtitle mb-0">menu-item with <br> low priority<br> task(s)</span>
-                </div>
-
-                <div class="grid-item">
-                  <span class="block-text-alt mb-0">Action: view to download
-                    <br /><br />
-                    Example task: download last year's traffic
-                    <br /><br />
-                    Menu-items: <br /><strong>History, Validation, Bookings</strong>
-                  </span>
-                </div>
-
-                <div class="grid-item">
-                  <span class="block-text-alt mb-0">
-                    Other infrequently-used components
-                    <br /><br />
-                    Example task: update fee amount on table row
-                    <br /><br />
-
-                    Menu-items: <br /><strong>Billing</strong>
-                  </span>
-                </div>
-              </div>
-
-
-            </div>
-            <!--
-            <div class="flex flex-column condensed-column">
-              <div class="block-copy">
-                <span class="block-title"
-                  >Menu-items for Overview dashboard</span
-                >
-                <p class="block-text">
-                  These menu-items reflect tasks of highest priority and
-                  therefore are represented on the interface over other tasks.
-                </p> -->
-            <!-- Why is this an icon element -->
-            <!--
-                <p>
-                  <br /><i
-                    >Site settings, Activity, Revenue, Rates, Transient,
-                    Permissions, Users, Space Management</i
-                  >
-                </p>
-              </div>
-            </div>
-        -->
-        </section>
-
-        <!-- Deep dive: dataset relationships section -->
-        <section id="deep-dive-dataset-relationships" class="flex flex-column font-secondary bg-grey-light mb-20 mt-20">
-          <span class="section-title">challenge #2: system status</span>
-          </span>
-          <span class="section-subheading mb-10">unknown updates across systemconfuses users on the status of the app
-          </span>
-
-          <div class="flex two-column-layout mb-2">
-            <div class="flex-1">
-              <div class="block-copy">
-                <p class="block-text">
-                  While spending time consolidating the menu, I later learned that pages within the menu items had
-                  forms, live data tables, and other
-                  auto-updating components that trigger
-                  system-wide changes without users' awareness.
-                  <br /><br />
-                  This was a level of system telemetry that was a key business selling point but there was no observable
-                  UI to reflect or communicate these status
-                  changes.
-                  <br /><br />
-                  For example, when updating parking fees for one vehicle, it can change the billing cycle across
-                  multiple accounts without the user knowing.
-                  <br /><br />
-                  My redesign had not considered how auto-updating components should behave or which ones should
-                  trigger user engagement and permissions and which ones should be push-updates or alerts.
-                  <br></br>
-                  Given the client's target audience of executive buyers, my design needed to clearly show these dynamic
-                  components to facilitate meaningful discussions about the product's value.
-
-                  <br></br>
-                  It also had to be simple. So I used the data I already gathered from menu item interactions to lead to
-                  the solution.
-                  <br>
-                  Using a 2x2 frameworks, I looked at the relationship between menu items, their relationship and
-                  interaction with each other.
-                </p>
-              </div>
-            </div>
-
-            <div class="flex-1">
-              <div class="flex flex-column bg-grey p-6">
-                <p class="block-title-alt">Relationship between menu-items</p>
-                <p class="block-copy">
-                  The simpler the relationship, the better the content will be
-                  for a dashboard.
-                </p>
-                <img src="./images/erdiagram.png" />
-              </div>
-              <div class="two-column-layout"> </div>
-
-            </div>
-          </div>
-
-          <div class="flex two-column-layout">
-
-            <div class="flex-1 bg-grey">
-              <div class="flex flex-column p-6">
-                <span class="block-title-alt">The higher the priority and the fewer interactive actions associated to
-                  it, the better the content will fit within the dashboard instead of a menu item on the navigation
-                  bar.</span>
-
-                <img src="./images/comparison-img2.png" />
-              </div>
-
-
-
-            </div>
-
-            <div class="flex-1 bg-grey">
-              <div class="flex flex-column p-6">
-                <span class="block-title-alt">Priority to complete task vs respective impact on
-                  system</span>
-                <p class="block-text-alt">
-                  The higher the priority and the less it triggers unknown changes across the system, the better the
-                  content will be for the dashboard.
-                </p>
-                <img src="./images/comparison-img2.png" />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Green Section for Floor plan UI -->
-
-        <section id="floorPlan" class="flex flex-column mb-20 mt-20 font-secondary">
-          <span class="section-title">extra</span>
-          <span class="section-subheading">standalone design within parking application | replacing onboarding wizard
-            setup </span>
-          <div class="flex flex-column bg-green solution-content banner-container px-12">
-            <!-- TEXT for Floor plan UI -->
-            <h5 class="px-12">Using physical documents to inspire design for screen</h5>
-            <div class="project_copy mt-0 mb-0 px-12">
-              <div>
-                <b>Overview</b>
-                <br /><br />
-                As a separate screen within the application, I was asked to brainstorm ways to design for a set-up
-                wizard onboarding new parking sites.
-                <br /><br />
-
-                The current application had multiple paged forms that took a long time to complete. It wasn't entirely
-                comprehensible either.
-                <br /><br />
-                <b>Solution</b>
-                <br /><br />
-                I advocated for translating physical documents into understandable UI screens as closely as possible to
-                the physical task users have to do. That meant taking users' very first step in mapping new parking
-                sites, ie. using a clipboard and pen to jot down parking site numbers, and drawing UI solutions that
-                could support the respective physical task.
-                <br /><br />
-                A direct visual translation of how users would perform the task would be clearer to understand and less
-                arduous to go through step-by-step.
-                <br /><br />
-              </div>
-            </div>
-
-            <!-- Image stack 1 -->
-            <div class="image-stack img-1 mt-4 mb-4">
-              <img src="./images/Floorplan.png" class="img-2 mt-0 mb-0" alt="customized floor plan layout" />
-              <img id="img2" src="./images/gifs/FloorUI2.gif" class="overlay-gif" style="display: none" />
-
-            </div>
-            <!-- annotation below image, then button -->
-
-            <div class="image-stack-button img-1 project_copy image-text py-1 px-0">
-              This complex UI screen was presented as a starting point for further discussions with the rest of the team
-              (to the engineers' relief). With no major constraints, I had fun designing this solution using airline
-              seating reservation flows as inspiration.
-            </div>
-
-            <!-- Toggle botton-->
-            <button class="toggle-btn button2" data-target="img2">
-              View quick animation
-            </button>
-          </div>
-        </section>
-
-
-
-        <!--learnings section  -->
-
-        <section id="learnings" class="font-secondary mb-27">
-          <div class="card learnings-card mt-0">
-            <div class="flex flex-column block-copy mb-0">
-              <span class="block-title mb-4">reflections on the project</span>
-              <p class="block-text">
-              <ul>
-                <li>
-
-                  Biggest challenge: finding ways to simplify dataset relationships by business value
-                </li>
-                <li>
-                  Quick win: applying heuristic patterns (e.g., "more info = more confusion") to meet the project goal
-                  (goal: make the design easy to understand when presenting)</li>
-                <li>The client had a vague idea of the desired final visual so our discussions were often a delicate
-                  balance of ideating and defining at once.
-                </li>
-                <li>I was often wary of accepting client design changes, not out of defiance but because I lacked the
-                  client's depth of knowledge of the product. I couldn't justify all their design change requests, but I
-                  also couldn't deny that I didn't know as much as they did.
-                </li>
-                <ul>
-                  <li>But, I quickly trusted the client's feedback. I think, on reflection, it was because of the
-                    client's efforts in making me feel involved in their discussions despite my lack of product
-                    knowledge. I felt valued.
-                  </li>
-                  <li>This trust was impactful and personally meaningful; it led to a positive work experience that
-                    reinforced the value of collaboration in the design process and kept timelines on track.</li>
-                </ul>
-                <li>This project continues to remind me of why I love design: the best work happens when strong
-                  relationships come first.</li>
-              </ul>
-              </p>
-
-              <a href="index.html" class="button">back</a>
-            </div>
-          </div>
-        </section>
-      </section>
-    </section>
-  </div>
-</body>
+</div><!-- end .page-wrap -->
 
 <script src="scripts/mark-scroll.js"></script>
 <script src="scripts/imagenav.js"></script>
+
+</body>
 
 </html>
